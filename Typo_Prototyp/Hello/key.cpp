@@ -13,6 +13,7 @@
 #include <Windows.h>
 #include <QKeyEvent>
 
+
 #define Animationszeit 110
 using namespace Qt;
 
