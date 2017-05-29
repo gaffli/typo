@@ -1,0 +1,2566 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>key</class>
+ <widget class="QWidget" name="key">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1046</width>
+    <height>473</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QHBoxLayout" name="zeile_1">
+     <property name="spacing">
+      <number>120</number>
+     </property>
+     <property name="leftMargin">
+      <number>0</number>
+     </property>
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+     <property name="rightMargin">
+      <number>200</number>
+     </property>
+     <item>
+      <widget class="QPushButton" name="_1">
+       <property name="minimumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#_1{ background-color: rgb(250,202,150);
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 1.5px;
+border-bottom-width: 1.5px;
+border-left-width: 0px;
+border-top-width: 0px;
+	border-right-color: black;
+	border-bottom-color: black;
+    }
+QPushButton#_1:pressed {
+    background-color: rgb(243, 141, 29);
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 0px;
+border-bottom-width: 0px;
+border-left-width: 1.5px;
+border-top-width: 1.5px;
+	border-left-color: black;
+	border-top-color: black;
+
+}</string>
+       </property>
+       <property name="text">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="_2">
+       <property name="minimumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#_2{ background-color: rgb(250,202,150); 
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 1.5px;
+border-bottom-width: 1.5px;
+border-left-width: 0px;
+border-top-width: 0px;
+	border-right-color: black;
+	border-bottom-color: black;}
+QPushButton#_2:pressed {
+    background-color: rgb(243, 141, 29);
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 0px;
+border-bottom-width: 0px;
+border-left-width: 1.5px;
+border-top-width: 1.5px;
+	border-left-color: black;
+	border-top-color: black;
+}</string>
+       </property>
+       <property name="text">
+        <string>2</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="_3">
+       <property name="minimumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#_3 { background-color: rgb(254,129,122); 
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 1.5px;
+border-bottom-width: 1.5px;
+border-left-width: 0px;
+border-top-width: 0px;
+	border-right-color: black;
+	border-bottom-color: black;
+}
+QPushButton#_3:pressed {
+    background-color: rgb(255, 0, 0);
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 0px;
+border-bottom-width: 0px;
+border-left-width: 1.5px;
+border-top-width: 1.5px;
+	border-left-color: black;
+	border-top-color: black;
+}</string>
+       </property>
+       <property name="text">
+        <string>3</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="_4">
+       <property name="minimumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#_4 { background-color: rgb(169,252,169); 
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 1.5px;
+border-bottom-width: 1.5px;
+border-left-width: 0px;
+border-top-width: 0px;
+	border-right-color: black;
+	border-bottom-color: black;}
+QPushButton#_4:pressed {
+    background-color: rgb(0, 255, 0);
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 0px;
+border-bottom-width: 0px;
+border-left-width: 1.5px;
+border-top-width: 1.5px;
+	border-left-color: black;
+	border-top-color: black;
+}</string>
+       </property>
+       <property name="text">
+        <string>4</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="_5">
+       <property name="minimumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#_5 { background-color: rgb(196,194,252); 
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 1.5px;
+border-bottom-width: 1.5px;
+border-left-width: 0px;
+border-top-width: 0px;
+	border-right-color: black;
+	border-bottom-color: black;}
+QPushButton#_5:pressed {
+    background-color: rgb(114, 111, 247);
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 0px;
+border-bottom-width: 0px;
+border-left-width: 1.5px;
+border-top-width: 1.5px;
+	border-left-color: black;
+	border-top-color: black;
+}</string>
+       </property>
+       <property name="text">
+        <string>5</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="_6">
+       <property name="minimumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#_6{ background-color: rgb(196,194,252); 
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 1.5px;
+border-bottom-width: 1.5px;
+border-left-width: 0px;
+border-top-width: 0px;
+	border-right-color: black;
+	border-bottom-color: black;}
+QPushButton#_6:pressed {
+    background-color: rgb(114, 111, 247);
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 0px;
+border-bottom-width: 0px;
+border-left-width: 1.5px;
+border-top-width: 1.5px;
+	border-left-color: black;
+	border-top-color: black;
+}</string>
+       </property>
+       <property name="text">
+        <string>6</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="_7">
+       <property name="minimumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#_7{ background-color: rgb(219,173,245); 
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 1.5px;
+border-bottom-width: 1.5px;
+border-left-width: 0px;
+border-top-width: 0px;
+	border-right-color: black;
+	border-bottom-color: black;}
+QPushButton#_7:pressed {
+    background-color: rgb(169, 64, 232);
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 0px;
+border-bottom-width: 0px;
+border-left-width: 1.5px;
+border-top-width: 1.5px;
+	border-left-color: black;
+	border-top-color: black;
+}</string>
+       </property>
+       <property name="text">
+        <string>7</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="_8">
+       <property name="minimumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#_8{ background-color: rgb(219,173,245); 
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 1.5px;
+border-bottom-width: 1.5px;
+border-left-width: 0px;
+border-top-width: 0px;
+	border-right-color: black;
+	border-bottom-color: black;}
+QPushButton#_8:pressed {
+    background-color: rgb(169, 64, 232);
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 0px;
+border-bottom-width: 0px;
+border-left-width: 1.5px;
+border-top-width: 1.5px;
+	border-left-color: black;
+	border-top-color: black;
+}</string>
+       </property>
+       <property name="text">
+        <string>8</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="_9">
+       <property name="minimumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#_9 { background-color: rgb(169,252,169);border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 1.5px;
+border-bottom-width: 1.5px;
+border-left-width: 0px;
+border-top-width: 0px;
+	border-right-color: black;
+	border-bottom-color: black; }
+QPushButton#_9:pressed {
+    background-color: rgb(0, 255, 0);
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 0px;
+border-bottom-width: 0px;
+border-left-width: 1.5px;
+border-top-width: 1.5px;
+	border-left-color: black;
+	border-top-color: black;
+}</string>
+       </property>
+       <property name="text">
+        <string>9</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="_0">
+       <property name="minimumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#_0 { background-color: rgb(254,129,122); 
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 1.5px;
+border-bottom-width: 1.5px;
+border-left-width: 0px;
+border-top-width: 0px;
+	border-right-color: black;
+	border-bottom-color: black;}
+QPushButton#_0:pressed {
+    background-color: rgb(255, 0, 0);
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 0px;
+border-bottom-width: 0px;
+border-left-width: 1.5px;
+border-top-width: 1.5px;
+	border-left-color: black;
+	border-top-color: black;
+}</string>
+       </property>
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="ss">
+       <property name="minimumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#ss{ background-color: rgb(250,202,150);
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 1.5px;
+border-bottom-width: 1.5px;
+border-left-width: 0px;
+border-top-width: 0px;
+	border-right-color: black;
+	border-bottom-color: black; }
+QPushButton#ss:pressed {
+    background-color: rgb(243, 141, 29);
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 0px;
+border-bottom-width: 0px;
+border-left-width: 1.5px;
+border-top-width: 1.5px;
+	border-left-color: black;
+	border-top-color: black;
+}</string>
+       </property>
+       <property name="text">
+        <string>ß   ?</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="backspace">
+       <property name="minimumSize">
+        <size>
+         <width>123</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#backspace{ background-color: rgb(250,202,150); 
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 1.5px;
+border-bottom-width: 1.5px;
+border-left-width: 0px;
+border-top-width: 0px;
+	border-right-color: black;
+	border-bottom-color: black;}
+QPushButton#backspace:pressed {
+    background-color: rgb(243, 141, 29);
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 0px;
+border-bottom-width: 0px;
+border-left-width: 1.5px;
+border-top-width: 1.5px;
+	border-left-color: black;
+	border-top-color: black;
+}</string>
+       </property>
+       <property name="text">
+        <string>←</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="zeile_2">
+     <property name="spacing">
+      <number>40</number>
+     </property>
+     <property name="leftMargin">
+      <number>20</number>
+     </property>
+     <property name="rightMargin">
+      <number>30</number>
+     </property>
+     <item>
+      <widget class="QPushButton" name="_Q">
+       <property name="minimumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#_Q{ background-color: rgb(250,202,150); 
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 1.5px;
+border-bottom-width: 1.5px;
+border-left-width: 0px;
+border-top-width: 0px;
+	border-right-color: black;
+	border-bottom-color: black;}
+QPushButton#_Q:pressed {
+    background-color: rgb(243, 141, 29);
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 0px;
+border-bottom-width: 0px;
+border-left-width: 1.5px;
+border-top-width: 1.5px;
+	border-left-color: black;
+	border-top-color: black;
+}</string>
+       </property>
+       <property name="text">
+        <string>Q</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="_W">
+       <property name="minimumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#_W { background-color: rgb(254,129,122);
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 1.5px;
+border-bottom-width: 1.5px;
+border-left-width: 0px;
+border-top-width: 0px;
+	border-right-color: black;
+	border-bottom-color: black; }
+QPushButton#_W:pressed {
+    background-color: rgb(255, 0, 0);
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 0px;
+border-bottom-width: 0px;
+border-left-width: 1.5px;
+border-top-width: 1.5px;
+	border-left-color: black;
+	border-top-color: black;
+
+}</string>
+       </property>
+       <property name="text">
+        <string>W</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="_E">
+       <property name="minimumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#_E { background-color: rgb(169,252,169); 
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 1.5px;
+border-bottom-width: 1.5px;
+border-left-width: 0px;
+border-top-width: 0px;
+	border-right-color: black;
+	border-bottom-color: black;}
+QPushButton#_E:pressed {
+    background-color: rgb(0, 255, 0);
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 0px;
+border-bottom-width: 0px;
+border-left-width: 1.5px;
+border-top-width: 1.5px;
+	border-left-color: black;
+	border-top-color: black;
+}</string>
+       </property>
+       <property name="text">
+        <string>E</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="_R">
+       <property name="minimumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#_R { background-color: rgb(196,194,252);
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 1.5px;
+border-bottom-width: 1.5px;
+border-left-width: 0px;
+border-top-width: 0px;
+	border-right-color: black;
+	border-bottom-color: black; }
+QPushButton#_R:pressed {
+    background-color: rgb(114, 111, 247);
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 0px;
+border-bottom-width: 0px;
+border-left-width: 1.5px;
+border-top-width: 1.5px;
+	border-left-color: black;
+	border-top-color: black;
+}</string>
+       </property>
+       <property name="text">
+        <string>R</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="_T">
+       <property name="minimumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#_T{ background-color: rgb(196,194,252);
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 1.5px;
+border-bottom-width: 1.5px;
+border-left-width: 0px;
+border-top-width: 0px;
+	border-right-color: black;
+	border-bottom-color: black; }
+QPushButton#_T:pressed {
+    background-color: rgb(114, 111, 247);
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 0px;
+border-bottom-width: 0px;
+border-left-width: 1.5px;
+border-top-width: 1.5px;
+	border-left-color: black;
+	border-top-color: black;
+}</string>
+       </property>
+       <property name="text">
+        <string>T</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="_Z">
+       <property name="minimumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#_Z{ background-color: rgb(219,173,245);
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 1.5px;
+border-bottom-width: 1.5px;
+border-left-width: 0px;
+border-top-width: 0px;
+	border-right-color: black;
+	border-bottom-color: black; }
+QPushButton#_Z:pressed {
+    background-color: rgb(169, 64, 232);
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 0px;
+border-bottom-width: 0px;
+border-left-width: 1.5px;
+border-top-width: 1.5px;
+	border-left-color: black;
+	border-top-color: black;
+}</string>
+       </property>
+       <property name="text">
+        <string>Z</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="_U">
+       <property name="minimumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#_U{ background-color: rgb(219,173,245);
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 1.5px;
+border-bottom-width: 1.5px;
+border-left-width: 0px;
+border-top-width: 0px;
+	border-right-color: black;
+	border-bottom-color: black; }
+QPushButton#_U:pressed {
+    background-color: rgb(169, 64, 232);
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 0px;
+border-bottom-width: 0px;
+border-left-width: 1.5px;
+border-top-width: 1.5px;
+	border-left-color: black;
+	border-top-color: black;
+}</string>
+       </property>
+       <property name="text">
+        <string>U</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="_Ii">
+       <property name="minimumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#_Ii { background-color: rgb(169,252,169); 
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 1.5px;
+border-bottom-width: 1.5px;
+border-left-width: 0px;
+border-top-width: 0px;
+	border-right-color: black;
+	border-bottom-color: black;}
+QPushButton#_Ii:pressed {
+    background-color: rgb(0, 255, 0);
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 0px;
+border-bottom-width: 0px;
+border-left-width: 1.5px;
+border-top-width: 1.5px;
+	border-left-color: black;
+	border-top-color: black;
+}</string>
+       </property>
+       <property name="text">
+        <string>I</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="_O">
+       <property name="minimumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#_O { background-color: rgb(254,129,122); 
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 1.5px;
+border-bottom-width: 1.5px;
+border-left-width: 0px;
+border-top-width: 0px;
+	border-right-color: black;
+	border-bottom-color: black;}
+QPushButton#_O:pressed {
+    background-color: rgb(255, 0, 0);
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 0px;
+border-bottom-width: 0px;
+border-left-width: 1.5px;
+border-top-width: 1.5px;
+	border-left-color: black;
+	border-top-color: black;
+}</string>
+       </property>
+       <property name="text">
+        <string>O</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="_P">
+       <property name="minimumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#_P{ background-color: rgb(250,202,150); 
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 1.5px;
+border-bottom-width: 1.5px;
+border-left-width: 0px;
+border-top-width: 0px;
+	border-right-color: black;
+	border-bottom-color: black;}
+QPushButton#_P:pressed {
+    background-color: rgb(243, 141, 29);
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 0px;
+border-bottom-width: 0px;
+border-left-width: 1.5px;
+border-top-width: 1.5px;
+	border-left-color: black;
+	border-top-color: black;
+}</string>
+       </property>
+       <property name="text">
+        <string>P</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="_ue">
+       <property name="minimumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#_ue{ background-color: rgb(250,202,150);
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 1.5px;
+border-bottom-width: 1.5px;
+border-left-width: 0px;
+border-top-width: 0px;
+	border-right-color: black;
+	border-bottom-color: black; }
+QPushButton#_ue:pressed {
+    background-color: rgb(243, 141, 29);
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 0px;
+border-bottom-width: 0px;
+border-left-width: 1.5px;
+border-top-width: 1.5px;
+	border-left-color: black;
+	border-top-color: black;
+}</string>
+       </property>
+       <property name="text">
+        <string>Ü</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="_enter">
+       <property name="minimumSize">
+        <size>
+         <width>73</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#_enter{ background-color: rgb(250,202,150); 
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 1.5px;
+border-bottom-width: 1.5px;
+border-left-width: 0px;
+border-top-width: 0px;
+	border-right-color: black;
+	border-bottom-color: black;}
+QPushButton#_enter:pressed {
+    background-color: rgb(243, 141, 29);
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 0px;
+border-bottom-width: 0px;
+border-left-width: 1.5px;
+border-top-width: 1.5px;
+	border-left-color: black;
+	border-top-color: black;
+}</string>
+       </property>
+       <property name="text">
+        <string>↲</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="zeile_3">
+     <property name="spacing">
+      <number>25</number>
+     </property>
+     <property name="leftMargin">
+      <number>40</number>
+     </property>
+     <item>
+      <widget class="QPushButton" name="_A">
+       <property name="minimumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#_A{ background-color: rgb(250,202,150); 
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 1.5px;
+border-bottom-width: 1.5px;
+border-left-width: 0px;
+border-top-width: 0px;
+	border-right-color: black;
+	border-bottom-color: black;}
+QPushButton#_A:pressed {
+    background-color: rgb(243, 141, 29);
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 0px;
+border-bottom-width: 0px;
+border-left-width: 1.5px;
+border-top-width: 1.5px;
+	border-left-color: black;
+	border-top-color: black;
+}</string>
+       </property>
+       <property name="text">
+        <string>A</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="_S">
+       <property name="minimumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#_S { background-color: rgb(254,129,122);
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 1.5px;
+border-bottom-width: 1.5px;
+border-left-width: 0px;
+border-top-width: 0px;
+	border-right-color: black;
+	border-bottom-color: black; }
+QPushButton#_S:pressed {
+    background-color: rgb(255, 0, 0);
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 0px;
+border-bottom-width: 0px;
+border-left-width: 1.5px;
+border-top-width: 1.5px;
+	border-left-color: black;
+	border-top-color: black;
+}</string>
+       </property>
+       <property name="text">
+        <string>S</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="_D">
+       <property name="minimumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#_D { background-color: rgb(169,252,169); 
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 1.5px;
+border-bottom-width: 1.5px;
+border-left-width: 0px;
+border-top-width: 0px;
+	border-right-color: black;
+	border-bottom-color: black;}
+QPushButton#_D:pressed {
+    background-color: rgb(0, 255, 0);
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 0px;
+border-bottom-width: 0px;
+border-left-width: 1.5px;
+border-top-width: 1.5px;
+	border-left-color: black;
+	border-top-color: black;
+}</string>
+       </property>
+       <property name="text">
+        <string>D</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="_F">
+       <property name="minimumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#_F{ background-color: rgb(196,194,252);
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 1.5px;
+border-bottom-width: 1.5px;
+border-left-width: 0px;
+border-top-width: 0px;
+	border-right-color: black;
+	border-bottom-color: black; }
+QPushButton#_F:pressed {
+    background-color: rgb(114, 111, 247);
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 0px;
+border-bottom-width: 0px;
+border-left-width: 1.5px;
+border-top-width: 1.5px;
+	border-left-color: black;
+	border-top-color: black;
+}</string>
+       </property>
+       <property name="text">
+        <string>F</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="_G">
+       <property name="minimumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#_G{ background-color: rgb(196,194,252); 
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 1.5px;
+border-bottom-width: 1.5px;
+border-left-width: 0px;
+border-top-width: 0px;
+	border-right-color: black;
+	border-bottom-color: black;}
+QPushButton#_G:pressed {
+    background-color: rgb(114, 111, 247);
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 0px;
+border-bottom-width: 0px;
+border-left-width: 1.5px;
+border-top-width: 1.5px;
+	border-left-color: black;
+	border-top-color: black;
+}</string>
+       </property>
+       <property name="text">
+        <string>G</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="_H">
+       <property name="minimumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#_H{ background-color: rgb(219,173,245); border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 1.5px;
+border-bottom-width: 1.5px;
+border-left-width: 0px;
+border-top-width: 0px;
+	border-right-color: black;
+	border-bottom-color: black;}
+QPushButton#_H:pressed {
+    background-color: rgb(169, 64, 232);
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 0px;
+border-bottom-width: 0px;
+border-left-width: 1.5px;
+border-top-width: 1.5px;
+	border-left-color: black;
+	border-top-color: black;
+}</string>
+       </property>
+       <property name="text">
+        <string>H</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="_J">
+       <property name="minimumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#_J{ background-color: rgb(219,173,245);
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 1.5px;
+border-bottom-width: 1.5px;
+border-left-width: 0px;
+border-top-width: 0px;
+	border-right-color: black;
+	border-bottom-color: black; }
+QPushButton#_J:pressed {
+    background-color: rgb(169, 64, 232);
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 0px;
+border-bottom-width: 0px;
+border-left-width: 1.5px;
+border-top-width: 1.5px;
+	border-left-color: black;
+	border-top-color: black;
+}</string>
+       </property>
+       <property name="text">
+        <string>J</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="_K">
+       <property name="minimumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#_K { background-color: rgb(169,252,169);border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 1.5px;
+border-bottom-width: 1.5px;
+border-left-width: 0px;
+border-top-width: 0px;
+	border-right-color: black;
+	border-bottom-color: black; }
+QPushButton#_K:pressed {
+    background-color: rgb(0, 255, 0);
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 0px;
+border-bottom-width: 0px;
+border-left-width: 1.5px;
+border-top-width: 1.5px;
+	border-left-color: black;
+	border-top-color: black;
+}</string>
+       </property>
+       <property name="text">
+        <string>K</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="_L">
+       <property name="minimumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#_L { background-color: rgb(254,129,122); 
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 1.5px;
+border-bottom-width: 1.5px;
+border-left-width: 0px;
+border-top-width: 0px;
+	border-right-color: black;
+	border-bottom-color: black;}
+QPushButton#_L:pressed {
+    background-color: rgb(255, 0, 0);
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 0px;
+border-bottom-width: 0px;
+border-left-width: 1.5px;
+border-top-width: 1.5px;
+	border-left-color: black;
+	border-top-color: black;
+}</string>
+       </property>
+       <property name="text">
+        <string>L</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="_oe">
+       <property name="minimumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#_oe{ background-color: rgb(250,202,150); 
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 1.5px;
+border-bottom-width: 1.5px;
+border-left-width: 0px;
+border-top-width: 0px;
+	border-right-color: black;
+	border-bottom-color: black;}
+QPushButton#_oe:pressed {
+    background-color: rgb(243, 141, 29);
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 0px;
+border-bottom-width: 0px;
+border-left-width: 1.5px;
+border-top-width: 1.5px;
+	border-left-color: black;
+	border-top-color: black;
+}</string>
+       </property>
+       <property name="text">
+        <string>Ö</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="_ae">
+       <property name="minimumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#_ae{ background-color: rgb(250,202,150);
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 1.5px;
+border-bottom-width: 1.5px;
+border-left-width: 0px;
+border-top-width: 0px;
+	border-right-color: black;
+	border-bottom-color: black; }
+QPushButton#_ae:pressed {
+    background-color: rgb(243, 141, 29);
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 0px;
+border-bottom-width: 0px;
+border-left-width: 1.5px;
+border-top-width: 1.5px;
+	border-left-color: black;
+	border-top-color: black;
+}</string>
+       </property>
+       <property name="text">
+        <string>Ä</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="_hashtag">
+       <property name="minimumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#_hashtag{ background-color: rgb(250,202,150); 
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 1.5px;
+border-bottom-width: 1.5px;
+border-left-width: 0px;
+border-top-width: 0px;
+	border-right-color: black;
+	border-bottom-color: black;}
+QPushButton#_hashtag:pressed {
+    background-color: rgb(243, 141, 29);
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 0px;
+border-bottom-width: 0px;
+border-left-width: 1.5px;
+border-top-width: 1.5px;
+	border-left-color: black;
+	border-top-color: black;
+}</string>
+       </property>
+       <property name="text">
+        <string>#</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="zeile_4">
+     <property name="spacing">
+      <number>120</number>
+     </property>
+     <property name="rightMargin">
+      <number>200</number>
+     </property>
+     <item>
+      <widget class="QPushButton" name="_umschaltL">
+       <property name="minimumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#_umschaltL{ background-color: rgb(250,202,150); 
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 1.5px;
+border-bottom-width: 1.5px;
+border-left-width: 0px;
+border-top-width: 0px;
+	border-right-color: black;
+	border-bottom-color: black;}
+QPushButton#_umschaltL:pressed {
+    background-color: rgb(243, 141, 29);
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 0px;
+border-bottom-width: 0px;
+border-left-width: 1.5px;
+border-top-width: 1.5px;
+	border-left-color: black;
+	border-top-color: black;
+}</string>
+       </property>
+       <property name="text">
+        <string>↑</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="_Y">
+       <property name="minimumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#_Y{ background-color: rgb(250,202,150); 
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 1.5px;
+border-bottom-width: 1.5px;
+border-left-width: 0px;
+border-top-width: 0px;
+	border-right-color: black;
+	border-bottom-color: black;}
+QPushButton#_Y:pressed {
+    background-color: rgb(243, 141, 29);
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 0px;
+border-bottom-width: 0px;
+border-left-width: 1.5px;
+border-top-width: 1.5px;
+	border-left-color: black;
+	border-top-color: black;
+}</string>
+       </property>
+       <property name="text">
+        <string>Y</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="_X">
+       <property name="minimumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#_X { background-color: rgb(254,129,122); 
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 1.5px;
+border-bottom-width: 1.5px;
+border-left-width: 0px;
+border-top-width: 0px;
+	border-right-color: black;
+	border-bottom-color: black;}
+QPushButton#_X:pressed {
+    background-color: rgb(255, 0, 0);
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 0px;
+border-bottom-width: 0px;
+border-left-width: 1.5px;
+border-top-width: 1.5px;
+	border-left-color: black;
+	border-top-color: black;
+}</string>
+       </property>
+       <property name="text">
+        <string>X</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="_C">
+       <property name="minimumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#_C{ background-color: rgb(169,252,169); 
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 1.5px;
+border-bottom-width: 1.5px;
+border-left-width: 0px;
+border-top-width: 0px;
+	border-right-color: black;
+	border-bottom-color: black;}
+QPushButton#_C:pressed {
+    background-color: rgb(0, 255, 0);
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 0px;
+border-bottom-width: 0px;
+border-left-width: 1.5px;
+border-top-width: 1.5px;
+	border-left-color: black;
+	border-top-color: black;
+}</string>
+       </property>
+       <property name="text">
+        <string>C</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="_V">
+       <property name="minimumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#_V{ background-color: rgb(196,194,252); 
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 1.5px;
+border-bottom-width: 1.5px;
+border-left-width: 0px;
+border-top-width: 0px;
+	border-right-color: black;
+	border-bottom-color: black;}
+QPushButton#_V:pressed {
+    background-color: rgb(114, 111, 247);
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 0px;
+border-bottom-width: 0px;
+border-left-width: 1.5px;
+border-top-width: 1.5px;
+	border-left-color: black;
+	border-top-color: black;
+}</string>
+       </property>
+       <property name="text">
+        <string>V</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="_B">
+       <property name="minimumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#_B{ background-color: rgb(196,194,252);
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 1.5px;
+border-bottom-width: 1.5px;
+border-left-width: 0px;
+border-top-width: 0px;
+	border-right-color: black;
+	border-bottom-color: black; }
+QPushButton#_B:pressed {
+    background-color: rgb(114, 111, 247);
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 0px;
+border-bottom-width: 0px;
+border-left-width: 1.5px;
+border-top-width: 1.5px;
+	border-left-color: black;
+	border-top-color: black;
+}</string>
+       </property>
+       <property name="text">
+        <string>B</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="_N">
+       <property name="minimumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#_N{ background-color: rgb(219,173,245);
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 1.5px;
+border-bottom-width: 1.5px;
+border-left-width: 0px;
+border-top-width: 0px;
+	border-right-color: black;
+	border-bottom-color: black; }
+QPushButton#_N:pressed {
+    background-color: rgb(169, 64, 232);
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 0px;
+border-bottom-width: 0px;
+border-left-width: 1.5px;
+border-top-width: 1.5px;
+	border-left-color: black;
+	border-top-color: black;
+}</string>
+       </property>
+       <property name="text">
+        <string>N</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="_M">
+       <property name="minimumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#_M{ background-color: rgb(219,173,245); border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 1.5px;
+border-bottom-width: 1.5px;
+border-left-width: 0px;
+border-top-width: 0px;
+	border-right-color: black;
+	border-bottom-color: black;}
+QPushButton#_M:pressed {
+    background-color: rgb(169, 64, 232);
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 0px;
+border-bottom-width: 0px;
+border-left-width: 1.5px;
+border-top-width: 1.5px;
+	border-left-color: black;
+	border-top-color: black;
+}</string>
+       </property>
+       <property name="text">
+        <string>M</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="_comma">
+       <property name="minimumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#_comma { background-color: rgb(169,252,169); border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 1.5px;
+border-bottom-width: 1.5px;
+border-left-width: 0px;
+border-top-width: 0px;
+	border-right-color: black;
+	border-bottom-color: black;}
+QPushButton#_comma:pressed {
+    background-color: rgb(0, 255, 0);
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 0px;
+border-bottom-width: 0px;
+border-left-width: 1.5px;
+border-top-width: 1.5px;
+	border-left-color: black;
+	border-top-color: black;
+}</string>
+       </property>
+       <property name="text">
+        <string>,   ;</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="_point">
+       <property name="minimumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#_point { background-color: rgb(254,129,122);
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 1.5px;
+border-bottom-width: 1.5px;
+border-left-width: 0px;
+border-top-width: 0px;
+	border-right-color: black;
+	border-bottom-color: black; }
+QPushButton#_point:pressed {
+    background-color: rgb(255, 0, 0);
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 0px;
+border-bottom-width: 0px;
+border-left-width: 1.5px;
+border-top-width: 1.5px;
+	border-left-color: black;
+	border-top-color: black;
+}</string>
+       </property>
+       <property name="text">
+        <string>.   :</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="_underscore">
+       <property name="minimumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#_underscore{ background-color: rgb(250,202,150); 
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 1.5px;
+border-bottom-width: 1.5px;
+border-left-width: 0px;
+border-top-width: 0px;
+	border-right-color: black;
+	border-bottom-color: black;}
+QPushButton#_underscore:pressed {
+    background-color: rgb(243, 141, 29);
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 0px;
+border-bottom-width: 0px;
+border-left-width: 1.5px;
+border-top-width: 1.5px;
+	border-left-color: black;
+	border-top-color: black;
+}</string>
+       </property>
+       <property name="text">
+        <string>-   _</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="_umschaltR">
+       <property name="minimumSize">
+        <size>
+         <width>124</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#_umschaltR{ background-color: rgb(250,202,150);
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 1.5px;
+border-bottom-width: 1.5px;
+border-left-width: 0px;
+border-top-width: 0px;
+	border-right-color: black;
+	border-bottom-color: black; }
+QPushButton#_umschaltR:pressed {
+    background-color: rgb(243, 141, 29);
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 0px;
+border-bottom-width: 0px;
+border-left-width: 1.5px;
+border-top-width: 1.5px;
+	border-left-color: black;
+	border-top-color: black;
+}</string>
+       </property>
+       <property name="text">
+        <string>↑</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="zeile_5">
+     <item>
+      <widget class="QPushButton" name="space">
+       <property name="minimumSize">
+        <size>
+         <width>120</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#space{ background-color: rgb(166,247,228);
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 1.5px;
+border-bottom-width: 1.5px;
+border-left-width: 0px;
+border-top-width: 0px;
+	border-right-color: black;
+	border-bottom-color: black; }
+QPushButton#space:pressed {
+    background-color: rgb(66, 238, 200);
+border-style: outset;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+	border-right-width: 0px;
+border-bottom-width: 0px;
+border-left-width: 1.5px;
+border-top-width: 1.5px;
+	border-left-color: black;
+	border-top-color: black;
+}</string>
+       </property>
+       <property name="text">
+        <string>Leertaste</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
