@@ -121,7 +121,7 @@ void MainWindow::timer_timeout()
 
 void MainWindow::on_anmelden_clicked()
 {
- login log;             // Objekt von Login erzeugen
+ login log;
  log.setModal(true);
  QObject::connect(&log,SIGNAL(signal_username_set(QString)),this,SLOT(on_label_username_set_user(QString)));
  log.exec();
