@@ -592,6 +592,7 @@ void MainWindow::on_eingabefeld_textChanged(const QString &typedwords)
       {
           ui->eingabefeld->setText(typedwords.mid(0));
           fehlersuche->NumberofErrors++;
+          return
       }
 
       int counter = 0;
