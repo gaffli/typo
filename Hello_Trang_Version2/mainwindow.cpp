@@ -585,12 +585,13 @@ void MainWindow::on_eingabefeld_textChanged(const QString &typedwords)
 {
   if(typedwords.length() == 0)
     return;
+
   if(typedwords.at(typedwords.length() - 1) == ' ')
     {
 
       if(typedwords.length() >= 2 && typedwords.at(typedwords.length() - 2) == ' ')
       {
-          ui->eingabefeld->setText(typedwords.mid(0));
+          ui->eingabefeld->setText(typedwords.mid(-1));
           fehlersuche->NumberofErrors++;
           return
       }
