@@ -143,7 +143,7 @@ void MainWindow::on_lernen_clicked()
   if (!typodb.open())
   {
   typodb=QSqlDatabase::addDatabase("QSQLITE");                //Datenbank Objekt erzeugt bzw ein SQLite Datenbank
-  typodb.setDatabaseName("D:/SQLite2/TypoDB.db");             //Pfad der Datenbank
+  typodb.setDatabaseName("C:/Users/madeb/Desktop/Lennart arbeit/Hello_Trang_Version2/Datenbank/TypoDB.db");             //Pfad der Datenbank
   typodb.open();
   }
 
@@ -588,16 +588,9 @@ void MainWindow::on_eingabefeld_textChanged(const QString &typedwords)
 
   if(typedwords.at(typedwords.length() - 1) == ' ')
     {
-
-      if(typedwords.length() >= 2 && typedwords.at(typedwords.length() - 2) == ' ')
-      {
-          ui->eingabefeld->setText(typedwords.mid(-1));
-          fehlersuche->NumberofErrors++;
-          return
-      }
-
       int counter = 0;
-      int firstSpace = - 1;
+      int firstSpace = -1;
+
       for(int i = 0; i < typedwords.length(); i++)
         {
           if(typedwords.at(i) == ' ')
@@ -609,6 +602,16 @@ void MainWindow::on_eingabefeld_textChanged(const QString &typedwords)
                 }
             }
         }
+
+      if(typedwords.size() == 1 && typedwords.at(typedwords.size()-1) == ' ')
+      {
+          ui->eingabefeld->setText(typedwords.mid(firstSpace + 1));
+          fehlersuche->NumberofErrors++;
+          int fehler=fehlersuche->NumberofErrors;
+          ui->label_fehler->setNum(fehler);
+          return;
+      }
+
       if(counter >=1)
         {
           QString tmpString = typedwords.left(firstSpace);
@@ -619,8 +622,8 @@ void MainWindow::on_eingabefeld_textChanged(const QString &typedwords)
           ui->label_WPM->setNum(woerter);
           int fehler=fehlersuche->NumberofErrors;
           ui->label_fehler->setNum(fehler);
-
         }
+
     }
 }
 
