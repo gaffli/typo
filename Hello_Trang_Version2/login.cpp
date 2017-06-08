@@ -131,6 +131,7 @@ void login::on_but_anmelden_clicked()
            ui->label_username->setText(benutzername);
            emit signal_username_set(benutzername);
 
+           // ab hier eignene funktion mit benutzername = login::benutzername etc.
             qry_login.exec("select COUNT(Art) from Statistik where Art='zeit' and Benutzername='"+ benutzername +"'");
             while (qry_login.next())
             ui->label_modizeit->setText(qry_login.value(0).toString());

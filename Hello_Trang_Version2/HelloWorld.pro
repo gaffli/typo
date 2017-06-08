@@ -29,7 +29,8 @@ SOURCES += main.cpp\
     info.cpp \
     key.cpp \
     benutzerhandbuch.cpp \
-    fehleranalyse.cpp
+    fehleranalyse.cpp \
+    benutzer.cpp
 
 
 HEADERS  += mainwindow.h \
@@ -37,7 +38,8 @@ HEADERS  += mainwindow.h \
     info.h \
     key.h \
     benutzerhandbuch.h \
-    fehleranalyse.h
+    fehleranalyse.h \
+    benutzer.h
 
 @win32:LIBS += C:\Windows\WinSxS\wow64_microsoft-windows-kernel32_31bf3856ad364e35_10.0.14393.0_none_cb86fb0ea15eef10\kernel32@
 FORMS    += mainwindow.ui \

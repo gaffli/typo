@@ -12,9 +12,9 @@ public:
   void end();
   void reset();
   bool IsRunning();
-  int NumberofErrors;
+  int NumberofErrors=0;
   int NumberofCorrectWords=0;
-  int WPM;
+  int WPM=0;
   void analyse(QString WordfromUser);
 
 private:

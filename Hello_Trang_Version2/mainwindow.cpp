@@ -365,6 +365,8 @@ void MainWindow::on_button_uebungende_clicked()
   ui->label_zeit->setText("Los Geht's!");
   ui->label_zeit->hide();
   ui->label->hide();
+  ui->label_fehler->setText("0");
+  ui->label_WPM->setText("0");
   if(fehlersuche->IsRunning())
     {
       fehlersuche->end();
