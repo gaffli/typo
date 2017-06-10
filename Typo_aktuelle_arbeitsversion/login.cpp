@@ -161,6 +161,6 @@ void login::use_querylogin(QSqlQuery qry_login)
 
    qry_login.exec("select AVG(WPM) from Statistik where Benutzername='"+ login::benutzername +"'");
    while (qry_login.next())
-   ui->label_wpm->setText(qry_login.value(0).toString());
+   ui->label_wpm->setNum(qry_login.value(0).toInt());
 
 }
