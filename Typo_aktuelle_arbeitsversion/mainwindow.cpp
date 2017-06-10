@@ -54,7 +54,7 @@ MainWindow::MainWindow(QWidget *parent) :
     typo_db.setHostName("89.163.178.19");
     typo_db.open();
 
-    ui->label_username->hide();
+
 
 }
 
@@ -86,34 +86,38 @@ void MainWindow::timer_timeout()
       if (ui->radioButton_1->isChecked())              // 1 Minute Zeit
          {
           teiler=60;
-          art="zeit1";
+          art="zeit";
          }
       else if (ui->radioButton_2->isChecked())        // 2 Minute Zeit
          {
           teiler=120;
-           art="zeit2";
+           art="zeit";
          }
       else if (ui->radioButton_3->isChecked())        // 3 Minute Zeit
          {
           teiler=180;
-          art="zeit3";
+          art="zeit";
 
          }
       else if (ui->radioButton_5->isChecked())        // 5 Minute Zeit
          {
           teiler=300;
-          art="zeit5";
+          art="zeit";
 
          }
 
-      woerter=woerter/teiler;
-      fehler=fehler/teiler;
-
+      //woerter=woerter/teiler;
+      //fehler=fehler/teiler;
       ui->label_fpm->setNum(fehler);
       ui->label_wpm->setNum(woerter);
       QString name;
       name=ui->label_username->text();
-
+      QString fpm;
+      QString wpm;
+    fpm=ui->label_fpm->text();
+    wpm=ui->label_wpm->text();
+     QSqlQuery qry;
+      qry.exec("insert into Statistik (Benutzername, Art, FPM, WPM) values ('"+name +"','"+art +"','"+fpm+"','"+ wpm +"')");
 
 }
 }
@@ -143,7 +147,7 @@ void MainWindow::on_lernen_clicked()
   if (!typodb.open())
   {
   typodb=QSqlDatabase::addDatabase("QSQLITE");                //Datenbank Objekt erzeugt bzw ein SQLite Datenbank
-  typodb.setDatabaseName("C:/Users/madeb/Desktop/Lennart arbeit/Hello_Trang_Version2/Datenbank/TypoDB.db");             //Pfad der Datenbank
+  typodb.setDatabaseName(".../Datenbank/TypoDB.db");             //Pfad der Datenbank
   typodb.open();
   }
 

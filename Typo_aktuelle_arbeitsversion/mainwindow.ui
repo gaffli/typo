@@ -878,8 +878,8 @@ border-top-width: 1.5px;
     <widget class="QLabel" name="label_username">
      <property name="geometry">
       <rect>
-       <x>320</x>
-       <y>10</y>
+       <x>210</x>
+       <y>40</y>
        <width>121</width>
        <height>31</height>
       </rect>

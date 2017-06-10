@@ -143,10 +143,9 @@ void login::use_querylogin(QSqlQuery qry_login)
   ui->label_username->setText(login::benutzername);
   emit signal_username_set(login::benutzername);
 
-  // ab hier eignene funktion mit benutzername = login::benutzername etc.
    qry_login.exec("select COUNT(Art) from Statistik where Art='zeit' and Benutzername='"+ login::benutzername +"'");
    while (qry_login.next())
-   ui->label_modizeit->setText(qry_login.value(0).toString());
+   ui->label_modizeit->setNum(qry_login.value(0).toInt());
 
    qry_login.exec("select COUNT(Art) from Statistik where Art='ueben' and Benutzername='"+ login::benutzername +"'");
    while (qry_login.next())
@@ -158,7 +157,7 @@ void login::use_querylogin(QSqlQuery qry_login)
 
    qry_login.exec("select AVG(FPM) from Statistik where Benutzername='"+ login::benutzername +"'");
    while (qry_login.next())
-   ui->label_fpm->setText(qry_login.value(0).toString());
+   ui->label_fpm->setNum(qry_login.value(0).toInt());
 
    qry_login.exec("select AVG(WPM) from Statistik where Benutzername='"+ login::benutzername +"'");
    while (qry_login.next())

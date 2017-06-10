@@ -505,7 +505,7 @@ public:
         eingabefeld->setGeometry(QRect(110, 590, 1040, 40));
         label_username = new QLabel(frame_lernen);
         label_username->setObjectName(QStringLiteral("label_username"));
-        label_username->setGeometry(QRect(320, 10, 121, 31));
+        label_username->setGeometry(QRect(210, 40, 121, 31));
         label_WPM = new QLabel(frame_lernen);
         label_WPM->setObjectName(QStringLiteral("label_WPM"));
         label_WPM->setGeometry(QRect(530, 80, 61, 31));

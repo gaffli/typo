@@ -15,6 +15,7 @@ class login : public QDialog
 
 public:
     explicit login(QWidget *parent = 0);
+    void use_querylogin(QSqlQuery qry_login);
 
     ~login();
 
@@ -37,7 +38,6 @@ private:
     QSqlDatabase typo_db =  QSqlDatabase::addDatabase("QMYSQL");
     QSqlDatabase typodb;
     QString benutzername, passwort, email;
-    void use_querylogin(QSqlQuery qry_login);
 
 
 };
