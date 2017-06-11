@@ -503,6 +503,7 @@ public:
         eingabefeld = new QLineEdit(frame_lernen);
         eingabefeld->setObjectName(QStringLiteral("eingabefeld"));
         eingabefeld->setGeometry(QRect(110, 590, 1040, 40));
+        eingabefeld->setCursorPosition(0);
         label_username = new QLabel(frame_lernen);
         label_username->setObjectName(QStringLiteral("label_username"));
         label_username->setGeometry(QRect(210, 40, 121, 31));

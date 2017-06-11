@@ -17,6 +17,7 @@
 #include<QFileDialog>
 #include<QMessageBox>
 #include<QTimer>
+#include<QTextCodec>
 #include <stdlib.h>
 
 
@@ -147,11 +148,11 @@ void MainWindow::on_lernen_clicked()
   ui->frame_ueben->hide();
 
 
-    QDir dir("C:/test");
-    QString s= dir.relativeFilePath("test/Datenbank/TypoDB.db");
+   QDir dir("C:/test");
+   QString s= dir.relativeFilePath("test/Datenbank/TypoDB.db");
 
   typodb=QSqlDatabase::addDatabase("QSQLITE");                //Datenbank Objekt erzeugt bzw ein SQLite Datenbank
-  typodb.setDatabaseName(s);             //Pfad der Datenbank "D:/SQlite2/TypoDB.db"
+  typodb.setDatabaseName("D:/SQlite2/TypoDB.db");             //Pfad der Datenbank "D:/SQlite2/TypoDB.db"
   typodb.open();
 
 
@@ -176,6 +177,11 @@ void MainWindow::on_bl_zeige_clicked()
        QString texte=query.value(record.indexOf("texte")).toString();       //Der aus der MYSQL Datenbank entnomme Text wird in einen QString gespeichtert und anschließent ausgegeben
        ui->frame_lernen->show();
        ui->textBrowser->setText(texte);
+
+       ui->eingabefeld->setFocus();
+
+
+
        if(!fehlersuche->IsRunning())
          {
           fehlersuche->start(texte);
@@ -201,6 +207,7 @@ void MainWindow::on_bl_mittel_clicked()
        QString texte=query.value(record.indexOf("texte")).toString();
        ui->frame_lernen->show();
        ui->textBrowser->setText(texte);
+        ui->eingabefeld->setFocus();
        if(!fehlersuche->IsRunning())
          {
           fehlersuche->start(texte);
@@ -227,6 +234,7 @@ void MainWindow::on_bl_ring_clicked()
        QString texte=query.value(record.indexOf("texte")).toString();
        ui->frame_lernen->show();
        ui->textBrowser->setText(texte);
+        ui->eingabefeld->setFocus();
        if(!fehlersuche->IsRunning())
          {
           fehlersuche->start(texte);
@@ -253,6 +261,7 @@ void MainWindow::on_bl_kleiner_clicked()
        QString texte=query.value(record.indexOf("texte")).toString();
        ui->frame_lernen->show();
        ui->textBrowser->setText(texte);
+        ui->eingabefeld->setFocus();
        if(!fehlersuche->IsRunning())
          {
           fehlersuche->start(texte);
@@ -279,6 +288,7 @@ void MainWindow::on_br_zeige_clicked()
        QString texte=query.value(record.indexOf("texte")).toString();
        ui->frame_lernen->show();
        ui->textBrowser->setText(texte);
+        ui->eingabefeld->setFocus();
        if(!fehlersuche->IsRunning())
          {
           fehlersuche->start(texte);
@@ -305,6 +315,7 @@ void MainWindow::on_br_mittel_clicked()
        QString texte=query.value(record.indexOf("texte")).toString();
        ui->frame_lernen->show();
        ui->textBrowser->setText(texte);
+        ui->eingabefeld->setFocus();
        if(!fehlersuche->IsRunning())
          {
           fehlersuche->start(texte);
@@ -331,6 +342,7 @@ void MainWindow::on_br_ring_clicked()
        QString texte=query.value(record.indexOf("texte")).toString();
        ui->frame_lernen->show();
        ui->textBrowser->setText(texte);
+        ui->eingabefeld->setFocus();
        if(!fehlersuche->IsRunning())
          {
           fehlersuche->start(texte);
@@ -357,6 +369,7 @@ void MainWindow::on_br_kleiner_clicked()
        QString texte=query.value(record.indexOf("texte")).toString();
        ui->frame_lernen->show();
        ui->textBrowser->setText(texte);
+        ui->eingabefeld->setFocus();
        if(!fehlersuche->IsRunning())
          {
           fehlersuche->start(texte);
@@ -409,6 +422,7 @@ void MainWindow::on_pushButton_starten_clicked()
        QString texte=query.value(record.indexOf("Text")).toString();
        ui->frame_lernen->show();
        ui->textBrowser->setText(texte);
+        ui->eingabefeld->setFocus();
        if(!fehlersuche->IsRunning())
          {
           fehlersuche->start(texte);
@@ -426,8 +440,9 @@ void MainWindow::on_pushButton_eigener_clicked()
     QFile file(filename);
 
     file.open(QIODevice::ReadOnly | QIODevice::Text); // Als Text-Datei nur zum Lesen öffnen
-    QString text=file.readAll();
+    QString text=QLatin1String (file.readAll());
     file.close(); // Datei wieder schließen
+     ui->eingabefeld->setFocus();
     ui->textBrowser->setText(text);
 
            ui->frame_lernen->show();
@@ -473,6 +488,7 @@ void MainWindow::on_pushButton_zeitstart_clicked()
                  ui->frame_lernen->show();
                  timer->start();                               //Zeitrennen starten
                  ui->textBrowser->setText(texte);
+                  ui->eingabefeld->setFocus();
                  if(!fehlersuche->IsRunning())
                    {
                     fehlersuche->start(texte);
@@ -503,6 +519,7 @@ void MainWindow::on_pushButton_zeitstart_clicked()
                  ui->frame_lernen->show();
                  timer->start();                               //Zeitrennen starten
                  ui->textBrowser->setText(texte);
+                  ui->eingabefeld->setFocus();
                  if(!fehlersuche->IsRunning())
                    {
                     fehlersuche->start(texte);
@@ -531,6 +548,7 @@ void MainWindow::on_pushButton_zeitstart_clicked()
                  ui->frame_lernen->show();
                  timer->start();                               //Zeitrennen starten
                  ui->textBrowser->setText(texte);
+                  ui->eingabefeld->setFocus();
                  if(!fehlersuche->IsRunning())
                    {
                     fehlersuche->start(texte);
@@ -559,6 +577,7 @@ void MainWindow::on_pushButton_zeitstart_clicked()
                  ui->frame_lernen->show();
                  timer->start();                               //Zeitrennen starten
                  ui->textBrowser->setText(texte);
+                  ui->eingabefeld->setFocus();
                  if(!fehlersuche->IsRunning())
                    {
                     fehlersuche->start(texte);
