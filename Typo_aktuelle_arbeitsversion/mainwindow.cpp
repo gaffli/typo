@@ -23,6 +23,7 @@
 int cnt;                //Variable für den Countdown
 
 QTimer *timer;
+using namespace std;
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -144,12 +145,15 @@ void MainWindow::on_lernen_clicked()
   ui->frame_lernen->hide();
   ui->frame_zeit->hide();
   ui->frame_ueben->hide();
-  if (!typodb.open())
-  {
+
+
+    QDir dir("C:/test");
+    QString s= dir.relativeFilePath("test/Datenbank/TypoDB.db");
+
   typodb=QSqlDatabase::addDatabase("QSQLITE");                //Datenbank Objekt erzeugt bzw ein SQLite Datenbank
-  typodb.setDatabaseName("D:SQLite2/TypoDB.db");             //Pfad der Datenbank
+  typodb.setDatabaseName(s);             //Pfad der Datenbank "D:/SQlite2/TypoDB.db"
   typodb.open();
-  }
+
 
 
 
