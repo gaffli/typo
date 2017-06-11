@@ -155,12 +155,18 @@ void login::use_querylogin(QSqlQuery qry_login)
    while (qry_login.next())
    ui->label_modiwett->setText(qry_login.value(0).toString());
 
-   qry_login.exec("select AVG(FPM) from Statistik where Benutzername='"+ login::benutzername +"'");
+   qry_login.exec("select AVG(FPM) from Statistik where Art='zeit' and Benutzername='"+ login::benutzername +"'");
    while (qry_login.next())
    ui->label_fpm->setNum(qry_login.value(0).toInt());
 
-   qry_login.exec("select AVG(WPM) from Statistik where Benutzername='"+ login::benutzername +"'");
+   qry_login.exec("select AVG(WPM) from Statistik where Art='zeit' and Benutzername='"+ login::benutzername +"'");
    while (qry_login.next())
    ui->label_wpm->setNum(qry_login.value(0).toInt());
+
+   qry_login.exec("select COUNT(Art) from Statistik where Art='lernen' and Benutzername='"+ login::benutzername +"'");
+   while (qry_login.next())
+   ui->label_mdilernen->setNum(qry_login.value(0).toInt());
+
+
 
 }

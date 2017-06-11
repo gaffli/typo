@@ -147,7 +147,7 @@ void MainWindow::on_lernen_clicked()
   if (!typodb.open())
   {
   typodb=QSqlDatabase::addDatabase("QSQLITE");                //Datenbank Objekt erzeugt bzw ein SQLite Datenbank
-  typodb.setDatabaseName(".../Datenbank/TypoDB.db");             //Pfad der Datenbank
+  typodb.setDatabaseName("D:SQLite2/TypoDB.db");             //Pfad der Datenbank
   typodb.open();
   }
 
