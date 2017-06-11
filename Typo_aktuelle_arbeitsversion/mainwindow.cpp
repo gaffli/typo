@@ -159,8 +159,7 @@ void MainWindow::on_bl_zeige_clicked()
 {  
   ui->frame_hand->hide();
   ui->frame_menue->hide();
-  int rnd;
-  rnd=rand() % 5 + 1; // Random zwischen 1-5
+  int rnd=rand() % 5 + 1; // Random zwischen 1-5
 
   QSqlQuery query;
   query.prepare("select Texte from lernen where ID_lernen=?");  //Dem SQL Befehl wird eine Variable aus dem Programm zugewiesen
@@ -420,29 +419,24 @@ void MainWindow::on_pushButton_eigener_clicked()
 {
     //Eigener Text
    QString filename=QFileDialog::getOpenFileName(this, tr("Open File"), "C://", "Text File (*.txt)");       // Eigene txt Datein können entnommen werden, Starverzeichnis ist C
-    QFile inputFile(filename);
+    QFile file(filename);
 
-    if (inputFile.open(QIODevice::ReadOnly))
-    {
-       QString line;
-       QTextStream in(&inputFile);
-       do
-        {
-           ui->textBrowser->setText(line);
+    file.open(QIODevice::ReadOnly | QIODevice::Text); // Als Text-Datei nur zum Lesen öffnen
+    QString text=file.readAll();
+    file.close(); // Datei wieder schließen
+    ui->textBrowser->setText(text);
+
            ui->frame_lernen->show();
            ui->frame_ueben->hide();
            ui->frame_menue->hide();
-           line = in.readLine();
+
            if(!fehlersuche->IsRunning())
              {
-              fehlersuche->start(line);
+              fehlersuche->start(text);
              }
 
-        }while(!line.isNull());
-              inputFile.close();
-    }
-}
 
+}
 void MainWindow::on_pushButton_zeitstart_clicked()
 {
 
@@ -457,9 +451,8 @@ void MainWindow::on_pushButton_zeitstart_clicked()
      if (ui->radioButton_1->isChecked())        // 1 Minute Zeit
         {
             cnt =60;
-            int rnd;
-            rnd=rand() % 5 + 6; // Random zwischen 6-10
-            timer->start();                               //Zeitrennen starten
+            int rnd=rand() % 5 + 6; // Random zwischen 6-10
+            rnd=rand() % 5 + 6;
             ui->frame_lernen->show();
             ui->frame_zeit->hide();
             ui->frame_menue->hide();
@@ -474,12 +467,11 @@ void MainWindow::on_pushButton_zeitstart_clicked()
              {
                  QString texte=query.value(record.indexOf("Text")).toString();
                  ui->frame_lernen->show();
+                 timer->start();                               //Zeitrennen starten
                  ui->textBrowser->setText(texte);
                  if(!fehlersuche->IsRunning())
                    {
                     fehlersuche->start(texte);
-
-
                    }
 
 
@@ -489,9 +481,8 @@ void MainWindow::on_pushButton_zeitstart_clicked()
         {
             cnt =120;
 
-            int rnd;
-            rnd=rand() % 5 + 11; // Random zwischen 11-15
-            timer->start();                               //Zeitrennen starten
+            int rnd=rand() % 5 + 11; // Random zwischen 11-15
+            rnd=rand() % 5 + 11;
             ui->frame_lernen->show();
             ui->frame_zeit->hide();
             ui->frame_menue->hide();
@@ -506,6 +497,7 @@ void MainWindow::on_pushButton_zeitstart_clicked()
              {
                  QString texte=query.value(record.indexOf("Text")).toString();
                  ui->frame_lernen->show();
+                 timer->start();                               //Zeitrennen starten
                  ui->textBrowser->setText(texte);
                  if(!fehlersuche->IsRunning())
                    {
@@ -516,9 +508,9 @@ void MainWindow::on_pushButton_zeitstart_clicked()
      else if (ui->radioButton_3->isChecked())   // 3 Minute Zeit
         {
             cnt =180;
-            int rnd;
-            rnd=rand() % 5 + 16; // Random zwischen 16-20
-            timer->start();                               //Zeitrennen starten
+            int rnd=rand() % 5 + 16; // Random zwischen 16-20
+            rnd=rand() % 5 + 16;
+
             ui->frame_lernen->show();
             ui->frame_zeit->hide();
             ui->frame_menue->hide();
@@ -533,6 +525,7 @@ void MainWindow::on_pushButton_zeitstart_clicked()
              {
                  QString texte=query.value(record.indexOf("Text")).toString();
                  ui->frame_lernen->show();
+                 timer->start();                               //Zeitrennen starten
                  ui->textBrowser->setText(texte);
                  if(!fehlersuche->IsRunning())
                    {
@@ -543,9 +536,9 @@ void MainWindow::on_pushButton_zeitstart_clicked()
      else if (ui->radioButton_5->isChecked())   // 5 Minute Zeit
         {
             cnt =300;
-            int rnd;
+            int rnd=rand() % 5 + 21;
             rnd=rand() % 5 + 21; // Random zwischen 21-25
-            timer->start();                               //Zeitrennen starten
+
             ui->frame_lernen->show();
             ui->frame_zeit->hide();
             ui->frame_menue->hide();
@@ -560,6 +553,7 @@ void MainWindow::on_pushButton_zeitstart_clicked()
              {
                  QString texte=query.value(record.indexOf("Text")).toString();
                  ui->frame_lernen->show();
+                 timer->start();                               //Zeitrennen starten
                  ui->textBrowser->setText(texte);
                  if(!fehlersuche->IsRunning())
                    {
