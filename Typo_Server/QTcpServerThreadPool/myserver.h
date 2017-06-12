@@ -17,7 +17,7 @@ class MyServer : public QTcpServer
 public:
     explicit MyServer(QObject *parent = 0);
     void startServer();
-    QStack<std::thread::id> * id_memory;
+    std::thread::id id_memory = NULL;
 
 protected:
     void incomingConnection( qintptr handle );

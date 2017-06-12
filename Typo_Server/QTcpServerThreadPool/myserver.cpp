@@ -39,7 +39,7 @@ void MyServer::incomingConnection(qintptr handle)
     // 4. The server throws the runnable to the thread.
 
     // Note: Rannable is a task not a thread
-    MyRunnable *task = new MyRunnable(MyServer::id_memory);
+    MyRunnable *task = new MyRunnable(&MyServer::id_memory);
 
     task->setAutoDelete(false);
 

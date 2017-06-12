@@ -26,3 +26,4 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 HEADERS += \
     mytcpserver.h
+

@@ -14,7 +14,7 @@
 class MyRunnable : public QRunnable
 {
 public:
-    MyRunnable(QStack<std::thread::id> *memory_pointer);
+    MyRunnable(std::thread::id &memory_pointer);
 
 protected:
     void run();
@@ -23,7 +23,9 @@ public:
     qintptr socketDescriptor;
 
 private:
-    QStack<std::thread::id> * id_memory_pointer;
+    std::thread::id id_memory_pointer;
+    std::thread::id other_identity;
+    std::thread::id identity;
 
 };
 
