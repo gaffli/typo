@@ -148,15 +148,9 @@ void MainWindow::on_lernen_clicked()
   ui->frame_ueben->hide();
 
 
-   QDir dir("C:/test");
-   QString s= dir.relativeFilePath("test/Datenbank/TypoDB.db");
-QString dbPath = QCoreApplication::applicationDirPath() + "/TypoDB.db";
-
   typodb=QSqlDatabase::addDatabase("QSQLITE");                //Datenbank Objekt erzeugt bzw ein SQLite Datenbank
-
- qDebug() << dbPath;
+  QString dbPath = QCoreApplication::applicationDirPath() + "/TypoDB.db";
   typodb.setDatabaseName(dbPath);
-                                                                  //Pfad der Datenbank "D:/SQlite2/TypoDB.db"
   typodb.open();
 
 
@@ -169,7 +163,7 @@ void MainWindow::on_bl_zeige_clicked()
   ui->frame_hand->hide();
   ui->frame_menue->hide();
   int rnd=rand() % 5 + 1; // Random zwischen 1-5
-
+    rnd=rand() % 5 + 1;
   QSqlQuery query;
   query.prepare("select Texte from lernen where ID_lernen=?");  //Dem SQL Befehl wird eine Variable aus dem Programm zugewiesen
   query.addBindValue(rnd);
@@ -199,7 +193,7 @@ void MainWindow::on_bl_mittel_clicked()
   ui->frame_menue->hide();
   int rnd;
   rnd=rand() % 5 + 6; // Random zwischen 6-10
-
+    rnd=rand() % 5 + 6;
   QSqlQuery query;
   query.prepare("select Texte from lernen where ID_lernen=?");
   query.addBindValue(rnd);
@@ -226,7 +220,7 @@ void MainWindow::on_bl_ring_clicked()
   ui->frame_menue->hide();
   int rnd;
   rnd=rand() % 5 + 11; // Random zwischen 11-15
-
+  rnd=rand() % 5 + 11;
   QSqlQuery query;
   query.prepare("select Texte from lernen where ID_lernen=?");
   query.addBindValue(rnd);
@@ -253,7 +247,7 @@ void MainWindow::on_bl_kleiner_clicked()
   ui->frame_menue->hide();
   int rnd;
   rnd=rand() % 5 + 16; // Random zwischen 16-20
-
+   rnd=rand() % 5 + 16;
   QSqlQuery query;
   query.prepare("select Texte from lernen where ID_lernen=?");
   query.addBindValue(rnd);
@@ -280,7 +274,7 @@ void MainWindow::on_br_zeige_clicked()
   ui->frame_menue->hide();
   int rnd;
   rnd=rand() % 5 + 21; // Random zwischen 21-25
-
+    rnd=rand() % 5 + 21;
   QSqlQuery query;
   query.prepare("select Texte from lernen where ID_lernen=?");
   query.addBindValue(rnd);
@@ -307,7 +301,7 @@ void MainWindow::on_br_mittel_clicked()
   ui->frame_menue->hide();
   int rnd;
   rnd=rand() % 5 + 26; // Random zwischen 26-30
-
+   rnd=rand() % 5 + 26;
   QSqlQuery query;
   query.prepare("select Texte from lernen where ID_lernen=?");
   query.addBindValue(rnd);
@@ -334,7 +328,7 @@ void MainWindow::on_br_ring_clicked()
   ui->frame_menue->hide();
   int rnd;
   rnd=rand() % 5 + 31; // Random zwischen 31-35
-
+   rnd=rand() % 5 + 31;
   QSqlQuery query;
   query.prepare("select Texte from lernen where ID_lernen=?");
   query.addBindValue(rnd);
@@ -361,7 +355,7 @@ void MainWindow::on_br_kleiner_clicked()
   ui->frame_menue->hide();
   int rnd;
   rnd=rand() % 5 + 36; // Random zwischen 36-40
-
+  rnd=rand() % 5 + 36;
   QSqlQuery query;
   query.prepare("select Texte from lernen where ID_lernen=?");
   query.addBindValue(rnd);
@@ -446,7 +440,9 @@ void MainWindow::on_pushButton_eigener_clicked()
     file.open(QIODevice::ReadOnly | QIODevice::Text); // Als Text-Datei nur zum Lesen öffnen
     QString text=QLatin1String (file.readAll());
     file.close(); // Datei wieder schließen
-     ui->eingabefeld->setFocus();
+
+
+    ui->eingabefeld->setFocus();
     ui->textBrowser->setText(text);
 
            ui->frame_lernen->show();
