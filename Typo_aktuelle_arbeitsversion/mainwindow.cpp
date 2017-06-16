@@ -449,13 +449,16 @@ void MainWindow::on_pushButton_eigener_clicked()
    QString filename=QFileDialog::getOpenFileName(this, tr("Open File"), "C://", "Text File (*.txt)");       // Eigene txt Datein können entnommen werden, Starverzeichnis ist C
     QFile file(filename);
 
+
     file.open(QIODevice::ReadOnly | QIODevice::Text); // Als Text-Datei nur zum Lesen öffnen
     QString text=QLatin1String (file.readAll());
     file.close(); // Datei wieder schließen
 
-
+    if (text.size() != 0)
+      {
     ui->eingabefeld->setFocus();
     ui->textBrowser->setText(text);
+
 
            ui->frame_lernen->show();
            ui->frame_ueben->hide();
@@ -466,7 +469,7 @@ void MainWindow::on_pushButton_eigener_clicked()
              {
               fehlersuche->start(text);
              }
-
+      }
 
 }
 void MainWindow::on_pushButton_zeitstart_clicked()
