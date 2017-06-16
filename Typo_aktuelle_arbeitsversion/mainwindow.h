@@ -82,6 +82,7 @@ private:
     key *keyboard;
     QSqlDatabase typodb;
     QSqlDatabase typo_db =  QSqlDatabase::addDatabase("QMYSQL");
+    bool text_run;
 
 };
 
