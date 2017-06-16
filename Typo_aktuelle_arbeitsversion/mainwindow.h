@@ -74,6 +74,8 @@ private slots:
 
     void on_label_username_set_user(QString username);
 
+    void on_pB_ende_clicked();
+
 private:
     Ui::MainWindow *ui;
     Ui::QWidget *Form;

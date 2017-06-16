@@ -21,6 +21,7 @@
 #include <stdlib.h>
 
 
+
 int cnt;                //Variable für den Countdown
 
 QTimer *timer;
@@ -55,9 +56,6 @@ MainWindow::MainWindow(QWidget *parent) :
     typo_db.setPort(3306);
     typo_db.setHostName("89.163.178.19");
     typo_db.open();
-
-
-
 }
 
 MainWindow::~MainWindow()
@@ -83,41 +81,40 @@ void MainWindow::timer_timeout()
       int woerter=fehlersuche->NumberofCorrectWords;
       int fehler=fehlersuche->NumberofErrors;
 
-       QString art;
+       QString art="zeit";
       int teiler=0;
       if (ui->radioButton_1->isChecked())              // 1 Minute Zeit
          {
           teiler=60;
-          art="zeit";
+
          }
       else if (ui->radioButton_2->isChecked())        // 2 Minute Zeit
          {
           teiler=120;
-           art="zeit";
+
          }
       else if (ui->radioButton_3->isChecked())        // 3 Minute Zeit
          {
           teiler=180;
-          art="zeit";
 
          }
       else if (ui->radioButton_5->isChecked())        // 5 Minute Zeit
          {
           teiler=300;
-          art="zeit";
 
          }
 
-      //woerter=woerter/teiler;
-      //fehler=fehler/teiler;
+      woerter=woerter/teiler;
+      fehler=fehler/teiler;
+
       ui->label_fpm->setNum(fehler);
       ui->label_wpm->setNum(woerter);
-      QString name;
-      name=ui->label_username->text();
-      QString fpm;
-      QString wpm;
-    fpm=ui->label_fpm->text();
-    wpm=ui->label_wpm->text();
+
+      QString name=ui->label_username->text();
+      QString fpm=ui->label_fpm->text();
+      QString wpm=ui->label_wpm->text();
+
+
      QSqlQuery qry;
       qry.exec("insert into Statistik (Benutzername, Art, FPM, WPM) values ('"+name +"','"+art +"','"+fpm+"','"+ wpm +"')");
 
@@ -193,7 +190,7 @@ void MainWindow::on_bl_mittel_clicked()
   ui->frame_menue->hide();
   int rnd;
   rnd=rand() % 5 + 6; // Random zwischen 6-10
-    rnd=rand() % 5 + 6;
+  rnd=rand() % 5 + 6;
   QSqlQuery query;
   query.prepare("select Texte from lernen where ID_lernen=?");
   query.addBindValue(rnd);
@@ -653,4 +650,22 @@ void MainWindow::on_eingabefeld_textChanged(const QString &typedwords)
 void MainWindow::on_label_username_set_user(QString username)
 {
     this->ui->label_username->setText(username);
+}
+
+void MainWindow::on_pB_ende_clicked()
+{
+    ui->frame_lernen->hide();
+    ui->frame_zeitvorbei->hide();
+    ui->frame_menue->show();
+    ui->label_zeit->setText("Los Geht's!");
+    ui->label_zeit->hide();
+    ui->label->hide();
+    ui->label_fehler->setText("0");
+    ui->label_WPM->setText("0");
+    if(fehlersuche->IsRunning())
+      {
+        fehlersuche->end();
+        ui->eingabefeld->clear();
+
+      }
 }

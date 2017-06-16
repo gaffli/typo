@@ -9,6 +9,8 @@ info::info(QWidget *parent) :
 {
     ui->setupUi(this);
     this->setWindowTitle("Info");
+    QPixmap image("banner.png");
+    ui->label_banner->setPixmap(image);
 }
 
 info::~info()

@@ -124,6 +124,15 @@
        <height>60</height>
       </rect>
      </property>
+     <property name="mouseTracking">
+      <bool>false</bool>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="toolTipDuration">
+      <number>0</number>
+     </property>
      <property name="text">
       <string>Anmelden</string>
      </property>
@@ -774,9 +783,9 @@ border-top-width: 1.5px;
    <widget class="QFrame" name="frame_lernen">
     <property name="geometry">
      <rect>
-      <x>10</x>
+      <x>200</x>
       <y>10</y>
-      <width>1261</width>
+      <width>1071</width>
       <height>681</height>
      </rect>
     </property>
@@ -968,100 +977,113 @@ border-top-width: 1.5px;
       <string>0</string>
      </property>
     </widget>
-   </widget>
-   <widget class="QFrame" name="frame_zeitvorbei">
-    <property name="geometry">
-     <rect>
-      <x>370</x>
-      <y>30</y>
-      <width>761</width>
-      <height>571</height>
-     </rect>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::StyledPanel</enum>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Raised</enum>
-    </property>
-    <widget class="QLabel" name="label_4">
-     <property name="geometry">
-      <rect>
-       <x>100</x>
-       <y>30</y>
-       <width>171</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Die Zeit ist abgelaufen. Du hast</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_wpm">
-     <property name="geometry">
-      <rect>
-       <x>60</x>
-       <y>90</y>
-       <width>71</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>10</pointsize>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="text">
-      <string>0</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_5">
-     <property name="geometry">
-      <rect>
-       <x>110</x>
-       <y>90</y>
-       <width>91</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>WPM</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_6">
+    <widget class="QFrame" name="frame_zeitvorbei">
      <property name="geometry">
       <rect>
        <x>120</x>
-       <y>160</y>
-       <width>91</width>
-       <height>51</height>
+       <y>10</y>
+       <width>811</width>
+       <height>421</height>
       </rect>
      </property>
-     <property name="text">
-      <string>FPM</string>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
      </property>
-    </widget>
-    <widget class="QLabel" name="label_fpm">
-     <property name="geometry">
-      <rect>
-       <x>40</x>
-       <y>170</y>
-       <width>61</width>
-       <height>41</height>
-      </rect>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
      </property>
-     <property name="font">
-      <font>
-       <pointsize>9</pointsize>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="text">
-      <string>0</string>
-     </property>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>30</y>
+        <width>281</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Die Zeit ist abgelaufen. Du hast</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_wpm">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>30</y>
+        <width>71</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>30</y>
+        <width>91</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>WPM</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>80</y>
+        <width>91</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>FPM</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_fpm">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>80</y>
+        <width>61</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pB_ende">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>170</y>
+        <width>140</width>
+        <height>60</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Zurück</string>
+      </property>
+     </widget>
     </widget>
    </widget>
   </widget>
