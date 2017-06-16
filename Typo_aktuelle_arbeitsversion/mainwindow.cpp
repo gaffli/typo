@@ -384,6 +384,7 @@ void MainWindow::on_button_uebungende_clicked()
   ui->frame_lernen->hide();
   ui->frame_menue->show();
   ui->label_zeit->setText("Los Geht's!");
+  ui->textBrowser->setText("");
   ui->label_zeit->hide();
   ui->label->hide();
   ui->label_fehler->setText("0");
@@ -400,13 +401,6 @@ void MainWindow::on_button_uebungende_clicked()
 
 void MainWindow::on_ueben_clicked()
 {
-    typo_db.setDatabaseName("typo");
-    typo_db.setUserName("Alex");
-    typo_db.setPassword("A92K07!27");
-    typo_db.setPort(3306);
-    typo_db.setHostName("89.163.178.19");
-    typo_db.open();
-
   ui->frame_ueben->show();
   ui->frame_hand->hide();
   ui->frame_zeit->hide();
@@ -416,6 +410,13 @@ void MainWindow::on_ueben_clicked()
 
 void MainWindow::on_pushButton_starten_clicked()
 {
+    typo_db.setDatabaseName("typo");
+    typo_db.setUserName("Alex");
+    typo_db.setPassword("A92K07!27");
+    typo_db.setPort(3306);
+    typo_db.setHostName("89.163.178.19");
+    typo_db.open();
+
   ui->frame_ueben->hide();
   ui->frame_lernen->show();
   ui->frame_menue->hide();
@@ -475,13 +476,6 @@ void MainWindow::on_pushButton_eigener_clicked()
 void MainWindow::on_pushButton_zeitstart_clicked()
 {
 
-    typo_db.setDatabaseName("typo");
-    typo_db.setUserName("Alex");
-    typo_db.setPassword("A92K07!27");
-    typo_db.setPort(3306);
-    typo_db.setHostName("89.163.178.19");
-    typo_db.open();
-
   ui->label_zeit->show();
   ui->label->show();
   ui->label_zeit->setText("Los Geht's!");
@@ -498,6 +492,13 @@ void MainWindow::on_pushButton_zeitstart_clicked()
             ui->frame_lernen->show();
             ui->frame_zeit->hide();
             ui->frame_menue->hide();
+
+            typo_db.setDatabaseName("typo");
+            typo_db.setUserName("Alex");
+            typo_db.setPassword("A92K07!27");
+            typo_db.setPort(3306);
+            typo_db.setHostName("89.163.178.19");
+            typo_db.open();
 
             QSqlQuery query;
             query.prepare("select Text from Texte where Textart='zeit1' and ID_Texte=?");

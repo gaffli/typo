@@ -451,7 +451,7 @@ border-top-width: 1.5px;
      <property name="geometry">
       <rect>
        <x>360</x>
-       <y>40</y>
+       <y>30</y>
        <width>180</width>
        <height>400</height>
       </rect>
@@ -1085,19 +1085,6 @@ border-top-width: 1.5px;
       </property>
      </widget>
     </widget>
-    <zorder>horizontalWidget</zorder>
-    <zorder>textBrowser</zorder>
-    <zorder>button_uebungende</zorder>
-    <zorder>label_zeit</zorder>
-    <zorder>label</zorder>
-    <zorder>eingabefeld</zorder>
-    <zorder>label_username</zorder>
-    <zorder>label_WPM</zorder>
-    <zorder>label_2</zorder>
-    <zorder>label_3</zorder>
-    <zorder>label_fehler</zorder>
-    <zorder>frame_zeitvorbei</zorder>
-    <zorder>frame_welcome</zorder>
    </widget>
    <widget class="QFrame" name="frame_welcome">
     <property name="geometry">
@@ -1265,7 +1252,7 @@ border-top-width: 1.5px;
      <x>0</x>
      <y>0</y>
      <width>1280</width>
-     <height>20</height>
+     <height>17</height>
     </rect>
    </property>
   </widget>

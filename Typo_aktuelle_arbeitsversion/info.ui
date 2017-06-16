@@ -140,7 +140,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>In Typo lernst du das 10-Finger-Tipp System, um keine Typo (Tippfehler) mehr zu schreiben. Zusätzlich wirst </string>
+     <string>In Typo lernst du das 10-Finger-Tipp System, um keine Typo (Tippfehler) mehr zu schreiben. Zusätzlich wirst Du mit Typo das schnelle Tippen mit der Tastatur lernen, damit du produktiver deine Arbeiten erledigen kannst.</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_5">
@@ -179,7 +179,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Lernen: &lt;/span&gt;Anfänger? Dann lerne dort für jeden Finger die richtige Zuordnung, der Tasten! Beachte dabei, dass für &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Lernen: &lt;/span&gt;Anfänger? Dann lerne dort für jeden Finger die richtige Zuordnung, der Tasten! Beachte dabei, dass für jeden Finger eine Farbe zugeordnet ist.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_8">

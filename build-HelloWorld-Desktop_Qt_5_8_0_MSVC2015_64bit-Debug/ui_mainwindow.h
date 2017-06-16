@@ -310,7 +310,7 @@ public:
         gb_rechts = new QGroupBox(frame_hand);
         gb_rechts->setObjectName(QStringLiteral("gb_rechts"));
         gb_rechts->setEnabled(true);
-        gb_rechts->setGeometry(QRect(360, 40, 180, 400));
+        gb_rechts->setGeometry(QRect(360, 30, 180, 400));
         br_zeige = new QPushButton(gb_rechts);
         br_zeige->setObjectName(QStringLiteral("br_zeige"));
         br_zeige->setGeometry(QRect(10, 30, 160, 75));
@@ -575,18 +575,6 @@ public:
         pB_ende = new QPushButton(frame_zeitvorbei);
         pB_ende->setObjectName(QStringLiteral("pB_ende"));
         pB_ende->setGeometry(QRect(270, 170, 140, 60));
-        horizontalWidget->raise();
-        textBrowser->raise();
-        button_uebungende->raise();
-        label_zeit->raise();
-        label->raise();
-        eingabefeld->raise();
-        label_username->raise();
-        label_WPM->raise();
-        label_2->raise();
-        label_3->raise();
-        label_fehler->raise();
-        frame_zeitvorbei->raise();
         frame_welcome = new QFrame(centralWidget);
         frame_welcome->setObjectName(QStringLiteral("frame_welcome"));
         frame_welcome->setGeometry(QRect(200, 0, 1070, 680));
@@ -628,7 +616,7 @@ public:
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 1280, 20));
+        menuBar->setGeometry(QRect(0, 0, 1280, 17));
         MainWindow->setMenuBar(menuBar);
         mainToolBar = new QToolBar(MainWindow);
         mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
