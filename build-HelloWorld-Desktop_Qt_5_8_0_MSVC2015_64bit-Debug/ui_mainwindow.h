@@ -643,7 +643,7 @@ public:
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        MainWindow->setToolTip(QApplication::translate("MainWindow", "<html><head/><body><p><br/></p></body></html>", Q_NULLPTR));
+        MainWindow->setToolTip(QString());
 #endif // QT_NO_TOOLTIP
 #ifndef QT_NO_TOOLTIP
         optionen->setToolTip(QApplication::translate("MainWindow", "<html><head/><body><p><br/></p></body></html>", Q_NULLPTR));
