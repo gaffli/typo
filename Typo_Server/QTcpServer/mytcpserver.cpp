@@ -2,6 +2,8 @@
 #include "winsock2.h"
 #include <ws2tcpip.h>
 #include <stdio.h>
+#include <QHostInfo>
+#include <QHostAddress>
 
 
 
@@ -15,12 +17,12 @@ MyTcpServer::MyTcpServer(QObject *parent) : QObject(parent)
      connect(server, SIGNAL(newConnection()),
              this, SLOT(newConnection()));
 
-     QHostAddress hostAddress;
-     bool ipChange = hostAddress.setAddress("192.168.178.65");
+
+    /* bool ipChange = hostAddress.setAddress("192.168.178.65");
 
      if(ipChange) qDebug() << "IP ADDRESS CHANGED";
      else qDebug() << "IP ADDRESS NOT CHANGED";
-
+*/
      if(!server->listen(QHostAddress::Any, 1234))
      {
          qDebug() << "Server could not start";
@@ -36,6 +38,7 @@ MyTcpServer::MyTcpServer(QObject *parent) : QObject(parent)
      // need to grab the socket
      QTcpSocket *socket = server->nextPendingConnection();
 
+     qDebug() << socket->peerAddress();
      socket->write("Hello client\r\n");
      socket->flush();
 

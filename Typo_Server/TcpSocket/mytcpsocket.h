@@ -24,7 +24,8 @@ public slots:
 
 private:
     QTcpSocket *socket;
-    
+    int socketport = 4321;
+    char c;
 };
 
 #endif // MYTCPSOCKET_H
