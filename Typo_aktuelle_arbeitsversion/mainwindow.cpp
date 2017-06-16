@@ -37,7 +37,8 @@ MainWindow::MainWindow(QWidget *parent) :
     timer= new QTimer(this);                                    //Timer für das Zeitrennen
     timer->setInterval(1000);
     connect(timer,SIGNAL(timeout()),this,SLOT(timer_timeout()));
-    QPixmap image("C:/Users/Alexa/Downloads/banner.png");
+    QString imagePath = QCoreApplication::applicationDirPath() + "/banner.png";
+    QPixmap image(imagePath);
     ui->label_banner_typo->setPixmap(image);
     ui->frame_welcome->show();
     ui->label_zeit->hide();
@@ -397,6 +398,13 @@ void MainWindow::on_button_uebungende_clicked()
 
 void MainWindow::on_ueben_clicked()
 {
+    typo_db.setDatabaseName("typo");
+    typo_db.setUserName("Alex");
+    typo_db.setPassword("A92K07!27");
+    typo_db.setPort(3306);
+    typo_db.setHostName("89.163.178.19");
+    typo_db.open();
+
   ui->frame_ueben->show();
   ui->frame_hand->hide();
   ui->frame_zeit->hide();
@@ -462,6 +470,12 @@ void MainWindow::on_pushButton_eigener_clicked()
 void MainWindow::on_pushButton_zeitstart_clicked()
 {
 
+    typo_db.setDatabaseName("typo");
+    typo_db.setUserName("Alex");
+    typo_db.setPassword("A92K07!27");
+    typo_db.setPort(3306);
+    typo_db.setHostName("89.163.178.19");
+    typo_db.open();
 
   ui->label_zeit->show();
   ui->label->show();
