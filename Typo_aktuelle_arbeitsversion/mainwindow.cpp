@@ -31,6 +31,7 @@ MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
+    MainWindow::setFixedSize(1280,720);
     ui->setupUi(this);
     this->setWindowTitle("Typo - 10 Finger Lernprogramm");
 
@@ -48,6 +49,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->frame_lernen->hide();
     ui->frame_ueben->hide();
     ui->label->hide();
+
 
     keyboard = new key();
     ui->horizontalLayout->addWidget(keyboard);
