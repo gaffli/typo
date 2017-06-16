@@ -107,14 +107,144 @@
    <widget class="QLabel" name="label_banner">
     <property name="geometry">
      <rect>
-      <x>390</x>
-      <y>50</y>
-      <width>361</width>
-      <height>111</height>
+      <x>170</x>
+      <y>0</y>
+      <width>706</width>
+      <height>196</height>
      </rect>
     </property>
     <property name="text">
      <string>TextLabel</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>200</y>
+      <width>331</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; text-decoration: underline;&quot;&gt;Willkommen bei Typo!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>240</y>
+      <width>1061</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>In Typo lernst du das 10-Finger-Tipp System, um keine Typo (Tippfehler) mehr zu schreiben. Zusätzlich wirst </string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>270</y>
+      <width>1061</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Du mit Typo das schnelle Tippen mit der Tastatur lernen, damit du produktiver deine Arbeiten erledigen kannst.</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>320</y>
+      <width>1041</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Links &lt;/span&gt;findest du verschiedene &lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Modi&lt;/span&gt;, mit denen Du deine Fähigkeiten kontinuierlich verbessern kannst.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>370</y>
+      <width>1061</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Lernen: &lt;/span&gt;Anfänger? Dann lerne dort für jeden Finger die richtige Zuordnung, der Tasten! Beachte dabei, dass für &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>400</y>
+      <width>1061</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>jeden Finger eine Farbe zugeordnet ist.</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_9">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>450</y>
+      <width>1061</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Üben:&lt;/span&gt; Jeder Finger ist trainiert? Dann wirst du in diesem Modus mit richtigen Wörtern und Sätzen konfrontiert!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_10">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>500</y>
+      <width>1061</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Zeitrennen: &lt;/span&gt;Tipp schneller! Hier kannst du unter Zeitdruck dein Tippen verbessern, indem du schneller wirst!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_11">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>550</y>
+      <width>1061</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Multiplayer: &lt;/span&gt;Wer ist besser? Du oder dein Freund?&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_12">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>600</y>
+      <width>1061</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Unter &lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Benutzerhandbuch&lt;/span&gt; findest du weitere Informationen.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
   </widget>

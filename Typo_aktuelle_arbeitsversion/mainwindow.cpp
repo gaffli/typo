@@ -37,7 +37,9 @@ MainWindow::MainWindow(QWidget *parent) :
     timer= new QTimer(this);                                    //Timer für das Zeitrennen
     timer->setInterval(1000);
     connect(timer,SIGNAL(timeout()),this,SLOT(timer_timeout()));
-
+    QPixmap image("C:/Users/Alexa/Downloads/banner.png");
+    ui->label_banner_typo->setPixmap(image);
+    ui->frame_welcome->show();
     ui->label_zeit->hide();
     ui->frame_zeitvorbei->hide();
     ui->frame_hand->hide();
@@ -143,6 +145,7 @@ void MainWindow::on_lernen_clicked()
   ui->frame_lernen->hide();
   ui->frame_zeit->hide();
   ui->frame_ueben->hide();
+  ui->frame_welcome->hide();
 
 
   typodb=QSqlDatabase::addDatabase("QSQLITE");                //Datenbank Objekt erzeugt bzw ein SQLite Datenbank
@@ -382,6 +385,7 @@ void MainWindow::on_button_uebungende_clicked()
   ui->label->hide();
   ui->label_fehler->setText("0");
   ui->label_WPM->setText("0");
+  ui->frame_welcome->show();
   if(fehlersuche->IsRunning())
     {
       fehlersuche->end();
@@ -397,6 +401,7 @@ void MainWindow::on_ueben_clicked()
   ui->frame_hand->hide();
   ui->frame_zeit->hide();
   ui->frame_lernen->hide();
+  ui->frame_welcome->hide();
 }
 
 void MainWindow::on_pushButton_starten_clicked()
@@ -445,6 +450,7 @@ void MainWindow::on_pushButton_eigener_clicked()
            ui->frame_lernen->show();
            ui->frame_ueben->hide();
            ui->frame_menue->hide();
+           ui->frame_welcome->hide();
 
            if(!fehlersuche->IsRunning())
              {
@@ -460,6 +466,7 @@ void MainWindow::on_pushButton_zeitstart_clicked()
   ui->label_zeit->show();
   ui->label->show();
   ui->label_zeit->setText("Los Geht's!");
+  ui->frame_welcome->hide();
 
 
   timer->stop();
@@ -592,6 +599,7 @@ void MainWindow::on_zeitrennen_clicked()
   ui->frame_hand->hide();
   ui->frame_lernen->hide();
   ui->frame_ueben->hide();
+  ui->frame_welcome->hide();
 }
 
 void MainWindow::on_b_buch_clicked()
@@ -660,6 +668,7 @@ void MainWindow::on_pB_ende_clicked()
     ui->label_zeit->setText("Los Geht's!");
     ui->label_zeit->hide();
     ui->label->hide();
+    ui->frame_welcome->show();
     ui->label_fehler->setText("0");
     ui->label_WPM->setText("0");
     if(fehlersuche->IsRunning())
