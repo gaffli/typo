@@ -166,14 +166,14 @@
      </rect>
     </property>
     <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Links &lt;/span&gt;findest du verschiedene &lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Modi&lt;/span&gt;, mit denen Du deine Fähigkeiten kontinuierlich verbessern kannst.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Links &lt;/span&gt;findest du verschiedene &lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Modi&lt;/span&gt;, mit denen Du deine Fähigkeiten kontinuierlich verbessern kannst. Um alle Modis nutzen zu können, musst Du dich anmelden.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_7">
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>370</y>
+      <y>420</y>
       <width>1061</width>
       <height>41</height>
      </rect>
@@ -186,7 +186,7 @@
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>400</y>
+      <y>450</y>
       <width>1061</width>
       <height>41</height>
      </rect>
@@ -199,7 +199,7 @@
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>450</y>
+      <y>490</y>
       <width>1061</width>
       <height>41</height>
      </rect>
@@ -212,7 +212,7 @@
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>500</y>
+      <y>540</y>
       <width>1061</width>
       <height>41</height>
      </rect>
@@ -225,7 +225,7 @@
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>550</y>
+      <y>590</y>
       <width>1061</width>
       <height>41</height>
      </rect>
@@ -238,13 +238,26 @@
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>600</y>
+      <y>630</y>
       <width>1061</width>
       <height>41</height>
      </rect>
     </property>
     <property name="text">
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Unter &lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Benutzerhandbuch&lt;/span&gt; findest du weitere Informationen.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_13">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>370</y>
+      <width>1061</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Um alle Modis nutzen zu können, musst Du dich anmelden.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
   </widget>

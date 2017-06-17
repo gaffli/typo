@@ -41,6 +41,7 @@ public:
     QLabel *label_10;
     QLabel *label_11;
     QLabel *label_12;
+    QLabel *label_13;
 
     void setupUi(QDialog *info)
     {
@@ -92,22 +93,25 @@ public:
         label_6->setGeometry(QRect(0, 320, 1041, 41));
         label_7 = new QLabel(frame_welcome);
         label_7->setObjectName(QStringLiteral("label_7"));
-        label_7->setGeometry(QRect(0, 370, 1061, 41));
+        label_7->setGeometry(QRect(0, 420, 1061, 41));
         label_8 = new QLabel(frame_welcome);
         label_8->setObjectName(QStringLiteral("label_8"));
-        label_8->setGeometry(QRect(0, 400, 1061, 41));
+        label_8->setGeometry(QRect(0, 450, 1061, 41));
         label_9 = new QLabel(frame_welcome);
         label_9->setObjectName(QStringLiteral("label_9"));
-        label_9->setGeometry(QRect(0, 450, 1061, 41));
+        label_9->setGeometry(QRect(0, 490, 1061, 41));
         label_10 = new QLabel(frame_welcome);
         label_10->setObjectName(QStringLiteral("label_10"));
-        label_10->setGeometry(QRect(0, 500, 1061, 41));
+        label_10->setGeometry(QRect(0, 540, 1061, 41));
         label_11 = new QLabel(frame_welcome);
         label_11->setObjectName(QStringLiteral("label_11"));
-        label_11->setGeometry(QRect(0, 550, 1061, 41));
+        label_11->setGeometry(QRect(0, 590, 1061, 41));
         label_12 = new QLabel(frame_welcome);
         label_12->setObjectName(QStringLiteral("label_12"));
-        label_12->setGeometry(QRect(0, 600, 1061, 41));
+        label_12->setGeometry(QRect(0, 630, 1061, 41));
+        label_13 = new QLabel(frame_welcome);
+        label_13->setObjectName(QStringLiteral("label_13"));
+        label_13->setGeometry(QRect(0, 370, 1061, 41));
 
         retranslateUi(info);
 
@@ -125,13 +129,14 @@ public:
         label_3->setText(QApplication::translate("info", "<html><head/><body><p><span style=\" font-size:10pt; font-weight:600; text-decoration: underline;\">Willkommen bei Typo!</span></p></body></html>", Q_NULLPTR));
         label_4->setText(QApplication::translate("info", "In Typo lernst du das 10-Finger-Tipp System, um keine Typo (Tippfehler) mehr zu schreiben. Zus\303\244tzlich wirst Du mit Typo das schnelle Tippen mit der Tastatur lernen, damit du produktiver deine Arbeiten erledigen kannst.", Q_NULLPTR));
         label_5->setText(QApplication::translate("info", "Du mit Typo das schnelle Tippen mit der Tastatur lernen, damit du produktiver deine Arbeiten erledigen kannst.", Q_NULLPTR));
-        label_6->setText(QApplication::translate("info", "<html><head/><body><p><span style=\" font-size:10pt; font-weight:600;\">Links </span>findest du verschiedene <span style=\" font-size:10pt; font-weight:600;\">Modi</span>, mit denen Du deine F\303\244higkeiten kontinuierlich verbessern kannst.</p></body></html>", Q_NULLPTR));
+        label_6->setText(QApplication::translate("info", "<html><head/><body><p><span style=\" font-size:10pt; font-weight:600;\">Links </span>findest du verschiedene <span style=\" font-size:10pt; font-weight:600;\">Modi</span>, mit denen Du deine F\303\244higkeiten kontinuierlich verbessern kannst. Um alle Modis nutzen zu k\303\266nnen, musst Du dich anmelden.</p></body></html>", Q_NULLPTR));
         label_7->setText(QApplication::translate("info", "<html><head/><body><p><span style=\" font-size:10pt; font-weight:600;\">Lernen: </span>Anf\303\244nger? Dann lerne dort f\303\274r jeden Finger die richtige Zuordnung, der Tasten! Beachte dabei, dass f\303\274r jeden Finger eine Farbe zugeordnet ist.</p></body></html>", Q_NULLPTR));
         label_8->setText(QApplication::translate("info", "jeden Finger eine Farbe zugeordnet ist.", Q_NULLPTR));
         label_9->setText(QApplication::translate("info", "<html><head/><body><p><span style=\" font-size:10pt; font-weight:600;\">\303\234ben:</span> Jeder Finger ist trainiert? Dann wirst du in diesem Modus mit richtigen W\303\266rtern und S\303\244tzen konfrontiert!</p></body></html>", Q_NULLPTR));
         label_10->setText(QApplication::translate("info", "<html><head/><body><p><span style=\" font-size:10pt; font-weight:600;\">Zeitrennen: </span>Tipp schneller! Hier kannst du unter Zeitdruck dein Tippen verbessern, indem du schneller wirst!</p></body></html>", Q_NULLPTR));
         label_11->setText(QApplication::translate("info", "<html><head/><body><p><span style=\" font-size:10pt; font-weight:600;\">Multiplayer: </span>Wer ist besser? Du oder dein Freund?</p></body></html>", Q_NULLPTR));
         label_12->setText(QApplication::translate("info", "<html><head/><body><p>Unter <span style=\" font-size:10pt; font-weight:600;\">Benutzerhandbuch</span> findest du weitere Informationen.</p></body></html>", Q_NULLPTR));
+        label_13->setText(QApplication::translate("info", "<html><head/><body><p>Um alle Modis nutzen zu k\303\266nnen, musst Du dich anmelden.</p></body></html>", Q_NULLPTR));
     } // retranslateUi
 
 };

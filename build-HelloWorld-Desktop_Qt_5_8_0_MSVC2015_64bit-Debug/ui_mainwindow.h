@@ -98,6 +98,7 @@ public:
     QLabel *label_24;
     QLabel *label_25;
     QLabel *label_26;
+    QLabel *label_13;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
 
@@ -588,31 +589,34 @@ public:
         label_17->setGeometry(QRect(360, 200, 331, 41));
         label_18 = new QLabel(frame_welcome);
         label_18->setObjectName(QStringLiteral("label_18"));
-        label_18->setGeometry(QRect(0, 240, 1061, 41));
+        label_18->setGeometry(QRect(100, 250, 1061, 41));
         label_19 = new QLabel(frame_welcome);
         label_19->setObjectName(QStringLiteral("label_19"));
-        label_19->setGeometry(QRect(0, 270, 1061, 41));
+        label_19->setGeometry(QRect(100, 270, 1061, 41));
         label_20 = new QLabel(frame_welcome);
         label_20->setObjectName(QStringLiteral("label_20"));
-        label_20->setGeometry(QRect(0, 320, 1041, 41));
+        label_20->setGeometry(QRect(100, 320, 1041, 41));
         label_21 = new QLabel(frame_welcome);
         label_21->setObjectName(QStringLiteral("label_21"));
-        label_21->setGeometry(QRect(0, 370, 1061, 41));
+        label_21->setGeometry(QRect(100, 410, 1061, 41));
         label_22 = new QLabel(frame_welcome);
         label_22->setObjectName(QStringLiteral("label_22"));
-        label_22->setGeometry(QRect(0, 400, 1061, 41));
+        label_22->setGeometry(QRect(100, 430, 1061, 41));
         label_23 = new QLabel(frame_welcome);
         label_23->setObjectName(QStringLiteral("label_23"));
-        label_23->setGeometry(QRect(0, 450, 1061, 41));
+        label_23->setGeometry(QRect(100, 475, 1061, 41));
         label_24 = new QLabel(frame_welcome);
         label_24->setObjectName(QStringLiteral("label_24"));
-        label_24->setGeometry(QRect(0, 500, 1061, 41));
+        label_24->setGeometry(QRect(100, 520, 1061, 41));
         label_25 = new QLabel(frame_welcome);
         label_25->setObjectName(QStringLiteral("label_25"));
-        label_25->setGeometry(QRect(0, 550, 1061, 41));
+        label_25->setGeometry(QRect(100, 570, 1061, 41));
         label_26 = new QLabel(frame_welcome);
         label_26->setObjectName(QStringLiteral("label_26"));
-        label_26->setGeometry(QRect(0, 600, 1061, 41));
+        label_26->setGeometry(QRect(100, 625, 1061, 41));
+        label_13 = new QLabel(frame_welcome);
+        label_13->setObjectName(QStringLiteral("label_13"));
+        label_13->setGeometry(QRect(100, 360, 1061, 41));
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
@@ -692,6 +696,7 @@ public:
         label_24->setText(QApplication::translate("MainWindow", "<html><head/><body><p><span style=\" font-size:10pt; font-weight:600;\">Zeitrennen: </span>Tipp schneller! Hier kannst du unter Zeitdruck dein Tippen verbessern, indem du schneller wirst!</p></body></html>", Q_NULLPTR));
         label_25->setText(QApplication::translate("MainWindow", "<html><head/><body><p><span style=\" font-size:10pt; font-weight:600;\">Multiplayer: </span>Wer ist besser? Du oder dein Freund?</p></body></html>", Q_NULLPTR));
         label_26->setText(QApplication::translate("MainWindow", "<html><head/><body><p>Unter <span style=\" font-size:10pt; font-weight:600;\">Benutzerhandbuch</span> findest du weitere Informationen.</p></body></html>", Q_NULLPTR));
+        label_13->setText(QApplication::translate("MainWindow", "<html><head/><body><p>Um <span style=\" font-size:10pt; font-weight:600;\">alle Modis</span> nutzen zu k\303\266nnen, musst Du dich <span style=\" font-size:10pt; font-weight:600;\">anmelden</span>.</p></body></html>", Q_NULLPTR));
     } // retranslateUi
 
 };

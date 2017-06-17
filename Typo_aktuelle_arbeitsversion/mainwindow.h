@@ -81,7 +81,7 @@ private:
     Ui::QWidget *Form;
     key *keyboard;
     QSqlDatabase typodb;
-    QSqlDatabase typo_db =  QSqlDatabase::addDatabase("QMYSQL");
+    QSqlDatabase typo_db;
     bool text_run;
 
 };

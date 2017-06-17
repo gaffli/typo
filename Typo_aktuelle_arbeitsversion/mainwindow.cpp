@@ -54,7 +54,7 @@ MainWindow::MainWindow(QWidget *parent) :
     keyboard = new key();
     ui->horizontalLayout->addWidget(keyboard);
     fehlersuche = new Fehleranalyse();
-
+    QSqlDatabase typo_db =  QSqlDatabase::addDatabase("QMYSQL");
     typo_db.setDatabaseName("typo");
     typo_db.setUserName("Alex");
     typo_db.setPassword("A92K07!27");
@@ -410,6 +410,7 @@ void MainWindow::on_ueben_clicked()
 
 void MainWindow::on_pushButton_starten_clicked()
 {
+    QSqlDatabase typo_db =  QSqlDatabase::addDatabase("QMYSQL");
     typo_db.setDatabaseName("typo");
     typo_db.setUserName("Alex");
     typo_db.setPassword("A92K07!27");
@@ -475,6 +476,13 @@ void MainWindow::on_pushButton_eigener_clicked()
 }
 void MainWindow::on_pushButton_zeitstart_clicked()
 {
+    QSqlDatabase typo_db =  QSqlDatabase::addDatabase("QMYSQL");
+    typo_db.setDatabaseName("typo");
+    typo_db.setUserName("Alex");
+    typo_db.setPassword("A92K07!27");
+    typo_db.setPort(3306);
+    typo_db.setHostName("89.163.178.19");
+    typo_db.open();
 
   ui->label_zeit->show();
   ui->label->show();
@@ -492,13 +500,6 @@ void MainWindow::on_pushButton_zeitstart_clicked()
             ui->frame_lernen->show();
             ui->frame_zeit->hide();
             ui->frame_menue->hide();
-
-            typo_db.setDatabaseName("typo");
-            typo_db.setUserName("Alex");
-            typo_db.setPassword("A92K07!27");
-            typo_db.setPort(3306);
-            typo_db.setHostName("89.163.178.19");
-            typo_db.open();
 
             QSqlQuery query;
             query.prepare("select Text from Texte where Textart='zeit1' and ID_Texte=?");
