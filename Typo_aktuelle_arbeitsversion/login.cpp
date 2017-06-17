@@ -15,7 +15,6 @@ login::login(QWidget *parent) :
     ui->reg_status->hide();
     ui->frame_profil->hide();
 
-
 }
 
 login::~login()
@@ -39,8 +38,6 @@ void login::on_pb_zurueck_clicked()
 {
 
 this->hide();
-    //labelname übertragen Lennart
-    //Es gibt ein Label "label_username" in der Form Login(also hier). Deren Inhalt würde ich gerne in einem Label auf dem Mainwindow haben(name des labels ist auch label_username)
 
 
 }
@@ -53,6 +50,7 @@ void login::on_button_registrieren_clicked()
    login::email=ui->reg_email->text();
    login::benutzername=ui->reg_benutzername->text();
    login::passwort=ui->reg_passwort->text();
+
 
    if(!login::email.contains('@') || login::email.size()>30)
      {
@@ -113,6 +111,9 @@ void login::on_but_anmelden_clicked()
 
     login::benutzername=ui->le_benutzername->text();
     login::passwort=ui->le_passwort->text();
+
+    if( !benutzername.isEmpty() )
+        benutzername[ 0 ] = benutzername[ 0 ].toUpper();
 
     QSqlQuery qry_login;
 

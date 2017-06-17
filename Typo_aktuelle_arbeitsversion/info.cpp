@@ -9,8 +9,7 @@ info::info(QWidget *parent) :
 {
     ui->setupUi(this);
     this->setWindowTitle("Info");
-    QPixmap image("C:/Users/Alexa/Downloads/banner.png");
-    ui->label_banner->setPixmap(image);
+
 }
 
 info::~info()

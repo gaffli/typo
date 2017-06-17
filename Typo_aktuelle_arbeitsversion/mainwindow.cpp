@@ -41,7 +41,11 @@ MainWindow::MainWindow(QWidget *parent) :
     QString imagePath = QCoreApplication::applicationDirPath() + "/banner.png";
     QPixmap image(imagePath);
     ui->label_banner_typo->setPixmap(image);
+    ui->label_username->setText("");
+    ui->label_username->hide();
     ui->frame_welcome->show();
+    ui->ueben->setEnabled(false);
+    ui->zeitrennen->setEnabled(false);
     ui->label_zeit->hide();
     ui->frame_zeitvorbei->hide();
     ui->frame_hand->hide();
