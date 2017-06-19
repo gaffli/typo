@@ -53,6 +53,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->frame_lernen->hide();
     ui->frame_ueben->hide();
     ui->label->hide();
+    ui->pb_profil->hide();
 
 
     keyboard = new key();
@@ -136,6 +137,8 @@ void MainWindow::on_anmelden_clicked()
  login log;
  log.setModal(true);
  QObject::connect(&log,SIGNAL(signal_username_set(QString)),this,SLOT(on_label_username_set_user(QString)));
+ QObject::connect(&log,SIGNAL(after_login_process()),this,SLOT(after_login_process()));
+ QObject::connect(&log,SIGNAL(after_logout_process()),this,SLOT(after_logout_process()));
  log.exec();
 }
 
@@ -711,4 +714,39 @@ void MainWindow::on_pB_ende_clicked()
         ui->eingabefeld->clear();
 
       }
+}
+
+void MainWindow::after_login_process()
+{
+    ui->anmelden->hide();
+    //Profil showen
+    ui->ueben->setEnabled(true);
+    ui->zeitrennen->setEnabled(true);
+    ui->multiplayer->setEnabled(true);
+    ui->pb_profil->show();
+}
+
+void MainWindow::after_logout_process()
+{
+    ui->anmelden->show();
+    ui->ueben->setEnabled(false);
+    ui->zeitrennen->setEnabled(false);
+    ui->multiplayer->setEnabled(false);
+    ui->label_username->setText("");
+    ui->pb_profil->hide();
+
+}
+
+void MainWindow::on_pb_profil_clicked()
+{
+    login log;
+    log.setModal(true);
+    QObject::connect(this,SIGNAL(profil_show_and_hide()),&log,SLOT(profil_show_and_hide()));
+    emit profil_show_and_hide();
+    log.exec();
+
+
+
+
+
 }

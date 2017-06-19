@@ -229,6 +229,19 @@
       <string>Benutzerhandbuch</string>
      </property>
     </widget>
+    <widget class="QPushButton" name="pb_profil">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>170</width>
+       <height>60</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Mein Profil</string>
+     </property>
+    </widget>
    </widget>
    <widget class="QFrame" name="frame_hand">
     <property name="geometry">
@@ -783,10 +796,10 @@ border-top-width: 1.5px;
    <widget class="QFrame" name="frame_lernen">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>0</y>
-      <width>1261</width>
-      <height>691</height>
+      <x>220</x>
+      <y>20</y>
+      <width>1051</width>
+      <height>671</height>
      </rect>
     </property>
     <property name="frameShape">

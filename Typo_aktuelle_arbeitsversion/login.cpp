@@ -25,13 +25,14 @@ login::~login()
 void login::on_abbrechen_anmelden_clicked()
 {
    ui->lab_status->hide();
-   this->close();
+   this->hide();
 }
 
 
 void login::on_pb_abmelden_clicked()
 {
-
+    emit after_logout_process();
+    this->hide();
 }
 
 void login::on_pb_zurueck_clicked()
@@ -127,6 +128,7 @@ void login::on_but_anmelden_clicked()
        if(count==1)
             {
               login::use_querylogin(qry_login);
+              emit login::after_login_process();
             }
        else
             {
@@ -170,4 +172,21 @@ void login::use_querylogin(QSqlQuery qry_login)
 
 
 
+}
+
+void login::profil_show_and_hide()
+{
+    ui->frame_login->hide();
+    ui->frame_profil->show();
+
+    typo_db.setDatabaseName("typo");
+    typo_db.setUserName("Alex");
+    typo_db.setPassword("A92K07!27");
+    typo_db.setPort(3306);
+    typo_db.setHostName("89.163.178.19");
+    typo_db.open();
+
+    QSqlQuery qry_login;
+
+    login::use_querylogin(qry_login);
 }

@@ -21,6 +21,8 @@ public:
 
 signals:
 void signal_username_set(QString);
+    void after_login_process();
+    void after_logout_process();
 
 private slots:
     void on_abbrechen_anmelden_clicked();
@@ -32,6 +34,8 @@ private slots:
     void on_button_registrieren_clicked();
 
     void on_but_anmelden_clicked();
+
+    void profil_show_and_hide();
 
 private:
     Ui::login *ui;

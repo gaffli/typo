@@ -27,6 +27,8 @@ public:
     Fehleranalyse* fehlersuche;
     ~MainWindow();
 
+signals:
+   void profil_show_and_hide();
 
 private slots:
 
@@ -75,6 +77,11 @@ private slots:
     void on_label_username_set_user(QString username);
 
     void on_pB_ende_clicked();
+
+    void after_login_process();
+    void after_logout_process();
+
+    void on_pb_profil_clicked();
 
 private:
     Ui::MainWindow *ui;

@@ -45,6 +45,7 @@ public:
     QFrame *line_3;
     QFrame *line_4;
     QPushButton *b_buch;
+    QPushButton *pb_profil;
     QFrame *frame_hand;
     QGroupBox *gb_links;
     QPushButton *bl_zeige;
@@ -167,6 +168,9 @@ public:
         b_buch->setObjectName(QStringLiteral("b_buch"));
         b_buch->setEnabled(true);
         b_buch->setGeometry(QRect(0, 485, 170, 60));
+        pb_profil = new QPushButton(frame_menue);
+        pb_profil->setObjectName(QStringLiteral("pb_profil"));
+        pb_profil->setGeometry(QRect(0, 0, 170, 60));
         frame_hand = new QFrame(centralWidget);
         frame_hand->setObjectName(QStringLiteral("frame_hand"));
         frame_hand->setGeometry(QRect(420, 40, 691, 601));
@@ -481,7 +485,7 @@ public:
         radioButton_5->setGeometry(QRect(10, 120, 76, 19));
         frame_lernen = new QFrame(centralWidget);
         frame_lernen->setObjectName(QStringLiteral("frame_lernen"));
-        frame_lernen->setGeometry(QRect(10, 0, 1261, 691));
+        frame_lernen->setGeometry(QRect(220, 20, 1051, 671));
         frame_lernen->setFrameShape(QFrame::StyledPanel);
         frame_lernen->setFrameShadow(QFrame::Raised);
         horizontalWidget = new QWidget(frame_lernen);
@@ -650,6 +654,7 @@ public:
 #endif // QT_NO_TOOLTIP
         anmelden->setText(QApplication::translate("MainWindow", "Anmelden", Q_NULLPTR));
         b_buch->setText(QApplication::translate("MainWindow", "Benutzerhandbuch", Q_NULLPTR));
+        pb_profil->setText(QApplication::translate("MainWindow", "Mein Profil", Q_NULLPTR));
         gb_links->setTitle(QApplication::translate("MainWindow", "Linke Hand", Q_NULLPTR));
         bl_zeige->setText(QApplication::translate("MainWindow", "Zeigefinger", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
