@@ -40,7 +40,6 @@ void login::on_pb_zurueck_clicked()
 
     this->hide();
 
-
 }
 
 void login::on_button_registrieren_clicked()
@@ -190,4 +189,19 @@ void login::profil_show_and_hide()
     QSqlQuery qry_login;
 
     login::use_querylogin(qry_login);
+}
+
+void login::signal_sys_show()
+{
+    this->show();
+}
+
+QString login::get()
+{
+    return(login::benutzername);
+}
+
+void login::set(QString name)
+{
+    login::benutzername = name;
 }

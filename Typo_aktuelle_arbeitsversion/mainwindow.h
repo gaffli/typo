@@ -29,6 +29,7 @@ public:
 
 signals:
    void profil_show_and_hide();
+   void signal_sys_show();
 
 private slots:
 
@@ -90,6 +91,7 @@ private:
     QSqlDatabase typodb;
     QSqlDatabase typo_db;
     bool text_run;
+    QString benutzername;
 
 };
 

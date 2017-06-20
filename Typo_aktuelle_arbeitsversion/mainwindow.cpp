@@ -145,6 +145,7 @@ void MainWindow::on_anmelden_clicked()
  QObject::connect(&log,SIGNAL(after_login_process()),this,SLOT(after_login_process()));
  QObject::connect(&log,SIGNAL(after_logout_process()),this,SLOT(after_logout_process()));
  log.exec();
+ MainWindow::benutzername = log.get();
 }
 
 void MainWindow::on_optionen_clicked()
@@ -724,7 +725,6 @@ void MainWindow::on_pB_ende_clicked()
 void MainWindow::after_login_process()
 {
     ui->anmelden->hide();
-    //Profil showen
     ui->ueben->setEnabled(true);
     ui->zeitrennen->setEnabled(true);
     ui->multiplayer->setEnabled(true);
@@ -745,12 +745,12 @@ void MainWindow::after_logout_process()
 void MainWindow::on_pb_profil_clicked()
 {
     login log;
-    log.show();
+    log.setModal(true);
+    QString name = MainWindow::benutzername;
+    log.set(name);
     QObject::connect(this,SIGNAL(profil_show_and_hide()),&log,SLOT(profil_show_and_hide()));
+    QObject::connect(&log,SIGNAL(after_logout_process()),this,SLOT(after_logout_process()));
     emit profil_show_and_hide();
-
-
-
-
+    log.exec();
 
 }

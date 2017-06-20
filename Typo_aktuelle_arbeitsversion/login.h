@@ -16,6 +16,8 @@ class login : public QDialog
 public:
     explicit login(QWidget *parent = 0);
     void use_querylogin(QSqlQuery qry_login);
+    void set(QString name);
+    QString get();
 
     ~login();
 
@@ -23,6 +25,7 @@ signals:
 void signal_username_set(QString);
     void after_login_process();
     void after_logout_process();
+
 
 private slots:
     void on_abbrechen_anmelden_clicked();
@@ -36,6 +39,7 @@ private slots:
     void on_but_anmelden_clicked();
 
     void profil_show_and_hide();
+    void signal_sys_show();
 
 private:
     Ui::login *ui;
