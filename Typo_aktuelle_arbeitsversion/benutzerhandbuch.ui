@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>941</width>
-    <height>809</height>
+    <width>469</width>
+    <height>429</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,10 +17,15 @@
    <property name="geometry">
     <rect>
      <x>0</x>
-     <y>750</y>
-     <width>151</width>
-     <height>61</height>
+     <y>350</y>
+     <width>471</width>
+     <height>81</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>16</pointsize>
+    </font>
    </property>
    <property name="text">
     <string>Schließen</string>
@@ -30,9 +35,9 @@
    <property name="geometry">
     <rect>
      <x>0</x>
-     <y>580</y>
+     <y>280</y>
      <width>151</width>
-     <height>61</height>
+     <height>71</height>
     </rect>
    </property>
    <property name="text">
@@ -43,10 +48,10 @@
   <widget class="QPushButton" name="HDasLernenAnfaengerUebungen">
    <property name="geometry">
     <rect>
-     <x>0</x>
-     <y>460</y>
-     <width>151</width>
-     <height>61</height>
+     <x>150</x>
+     <y>210</y>
+     <width>161</width>
+     <height>71</height>
     </rect>
    </property>
    <property name="text">
@@ -58,9 +63,9 @@
    <property name="geometry">
     <rect>
      <x>0</x>
-     <y>400</y>
+     <y>210</y>
      <width>151</width>
-     <height>61</height>
+     <height>71</height>
     </rect>
    </property>
    <property name="text">
@@ -70,10 +75,10 @@
   <widget class="QPushButton" name="FUmgangmitderBildschirmtastatur">
    <property name="geometry">
     <rect>
-     <x>0</x>
-     <y>340</y>
-     <width>151</width>
-     <height>61</height>
+     <x>310</x>
+     <y>140</y>
+     <width>161</width>
+     <height>71</height>
     </rect>
    </property>
    <property name="text">
@@ -84,10 +89,10 @@ Bildschirmtastatur</string>
   <widget class="QPushButton" name="ELernvorgang">
    <property name="geometry">
     <rect>
-     <x>0</x>
-     <y>280</y>
-     <width>151</width>
-     <height>61</height>
+     <x>150</x>
+     <y>140</y>
+     <width>161</width>
+     <height>71</height>
     </rect>
    </property>
    <property name="text">
@@ -98,9 +103,9 @@ Bildschirmtastatur</string>
    <property name="geometry">
     <rect>
      <x>0</x>
-     <y>50</y>
+     <y>70</y>
      <width>151</width>
-     <height>61</height>
+     <height>71</height>
     </rect>
    </property>
    <property name="text">
@@ -110,10 +115,10 @@ Bildschirmtastatur</string>
   <widget class="QPushButton" name="BVorwort">
    <property name="geometry">
     <rect>
-     <x>0</x>
-     <y>110</y>
-     <width>151</width>
-     <height>61</height>
+     <x>150</x>
+     <y>70</y>
+     <width>161</width>
+     <height>71</height>
     </rect>
    </property>
    <property name="text">
@@ -123,10 +128,10 @@ Bildschirmtastatur</string>
   <widget class="QPushButton" name="IDasLernenFortgeschrittenenUebungen">
    <property name="geometry">
     <rect>
-     <x>0</x>
-     <y>520</y>
-     <width>151</width>
-     <height>61</height>
+     <x>310</x>
+     <y>210</y>
+     <width>161</width>
+     <height>71</height>
     </rect>
    </property>
    <property name="text">
@@ -137,10 +142,10 @@ Bildschirmtastatur</string>
   <widget class="QPushButton" name="KDieWettkaempfeMultiplayerWettkampf">
    <property name="geometry">
     <rect>
-     <x>0</x>
-     <y>630</y>
-     <width>151</width>
-     <height>61</height>
+     <x>150</x>
+     <y>280</y>
+     <width>161</width>
+     <height>71</height>
     </rect>
    </property>
    <property name="text">
@@ -152,9 +157,9 @@ Bildschirmtastatur</string>
    <property name="geometry">
     <rect>
      <x>0</x>
-     <y>220</y>
+     <y>140</y>
      <width>151</width>
-     <height>61</height>
+     <height>71</height>
     </rect>
    </property>
    <property name="text">
@@ -164,46 +169,14 @@ Bildschirmtastatur</string>
   <widget class="QPushButton" name="CEinfuehrungTypo">
    <property name="geometry">
     <rect>
-     <x>0</x>
-     <y>160</y>
-     <width>151</width>
-     <height>61</height>
+     <x>310</x>
+     <y>70</y>
+     <width>161</width>
+     <height>71</height>
     </rect>
    </property>
    <property name="text">
     <string>Einführung Typo</string>
-   </property>
-  </widget>
-  <widget class="QTextBrowser" name="AInhaltsangabe_2">
-   <property name="geometry">
-    <rect>
-     <x>150</x>
-     <y>0</y>
-     <width>801</width>
-     <height>811</height>
-    </rect>
-   </property>
-   <property name="html">
-    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:16pt; font-weight:600;&quot;&gt;Inhaltsangabe:&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2,sans-serif'; font-size:16pt; font-weight:600;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:18pt;&quot;&gt; Inhaltsangabe&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:18pt;&quot;&gt;Vorwort&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:18pt;&quot;&gt;Einführung Typo&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:18pt;&quot;&gt;Benutzerkontoführung&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:18pt;&quot;&gt;Lernvorgang&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:18pt;&quot;&gt;Umgang mit der Bildschirmtastatur&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:18pt;&quot;&gt;Das Hauptmenü&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:18pt;&quot;&gt;Das Lernen&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:18pt;&quot;&gt;- Anfänger-Übungen&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:18pt;&quot;&gt;- Fortgeschrittenen-Übungen&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:18pt;&quot;&gt;Die Wettkämpfe&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:18pt;&quot;&gt;- Zeit-Wettkampf&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:18pt;&quot;&gt;-Multiplayer-Wettkampf&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:18pt;&quot;&gt;Lernstatistik&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
   <widget class="QPushButton" name="AAVollstaendigesHandbuch">
@@ -211,21 +184,39 @@ p, li { white-space: pre-wrap; }
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>151</width>
-     <height>61</height>
+     <width>471</width>
+     <height>71</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>16</pointsize>
+    </font>
    </property>
    <property name="text">
     <string>Vollständiges Handbuch</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="LStatistik">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>280</y>
+     <width>161</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Statistik</string>
    </property>
   </widget>
   <widget class="Line" name="line">
    <property name="geometry">
     <rect>
      <x>0</x>
-     <y>450</y>
-     <width>151</width>
-     <height>20</height>
+     <y>60</y>
+     <width>481</width>
+     <height>21</height>
     </rect>
    </property>
    <property name="frameShadow">
@@ -242,9 +233,9 @@ p, li { white-space: pre-wrap; }
    <property name="geometry">
     <rect>
      <x>0</x>
-     <y>570</y>
-     <width>151</width>
-     <height>20</height>
+     <y>340</y>
+     <width>481</width>
+     <height>21</height>
     </rect>
    </property>
    <property name="frameShadow">
@@ -261,9 +252,9 @@ p, li { white-space: pre-wrap; }
    <property name="geometry">
     <rect>
      <x>0</x>
-     <y>740</y>
-     <width>151</width>
-     <height>20</height>
+     <y>130</y>
+     <width>481</width>
+     <height>21</height>
     </rect>
    </property>
    <property name="frameShadow">
@@ -280,9 +271,9 @@ p, li { white-space: pre-wrap; }
    <property name="geometry">
     <rect>
      <x>0</x>
-     <y>100</y>
-     <width>151</width>
-     <height>20</height>
+     <y>200</y>
+     <width>481</width>
+     <height>21</height>
     </rect>
    </property>
    <property name="frameShadow">
@@ -300,7 +291,7 @@ p, li { white-space: pre-wrap; }
     <rect>
      <x>0</x>
      <y>270</y>
-     <width>151</width>
+     <width>481</width>
      <height>21</height>
     </rect>
    </property>
@@ -314,403 +305,44 @@ p, li { white-space: pre-wrap; }
     <enum>Qt::Horizontal</enum>
    </property>
   </widget>
-  <widget class="QTextBrowser" name="BVorwort_2">
+  <widget class="Line" name="line_6">
    <property name="geometry">
     <rect>
-     <x>150</x>
-     <y>0</y>
-     <width>791</width>
-     <height>811</height>
+     <x>140</x>
+     <y>70</y>
+     <width>21</width>
+     <height>281</height>
     </rect>
    </property>
-   <property name="html">
-    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif,serif'; font-size:16pt; font-weight:600;&quot;&gt;Vorwort&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2,sans-serif,serif'; font-size:16pt; font-weight:600;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2,sans-serif,serif'; font-size:14pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif,serif'; font-size:16pt;&quot;&gt;Im heutigen Alltag sind mittlerweile Computer und deren Benutzung Selbstverständlich geworden, egal ob Privat oder in der Arbeit. Sie erledigen für uns wichtige Arbeiten und Erleichtern unser Leben. Somit ist eine richtige Benutzung dieser Geräte unabdingbar um diese Effizient nutzen zu können. &lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif,serif'; font-size:16pt;&quot;&gt;Das 10-Finger-Tipp System stellt auch einen Teil der richtigen Benutzung eines Computers dar. Durch das Erlernen des 10-Finger-Tipp Systems können sie zum einen, eine effizientere Arbeitsweise am PC erreichen, da sie schneller schreiben können und sie müssen nicht ständig den Blick zwischen Tastatur und Bildschirm hin und her wandern lassen. &lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif,serif'; font-size:16pt;&quot;&gt;Zum anderen fördert es für ihren Körper schonendere Arbeitsweise, durch den Aufrechten Blick auf den PC Bildschirm und nicht den geknickten Blick nach unten auf die Tastatur, fördern sie eine Rückenschonende Arbeitshaltung vor dem PC.&lt;/span&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif,serif'; font-size:16pt;&quot;&gt;Aus diesen Gründen, haben sich vier Junge Studenten der Ostbayrischen Technischen Hochschule Regensburg es zur Aufgabe gemacht, ein Programm zu entwickeln zum Erlernen und spielerischen vertiefen des 10-Finger-Systems.&lt;/span&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif,serif'; font-size:12pt;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   <property name="frameShadow">
+    <enum>QFrame::Plain</enum>
+   </property>
+   <property name="lineWidth">
+    <number>2</number>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
    </property>
   </widget>
-  <widget class="QTextBrowser" name="AAVollstaendigesHandbuch_2">
+  <widget class="Line" name="line_7">
    <property name="geometry">
     <rect>
-     <x>150</x>
-     <y>0</y>
-     <width>791</width>
-     <height>811</height>
+     <x>300</x>
+     <y>70</y>
+     <width>21</width>
+     <height>281</height>
     </rect>
    </property>
-   <property name="html">
-    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:16pt; font-weight:600;&quot;&gt;Inhaltsangabe:&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2,sans-serif'; font-size:16pt; font-weight:600;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:18pt;&quot;&gt; Inhaltsangabe&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:18pt;&quot;&gt;Vorwort&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:18pt;&quot;&gt;Einführung Typo&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:18pt;&quot;&gt;Benutzerkontoführung&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:18pt;&quot;&gt;Lernvorgang&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:18pt;&quot;&gt;Umgang mit der Bildschirmtastatur&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:18pt;&quot;&gt;Das Hauptmenü&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:18pt;&quot;&gt;Das Lernen&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:18pt;&quot;&gt;- Anfänger-Übungen&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:18pt;&quot;&gt;- Fortgeschrittenen-Übungen&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:18pt;&quot;&gt;Die Wettkämpfe&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:18pt;&quot;&gt;- Zeit-Wettkampf&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:18pt;&quot;&gt;-Multiplayer-Wettkampf&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:18pt;&quot;&gt;Lernstatistik&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2,sans-serif'; font-size:18pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2,sans-serif'; font-size:18pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2,sans-serif'; font-size:18pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:16pt; font-weight:600;&quot;&gt;Vorwort&lt;/span&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:16pt;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:14pt;&quot;&gt;Im heutigen Alltag sind mittlerweile Computer und deren Benutzung Selbstverständlich geworden, egal ob Privat oder in der Arbeit. Sie erledigen für uns wichtige Arbeiten und Erleichtern unser Leben. Somit ist eine richtige Benutzung dieser Geräte unabdingbar um diese Effizient nutzen zu können. &lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:14pt;&quot;&gt;Das 10-Finger-Tipp System stellt auch einen Teil der richtigen Benutzung eines Computers dar. Durch das Erlernen des 10-Finger-Tipp Systems können sie zum einen, eine effizientere Arbeitsweise am PC erreichen, da sie schneller schreiben können und sie müssen nicht ständig den Blick zwischen Tastatur und Bildschirm hin und her wandern lassen. &lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:14pt;&quot;&gt;Zum anderen fördert es für ihren Körper schonendere Arbeitsweise, durch den Aufrechten Blick auf den PC Bildschirm und nicht den geknickten Blick nach unten auf die Tastatur, fördern sie eine Rückenschonende Arbeitshaltung vor dem PC.&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:14pt;&quot;&gt; Aus diesen Gründen, haben sich vier Junge Studenten der Ostbayrischen Technischen Hochschule Regensburg es zur Aufgabe gemacht, ein Programm zu entwickeln zum Erlernen und spielerischen vertiefen des 10-Finger-Systems.&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:12pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:12pt;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:16pt; font-weight:600;&quot;&gt;Einführung Typo&lt;/span&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:16pt;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:14pt;&quot;&gt;Typo bietet ihnen die Möglichkeit, durch verschiedene Übungen und Modis zunächst das 10 Finger-Tipp-System zu erlernen. Diese Möglichkeiten finden sie in den Rubriken „Lernen“ du „Üben“. &lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:14pt;&quot;&gt;Wenn sie erfolgreich das 10-Finger-System erlernt, können sie später mit den Wettkampfmodi ihre Fertigkeiten spielerisch vertiefen. Diese finden sie in den Rubriken „Zeitrennen“ und „Multiplayer“. Um ihren Fortschritt zu speichern, können sie ein Benutzerkonto erstellen um ihre Ergebnisse in den Wettkämpfen zu speichern. &lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:14pt;&quot;&gt;Dadurch haben sie die Möglichkeit, ihre Ergebnisse und Fortschritte transparent in einer Statistik einzusehen. Somit gibt es für das Erlernen und Vertiefen des 10-Finger-Systems ein Langzeitmotivation, um ihnen das Erlernen dieses Systems zu erleichtern.&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2,sans-serif'; font-size:14pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2,sans-serif'; font-size:14pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:16pt; font-weight:600;&quot;&gt;Benutzerkontoführung&lt;/span&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:8pt; font-weight:600;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:16pt;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:14pt;&quot;&gt;Sobald sie das Programm Typo geöffnet haben, finden sie oben links den Button „Anmelden“. Dort finden sie alle wichtigen Optionen der Benutzerkontoführung. &lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:14pt;&quot;&gt;Falls sie noch kein Konto bei Typo besitzen, benutzen sie den Button „Registrieren“. Für ihre Registrierung bei Typo müssen sie sich einen Benutzernamen und ein Passwortüberlegen, den sie in die passenden Felder eintragen. Das Dialogfenster schließt sich automatisch, wenn die Registrierung erfolgreich war. &lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:14pt;&quot;&gt;Um sich bei Typo anzumelden müssen sie nun ihren Benutzernamen und ihr Passwort eingeben. Bei Korrekter Eingabe wird sich auch dieses Dialogfenster automatisch schließen. Danach können sie mit der Benutzung von Typo beginnen.&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2,sans-serif'; font-size:14pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2,sans-serif'; font-size:14pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:16pt; font-weight:600;&quot;&gt;Lernvorgang&lt;/span&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:8pt; font-weight:600;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:16pt;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:14pt;&quot;&gt;Typo erlernt ihnen das 10-Finger-Systems, indem es ihnen erst jeden einzelnen Finger beider Hände lehrt. Es beginnt mit dem wichtigsten Finger dem Zeigefinger. &lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:14pt;&quot;&gt;In kurzen Übungen wird ihnen gezeigt, welche Tasten sie mit dem Zeigefinger bedienen müssen. Nachdem diese Übung geschafft ist, kommt der nächste Finger hinzu, der Mittelfinger.&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:14pt;&quot;&gt;Diese Art der Übungen wird fortgesetzt bis alle Finger der rechten und linken Hand erlernt wurden. Anschließend können sie unter der Rubrik „Übungen“ ein Diktat abschreiben, bei dem alle Finger benötigt werden. &lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:14pt;&quot;&gt;Sie besitzen auch in dieser Rubrik die Möglichkeit, eigene Texte in unserer Datenbank einzuspeichern und diese anschließend abzuschreiben.&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2,sans-serif'; font-size:14pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2,sans-serif'; font-size:14pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:16pt; font-weight:600;&quot;&gt;Umgang mit der Bildschirmtastatur&lt;/span&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:8pt; font-weight:600;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:16pt;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:14pt;&quot;&gt;Die Bildschirmtastatur bei Typo dient ihnen dazu, dass es für sie anfangs erleichtert wird, den Blick auf dem Bildschirm zu halten. &lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:14pt;&quot;&gt;Die Bildschirmtastatur ist farblich unterteilt um ihnen anzuzeigen, welche Finger für welche Tasten auf der Tastatur zuständig sind. Jeder ihrer Tastaturanschläge wird auf dieser virtuellen Tastatur visuell dargestellt, auch fehlerhafte Eingaben werden ihnen dargestellt. &lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:14pt;&quot;&gt;Sie dient dazu so schnell wie nur möglich, ihren Blick kontinuierlich auf dem Bildschirm zu halten um somit eine Gesunden Haltung bei der Arbeit vor dem Computer hervorzurufen.&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2,sans-serif'; font-size:14pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2,sans-serif'; font-size:14pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:16pt; font-weight:600;&quot;&gt;Das Hauptmenü&lt;/span&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:8pt; font-weight:600;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:16pt;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:14pt;&quot;&gt;Das Hauptmenü besteht aus sieben Menüpunkten. Der erste Punkt ist der Menüpunkt „Anmelden“ dort finden sie alle wichtigen Funktionen der Benutzerkontoführung. &lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:14pt;&quot;&gt;Die zweite Rubrik „lernen“ zeigt ihnen die Lernmöglichkeiten der einzelnen Finger (Zeigefinger, Mittelfinger usw.). &lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:14pt;&quot;&gt;Die dritte Rubrik „Üben“ zeigt ihnen ihre Übungsmöglichkeiten, um ihre Fertigkeiten im 10-Finger-System erstmalig vollständig anzuwenden und zu vertiefen. Dort können sie auch eigene Texte einfügen. &lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:14pt;&quot;&gt;Nummer vier in der Menüpunktleiste ist der Zeit-Wettkampfmodus, bei dem sie eine vorgegebene Zeit auswählen, in der sie so viele Tastenanschläge wie möglich versuchen zu schaffen. &lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:14pt;&quot;&gt;Der fünfte Punkt ist der Multiplayermodus, bei dem sie die Möglichkeit haben, gegen andere Spieler ihre Fertigkeiten des 10-Finger-Systems unter Beweis zu stellen. &lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:14pt;&quot;&gt;Im sechsten Menüpunkt können sie das Benutzerhandbuch aufrufen, falls sie einmal etwas vergessen haben. &lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:14pt;&quot;&gt;Der letzte Menüpunkt „Info“ zeigt ihnen alle wichtigen Informationen über Typo an, wie ihre Version oder eine Weiterleitung auf unsere Website&lt;/span&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:12pt;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2,sans-serif'; font-size:12pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2,sans-serif'; font-size:12pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:16pt; font-weight:600;&quot;&gt;Das Lernen&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2,sans-serif'; font-size:16pt; font-weight:600;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2,sans-serif'; font-size:16pt; font-weight:600;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:16pt; font-weight:600;&quot;&gt;Anfänger-Übungen&lt;/span&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:8pt; font-weight:600;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:16pt;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:14pt;&quot;&gt;In den Anfänger-Übungen unter der Rubrik „Lernen“ wird ihnen Schritt für Schritt gezeigt, welcher Finger für welche Tasten verantwortlich sind und in kurzen Texten wird dies gleich geübt. &lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:14pt;&quot;&gt;Es gibt zu jedem einzelnen Finger (Zeigefinger, Mittelfinger, Ringfinger und Zeigefinger) jeweils zur linken und zur rechten Hand eine eigenen Lernrubrik, um jeden einzelnen Finger seine Aufgaben zu zeigen und sich daran zu gewöhnen. Die virtuelle Tastatur wird sie dabei unterstützen.&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2,sans-serif'; font-size:14pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2,sans-serif'; font-size:14pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:16pt; font-weight:600;&quot;&gt;Fortgeschrittenen-Übungen&lt;/span&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:8pt; font-weight:600;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:16pt;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:14pt;&quot;&gt;In der Fortgeschrittenen-Übung können sie nun alle Finger gleichzeitig bei einem Diktat verwenden um ihre Fertigkeiten zu festigen. Sie haben entweder die Möglichkeit, zufällige Texte aus unserer Datenbank abzurufen oder eigene Texte in Typo hochzuladen und diese abzutippen.&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:14pt;&quot;&gt;Bei den Fortgeschrittenen Übungen verwenden sie zum ersten Mal alle zehn Finger gleichzeitig und erlernen somit vollständig das 10-Finger-System. Wenn sie sich anschließend sicher fühlen, können sie die Wettkampf Modis ausprobieren um ihre Fertigkeiten unter Beweis zu stellen.&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2,sans-serif'; font-size:14pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2,sans-serif'; font-size:14pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:14pt; font-weight:600;&quot;&gt;Die Wettkämpfe &lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2,sans-serif'; font-size:14pt; font-weight:600;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:16pt;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:16pt; font-weight:600;&quot;&gt;Zeit-Wettkampf&lt;/span&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:8pt; font-weight:600;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:16pt;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:14pt;&quot;&gt;Den Zeit-Wettkampf finden sie unter der Rubrik „Zeitrennen“. Hier haben sie zuerst die Möglichkeit eine Zeitauswahl vorzunehmen, um zu entscheiden wie lange der Wettkampf dauern soll. &lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:14pt;&quot;&gt;Danach wird ihnen ein Text vorgegeben, den sie versuchen so schnell wie möglich abzutippen. Ein Timer im Userinterface zeigt ihnen den Fortschritt des Wettkampfes auf. Ist der Timer bei null angelangt oder haben sie den Text vollständig abgetippt, ist der Wettkampf beendet. Ihr Ergebnis wird ihnen anschließend angezeigt und in unserer Statistik gespeichert.&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2,sans-serif'; font-size:14pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2,sans-serif'; font-size:14pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:16pt; font-weight:600;&quot;&gt;Multiplayer-Wettkampf&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2,sans-serif'; font-size:16pt; font-weight:600;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2,sans-serif'; font-size:16pt; font-weight:600;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif'; font-size:16pt; font-weight:600;&quot;&gt;Statistik&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   <property name="frameShadow">
+    <enum>QFrame::Plain</enum>
+   </property>
+   <property name="lineWidth">
+    <number>2</number>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
    </property>
   </widget>
-  <widget class="QTextBrowser" name="ELernvorgang_2">
-   <property name="geometry">
-    <rect>
-     <x>150</x>
-     <y>0</y>
-     <width>791</width>
-     <height>811</height>
-    </rect>
-   </property>
-   <property name="html">
-    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif,serif'; font-size:16pt; font-weight:600;&quot;&gt;Lernvorgang &lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif,serif'; font-size:16pt;&quot;&gt;  &lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif,serif'; font-size:16pt;&quot;&gt;Typo erlernt ihnen das 10-Finger-Systems, indem es ihnen erst jeden einzelnen Finger beider Hände lehrt. Es beginnt mit dem wichtigsten Finger dem Zeigefinger. &lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif,serif'; font-size:16pt;&quot;&gt;In kurzen Übungen wird ihnen gezeigt, welche Tasten sie mit dem Zeigefinger bedienen müssen. Nachdem diese Übung geschafft ist, kommt der nächste Finger hinzu, der Mittelfinger.&lt;/span&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif,serif'; font-size:16pt;&quot;&gt;Diese Art der Übungen wird fortgesetzt bis alle Finger der rechten und linken Hand erlernt wurden. Anschließend können sie unter der Rubrik „Übungen“ ein Diktat abschreiben, bei dem alle Finger benötigt werden. &lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif,serif'; font-size:16pt;&quot;&gt;Sie besitzen auch in dieser Rubrik die Möglichkeit, eigene Texte in unserer Datenbank einzuspeichern und diese anschließend abzuschreiben.&lt;/span&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-   </property>
-  </widget>
-  <widget class="QTextBrowser" name="FUmgangmitderBildschirmtastatur_2">
-   <property name="geometry">
-    <rect>
-     <x>150</x>
-     <y>0</y>
-     <width>791</width>
-     <height>811</height>
-    </rect>
-   </property>
-   <property name="html">
-    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif,serif'; font-size:16pt; font-weight:600;&quot;&gt;Umgang mit der Bildschirmtastatur &lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif,serif'; font-size:16pt;&quot;&gt;  &lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif,serif'; font-size:16pt;&quot;&gt;Die Bildschirmtastatur bei Typo dient ihnen dazu, dass es für sie anfangs erleichtert wird, den Blick auf dem Bildschirm zu halten. &lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif,serif'; font-size:16pt;&quot;&gt;Die Bildschirmtastatur ist farblich unterteilt um ihnen anzuzeigen, welche Finger für welche Tasten auf der Tastatur zuständig sind. Jeder ihrer Tastaturanschläge wird auf dieser virtuellen Tastatur visuell dargestellt, auch fehlerhafte Eingaben werden ihnen dargestellt. &lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif,serif'; font-size:16pt;&quot;&gt;Sie dient dazu so schnell wie nur möglich, ihren Blick kontinuierlich auf dem Bildschirm zu halten um somit eine Gesunden Haltung bei der Arbeit vor dem Computer hervorzurufen.&lt;/span&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-   </property>
-  </widget>
-  <widget class="QTextBrowser" name="GDasHauptmenue_2">
-   <property name="geometry">
-    <rect>
-     <x>150</x>
-     <y>0</y>
-     <width>791</width>
-     <height>811</height>
-    </rect>
-   </property>
-   <property name="html">
-    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif,serif'; font-size:16pt; font-weight:600;&quot;&gt;Das Hauptmenü &lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif,serif'; font-size:16pt;&quot;&gt;  &lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif,serif'; font-size:16pt;&quot;&gt;Das Hauptmenü besteht aus sieben Menüpunkten. Der erste Punkt ist der Menüpunkt „Anmelden“ dort finden sie alle wichtigen Funktionen der Benutzerkontoführung. &lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif,serif'; font-size:16pt;&quot;&gt;Die zweite Rubrik „lernen“ zeigt ihnen die Lernmöglichkeiten der einzelnen Finger (Zeigefinger, Mittelfinger usw.). &lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif,serif'; font-size:16pt;&quot;&gt;Die dritte Rubrik „Üben“ zeigt ihnen ihre Übungsmöglichkeiten, um ihre Fertigkeiten im 10-Finger-System erstmalig vollständig anzuwenden und zu vertiefen. Dort können sie auch eigene Texte einfügen. &lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif,serif'; font-size:16pt;&quot;&gt;Nummer vier in der Menüpunktleiste ist der Zeit-Wettkampfmodus, bei dem sie eine vorgegebene Zeit auswählen, in der sie so viele Tastenanschläge wie möglich versuchen zu schaffen. &lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif,serif'; font-size:16pt;&quot;&gt;Der fünfte Punkt ist der Multiplayermodus, bei dem sie die Möglichkeit haben, gegen andere Spieler ihre Fertigkeiten des 10-Finger-Systems unter Beweis zu stellen. &lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif,serif'; font-size:16pt;&quot;&gt;Im sechsten Menüpunkt können sie das Benutzerhandbuch aufrufen, falls sie einmal etwas vergessen haben. &lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif,serif'; font-size:16pt;&quot;&gt;Der letzte Menüpunkt „Info“ zeigt ihnen alle wichtigen Informationen über Typo an, wie ihre Version oder eine Weiterleitung auf unsere Website.&lt;/span&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-   </property>
-  </widget>
-  <widget class="QTextBrowser" name="HDasLernenAnfaengerUebungen_2">
-   <property name="geometry">
-    <rect>
-     <x>150</x>
-     <y>0</y>
-     <width>791</width>
-     <height>811</height>
-    </rect>
-   </property>
-   <property name="html">
-    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif,serif'; font-size:16pt; font-weight:600;&quot;&gt;Das Lernen&lt;/span&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif,serif'; font-size:16pt; font-weight:600;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif,serif'; font-size:16pt; font-weight:600;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif,serif'; font-size:16pt; font-weight:600;&quot;&gt;Anfänger-Übungen &lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif,serif'; font-size:16pt;&quot;&gt;  &lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif,serif'; font-size:16pt;&quot;&gt;In den Anfänger-Übungen unter der Rubrik „Lernen“ wird ihnen Schritt für Schritt gezeigt, welcher Finger für welche Tasten verantwortlich sind und in kurzen Texten wird dies gleich geübt. &lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif,serif'; font-size:16pt;&quot;&gt;Es gibt zu jedem einzelnen Finger (Zeigefinger, Mittelfinger, Ringfinger und Zeigefinger) jeweils zur linken und zur rechten Hand eine eigenen Lernrubrik, um jeden einzelnen Finger seine Aufgaben zu zeigen und sich daran zu gewöhnen. Die virtuelle Tastatur wird sie dabei unterstützen.&lt;/span&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-   </property>
-  </widget>
-  <widget class="QTextBrowser" name="IDasLernenFortgeschrittenenUebungen_2">
-   <property name="geometry">
-    <rect>
-     <x>150</x>
-     <y>0</y>
-     <width>791</width>
-     <height>811</height>
-    </rect>
-   </property>
-   <property name="html">
-    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif,serif'; font-size:16pt; font-weight:600;&quot;&gt;Das Lernen&lt;/span&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2,sans-serif,serif'; font-size:16pt; font-weight:600;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif,serif'; font-size:16pt; font-weight:600;&quot;&gt;Fortgeschrittenen-Übungen &lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif,serif'; font-size:16pt;&quot;&gt;  &lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif,serif'; font-size:16pt;&quot;&gt;In der Fortgeschrittenen-Übung können sie nun alle Finger gleichzeitig bei einem Diktat verwenden um ihre Fertigkeiten zu festigen. Sie haben entweder die Möglichkeit, zufällige Texte aus unserer Datenbank abzurufen oder eigene Texte in Typo hochzuladen und diese abzutippen.&lt;/span&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif,serif'; font-size:16pt;&quot;&gt;Bei den Fortgeschrittenen Übungen verwenden sie zum ersten Mal alle zehn Finger gleichzeitig und erlernen somit vollständig das 10-Finger-System. Wenn sie sich anschließend sicher fühlen, können sie die Wettkampf Modis ausprobieren um ihre Fertigkeiten unter Beweis zu stellen.&lt;/span&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-   </property>
-  </widget>
-  <widget class="QTextBrowser" name="JDieWettkaempfeZeitWettkaempfe_2">
-   <property name="geometry">
-    <rect>
-     <x>150</x>
-     <y>0</y>
-     <width>791</width>
-     <height>811</height>
-    </rect>
-   </property>
-   <property name="html">
-    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif,serif'; font-size:16pt; font-weight:600;&quot;&gt;Die Wettkämpfe &lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif,serif'; font-size:16pt; font-weight:600;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif,serif'; font-size:16pt;&quot;&gt;  &lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif,serif'; font-size:16pt; font-weight:600;&quot;&gt;Zeit-Wettkampf &lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif,serif'; font-size:16pt;&quot;&gt;  &lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif,serif'; font-size:16pt;&quot;&gt;Den Zeit-Wettkampf finden sie unter der Rubrik „Zeitrennen“. Hier haben sie zuerst die Möglichkeit eine Zeitauswahl vorzunehmen, um zu entscheiden wie lange der Wettkampf dauern soll. &lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif,serif'; font-size:16pt;&quot;&gt;Danach wird ihnen ein Text vorgegeben, den sie versuchen so schnell wie möglich abzutippen. Ein Timer im Userinterface zeigt ihnen den Fortschritt des Wettkampfes auf. Ist der Timer bei null angelangt oder haben sie den Text vollständig abgetippt, ist der Wettkampf beendet. Ihr Ergebnis wird ihnen anschließend angezeigt und in unserer Statistik gespeichert.&lt;/span&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif,serif'; font-size:16pt;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-   </property>
-  </widget>
-  <widget class="QTextBrowser" name="KDieWettkaempfeMultiplayerWettkampf_2">
-   <property name="geometry">
-    <rect>
-     <x>150</x>
-     <y>0</y>
-     <width>791</width>
-     <height>811</height>
-    </rect>
-   </property>
-   <property name="html">
-    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif,serif'; font-size:16pt; font-weight:600;&quot;&gt;Die Wettkämpfe &lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2,sans-serif,serif'; font-size:16pt; font-weight:600;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2,sans-serif,serif'; font-size:16pt; font-weight:600;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif,serif'; font-size:16pt; font-weight:600;&quot;&gt;Multiplayer-Wettkampf&lt;/span&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-   </property>
-  </widget>
-  <widget class="QTextBrowser" name="CEinfuehrungTypo_2">
-   <property name="geometry">
-    <rect>
-     <x>150</x>
-     <y>0</y>
-     <width>791</width>
-     <height>811</height>
-    </rect>
-   </property>
-   <property name="html">
-    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif,serif'; font-size:16pt; font-weight:600;&quot;&gt;Einführung Typo&lt;/span&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif,serif'; font-size:8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif,serif'; font-size:16pt;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif,serif'; font-size:8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif,serif'; font-size:16pt;&quot;&gt;Typo bietet ihnen die Möglichkeit, durch verschiedene Übungen und Modis zunächst das 10 Finger-Tipp-System zu erlernen. Diese Möglichkeiten finden sie in den Rubriken „Lernen“ du „Üben“. &lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif,serif'; font-size:16pt;&quot;&gt;Wenn sie erfolgreich das 10-Finger-System erlernt, können sie später mit den Wettkampfmodi ihre Fertigkeiten spielerisch vertiefen. Diese finden sie in den Rubriken „Zeitrennen“ und „Multiplayer“. Um ihren Fortschritt zu speichern, können sie ein Benutzerkonto erstellen um ihre Ergebnisse in den Wettkämpfen zu speichern. &lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif,serif'; font-size:16pt;&quot;&gt;Dadurch haben sie die Möglichkeit, ihre Ergebnisse und Fortschritte transparent in einer Statistik einzusehen. Somit gibt es für das Erlernen und Vertiefen des 10-Finger-Systems ein Langzeitmotivation, um ihnen das Erlernen dieses Systems zu erleichtern.&lt;/span&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-   </property>
-  </widget>
-  <widget class="QTextBrowser" name="DBenutzerkontofuehrung_2">
-   <property name="geometry">
-    <rect>
-     <x>150</x>
-     <y>0</y>
-     <width>791</width>
-     <height>811</height>
-    </rect>
-   </property>
-   <property name="html">
-    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif,serif'; font-size:16pt; font-weight:600;&quot;&gt;Benutzerkontoführung &lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif,serif'; font-size:16pt;&quot;&gt;  &lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif,serif'; font-size:16pt;&quot;&gt;Sobald sie das Programm Typo geöffnet haben, finden sie oben links den Button „Anmelden“. Dort finden sie alle wichtigen Optionen der Benutzerkontoführung. &lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif,serif'; font-size:16pt;&quot;&gt;Falls sie noch kein Konto bei Typo besitzen, benutzen sie den Button „Registrieren“. Für ihre Registrierung bei Typo müssen sie sich einen Benutzernamen und ein Passwortüberlegen, den sie in die passenden Felder eintragen. Das Dialogfenster schließt sich automatisch, wenn die Registrierung erfolgreich war. &lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif,serif'; font-size:16pt;&quot;&gt;Um sich bei Typo anzumelden müssen sie nun ihren Benutzernamen und ihr Passwort eingeben. Bei Korrekter Eingabe wird sich auch dieses Dialogfenster automatisch schließen. Danach können sie mit der Benutzung von Typo beginnen.&lt;/span&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="LStatistik">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>690</y>
-     <width>151</width>
-     <height>61</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Statistik</string>
-   </property>
-  </widget>
-  <widget class="QTextBrowser" name="LStatistik_2">
-   <property name="geometry">
-    <rect>
-     <x>150</x>
-     <y>0</y>
-     <width>791</width>
-     <height>811</height>
-    </rect>
-   </property>
-   <property name="html">
-    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2,sans-serif,serif'; font-size:16pt; font-weight:600;&quot;&gt;Statistik&lt;/span&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-   </property>
-  </widget>
-  <zorder>MSchliessen</zorder>
-  <zorder>JDieWettkaempfeZeitWettkaempfe</zorder>
-  <zorder>HDasLernenAnfaengerUebungen</zorder>
-  <zorder>GDasHauptmenue</zorder>
-  <zorder>FUmgangmitderBildschirmtastatur</zorder>
-  <zorder>ELernvorgang</zorder>
-  <zorder>AInhaltsangabe</zorder>
-  <zorder>BVorwort</zorder>
-  <zorder>IDasLernenFortgeschrittenenUebungen</zorder>
-  <zorder>KDieWettkaempfeMultiplayerWettkampf</zorder>
-  <zorder>DBenutzerkontofuehrung</zorder>
-  <zorder>CEinfuehrungTypo</zorder>
-  <zorder>AAVollstaendigesHandbuch</zorder>
-  <zorder>line</zorder>
-  <zorder>line_2</zorder>
-  <zorder>line_3</zorder>
-  <zorder>line_4</zorder>
-  <zorder>line_5</zorder>
-  <zorder>LStatistik</zorder>
-  <zorder>BVorwort_2</zorder>
-  <zorder>AInhaltsangabe_2</zorder>
-  <zorder>AAVollstaendigesHandbuch_2</zorder>
-  <zorder>CEinfuehrungTypo_2</zorder>
-  <zorder>DBenutzerkontofuehrung_2</zorder>
-  <zorder>ELernvorgang_2</zorder>
-  <zorder>GDasHauptmenue_2</zorder>
-  <zorder>HDasLernenAnfaengerUebungen_2</zorder>
-  <zorder>IDasLernenFortgeschrittenenUebungen_2</zorder>
-  <zorder>JDieWettkaempfeZeitWettkaempfe_2</zorder>
-  <zorder>KDieWettkaempfeMultiplayerWettkampf_2</zorder>
-  <zorder>LStatistik_2</zorder>
-  <zorder>FUmgangmitderBildschirmtastatur_2</zorder>
  </widget>
  <resources/>
  <connections/>

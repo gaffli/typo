@@ -13,15 +13,14 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
 
-    MainWindow::line.append("abcd efghi jklmn opqr");  // zum testen noch hier drin, später löschen
+    MainWindow::line.append("abcd EFGHI jklm NOPQ rstv UVW xyz");  // zum testen noch hier drin, später löschen
                                             // wenn dann code zusammegeführt wird mit f3 alle lines durch texte ersetzen bzw zeile 24 entkommentieren
                                             // ACHTUNG: auch im header des ding durch texte ersetz
-
-
     ui->setupUi(this);
     ui->textBrowser->setText(line); // bei einfügen ins mainwindow ist das gleich die variable für den text
-    qApp->installEventFilter(this);
+    qApp->installEventFilter(this);  // Hello World
     //QString line = texte;
+
 }
 
 MainWindow::~MainWindow()
@@ -29,42 +28,60 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-bool MainWindow::eventFilter(QObject *obj, QEvent *event) //Von lennart übernommen gibt die Ascii codes aus der eintippten Buchstaben
-                                                          //leider gibt der von ihm geschriebene Code den Ascii code nicht korekkt aus, es wird nicht zwischen Groß und Kleinbuschtaben unterschieden
+bool MainWindow::eventFilter(QObject *obj, QEvent *event)
 {
-  if (event->type() == QEvent::KeyPress)
-  {
+    if (event->type() == QEvent::KeyPress)
+    {
+        QKeyEvent *ke = (QKeyEvent *) event;
+        taste = ke->text();
+        ui->textBrowser_2->setText(taste);
+        if(zaehler == 0)
+        {
+            if (taste == "A" || taste == "B" || taste == "C" || taste == "D" || taste == "E" || taste == "F" || taste == "G" || taste == "H"
+                    || taste == "I" || taste == "J" || taste == "K" || taste == "L" || taste == "M" || taste == "N" || taste == "O" || taste == "P" || taste == "Q"
+                    || taste == "R" || taste == "S" || taste == "T" || taste == "U" || taste == "V" || taste == "W" || taste == "X" || taste == "Y" || taste == "Z")
+            {
+                zaehler = 1;
+                MainWindow::Vergleich();
+            }
+            if (taste == Qt::Key_Space || taste == "a" || taste == "b" || taste == "c" || taste == "d" || taste == "e" || taste == "f" || taste == "g" || taste == "h"
+                    || taste == "i" || taste == "j" || taste == "k" || taste == "l" || taste == "m" || taste == "n" || taste == "o" || taste == "p" || taste == "q" ||
+                    taste == "r" || taste == "s" || taste == "t" || taste == "u" || taste == "v" || taste == "w" || taste == "x" || taste == "y" || taste == "z")
+            {
+                zaehler = 1;
+                MainWindow::Vergleich();
+            }
+        }
+        else if (zaehler = 1)
+        {
+            zaehler = 0;
+        }
+        return QObject::eventFilter(obj, event);
 
-          QKeyEvent *keyEvent = static_cast<QKeyEvent *>(event); //Aufzeichnen der eingegeben Chars
-          taste = keyEvent->key();
-          std::cout << taste << std::endl;
-          ui->textBrowser_2->setText(QString("%1").arg(taste)); //Ausgabe auf dem Textbrowser 2
-          Vergleich(taste); //Aufruf der Verlgeich und Lösch Funktion
-          std::cout << "a" << std::endl;
-
-
-  }
-
-
-return QObject::eventFilter(obj, event);
+    }
+    else
+    {
+        return QObject::eventFilter(obj, event);
+    }
 }
 
-
-
-void MainWindow::Vergleich(int taste)
+void MainWindow::Vergleich()
 {
-    int strwert = MainWindow::line.at(0).toLatin1(); //die erste stelle des QStrings line wird hier zum ascii code umgewandelt zum vergleich
-    ui->spinBox->setValue(strwert); //Wert wird in der spinbox angezeigt
+    linewert = MainWindow::line.at(spacezaehler).toLatin1();
+    tippwert = taste.at(0).toLatin1();
+    ui->spinBox->setValue(linewert);
 
-    if (taste == strwert || taste == strwert - 32) // hier werden die werte taste und strwert verglichen, der zwite teil der if operation ist nötig da lennarts code noch nicht korrekt ist
+    if (linewert == tippwert )
     {
-        MainWindow::line.remove(0,1); //Der erste Buchstabe von line wird entfernt
-        ui->textBrowser->setText(MainWindow::line); //neuer text wird angezeigt
-        ui->spinBox->setValue(strwert);
-        ui->textBrowser_3->setText("right");
+        spacezaehler ++;
+        ui->spinBox->setValue(tippwert);
+        if (tippwert == 32)
+        {
+            MainWindow::line.remove(0,spacezaehler);
+            ui->textBrowser->setText(MainWindow::line);
+            spacezaehler = 0;
+        }
     }
-
-
 }
 
 

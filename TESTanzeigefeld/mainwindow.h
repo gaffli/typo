@@ -14,12 +14,16 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
-    int taste;
+    QString taste;
+    int zaehler = 0;
+    int linewert;
+    int tippwert;
+    int spacezaehler = 0;
 
 private:
     Ui::MainWindow *ui;
     bool eventFilter(QObject *obj, QEvent *event);
-    void Vergleich(int taste);
+    void Vergleich();
     QString line;
 
 

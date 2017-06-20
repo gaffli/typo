@@ -14,9 +14,12 @@ class Benutzerhandbuch : public QDialog
 public:
     explicit Benutzerhandbuch(QWidget *parent = 0);
     ~Benutzerhandbuch();
+     QString Url;
 
 private slots:
-       void on_AAVollstaendigesHandbuch_clicked();
+        void SetPath();
+
+        void on_AAVollstaendigesHandbuch_clicked();
 
         void on_AInhaltsangabe_clicked();
 
