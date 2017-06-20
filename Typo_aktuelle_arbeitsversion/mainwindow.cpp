@@ -134,6 +134,11 @@ void MainWindow::timer_timeout()
 
 void MainWindow::on_anmelden_clicked()
 {
+
+    ui->frame_hand->hide();
+    ui->frame_welcome->show();
+
+
  login log;
  log.setModal(true);
  QObject::connect(&log,SIGNAL(signal_username_set(QString)),this,SLOT(on_label_username_set_user(QString)));
@@ -740,10 +745,9 @@ void MainWindow::after_logout_process()
 void MainWindow::on_pb_profil_clicked()
 {
     login log;
-    log.setModal(true);
+    log.show();
     QObject::connect(this,SIGNAL(profil_show_and_hide()),&log,SLOT(profil_show_and_hide()));
     emit profil_show_and_hide();
-    log.exec();
 
 
 

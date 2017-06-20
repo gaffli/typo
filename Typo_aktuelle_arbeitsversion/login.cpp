@@ -25,7 +25,7 @@ login::~login()
 void login::on_abbrechen_anmelden_clicked()
 {
    ui->lab_status->hide();
-   this->hide();
+   this->close();
 }
 
 
@@ -38,7 +38,7 @@ void login::on_pb_abmelden_clicked()
 void login::on_pb_zurueck_clicked()
 {
 
-this->hide();
+    this->hide();
 
 
 }
@@ -176,6 +176,7 @@ void login::use_querylogin(QSqlQuery qry_login)
 
 void login::profil_show_and_hide()
 {
+
     ui->frame_login->hide();
     ui->frame_profil->show();
 
