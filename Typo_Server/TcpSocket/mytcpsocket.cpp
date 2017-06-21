@@ -19,13 +19,12 @@ void MyTcpSocket::doConnect()
 
     qDebug() << "connecting...";
 
-    //const char* ip_addresse = QHostInfo::localHostName() ;
     MyTcpSocket::c = MyTcpSocket::socketport;
 
     // this is not blocking call
     socket->bind(MyTcpSocket::socketport);
 
-    socket->connectToHost("127.0.0.1",4321);
+    socket->connectToHost("127.0.0.1",1234);
     // we need to wait...
     if(!socket->waitForConnected(5000))
     {
@@ -38,9 +37,10 @@ void MyTcpSocket::connected()
     qDebug() << "connected...";
 
     // Hey server, tell me about you.
-   // socket->write("HEAD / HTTP/1.0\r\n\r\n\r\n\r\n");
-   // socket->write();
+    socket->write("HEAD / HTTP/1.0\r\n\r\n\r\n\r\n");
+    socket->write("hallo server");
     socket->write(&(MyTcpSocket::c));
+    socket->flush();
 
 }
 
