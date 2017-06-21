@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <QHostInfo>
 #include <QHostAddress>
+#include <QTcpSocket>
 
 
 
@@ -36,13 +37,27 @@ MyTcpServer::MyTcpServer(QObject *parent) : QObject(parent)
  void MyTcpServer::newConnection()
  {
      // need to grab the socket
-     QTcpSocket *socket = server->nextPendingConnection();
+     socket = server->nextPendingConnection();
+     connect(socket, SIGNAL(readyRead()),this, SLOT(readyRead()));
 
      qDebug() << socket->peerAddress();
      socket->write("Hello client\r\n");
-     socket->flush();
+     if (socket->flush())
+       qDebug() << "es wurde geschreiben";
 
-     socket->waitForBytesWritten(3000);
 
-     socket->close();
+
+     socket->waitForBytesWritten(5000);
+     qDebug() << socket->readAll();
+     //qDebug() << socket->bytesAvailable();
+
+    // socket->close();
+ }
+
+ void MyTcpServer::readyRead()
+ {
+     qDebug() << "reading...";
+
+     // read the data from the socket
+     qDebug() << socket->readAll();
  }
