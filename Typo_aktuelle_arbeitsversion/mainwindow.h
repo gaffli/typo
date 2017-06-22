@@ -26,10 +26,11 @@ public:
 
     Fehleranalyse* fehlersuche;
     ~MainWindow();
+    bool eventFilter(QObject *obj, QEvent *event);
+    QString text;
 
 signals:
    void profil_show_and_hide();
-   void signal_sys_show();
 
 private slots:
 
@@ -84,6 +85,8 @@ private slots:
 
     void on_pb_profil_clicked();
 
+    void Vergleich();
+
 private:
     Ui::MainWindow *ui;
     Ui::QWidget *Form;
@@ -91,7 +94,10 @@ private:
     QSqlDatabase typodb;
     QSqlDatabase typo_db;
     bool text_run;
-    QString benutzername;
+    int tippwert;
+    int spacezaehler = 0;
+    int textcounter = 0;
+    int zaehler = 0;
 
 };
 
