@@ -19,6 +19,7 @@
 #include<QTimer>
 #include<QTextCodec>
 #include <stdlib.h>
+#include <QKeyEvent>
 
 
 
@@ -44,7 +45,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->label_username->setText("");
     ui->label_username->hide();
     ui->frame_welcome->show();
-    ui->ueben->setEnabled(false);
+    ui->ueben->setEnabled(true);
     ui->zeitrennen->setEnabled(false);
     ui->label_zeit->hide();
     ui->frame_zeitvorbei->hide();
@@ -59,6 +60,9 @@ MainWindow::MainWindow(QWidget *parent) :
     keyboard = new key();
     ui->horizontalLayout->addWidget(keyboard);
     fehlersuche = new Fehleranalyse();
+
+    setFocusPolicy(Qt::StrongFocus);
+    qApp->installEventFilter(this);
     QSqlDatabase typo_db =  QSqlDatabase::addDatabase("QMYSQL");
     typo_db.setDatabaseName("typo");
     typo_db.setUserName("Alex");
@@ -73,6 +77,7 @@ MainWindow::~MainWindow()
     delete ui;
     delete keyboard;
     delete fehlersuche;
+
 
 }
 
@@ -145,7 +150,6 @@ void MainWindow::on_anmelden_clicked()
  QObject::connect(&log,SIGNAL(after_login_process()),this,SLOT(after_login_process()));
  QObject::connect(&log,SIGNAL(after_logout_process()),this,SLOT(after_logout_process()));
  log.exec();
- MainWindow::benutzername = log.get();
 }
 
 void MainWindow::on_optionen_clicked()
@@ -188,9 +192,9 @@ void MainWindow::on_bl_zeige_clicked()
    QSqlRecord record=query.record();
    while (query.next())
    {
-       QString texte=query.value(record.indexOf("texte")).toString();       //Der aus der MYSQL Datenbank entnomme Text wird in einen QString gespeichtert und anschließent ausgegeben
+       text=query.value(record.indexOf("texte")).toString();       //Der aus der MYSQL Datenbank entnomme Text wird in einen QString gespeichtert und anschließent ausgegeben
        ui->frame_lernen->show();
-       ui->textBrowser->setText(texte);
+       ui->textBrowser->setText(text);
 
        ui->eingabefeld->setFocus();
 
@@ -198,7 +202,7 @@ void MainWindow::on_bl_zeige_clicked()
 
        if(!fehlersuche->IsRunning())
          {
-          fehlersuche->start(texte);
+          fehlersuche->start(text);
          }
    }
 
@@ -218,13 +222,13 @@ void MainWindow::on_bl_mittel_clicked()
    QSqlRecord record=query.record();
    while (query.next())
    {
-       QString texte=query.value(record.indexOf("texte")).toString();
+       text=query.value(record.indexOf("texte")).toString();
        ui->frame_lernen->show();
-       ui->textBrowser->setText(texte);
+       ui->textBrowser->setText(text);
         ui->eingabefeld->setFocus();
        if(!fehlersuche->IsRunning())
          {
-          fehlersuche->start(texte);
+          fehlersuche->start(text);
          }
    }
 
@@ -245,13 +249,13 @@ void MainWindow::on_bl_ring_clicked()
    QSqlRecord record=query.record();
    while (query.next())
    {
-       QString texte=query.value(record.indexOf("texte")).toString();
+       text=query.value(record.indexOf("texte")).toString();
        ui->frame_lernen->show();
-       ui->textBrowser->setText(texte);
+       ui->textBrowser->setText(text);
         ui->eingabefeld->setFocus();
        if(!fehlersuche->IsRunning())
          {
-          fehlersuche->start(texte);
+          fehlersuche->start(text);
          }
    }
 
@@ -272,13 +276,13 @@ void MainWindow::on_bl_kleiner_clicked()
    QSqlRecord record=query.record();
    while (query.next())
    {
-       QString texte=query.value(record.indexOf("texte")).toString();
+       text=query.value(record.indexOf("texte")).toString();
        ui->frame_lernen->show();
-       ui->textBrowser->setText(texte);
+       ui->textBrowser->setText(text);
         ui->eingabefeld->setFocus();
        if(!fehlersuche->IsRunning())
          {
-          fehlersuche->start(texte);
+          fehlersuche->start(text);
          }
    }
 
@@ -299,13 +303,13 @@ void MainWindow::on_br_zeige_clicked()
    QSqlRecord record=query.record();
    while (query.next())
    {
-       QString texte=query.value(record.indexOf("texte")).toString();
+       text=query.value(record.indexOf("texte")).toString();
        ui->frame_lernen->show();
-       ui->textBrowser->setText(texte);
+       ui->textBrowser->setText(text);
         ui->eingabefeld->setFocus();
        if(!fehlersuche->IsRunning())
          {
-          fehlersuche->start(texte);
+          fehlersuche->start(text);
          }
    }
 
@@ -326,13 +330,13 @@ void MainWindow::on_br_mittel_clicked()
    QSqlRecord record=query.record();
    while (query.next())
    {
-       QString texte=query.value(record.indexOf("texte")).toString();
+       text=query.value(record.indexOf("texte")).toString();
        ui->frame_lernen->show();
-       ui->textBrowser->setText(texte);
+       ui->textBrowser->setText(text);
         ui->eingabefeld->setFocus();
        if(!fehlersuche->IsRunning())
          {
-          fehlersuche->start(texte);
+          fehlersuche->start(text);
          }
    }
 
@@ -353,13 +357,13 @@ void MainWindow::on_br_ring_clicked()
    QSqlRecord record=query.record();
    while (query.next())
    {
-       QString texte=query.value(record.indexOf("texte")).toString();
+       text=query.value(record.indexOf("texte")).toString();
        ui->frame_lernen->show();
-       ui->textBrowser->setText(texte);
+       ui->textBrowser->setText(text);
         ui->eingabefeld->setFocus();
        if(!fehlersuche->IsRunning())
          {
-          fehlersuche->start(texte);
+          fehlersuche->start(text);
          }
    }
 
@@ -380,13 +384,13 @@ void MainWindow::on_br_kleiner_clicked()
    QSqlRecord record=query.record();
    while (query.next())
    {
-       QString texte=query.value(record.indexOf("texte")).toString();
+       text=query.value(record.indexOf("texte")).toString();
        ui->frame_lernen->show();
-       ui->textBrowser->setText(texte);
+       ui->textBrowser->setText(text);
         ui->eingabefeld->setFocus();
        if(!fehlersuche->IsRunning())
          {
-          fehlersuche->start(texte);
+          fehlersuche->start(text);
          }
    }
 
@@ -444,13 +448,13 @@ void MainWindow::on_pushButton_starten_clicked()
    QSqlRecord record=query.record();
    while (query.next())
    {
-       QString texte=query.value(record.indexOf("Text")).toString();
+       text=query.value(record.indexOf("Text")).toString();
        ui->frame_lernen->show();
-       ui->textBrowser->setText(texte);
+       ui->textBrowser->setText(text);
         ui->eingabefeld->setFocus();
        if(!fehlersuche->IsRunning())
          {
-          fehlersuche->start(texte);
+          fehlersuche->start(text);
          }
    }
 
@@ -466,7 +470,7 @@ void MainWindow::on_pushButton_eigener_clicked()
 
 
     file.open(QIODevice::ReadOnly | QIODevice::Text); // Als Text-Datei nur zum Lesen öffnen
-    QString text=QLatin1String (file.readAll());
+    text=QLatin1String (file.readAll());
     file.close(); // Datei wieder schließen
 
     if (text.size() != 0)
@@ -522,14 +526,14 @@ void MainWindow::on_pushButton_zeitstart_clicked()
              QSqlRecord record=query.record();
              while (query.next())
              {
-                 QString texte=query.value(record.indexOf("Text")).toString();
+                 text=query.value(record.indexOf("Text")).toString();
                  ui->frame_lernen->show();
                  timer->start();                               //Zeitrennen starten
-                 ui->textBrowser->setText(texte);
+                 ui->textBrowser->setText(text);
                   ui->eingabefeld->setFocus();
                  if(!fehlersuche->IsRunning())
                    {
-                    fehlersuche->start(texte);
+                    fehlersuche->start(text);
                    }
 
 
@@ -553,14 +557,14 @@ void MainWindow::on_pushButton_zeitstart_clicked()
              QSqlRecord record=query.record();
              while (query.next())
              {
-                 QString texte=query.value(record.indexOf("Text")).toString();
+                 text=query.value(record.indexOf("Text")).toString();
                  ui->frame_lernen->show();
                  timer->start();                               //Zeitrennen starten
-                 ui->textBrowser->setText(texte);
+                 ui->textBrowser->setText(text);
                   ui->eingabefeld->setFocus();
                  if(!fehlersuche->IsRunning())
                    {
-                    fehlersuche->start(texte);
+                    fehlersuche->start(text);
                    }
              }
         }
@@ -582,14 +586,14 @@ void MainWindow::on_pushButton_zeitstart_clicked()
              QSqlRecord record=query.record();
              while (query.next())
              {
-                 QString texte=query.value(record.indexOf("Text")).toString();
+                 text=query.value(record.indexOf("Text")).toString();
                  ui->frame_lernen->show();
                  timer->start();                               //Zeitrennen starten
-                 ui->textBrowser->setText(texte);
+                 ui->textBrowser->setText(text);
                   ui->eingabefeld->setFocus();
                  if(!fehlersuche->IsRunning())
                    {
-                    fehlersuche->start(texte);
+                    fehlersuche->start(text);
                    }
              }
         }
@@ -611,14 +615,14 @@ void MainWindow::on_pushButton_zeitstart_clicked()
              QSqlRecord record=query.record();
              while (query.next())
              {
-                 QString texte=query.value(record.indexOf("Text")).toString();
+                 text=query.value(record.indexOf("Text")).toString();
                  ui->frame_lernen->show();
                  timer->start();                               //Zeitrennen starten
-                 ui->textBrowser->setText(texte);
+                 ui->textBrowser->setText(text);
                   ui->eingabefeld->setFocus();
                  if(!fehlersuche->IsRunning())
                    {
-                    fehlersuche->start(texte);
+                    fehlersuche->start(text);
                    }
              }
         }
@@ -725,6 +729,7 @@ void MainWindow::on_pB_ende_clicked()
 void MainWindow::after_login_process()
 {
     ui->anmelden->hide();
+    //Profil showen
     ui->ueben->setEnabled(true);
     ui->zeitrennen->setEnabled(true);
     ui->multiplayer->setEnabled(true);
@@ -745,12 +750,71 @@ void MainWindow::after_logout_process()
 void MainWindow::on_pb_profil_clicked()
 {
     login log;
-    log.setModal(true);
-    QString name = MainWindow::benutzername;
-    log.set(name);
+    log.show();
     QObject::connect(this,SIGNAL(profil_show_and_hide()),&log,SLOT(profil_show_and_hide()));
-    QObject::connect(&log,SIGNAL(after_logout_process()),this,SLOT(after_logout_process()));
     emit profil_show_and_hide();
-    log.exec();
+
+
+
+
 
 }
+
+bool MainWindow::eventFilter(QObject *obj, QEvent *event)
+{
+    if (event->type() == QEvent::KeyPress)
+    {
+        QKeyEvent* ke = (QKeyEvent *) event;
+        QByteArray byte = 0;
+        QString taste = ke->text();
+        byte = taste.toLatin1();
+        tippwert = static_cast<quint8>(byte[0]);
+
+        if (zaehler == 0)
+        {
+            Vergleich();
+            zaehler = 1;
+        }
+        else if (zaehler != 0)
+        {
+            zaehler = 0;
+        }
+    }
+    return QObject::eventFilter(obj, event);
+}
+
+void MainWindow::Vergleich()
+{
+    if (tippwert >= 33 && tippwert <= 126)
+    {
+        spacezaehler ++;
+    }
+    if (tippwert == 32 && spacezaehler != 0)
+        {
+            zaehler = 0;
+            QString v;
+            int textsize = text.length();
+            do
+            {
+                if (zaehler < textsize)
+                {
+                v = text.at(zaehler);
+                zaehler++;
+                }
+                else
+                {
+                    zaehler++;
+                    break;
+                }
+            }while(v != Qt::Key_Space);
+            text.remove(0,zaehler);
+            ui->textBrowser->setText(text);
+            spacezaehler = 0;
+        }
+}
+
+
+
+
+
+
