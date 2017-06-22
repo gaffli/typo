@@ -233,7 +233,7 @@
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>0</y>
+       <y>20</y>
        <width>170</width>
        <height>60</height>
       </rect>
@@ -242,6 +242,19 @@
       <string>Mein Profil</string>
      </property>
     </widget>
+    <zorder>optionen</zorder>
+    <zorder>multiplayer</zorder>
+    <zorder>zeitrennen</zorder>
+    <zorder>ueben</zorder>
+    <zorder>lernen</zorder>
+    <zorder>anmelden</zorder>
+    <zorder>line</zorder>
+    <zorder>line_2</zorder>
+    <zorder>line_3</zorder>
+    <zorder>line_4</zorder>
+    <zorder>b_buch</zorder>
+    <zorder>pb_profil</zorder>
+    <zorder>frame_lernen</zorder>
    </widget>
    <widget class="QFrame" name="frame_hand">
     <property name="geometry">
@@ -796,10 +809,10 @@ border-top-width: 1.5px;
    <widget class="QFrame" name="frame_lernen">
     <property name="geometry">
      <rect>
-      <x>220</x>
-      <y>20</y>
-      <width>1051</width>
-      <height>671</height>
+      <x>10</x>
+      <y>10</y>
+      <width>1261</width>
+      <height>681</height>
      </rect>
     </property>
     <property name="frameShape">
