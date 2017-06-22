@@ -90,8 +90,9 @@ void MainWindow::timer_timeout()
     if(cnt==0)
     {
       timer->stop();
-      ui->frame_zeitvorbei->show();
       ui->frame_lernen->hide();
+      ui->frame_zeitvorbei->show();
+
 
       int woerter=fehlersuche->NumberofCorrectWords;
       int fehler=fehlersuche->NumberofErrors;
@@ -119,8 +120,8 @@ void MainWindow::timer_timeout()
 
          }
 
-      woerter=woerter/teiler;
-      fehler=fehler/teiler;
+     // woerter=woerter/teiler;
+     // fehler=fehler/teiler;
 
       ui->label_fpm->setNum(fehler);
       ui->label_wpm->setNum(woerter);
@@ -511,7 +512,7 @@ void MainWindow::on_pushButton_zeitstart_clicked()
 
      if (ui->radioButton_1->isChecked())        // 1 Minute Zeit
         {
-            cnt =60;
+            cnt =10;
             int rnd=rand() % 5 + 6; // Random zwischen 6-10
             rnd=rand() % 5 + 6;
             ui->frame_lernen->show();
