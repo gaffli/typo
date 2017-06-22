@@ -651,15 +651,18 @@ void MainWindow::on_eingabefeld_textChanged(const QString &typedwords)
 {
   if(typedwords.length() == 0)
     return;
-/*
+
   if(ui->textBrowser->toPlainText() == "")
   MainWindow::text_run = false;
   else
   MainWindow::text_run = true;
 
   if(MainWindow::text_run == false)
-    return;
-*/
+    {
+      ui->eingabefeld->setText(typedwords.mid(typedwords.size()-1));
+      return;
+  }
+
 
   if(typedwords.at(typedwords.length() - 1) == ' ')
     {
