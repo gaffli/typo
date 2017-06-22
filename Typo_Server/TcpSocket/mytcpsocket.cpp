@@ -39,7 +39,10 @@ void MyTcpSocket::connected()
     // Hey server, tell me about you.
     socket->write("HEAD / HTTP/1.0\r\n\r\n\r\n\r\n");
     socket->write("hallo server");
-    socket->write(&(MyTcpSocket::c));
+    //socket->write(&(MyTcpSocket::c));
+    socket->write("hellooooooo");
+    socket->flush();
+    //qDebug() << socket->localAddress();
     socket->flush();
 
 }
