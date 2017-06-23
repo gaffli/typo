@@ -94,6 +94,7 @@ private:
     QSqlDatabase typodb;
     QSqlDatabase typo_db;
     bool text_run;
+    bool ende = false;
     int tippwert;
     int spacezaehler = 0;
     int textcounter = 0;
