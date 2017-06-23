@@ -5,6 +5,7 @@
 #include <QTcpSocket>
 #include <QAbstractSocket>
 #include <QDebug>
+#include <QTcpServer>
 
 class MyTcpSocket : public QObject
 {
@@ -15,17 +16,18 @@ public:
     void doConnect();
 
 signals:
+    void first_socked_finish();
 
 public slots:
     void connected();
     void disconnected();
     void bytesWritten(qint64 bytes);
     void readyRead();
+    void socket_after_socket();
 
 private:
     QTcpSocket *socket;
     int socketport = 4321;
-    char c;
 };
 
 #endif // MYTCPSOCKET_H

@@ -16,10 +16,9 @@ void MyTcpSocket::doConnect()
     connect(socket, SIGNAL(disconnected()),this, SLOT(disconnected()));
     connect(socket, SIGNAL(bytesWritten(qint64)),this, SLOT(bytesWritten(qint64)));
     connect(socket, SIGNAL(readyRead()),this, SLOT(readyRead()));
+    connect(this,SIGNAL(first_socked_finish()),this,SLOT(socket_after_socket()));
 
     qDebug() << "connecting...";
-
-    MyTcpSocket::c = MyTcpSocket::socketport;
 
     // this is not blocking call
     socket->bind(MyTcpSocket::socketport);
@@ -50,6 +49,7 @@ void MyTcpSocket::connected()
 void MyTcpSocket::disconnected()
 {
     qDebug() << "disconnected...";
+    emit first_socked_finish();
 }
 
 void MyTcpSocket::bytesWritten(qint64 bytes)
@@ -63,4 +63,16 @@ void MyTcpSocket::readyRead()
 
     // read the data from the socket
     qDebug() << socket->readAll();
+}
+
+void MyTcpSocket::socket_after_socket()
+{
+   QTcpSocket * new_socket = new QTcpSocket(this);
+   new_socket->bind(MyTcpSocket::socketport);
+
+   new_socket->waitForReadyRead(30000);
+   if (new_socket->ConnectedState == 4)
+       qDebug() << "connected new socket";
+   else
+       qDebug() << "connecting new socket failed";
 }

@@ -5,6 +5,8 @@
 #include <QTcpSocket>
 #include <QTcpServer>
 #include <QDebug>
+#include <QQueue>
+#include <QVector>
 
 class MyTcpServer : public QObject
 {
@@ -13,15 +15,19 @@ public:
     explicit MyTcpServer(QObject *parent = 0);
 
 signals:
+    void two_clients_signal();
 
 public slots:
 
      void newConnection();
      void readyRead();
+     void two_clients_slot();
 
 private:
      QTcpServer *server;
      QTcpSocket *socket;
+     QQueue<QHostAddress> client_ip;
+     QQueue<quint16> client_ports;
 
 };
 
