@@ -625,6 +625,7 @@ void MainWindow::on_pushButton_zeitstart_clicked()
                    {
                     fehlersuche->start(text);
                    }
+
              }
         }
 
