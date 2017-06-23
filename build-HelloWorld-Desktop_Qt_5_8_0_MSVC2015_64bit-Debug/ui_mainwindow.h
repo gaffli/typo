@@ -23,6 +23,7 @@
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QRadioButton>
+#include <QtWidgets/QTableWidget>
 #include <QtWidgets/QTextBrowser>
 #include <QtWidgets/QToolBar>
 #include <QtWidgets/QWidget>
@@ -80,13 +81,6 @@ public:
     QLabel *label_2;
     QLabel *label_3;
     QLabel *label_fehler;
-    QFrame *frame_zeitvorbei;
-    QLabel *label_4;
-    QLabel *label_wpm;
-    QLabel *label_5;
-    QLabel *label_6;
-    QLabel *label_fpm;
-    QPushButton *pB_ende;
     QFrame *frame_welcome;
     QLabel *label_banner_typo;
     QLabel *label_17;
@@ -100,6 +94,18 @@ public:
     QLabel *label_25;
     QLabel *label_26;
     QLabel *label_13;
+    QFrame *frame_zeitvorbei;
+    QLabel *label_zeittext;
+    QLabel *label_wpm;
+    QLabel *label_wpm_2;
+    QLabel *label_fpm_2;
+    QLabel *label_fpm;
+    QPushButton *pB_ende;
+    QTableWidget *tableWidget_woerter;
+    QLabel *label_vorbeitext;
+    QLabel *label_rwort;
+    QLabel *label_fwort;
+    QPushButton *pb_profil_2;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
 
@@ -171,18 +177,6 @@ public:
         pb_profil = new QPushButton(frame_menue);
         pb_profil->setObjectName(QStringLiteral("pb_profil"));
         pb_profil->setGeometry(QRect(0, 20, 170, 60));
-        optionen->raise();
-        multiplayer->raise();
-        zeitrennen->raise();
-        ueben->raise();
-        lernen->raise();
-        anmelden->raise();
-        line->raise();
-        line_2->raise();
-        line_3->raise();
-        line_4->raise();
-        b_buch->raise();
-        pb_profil->raise();
         frame_hand = new QFrame(centralWidget);
         frame_hand->setObjectName(QStringLiteral("frame_hand"));
         frame_hand->setGeometry(QRect(420, 40, 691, 601));
@@ -559,42 +553,9 @@ public:
         label_fehler->setObjectName(QStringLiteral("label_fehler"));
         label_fehler->setGeometry(QRect(790, 80, 61, 31));
         label_fehler->setFont(font2);
-        frame_zeitvorbei = new QFrame(frame_lernen);
-        frame_zeitvorbei->setObjectName(QStringLiteral("frame_zeitvorbei"));
-        frame_zeitvorbei->setGeometry(QRect(120, 10, 811, 421));
-        frame_zeitvorbei->setFrameShape(QFrame::StyledPanel);
-        frame_zeitvorbei->setFrameShadow(QFrame::Raised);
-        label_4 = new QLabel(frame_zeitvorbei);
-        label_4->setObjectName(QStringLiteral("label_4"));
-        label_4->setGeometry(QRect(100, 30, 281, 41));
-        label_wpm = new QLabel(frame_zeitvorbei);
-        label_wpm->setObjectName(QStringLiteral("label_wpm"));
-        label_wpm->setGeometry(QRect(300, 30, 71, 41));
-        QFont font4;
-        font4.setPointSize(10);
-        font4.setBold(true);
-        font4.setWeight(75);
-        label_wpm->setFont(font4);
-        label_5 = new QLabel(frame_zeitvorbei);
-        label_5->setObjectName(QStringLiteral("label_5"));
-        label_5->setGeometry(QRect(380, 30, 91, 41));
-        label_6 = new QLabel(frame_zeitvorbei);
-        label_6->setObjectName(QStringLiteral("label_6"));
-        label_6->setGeometry(QRect(380, 80, 91, 51));
-        label_fpm = new QLabel(frame_zeitvorbei);
-        label_fpm->setObjectName(QStringLiteral("label_fpm"));
-        label_fpm->setGeometry(QRect(300, 80, 61, 41));
-        QFont font5;
-        font5.setPointSize(9);
-        font5.setBold(true);
-        font5.setWeight(75);
-        label_fpm->setFont(font5);
-        pB_ende = new QPushButton(frame_zeitvorbei);
-        pB_ende->setObjectName(QStringLiteral("pB_ende"));
-        pB_ende->setGeometry(QRect(270, 170, 140, 60));
         frame_welcome = new QFrame(centralWidget);
         frame_welcome->setObjectName(QStringLiteral("frame_welcome"));
-        frame_welcome->setGeometry(QRect(200, 0, 1070, 680));
+        frame_welcome->setGeometry(QRect(209, -1, 1061, 681));
         frame_welcome->setFrameShape(QFrame::StyledPanel);
         frame_welcome->setFrameShadow(QFrame::Raised);
         label_banner_typo = new QLabel(frame_welcome);
@@ -633,6 +594,54 @@ public:
         label_13 = new QLabel(frame_welcome);
         label_13->setObjectName(QStringLiteral("label_13"));
         label_13->setGeometry(QRect(100, 360, 1061, 41));
+        frame_zeitvorbei = new QFrame(centralWidget);
+        frame_zeitvorbei->setObjectName(QStringLiteral("frame_zeitvorbei"));
+        frame_zeitvorbei->setGeometry(QRect(220, 20, 811, 421));
+        frame_zeitvorbei->setFrameShape(QFrame::StyledPanel);
+        frame_zeitvorbei->setFrameShadow(QFrame::Raised);
+        label_zeittext = new QLabel(frame_zeitvorbei);
+        label_zeittext->setObjectName(QStringLiteral("label_zeittext"));
+        label_zeittext->setGeometry(QRect(100, 30, 281, 41));
+        label_wpm = new QLabel(frame_zeitvorbei);
+        label_wpm->setObjectName(QStringLiteral("label_wpm"));
+        label_wpm->setGeometry(QRect(300, 30, 71, 41));
+        QFont font4;
+        font4.setPointSize(10);
+        font4.setBold(true);
+        font4.setWeight(75);
+        label_wpm->setFont(font4);
+        label_wpm_2 = new QLabel(frame_zeitvorbei);
+        label_wpm_2->setObjectName(QStringLiteral("label_wpm_2"));
+        label_wpm_2->setGeometry(QRect(380, 30, 91, 41));
+        label_fpm_2 = new QLabel(frame_zeitvorbei);
+        label_fpm_2->setObjectName(QStringLiteral("label_fpm_2"));
+        label_fpm_2->setGeometry(QRect(380, 80, 91, 51));
+        label_fpm = new QLabel(frame_zeitvorbei);
+        label_fpm->setObjectName(QStringLiteral("label_fpm"));
+        label_fpm->setGeometry(QRect(300, 80, 61, 41));
+        QFont font5;
+        font5.setPointSize(9);
+        font5.setBold(true);
+        font5.setWeight(75);
+        label_fpm->setFont(font5);
+        pB_ende = new QPushButton(frame_zeitvorbei);
+        pB_ende->setObjectName(QStringLiteral("pB_ende"));
+        pB_ende->setGeometry(QRect(270, 170, 140, 60));
+        tableWidget_woerter = new QTableWidget(frame_zeitvorbei);
+        tableWidget_woerter->setObjectName(QStringLiteral("tableWidget_woerter"));
+        tableWidget_woerter->setGeometry(QRect(520, 50, 256, 192));
+        label_vorbeitext = new QLabel(frame_zeitvorbei);
+        label_vorbeitext->setObjectName(QStringLiteral("label_vorbeitext"));
+        label_vorbeitext->setGeometry(QRect(100, 30, 281, 41));
+        label_rwort = new QLabel(frame_zeitvorbei);
+        label_rwort->setObjectName(QStringLiteral("label_rwort"));
+        label_rwort->setGeometry(QRect(380, 30, 91, 41));
+        label_fwort = new QLabel(frame_zeitvorbei);
+        label_fwort->setObjectName(QStringLiteral("label_fwort"));
+        label_fwort->setGeometry(QRect(380, 80, 91, 51));
+        pb_profil_2 = new QPushButton(frame_zeitvorbei);
+        pb_profil_2->setObjectName(QStringLiteral("pb_profil_2"));
+        pb_profil_2->setGeometry(QRect(40, 170, 170, 60));
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
@@ -696,12 +705,6 @@ public:
         label_2->setText(QApplication::translate("MainWindow", "richtige W\303\266rter:", Q_NULLPTR));
         label_3->setText(QApplication::translate("MainWindow", "Fehler:", Q_NULLPTR));
         label_fehler->setText(QApplication::translate("MainWindow", "0", Q_NULLPTR));
-        label_4->setText(QApplication::translate("MainWindow", "Die Zeit ist abgelaufen. Du hast", Q_NULLPTR));
-        label_wpm->setText(QApplication::translate("MainWindow", "0", Q_NULLPTR));
-        label_5->setText(QApplication::translate("MainWindow", "WPM", Q_NULLPTR));
-        label_6->setText(QApplication::translate("MainWindow", "FPM", Q_NULLPTR));
-        label_fpm->setText(QApplication::translate("MainWindow", "0", Q_NULLPTR));
-        pB_ende->setText(QApplication::translate("MainWindow", "Zur\303\274ck", Q_NULLPTR));
         label_banner_typo->setText(QApplication::translate("MainWindow", "TextLabel", Q_NULLPTR));
         label_17->setText(QApplication::translate("MainWindow", "<html><head/><body><p><span style=\" font-size:10pt; font-weight:600; text-decoration: underline;\">Willkommen bei Typo!</span></p></body></html>", Q_NULLPTR));
         label_18->setText(QApplication::translate("MainWindow", "In Typo lernst du das 10-Finger-Tipp System, um keine Typo (Tippfehler) mehr zu schreiben. Zus\303\244tzlich wirst ", Q_NULLPTR));
@@ -714,6 +717,16 @@ public:
         label_25->setText(QApplication::translate("MainWindow", "<html><head/><body><p><span style=\" font-size:10pt; font-weight:600;\">Multiplayer: </span>Wer ist besser? Du oder dein Freund?</p></body></html>", Q_NULLPTR));
         label_26->setText(QApplication::translate("MainWindow", "<html><head/><body><p>Unter <span style=\" font-size:10pt; font-weight:600;\">Benutzerhandbuch</span> findest du weitere Informationen.</p></body></html>", Q_NULLPTR));
         label_13->setText(QApplication::translate("MainWindow", "<html><head/><body><p>Um <span style=\" font-size:10pt; font-weight:600;\">alle Modis</span> nutzen zu k\303\266nnen, musst Du dich <span style=\" font-size:10pt; font-weight:600;\">anmelden</span>.</p></body></html>", Q_NULLPTR));
+        label_zeittext->setText(QApplication::translate("MainWindow", "Die Zeit ist abgelaufen. Du hast", Q_NULLPTR));
+        label_wpm->setText(QApplication::translate("MainWindow", "0", Q_NULLPTR));
+        label_wpm_2->setText(QApplication::translate("MainWindow", "WPM", Q_NULLPTR));
+        label_fpm_2->setText(QApplication::translate("MainWindow", "FPM", Q_NULLPTR));
+        label_fpm->setText(QApplication::translate("MainWindow", "0", Q_NULLPTR));
+        pB_ende->setText(QApplication::translate("MainWindow", "Zur\303\274ck", Q_NULLPTR));
+        label_vorbeitext->setText(QApplication::translate("MainWindow", "\303\234bung ist vorbei ", Q_NULLPTR));
+        label_rwort->setText(QApplication::translate("MainWindow", "richtige W\303\266rter", Q_NULLPTR));
+        label_fwort->setText(QApplication::translate("MainWindow", "Fehler", Q_NULLPTR));
+        pb_profil_2->setText(QApplication::translate("MainWindow", "Mein Profil", Q_NULLPTR));
     } // retranslateUi
 
 };

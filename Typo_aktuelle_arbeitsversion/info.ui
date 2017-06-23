@@ -104,7 +104,7 @@
    <property name="frameShadow">
     <enum>QFrame::Raised</enum>
    </property>
-   <widget class="QLabel" name="label_4">
+   <widget class="QLabel" name="label_zeittext">
     <property name="geometry">
      <rect>
       <x>100</x>
@@ -137,7 +137,7 @@
      <string>0</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_5">
+   <widget class="QLabel" name="label_wpm_2">
     <property name="geometry">
      <rect>
       <x>380</x>
@@ -150,7 +150,7 @@
      <string>WPM</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_6">
+   <widget class="QLabel" name="label_fpm_2">
     <property name="geometry">
      <rect>
       <x>380</x>
@@ -194,6 +194,55 @@
     </property>
     <property name="text">
      <string>Zurück</string>
+    </property>
+   </widget>
+   <widget class="QTableWidget" name="tableWidget_woerter">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>50</y>
+      <width>256</width>
+      <height>192</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_vorbeitext">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>30</y>
+      <width>281</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Übung ist vorbei </string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_rwort">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>30</y>
+      <width>91</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>richtige Wörter</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_fwort">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>80</y>
+      <width>91</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Fehler</string>
     </property>
    </widget>
   </widget>

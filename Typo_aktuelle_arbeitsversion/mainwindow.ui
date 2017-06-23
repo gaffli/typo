@@ -242,19 +242,6 @@
       <string>Mein Profil</string>
      </property>
     </widget>
-    <zorder>optionen</zorder>
-    <zorder>multiplayer</zorder>
-    <zorder>zeitrennen</zorder>
-    <zorder>ueben</zorder>
-    <zorder>lernen</zorder>
-    <zorder>anmelden</zorder>
-    <zorder>line</zorder>
-    <zorder>line_2</zorder>
-    <zorder>line_3</zorder>
-    <zorder>line_4</zorder>
-    <zorder>b_buch</zorder>
-    <zorder>pb_profil</zorder>
-    <zorder>frame_lernen</zorder>
    </widget>
    <widget class="QFrame" name="frame_hand">
     <property name="geometry">
@@ -1007,10 +994,10 @@ border-top-width: 1.5px;
    <widget class="QFrame" name="frame_welcome">
     <property name="geometry">
      <rect>
-      <x>200</x>
-      <y>0</y>
-      <width>1070</width>
-      <height>680</height>
+      <x>209</x>
+      <y>-1</y>
+      <width>1061</width>
+      <height>681</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -1173,6 +1160,176 @@ border-top-width: 1.5px;
      </property>
      <property name="text">
       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Um &lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;alle Modis&lt;/span&gt; nutzen zu können, musst Du dich &lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;anmelden&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="frame_zeitvorbei">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>20</y>
+      <width>811</width>
+      <height>421</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLabel" name="label_zeittext">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>30</y>
+       <width>281</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Die Zeit ist abgelaufen. Du hast</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_wpm">
+     <property name="geometry">
+      <rect>
+       <x>300</x>
+       <y>30</y>
+       <width>71</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>0</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_wpm_2">
+     <property name="geometry">
+      <rect>
+       <x>380</x>
+       <y>30</y>
+       <width>91</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>WPM</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_fpm_2">
+     <property name="geometry">
+      <rect>
+       <x>380</x>
+       <y>80</y>
+       <width>91</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>FPM</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_fpm">
+     <property name="geometry">
+      <rect>
+       <x>300</x>
+       <y>80</y>
+       <width>61</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>9</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>0</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pB_ende">
+     <property name="geometry">
+      <rect>
+       <x>270</x>
+       <y>170</y>
+       <width>140</width>
+       <height>60</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Zurück</string>
+     </property>
+    </widget>
+    <widget class="QTableWidget" name="tableWidget_woerter">
+     <property name="geometry">
+      <rect>
+       <x>520</x>
+       <y>50</y>
+       <width>256</width>
+       <height>192</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_vorbeitext">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>30</y>
+       <width>281</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Übung ist vorbei </string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_rwort">
+     <property name="geometry">
+      <rect>
+       <x>380</x>
+       <y>30</y>
+       <width>91</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>richtige Wörter</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_fwort">
+     <property name="geometry">
+      <rect>
+       <x>380</x>
+       <y>80</y>
+       <width>91</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Fehler</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pb_profil_2">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>170</y>
+       <width>170</width>
+       <height>60</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Mein Profil</string>
      </property>
     </widget>
    </widget>

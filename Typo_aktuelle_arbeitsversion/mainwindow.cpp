@@ -124,7 +124,7 @@ void MainWindow::timer_timeout()
      // fehler=fehler/teiler;
 
       ui->label_fpm->setNum(fehler);
-      ui->label_wpm->setNum(woerter);
+     ui->label_wpm->setNum(woerter);
 
       QString name=ui->label_username->text();
       QString fpm=ui->label_fpm->text();
@@ -625,7 +625,6 @@ void MainWindow::on_pushButton_zeitstart_clicked()
                    {
                     fehlersuche->start(text);
                    }
-
              }
         }
 
@@ -820,3 +819,8 @@ void MainWindow::Vergleich()
 
 
 
+
+void MainWindow::on_pb_profil_2_clicked()
+{
+
+}
