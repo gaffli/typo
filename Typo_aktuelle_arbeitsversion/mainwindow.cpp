@@ -91,6 +91,8 @@ void MainWindow::timer_timeout()
     {
       timer->stop();
       ui->frame_lernen->hide();
+      ui->frame_zeittext->show();
+      ui->frame_textueben->hide();
       ui->frame_zeitvorbei->show();
 
 
@@ -123,7 +125,8 @@ void MainWindow::timer_timeout()
      // woerter=woerter/teiler;
      // fehler=fehler/teiler;
 
-      ui->label_fpm->setNum(fehler);
+
+     ui->label_fpm->setNum(fehler);
      ui->label_wpm->setNum(woerter);
 
       QString name=ui->label_username->text();
@@ -491,6 +494,8 @@ void MainWindow::on_pushButton_eigener_clicked()
              }
       }
 
+
+
 }
 void MainWindow::on_pushButton_zeitstart_clicked()
 {
@@ -814,13 +819,10 @@ void MainWindow::Vergleich()
         }
 }
 
-
-
-
-
-
-
 void MainWindow::on_pb_profil_2_clicked()
 {
-
+    login log;
+    log.show();
+    QObject::connect(this,SIGNAL(profil_show_and_hide()),&log,SLOT(profil_show_and_hide()));
+    emit profil_show_and_hide();
 }
