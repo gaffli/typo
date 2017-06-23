@@ -994,10 +994,10 @@ border-top-width: 1.5px;
    <widget class="QFrame" name="frame_welcome">
     <property name="geometry">
      <rect>
-      <x>209</x>
-      <y>-1</y>
-      <width>1061</width>
-      <height>681</height>
+      <x>219</x>
+      <y>9</y>
+      <width>1051</width>
+      <height>671</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -1166,8 +1166,8 @@ border-top-width: 1.5px;
    <widget class="QFrame" name="frame_zeitvorbei">
     <property name="geometry">
      <rect>
-      <x>220</x>
-      <y>20</y>
+      <x>230</x>
+      <y>10</y>
       <width>811</width>
       <height>421</height>
      </rect>
@@ -1178,19 +1178,6 @@ border-top-width: 1.5px;
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
-    <widget class="QLabel" name="label_zeittext">
-     <property name="geometry">
-      <rect>
-       <x>100</x>
-       <y>30</y>
-       <width>281</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Die Zeit ist abgelaufen. Du hast</string>
-     </property>
-    </widget>
     <widget class="QLabel" name="label_wpm">
      <property name="geometry">
       <rect>
@@ -1209,32 +1196,6 @@ border-top-width: 1.5px;
      </property>
      <property name="text">
       <string>0</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_wpm_2">
-     <property name="geometry">
-      <rect>
-       <x>380</x>
-       <y>30</y>
-       <width>91</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>WPM</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_fpm_2">
-     <property name="geometry">
-      <rect>
-       <x>380</x>
-       <y>80</y>
-       <width>91</width>
-       <height>51</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>FPM</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_fpm">
@@ -1261,7 +1222,7 @@ border-top-width: 1.5px;
      <property name="geometry">
       <rect>
        <x>270</x>
-       <y>170</y>
+       <y>250</y>
        <width>140</width>
        <height>60</height>
       </rect>
@@ -1280,50 +1241,121 @@ border-top-width: 1.5px;
       </rect>
      </property>
     </widget>
-    <widget class="QLabel" name="label_vorbeitext">
+    <widget class="QFrame" name="frame_zeittext">
      <property name="geometry">
       <rect>
-       <x>100</x>
+       <x>20</x>
        <y>30</y>
-       <width>281</width>
-       <height>41</height>
+       <width>451</width>
+       <height>211</height>
       </rect>
      </property>
-     <property name="text">
-      <string>Übung ist vorbei </string>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
      </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QLabel" name="label_zeittext">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>281</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Die Zeit ist abgelaufen. Du hast</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_wpm_2">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>0</y>
+        <width>91</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>WPM</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_fpm_2">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>50</y>
+        <width>91</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>FPM</string>
+      </property>
+     </widget>
     </widget>
-    <widget class="QLabel" name="label_rwort">
+    <widget class="QFrame" name="frame_textueben">
      <property name="geometry">
       <rect>
-       <x>380</x>
+       <x>20</x>
        <y>30</y>
-       <width>91</width>
-       <height>41</height>
+       <width>491</width>
+       <height>161</height>
       </rect>
      </property>
-     <property name="text">
-      <string>richtige Wörter</string>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
      </property>
-    </widget>
-    <widget class="QLabel" name="label_fwort">
-     <property name="geometry">
-      <rect>
-       <x>380</x>
-       <y>80</y>
-       <width>91</width>
-       <height>51</height>
-      </rect>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
      </property>
-     <property name="text">
-      <string>Fehler</string>
-     </property>
+     <widget class="QLabel" name="label_vorbeitext">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>0</y>
+        <width>281</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Übung ist vorbei. Du hast</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_fwort">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>50</y>
+        <width>91</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Fehler</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_rwort">
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>0</y>
+        <width>91</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>richtige Wörter</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QPushButton" name="pb_profil_2">
      <property name="geometry">
       <rect>
        <x>40</x>
-       <y>170</y>
+       <y>250</y>
        <width>170</width>
        <height>60</height>
       </rect>
