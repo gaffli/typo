@@ -45,7 +45,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->label_username->setText("");
     ui->label_username->hide();
     ui->frame_welcome->show();
-    ui->ueben->setEnabled(true);
+    ui->ueben->setEnabled(false);
     ui->zeitrennen->setEnabled(false);
     ui->label_zeit->hide();
     ui->frame_zeitvorbei->hide();
@@ -804,10 +804,12 @@ void MainWindow::Vergleich()
                 {
                 v = text.at(zaehler);
                 zaehler++;
+                ende = false;
                 }
                 else
                 {
                     zaehler++;
+                    ende = true;
                     break;
                 }
             }while(v != Qt::Key_Space);
