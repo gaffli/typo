@@ -16,7 +16,10 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp \
-    mytcpsocket.cpp
+    mytcpsocket.cpp \
+    mytcpserver.cpp
 
 HEADERS += \
-    mytcpsocket.h
+    mytcpsocket.h \
+    mytcpserver.h \
+    mytcpserver.h

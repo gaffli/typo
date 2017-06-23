@@ -24,10 +24,13 @@ public slots:
     void bytesWritten(qint64 bytes);
     void readyRead();
     void socket_after_socket();
+    void newConnection();
+    void readyRead_new();
 
 private:
     QTcpSocket *socket;
-    int socketport = 4321;
+    QTcpServer *server;
+    int socketport = 4322;
 };
 
 #endif // MYTCPSOCKET_H
