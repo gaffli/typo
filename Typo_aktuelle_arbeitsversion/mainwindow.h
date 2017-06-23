@@ -87,6 +87,8 @@ private slots:
 
     void Vergleich();
 
+    void on_pb_profil_2_clicked();
+
 private:
     Ui::MainWindow *ui;
     Ui::QWidget *Form;
