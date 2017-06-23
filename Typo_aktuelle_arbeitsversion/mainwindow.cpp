@@ -757,11 +757,6 @@ void MainWindow::on_pb_profil_clicked()
     log.show();
     QObject::connect(this,SIGNAL(profil_show_and_hide()),&log,SLOT(profil_show_and_hide()));
     emit profil_show_and_hide();
-
-
-
-
-
 }
 
 bool MainWindow::eventFilter(QObject *obj, QEvent *event)
