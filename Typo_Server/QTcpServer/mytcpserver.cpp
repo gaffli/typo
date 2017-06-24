@@ -5,6 +5,8 @@
 #include <QHostInfo>
 #include <QHostAddress>
 #include <QTcpSocket>
+#include <QThread>
+#include <random>
 
 
 
@@ -18,12 +20,10 @@ MyTcpServer::MyTcpServer(QObject *parent) : QObject(parent)
      connect(server, SIGNAL(newConnection()),
              this, SLOT(newConnection()));
 
+     connect(this,SIGNAL(two_clients_signal()),this,SLOT(two_clients_slot()));
 
-    /* bool ipChange = hostAddress.setAddress("192.168.178.65");
 
-     if(ipChange) qDebug() << "IP ADDRESS CHANGED";
-     else qDebug() << "IP ADDRESS NOT CHANGED";
-*/
+
      if(!server->listen(QHostAddress::Any, 1234))
      {
          qDebug() << "Server could not start";
@@ -32,26 +32,41 @@ MyTcpServer::MyTcpServer(QObject *parent) : QObject(parent)
      {
          qDebug() << "Server started!";
      }
+
+
  }
+
 
  void MyTcpServer::newConnection()
  {
+
+
      // need to grab the socket
      socket = server->nextPendingConnection();
      connect(socket, SIGNAL(readyRead()),this, SLOT(readyRead()));
 
-     qDebug() << socket->peerAddress();
+      quint16 port = 0;
+      port = socket->peerPort();
+      QHostAddress ip;
+      ip = socket->peerAddress();
+
+    qDebug() << port;
+
      socket->write("Hello client\r\n");
      if (socket->flush())
-       qDebug() << "es wurde geschreiben";
+       qDebug() << "es wurde geschrieben";
 
 
 
-     socket->waitForBytesWritten(5000);
-     qDebug() << socket->readAll();
-     //qDebug() << socket->bytesAvailable();
 
-    // socket->close();
+     MyTcpServer::client_ip.enqueue(ip);
+     MyTcpServer::client_ports.enqueue(port);
+
+     if (MyTcpServer::client_ports.size() >= 2)
+     emit two_clients_signal();
+
+ socket->close();
+
  }
 
  void MyTcpServer::readyRead()
@@ -61,3 +76,59 @@ MyTcpServer::MyTcpServer(QObject *parent) : QObject(parent)
      // read the data from the socket
      qDebug() << socket->readAll();
  }
+
+ void MyTcpServer::two_clients_slot()
+ {
+     bool client_1_written = false;
+     bool client_2_written = false;
+
+     QTcpSocket * socket_1;
+     QTcpSocket * socket_2;
+
+     QByteArray client_1_wpm;
+     QByteArray client_1_fpm;
+     QByteArray client_2_wpm;
+     QByteArray client_2_fpm;
+
+     socket_1->connectToHost(MyTcpServer::client_ip.dequeue(), MyTcpServer::client_ports.dequeue());
+     socket_2->connectToHost(MyTcpServer::client_ip.dequeue(), MyTcpServer::client_ports.dequeue());
+
+     int r = rand() % 5;
+     QByteArray package_text_number = QByteArray::number(r);
+
+     socket_1->write(package_text_number);
+     socket_2->write(package_text_number);
+     socket_1->flush();
+     socket_2->flush();
+
+     while(socket_1->state() == socket_2->state() && socket_1->state() != QAbstractSocket::UnconnectedState)
+     {
+          if (socket_1->bytesAvailable() != 0)
+          {
+              client_1_fpm = socket_1->readAll();
+              client_1_wpm = socket_1->readAll();
+              client_1_written = true;
+          }
+          if (socket_2->bytesAvailable() != 0)
+          {
+              client_2_fpm = socket_2->readAll();
+              client_2_wpm = socket_2->readAll();
+              client_2_written = true;
+          }
+
+     }
+
+     if(client_1_written == client_2_written && client_1_written == true)
+     {
+         socket_1->write(client_1_fpm);
+         socket_1->write(client_1_wpm);
+         socket_2->write(client_2_fpm);
+         socket_2->write(client_2_wpm);
+         socket_1->flush();
+         socket_2->flush();
+     }
+
+     socket_1->close();
+     socket_2->close();
+ }
+
