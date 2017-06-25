@@ -874,6 +874,8 @@ void MainWindow::on_multiplayer_clicked()
         {
             i = false;
         }
+        else
+            this->timerEvent(Sleep(50));
     }
 
     QSqlQuery query;
