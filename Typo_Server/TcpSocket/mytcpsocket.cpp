@@ -23,7 +23,7 @@ void MyTcpSocket::doConnect()
 
     // this is not blocking call
     socket->bind(MyTcpSocket::socketport);
-    socket->connectToHost("192.168.2.125",1234);
+    socket->connectToHost("::ffff:192.168.2.125",1234);
     // we need to wait...
 
 
@@ -65,11 +65,11 @@ void MyTcpSocket::readyRead()
 void MyTcpSocket::socket_after_socket()
 {
     MyTcpSocket::counter_message = 0;
-    MyTcpSocket::server = new QTcpServer(this);
-    connect(MyTcpSocket::server, SIGNAL(newConnection()), this, SLOT(newConnection()));
+    server = new QTcpServer(this);
+    connect(server, SIGNAL(newConnection()), this, SLOT(newConnection()));
 
 
-    if(! MyTcpSocket::server->listen(QHostAddress::Any, MyTcpSocket::socketport))
+    if(! server->listen(QHostAddress::Any, MyTcpSocket::socketport))
     {
         qDebug() << "Server could not start";
     }
@@ -78,6 +78,8 @@ void MyTcpSocket::socket_after_socket()
         qDebug() << "Server started!";
     }
 
+    if(server->isListening())
+        qDebug() << "listening";
 }
 
 void MyTcpSocket::newConnection()
