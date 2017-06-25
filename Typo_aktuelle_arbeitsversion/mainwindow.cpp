@@ -839,6 +839,10 @@ void MainWindow::on_multiplayer_clicked()
     ui->frame_ueben->hide();
     ui->frame_welcome->hide();
     MainWindow::is_multipl = true;
+    MyTcpSocket s;
+    s.doConnect();
+    connect(&s,SIGNAL(signal_txt_nmbr(char)),this,SLOT(set_rand_multi(char)));
+    connect(this,SIGNAL(multipl_fpm_wpm(int,int)),&s,SLOT(set_variables(int,int)));
 
     QSqlDatabase typo_db =  QSqlDatabase::addDatabase("QMYSQL");
     typo_db.setDatabaseName("typo");
@@ -860,6 +864,14 @@ void MainWindow::on_multiplayer_clicked()
     ui->frame_zeit->hide();
     ui->frame_menue->hide();
 
+    while(1)
+    {
+        if (MainWindow::scnd_plr_connect == true)
+            break;
+        else
+            continue;
+    }
+
     QSqlQuery query;
     query.prepare("select Text from Texte where Textart='zeit2' and ID_Texte=?");
     query.addBindValue(MainWindow::rnd_multi);
@@ -880,7 +892,8 @@ void MainWindow::on_multiplayer_clicked()
      }
 }
 
-void MainWindow::set_rand_multi(int rand_mult)
+void MainWindow::set_rand_multi(char rand_mult)
 {
     MainWindow::rnd_multi = rand_mult;
+    MainWindow::scnd_plr_connect = true;
 }
