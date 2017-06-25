@@ -845,6 +845,7 @@ void MainWindow::on_multiplayer_clicked()
     s.doConnect();
     connect(&s,SIGNAL(signal_txt_nmbr(char)),this,SLOT(set_rand_multi(char)));
     connect(this,SIGNAL(multipl_fpm_wpm(int,int)),&s,SLOT(set_variables(int,int)));
+    connect(&s,SIGNAL(scnd_plr_con()),this,SLOT(scnd_plr_connected()));
 
     QSqlDatabase typo_db =  QSqlDatabase::addDatabase("QMYSQL");
     typo_db.setDatabaseName("typo");
@@ -895,5 +896,9 @@ void MainWindow::on_multiplayer_clicked()
 void MainWindow::set_rand_multi(char rand_mult)
 {
     MainWindow::rnd_multi = rand_mult;
+}
+
+void MainWindow::scnd_plr_connected()
+{
     MainWindow::scnd_plr_connect = true;
 }
