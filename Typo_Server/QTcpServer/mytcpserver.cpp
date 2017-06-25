@@ -53,10 +53,8 @@ MyTcpServer::MyTcpServer(QObject *parent) : QObject(parent)
     qDebug() << port;
 
      socket->write("Hello client\r\n");
-     if (socket->flush())
-       qDebug() << "es wurde geschrieben";
-
-
+     if (socket->flush())         
+         qDebug() << "es wurde geschrieben";
 
 
      MyTcpServer::client_ip.enqueue(ip);
