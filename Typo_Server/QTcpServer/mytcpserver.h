@@ -22,6 +22,7 @@ public slots:
      void newConnection();
      void readyRead();
      void two_clients_slot();
+     void connected();
 
 private:
      QTcpServer *server;

@@ -30,6 +30,7 @@ public slots:
     void readyRead_new();
     void newdisconnected();
     void set_variables(int, int);
+    void acceptError(QAbstractSocket::SocketError);
 
 private:
     QTcpSocket *socket;
