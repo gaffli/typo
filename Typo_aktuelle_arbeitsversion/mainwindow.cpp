@@ -838,6 +838,7 @@ void MainWindow::on_multiplayer_clicked()
     ui->frame_lernen->hide();
     ui->frame_ueben->hide();
     ui->frame_welcome->hide();
+    MainWindow::is_multipl = true;
 
     QSqlDatabase typo_db =  QSqlDatabase::addDatabase("QMYSQL");
     typo_db.setDatabaseName("typo");
