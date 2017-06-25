@@ -29,6 +29,7 @@ void MyTcpSocket::doConnect()
     {
         qDebug() << "Error: " << socket->errorString();
     }
+    socket->waitForDisconnected();
 }
 
 void MyTcpSocket::connected()
