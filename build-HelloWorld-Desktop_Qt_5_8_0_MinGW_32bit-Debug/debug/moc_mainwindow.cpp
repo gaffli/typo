@@ -172,7 +172,7 @@ static const uint qt_meta_data_MainWindow[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void, QMetaType::Int,   35,
+    QMetaType::Void, QMetaType::Char,   35,
 
        0        // eod
 };
@@ -213,7 +213,7 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 27: _t->Vergleich(); break;
         case 28: _t->on_pb_profil_2_clicked(); break;
         case 29: _t->on_multiplayer_clicked(); break;
-        case 30: _t->set_rand_multi((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 30: _t->set_rand_multi((*reinterpret_cast< char(*)>(_a[1]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {

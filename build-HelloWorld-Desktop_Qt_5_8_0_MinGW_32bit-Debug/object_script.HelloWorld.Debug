@@ -7,9 +7,13 @@ INPUT(
 ./debug\benutzerhandbuch.o
 ./debug\fehleranalyse.o
 ./debug\benutzer.o
+./debug\mytcpserver.o
+./debug\mytcpsocket.o
 ./debug\moc_mainwindow.o
 ./debug\moc_login.o
 ./debug\moc_info.o
 ./debug\moc_key.o
 ./debug\moc_benutzerhandbuch.o
+./debug\moc_mytcpserver.o
+./debug\moc_mytcpsocket.o
 );
