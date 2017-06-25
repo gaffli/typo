@@ -1,7 +1,7 @@
 #include "mytcpsocket.h"
 #include <QHostAddress>
 #include <QString>
-#include "mytcpserver.h"
+//#include "mytcpserver.h"
 
 MyTcpSocket::MyTcpSocket(QObject *parent) :
     QObject(parent)
@@ -65,11 +65,12 @@ void MyTcpSocket::readyRead()
 void MyTcpSocket::socket_after_socket()
 {
     MyTcpSocket::counter_message = 0;
-    server = new QTcpServer(this);
-    connect(server, SIGNAL(newConnection()), this, SLOT(newConnection()));
+    MyTcpSocket::server = new QTcpServer(this);
+    connect(MyTcpSocket::server, SIGNAL(newConnection()), this, SLOT(newConnection()));
+    connect(MyTcpSocket::server, SIGNAL(acceptError(QAbstractSocket::SocketError)),this,SLOT(acceptError(QAbstractSocket::SocketError)));
 
 
-    if(! server->listen(QHostAddress::Any, MyTcpSocket::socketport))
+    if(! MyTcpSocket::server->listen(QHostAddress::Any, MyTcpSocket::socketport))
     {
         qDebug() << "Server could not start";
     }
@@ -78,18 +79,19 @@ void MyTcpSocket::socket_after_socket()
         qDebug() << "Server started!";
     }
 
-    if(server->isListening())
+    if(MyTcpSocket::server->isListening())
         qDebug() << "listening";
 }
 
 void MyTcpSocket::newConnection()
 {
-    MyTcpSocket::new_socket = new QTcpSocket(this);
+    //MyTcpSocket::new_socket = new QTcpSocket(this);
+
+    MyTcpSocket::new_socket = MyTcpSocket::server->nextPendingConnection();
+
 
     connect(MyTcpSocket::new_socket, SIGNAL(disconnected()),this, SLOT(newdisconnected()));
     connect(MyTcpSocket::new_socket, SIGNAL(readyRead()),this, SLOT(readyRead_new()));
-
-    MyTcpSocket::new_socket = MyTcpSocket::server->nextPendingConnection();
 
     MyTcpSocket::new_socket->waitForBytesWritten(3000);
     MyTcpSocket::new_socket->write("hellooo");
@@ -135,4 +137,9 @@ void MyTcpSocket::set_variables(int fpm_c, int wpm_c)
     MyTcpSocket::new_socket->write(QByteArray::number(MyTcpSocket::fpm));
     MyTcpSocket::new_socket->flush();
     MyTcpSocket::new_socket->write(QByteArray::number(MyTcpSocket::wpm));
+}
+
+void MyTcpSocket::acceptError(QAbstractSocket::SocketError error)
+{
+    qDebug() << error;
 }
