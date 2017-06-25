@@ -26,6 +26,7 @@ void MyTcpSocket::doConnect()
     socket->connectToHost("127.0.0.1",1234);
     // we need to wait...
 
+
     if(!socket->waitForConnected(5000))
     {
         qDebug() << "Error: " << socket->errorString();
@@ -40,7 +41,6 @@ void MyTcpSocket::connected()
     socket->write("HEAD / HTTP/1.0\r\n\r\n\r\n\r\n");
     socket->write("hallo server");
     socket->flush();
-
 }
 
 void MyTcpSocket::disconnected()
