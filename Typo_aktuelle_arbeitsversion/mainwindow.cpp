@@ -23,7 +23,6 @@
 
 
 
-int cnt;                //Variable für den Countdown
 
 QTimer *timer;
 
@@ -83,11 +82,11 @@ MainWindow::~MainWindow()
 
 void MainWindow::timer_timeout()
 {
-    cnt--;
+    MainWindow::cnt--;
 
-    ui->label_zeit->setText(QString::number(cnt)); // Aktuelle Zeit wird dem label zugewiesen
+    ui->label_zeit->setText(QString::number(MainWindow::cnt)); // Aktuelle Zeit wird dem label zugewiesen
 
-    if(cnt==0)
+    if(MainWindow::cnt==0)
     {
       timer->stop();
       ui->frame_lernen->hide();
@@ -121,6 +120,10 @@ void MainWindow::timer_timeout()
           teiler=300;
 
          }
+      else if(MainWindow::is_multipl == true)
+      {
+          teiler = 120;
+      }
 
      // woerter=woerter/teiler;
      // fehler=fehler/teiler;
@@ -132,6 +135,8 @@ void MainWindow::timer_timeout()
       QString name=ui->label_username->text();
       QString fpm=ui->label_fpm->text();
       QString wpm=ui->label_wpm->text();
+
+      emit MainWindow::multipl_fpm_wpm(fehler,woerter);
 
 
      QSqlQuery qry;
@@ -415,7 +420,6 @@ void MainWindow::on_button_uebungende_clicked()
     {
       fehlersuche->end();
       ui->eingabefeld->clear();
-
     }
 }
 
@@ -517,7 +521,7 @@ void MainWindow::on_pushButton_zeitstart_clicked()
 
      if (ui->radioButton_1->isChecked())        // 1 Minute Zeit
         {
-            cnt =10;
+            MainWindow::cnt =60;
             int rnd=rand() % 5 + 6; // Random zwischen 6-10
             rnd=rand() % 5 + 6;
             ui->frame_lernen->show();
@@ -547,7 +551,7 @@ void MainWindow::on_pushButton_zeitstart_clicked()
         }
      else if (ui->radioButton_2->isChecked())   // 2 Minute Zeit
         {
-            cnt =120;
+            MainWindow::cnt =120;
 
             int rnd=rand() % 5 + 11; // Random zwischen 11-15
             rnd=rand() % 5 + 11;
@@ -576,7 +580,7 @@ void MainWindow::on_pushButton_zeitstart_clicked()
         }
      else if (ui->radioButton_3->isChecked())   // 3 Minute Zeit
         {
-            cnt =180;
+            MainWindow::cnt =180;
             int rnd=rand() % 5 + 16; // Random zwischen 16-20
             rnd=rand() % 5 + 16;
 
@@ -605,7 +609,7 @@ void MainWindow::on_pushButton_zeitstart_clicked()
         }
      else if (ui->radioButton_5->isChecked())   // 5 Minute Zeit
         {
-            cnt =300;
+            MainWindow::cnt =300;
             int rnd=rand() % 5 + 21;
             rnd=rand() % 5 + 21; // Random zwischen 21-25
 
@@ -825,4 +829,57 @@ void MainWindow::on_pb_profil_2_clicked()
     log.show();
     QObject::connect(this,SIGNAL(profil_show_and_hide()),&log,SLOT(profil_show_and_hide()));
     emit profil_show_and_hide();
+}
+
+void MainWindow::on_multiplayer_clicked()
+{
+    ui->frame_zeit->show();
+    ui->frame_hand->hide();
+    ui->frame_lernen->hide();
+    ui->frame_ueben->hide();
+    ui->frame_welcome->hide();
+
+    QSqlDatabase typo_db =  QSqlDatabase::addDatabase("QMYSQL");
+    typo_db.setDatabaseName("typo");
+    typo_db.setUserName("Alex");
+    typo_db.setPassword("A92K07!27");
+    typo_db.setPort(3306);
+    typo_db.setHostName("89.163.178.19");
+    typo_db.open();
+
+
+    ui->label_zeit->show();
+    ui->label->show();
+    ui->label_zeit->setText("Los Geht's!");
+
+    MainWindow::cnt =120;
+
+
+    ui->frame_lernen->show();
+    ui->frame_zeit->hide();
+    ui->frame_menue->hide();
+
+    QSqlQuery query;
+    query.prepare("select Text from Texte where Textart='zeit2' and ID_Texte=?");
+    query.addBindValue(MainWindow::rnd_multi);
+    query.exec();
+
+     QSqlRecord record=query.record();
+     while (query.next())
+     {
+         text=query.value(record.indexOf("Text")).toString();
+         ui->frame_lernen->show();
+         timer->start();                               //Zeitrennen starten
+         ui->textBrowser->setText(text);
+         ui->eingabefeld->setFocus();
+         if(!fehlersuche->IsRunning())
+           {
+            fehlersuche->start(text);
+           }
+     }
+}
+
+void MainWindow::set_rand_multi(int rand_mult)
+{
+    MainWindow::rnd_multi = rand_mult;
 }

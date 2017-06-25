@@ -31,6 +31,7 @@ public:
 
 signals:
    void profil_show_and_hide();
+   void multipl_fpm_wpm(int,int);
 
 private slots:
 
@@ -89,6 +90,9 @@ private slots:
 
     void on_pb_profil_2_clicked();
 
+    void on_multiplayer_clicked();
+    void set_rand_multi(int rand_mult);
+
 private:
     Ui::MainWindow *ui;
     Ui::QWidget *Form;
@@ -101,6 +105,9 @@ private:
     int spacezaehler = 0;
     int textcounter = 0;
     int zaehler = 0;
+    int cnt = 0;
+    int rnd_multi = 0;
+    bool is_multipl = false;
 
 };
 

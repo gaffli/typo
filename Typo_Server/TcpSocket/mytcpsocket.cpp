@@ -64,8 +64,10 @@ void MyTcpSocket::readyRead()
 
 void MyTcpSocket::socket_after_socket()
 {
+    MyTcpSocket::counter_message = 0;
     MyTcpSocket::server = new QTcpServer(this);
     connect(MyTcpSocket::server, SIGNAL(newConnection()), this, SLOT(newConnection()));
+    connect(MyTcpSocket::server, SIGNAL(disconnected()),this, SLOT(newdisconnected()));
 
     if(! MyTcpSocket::server->listen(QHostAddress::LocalHost, MyTcpSocket::socketport))
     {
@@ -80,15 +82,15 @@ void MyTcpSocket::socket_after_socket()
 
 void MyTcpSocket::newConnection()
 {
-    QTcpSocket * new_socket = new QTcpSocket(this);
+    MyTcpSocket::new_socket = new QTcpSocket(this);
 
-    connect(new_socket, SIGNAL(readyRead()),this, SLOT(readyRead_new()));
+    connect(MyTcpSocket::new_socket, SIGNAL(readyRead()),this, SLOT(readyRead_new()));
 
-    new_socket = server->nextPendingConnection();
+    MyTcpSocket::new_socket = MyTcpSocket::server->nextPendingConnection();
 
-    new_socket->waitForBytesWritten(3000);
-    new_socket->write("hellooo");
-    new_socket->flush();
+    MyTcpSocket::new_socket->waitForBytesWritten(3000);
+    MyTcpSocket::new_socket->write("hellooo");
+    MyTcpSocket::new_socket->flush();
 
 
 }
@@ -96,4 +98,38 @@ void MyTcpSocket::newConnection()
 void MyTcpSocket::readyRead_new()
 {
     qDebug() << "laeuft";
+    switch (MyTcpSocket::counter_message) {
+    case 0:
+        MyTcpSocket::new_socket->read(&(MyTcpSocket::txt_nmbr),5);
+        MyTcpSocket::counter_message++;
+        break;
+
+    case 1:
+        MyTcpSocket::other_fpm = MyTcpSocket::new_socket->readAll();
+        MyTcpSocket::counter_message++;
+        break;
+
+    case 2:
+        MyTcpSocket::other_wpm = MyTcpSocket::new_socket->readAll();
+        MyTcpSocket::counter_message++;
+        break;
+
+    default:
+        break;
+    }
+
+}
+
+void MyTcpSocket::newdisconnected()
+{
+    emit MyTcpSocket::signal_other_f_w_pm(other_fpm.toInt(),other_wpm.toInt());
+}
+
+void MyTcpSocket::set_variables(int fpm_c, int wpm_c)
+{
+    MyTcpSocket::fpm = fpm_c;
+    MyTcpSocket::wpm = wpm_c;
+    MyTcpSocket::new_socket->write(QByteArray::number(MyTcpSocket::fpm));
+    MyTcpSocket::new_socket->flush();
+    MyTcpSocket::new_socket->write(QByteArray::number(MyTcpSocket::wpm));
 }
