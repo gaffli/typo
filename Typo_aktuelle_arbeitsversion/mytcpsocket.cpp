@@ -39,6 +39,7 @@ void MyTcpSocket::connected()
     socket->write("HEAD / HTTP/1.0\r\n\r\n\r\n\r\n");
     socket->write("hallo server");
     socket->flush();
+    qDebug() << socket->readAll();
 
 }
 
