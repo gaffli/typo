@@ -121,10 +121,11 @@ MyTcpServer::MyTcpServer(QObject *parent) : QObject(parent)
      if(client_1_written == client_2_written && client_1_written == true)
      {
          socket_1->write(client_1_fpm);
-         socket_1->write(client_1_wpm);
          socket_2->write(client_2_fpm);
-         socket_2->write(client_2_wpm);
          socket_1->flush();
+
+         socket_1->write(client_1_wpm);
+         socket_2->write(client_2_wpm);
          socket_2->flush();
      }
 

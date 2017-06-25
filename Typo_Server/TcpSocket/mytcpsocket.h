@@ -17,6 +17,8 @@ public:
 
 signals:
     void first_socked_finish();
+    void signal_other_f_w_pm(int,int);
+    void writing_done();
 
 public slots:
     void connected();
@@ -26,11 +28,20 @@ public slots:
     void socket_after_socket();
     void newConnection();
     void readyRead_new();
+    void newdisconnected();
+    void set_variables(int, int);
 
 private:
     QTcpSocket *socket;
+    QTcpSocket *new_socket;
     QTcpServer *server;
     int socketport = 4322;
+    int fpm = 0;
+    int wpm = 0;
+    char txt_nmbr = 0;
+    short counter_message;
+    QByteArray other_fpm;
+    QByteArray other_wpm;
 };
 
 #endif // MYTCPSOCKET_H
