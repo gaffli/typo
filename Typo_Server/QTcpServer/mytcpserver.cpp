@@ -51,7 +51,8 @@ MyTcpServer::MyTcpServer(QObject *parent) : QObject(parent)
       ip = socket->peerAddress();
 
      socket->write("Hello client\r\n");
-
+     socket->flush();
+     qDebug() << socket->readAll();
 
      MyTcpServer::client_ip.enqueue(ip);
      MyTcpServer::client_ports.enqueue(port);
