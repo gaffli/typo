@@ -39,13 +39,6 @@ void MyTcpSocket::doConnect()
 void MyTcpSocket::connected()
 {
     qDebug() << "connected...";
-
-    // Hey server, tell me about you.
-    socket->write("HEAD / HTTP/1.0\r\n\r\n\r\n\r\n");
-    socket->write("hallo server");
-    socket->flush();
-    qDebug() << socket->readAll();
-
 }
 
 void MyTcpSocket::disconnected()
@@ -66,6 +59,8 @@ void MyTcpSocket::readyRead()
     // read the data from the socket
     qDebug() << socket->readAll();
 }
+
+
 
 void MyTcpSocket::socket_after_socket()
 {
@@ -94,8 +89,6 @@ void MyTcpSocket::newConnection()
 
 
     MyTcpSocket::new_socket->waitForBytesWritten(3000);
-    MyTcpSocket::new_socket->write("hellooo");
-    MyTcpSocket::new_socket->flush();
 
 
 }
