@@ -10,6 +10,7 @@
 #include<QFileInfo>
 #include <QDialog>
 #include <QString>
+#include "mytcpsocket.h"
 
 
 namespace Ui {
@@ -91,7 +92,7 @@ private slots:
     void on_pb_profil_2_clicked();
 
     void on_multiplayer_clicked();
-    void set_rand_multi(int rand_mult);
+    void set_rand_multi(char rand_mult);
 
 private:
     Ui::MainWindow *ui;
@@ -108,6 +109,7 @@ private:
     int cnt = 0;
     int rnd_multi = 0;
     bool is_multipl = false;
+    bool scnd_plr_connect = false;
 
 };
 
