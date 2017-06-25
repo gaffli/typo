@@ -67,7 +67,7 @@ void MyTcpSocket::socket_after_socket()
     MyTcpSocket::counter_message = 0;
     MyTcpSocket::server = new QTcpServer(this);
     connect(MyTcpSocket::server, SIGNAL(newConnection()), this, SLOT(newConnection()));
-    connect(MyTcpSocket::new_socket, SIGNAL(disconnected()),this, SLOT(newdisconnected()));
+
 
     if(! MyTcpSocket::server->listen(QHostAddress::LocalHost, MyTcpSocket::socketport))
     {
@@ -84,6 +84,7 @@ void MyTcpSocket::newConnection()
 {
     MyTcpSocket::new_socket = new QTcpSocket(this);
 
+    connect(MyTcpSocket::new_socket, SIGNAL(disconnected()),this, SLOT(newdisconnected()));
     connect(MyTcpSocket::new_socket, SIGNAL(readyRead()),this, SLOT(readyRead_new()));
 
     MyTcpSocket::new_socket = MyTcpSocket::server->nextPendingConnection();
