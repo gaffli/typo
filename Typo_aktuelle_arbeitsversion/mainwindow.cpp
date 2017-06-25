@@ -20,6 +20,8 @@
 #include<QTextCodec>
 #include <stdlib.h>
 #include <QKeyEvent>
+#include <time.h>
+#include <QTime>
 
 
 
@@ -864,12 +866,10 @@ void MainWindow::on_multiplayer_clicked()
     ui->frame_zeit->hide();
     ui->frame_menue->hide();
 
-    while(1)
+    while(true)
     {
         if (MainWindow::scnd_plr_connect == true)
             break;
-        else
-            continue;
     }
 
     QSqlQuery query;
