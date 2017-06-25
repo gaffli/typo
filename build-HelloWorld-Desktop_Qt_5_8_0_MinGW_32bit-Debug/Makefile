@@ -225,6 +225,7 @@ Makefile: ../Typo_aktuelle_arbeitsversion/HelloWorld.pro D:/qt/5.8/mingw53_32/mk
 		D:/qt/5.8/mingw53_32/lib/Qt5Widgets.prl \
 		D:/qt/5.8/mingw53_32/lib/Qt5Gui.prl \
 		D:/qt/5.8/mingw53_32/lib/Qt5Sql.prl \
+		D:/qt/5.8/mingw53_32/lib/Qt5Network.prl \
 		D:/qt/5.8/mingw53_32/lib/Qt5Core.prl
 	$(QMAKE) -o Makefile ..\Typo_aktuelle_arbeitsversion\HelloWorld.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
 D:/qt/5.8/mingw53_32/mkspecs/features/spec_pre.prf:
@@ -393,6 +394,7 @@ D:/qt/5.8/mingw53_32/lib/qtmaind.prl:
 D:/qt/5.8/mingw53_32/lib/Qt5Widgets.prl:
 D:/qt/5.8/mingw53_32/lib/Qt5Gui.prl:
 D:/qt/5.8/mingw53_32/lib/Qt5Sql.prl:
+D:/qt/5.8/mingw53_32/lib/Qt5Network.prl:
 D:/qt/5.8/mingw53_32/lib/Qt5Core.prl:
 qmake: FORCE
 	@$(QMAKE) -o Makefile ..\Typo_aktuelle_arbeitsversion\HelloWorld.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
