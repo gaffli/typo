@@ -1,7 +1,6 @@
 #include "mytcpsocket.h"
 #include <QHostAddress>
 #include <QString>
-#include "mytcpserver.h"
 
 MyTcpSocket::MyTcpSocket(QObject *parent) :
     QObject(parent)
