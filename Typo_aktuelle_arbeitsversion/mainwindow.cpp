@@ -867,10 +867,13 @@ void MainWindow::on_multiplayer_clicked()
     ui->frame_zeit->hide();
     ui->frame_menue->hide();
 
-    while(true)
+    bool i = true;
+    while(i)
     {
         if (MainWindow::scnd_plr_connect == true)
-            break;
+        {
+            i = false;
+        }
     }
 
     QSqlQuery query;
