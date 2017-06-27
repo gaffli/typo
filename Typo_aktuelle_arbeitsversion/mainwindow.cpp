@@ -842,6 +842,25 @@ void MainWindow::scnd_plr_connected()
 void MainWindow::set_rand_multi(char rand_mult)
 {
     MainWindow::rnd_multi = rand_mult;
+
+    QSqlQuery query;
+    query.prepare("select Text from Texte where Textart='zeit2' and ID_Texte=?");
+    query.addBindValue(MainWindow::rnd_multi);
+    query.exec();
+
+     QSqlRecord record=query.record();
+     while (query.next())
+     {
+         text=query.value(record.indexOf("Text")).toString();
+         ui->frame_lernen->show();
+         timer->start();                               //Zeitrennen starten
+         ui->textBrowser->setText(text);
+         ui->eingabefeld->setFocus();
+         if(!fehlersuche->IsRunning())
+           {
+            fehlersuche->start(text);
+           }
+     }
 }
 
 void MainWindow::on_multiplayer_clicked()
@@ -891,24 +910,6 @@ void MainWindow::on_multiplayer_clicked()
         }
     }
 */
-    QSqlQuery query;
-    query.prepare("select Text from Texte where Textart='zeit2' and ID_Texte=?");
-    query.addBindValue(MainWindow::rnd_multi);
-    query.exec();
-
-     QSqlRecord record=query.record();
-     while (query.next())
-     {
-         text=query.value(record.indexOf("Text")).toString();
-         ui->frame_lernen->show();
-         timer->start();                               //Zeitrennen starten
-         ui->textBrowser->setText(text);
-         ui->eingabefeld->setFocus();
-         if(!fehlersuche->IsRunning())
-           {
-            fehlersuche->start(text);
-           }
-     }
 }
 
 
