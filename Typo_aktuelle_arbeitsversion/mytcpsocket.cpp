@@ -25,15 +25,18 @@ void MyTcpSocket::doConnect()
     socket->connectToHost("::ffff:192.168.2.125",1234);
     // we need to wait...
 
-    if(!socket->waitForConnected(5000))
+    if(!socket->waitForConnected())
     {
         qDebug() << "Error: " << socket->errorString();
     }
 
-    if (!socket->waitForDisconnected())
+    if (socket->state() != QAbstractSocket::UnconnectedState)
+   {
+    if (!socket->waitForDisconnected(500))
     {
         socket->disconnectFromHost();
     }
+   }
 }
 
 void MyTcpSocket::connected()
@@ -82,10 +85,13 @@ void MyTcpSocket::socket_after_socket()
 
 void MyTcpSocket::newConnection()
 {
-    MyTcpSocket::new_socket = MyTcpSocket::server->nextPendingConnection();
-
     connect(MyTcpSocket::new_socket, SIGNAL(disconnected()),this, SLOT(newdisconnected()));
     connect(MyTcpSocket::new_socket, SIGNAL(readyRead()),this, SLOT(readyRead_new()));
+
+    MyTcpSocket::new_socket = MyTcpSocket::server->nextPendingConnection();
+    qDebug() << new_socket->state();
+
+    emit scnd_plr_con();
 
 
     MyTcpSocket::new_socket->waitForBytesWritten(3000);
@@ -100,6 +106,7 @@ void MyTcpSocket::readyRead_new()
     case 0:
         MyTcpSocket::new_socket->read(&(MyTcpSocket::txt_nmbr),5);
         emit MyTcpSocket::signal_txt_nmbr(MyTcpSocket::txt_nmbr);
+        qDebug() << MyTcpSocket::txt_nmbr;
         MyTcpSocket::counter_message++;
         break;
 

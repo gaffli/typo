@@ -833,6 +833,17 @@ void MainWindow::on_pb_profil_2_clicked()
     emit profil_show_and_hide();
 }
 
+void MainWindow::scnd_plr_connected()
+{
+    MainWindow::scnd_plr_connect = true;
+    qDebug() << "lauft";
+}
+
+void MainWindow::set_rand_multi(char rand_mult)
+{
+    MainWindow::rnd_multi = rand_mult;
+}
+
 void MainWindow::on_multiplayer_clicked()
 {
     ui->frame_zeit->show();
@@ -841,8 +852,10 @@ void MainWindow::on_multiplayer_clicked()
     ui->frame_ueben->hide();
     ui->frame_welcome->hide();
     MainWindow::is_multipl = true;
+
     MyTcpSocket s;
     s.doConnect();
+
     connect(&s,SIGNAL(signal_txt_nmbr(char)),this,SLOT(set_rand_multi(char)));
     connect(this,SIGNAL(multipl_fpm_wpm(int,int)),&s,SLOT(set_variables(int,int)));
     connect(&s,SIGNAL(scnd_plr_con()),this,SLOT(scnd_plr_connected()));
@@ -867,17 +880,17 @@ void MainWindow::on_multiplayer_clicked()
     ui->frame_zeit->hide();
     ui->frame_menue->hide();
 
-    bool i = true;
-    while(i)
+    if (MainWindow::scnd_plr_connect == false)
+        i = true;
+
+/*    while(i)
     {
         if (MainWindow::scnd_plr_connect == true)
         {
             i = false;
         }
-        else
-            this->timerEvent(Sleep(50));
     }
-
+*/
     QSqlQuery query;
     query.prepare("select Text from Texte where Textart='zeit2' and ID_Texte=?");
     query.addBindValue(MainWindow::rnd_multi);
@@ -898,12 +911,5 @@ void MainWindow::on_multiplayer_clicked()
      }
 }
 
-void MainWindow::set_rand_multi(char rand_mult)
-{
-    MainWindow::rnd_multi = rand_mult;
-}
 
-void MainWindow::scnd_plr_connected()
-{
-    MainWindow::scnd_plr_connect = true;
-}
+

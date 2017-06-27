@@ -29,6 +29,7 @@ public:
     ~MainWindow();
     bool eventFilter(QObject *obj, QEvent *event);
     QString text;
+    bool i = false;
 
 signals:
    void profil_show_and_hide();
@@ -93,6 +94,7 @@ private slots:
 
     void on_multiplayer_clicked();
     void set_rand_multi(char rand_mult);
+    void scnd_plr_connected();
 
 private:
     Ui::MainWindow *ui;
@@ -107,7 +109,7 @@ private:
     int textcounter = 0;
     int zaehler = 0;
     int cnt = 0;
-    int rnd_multi = 0;
+    int rnd_multi = 1;
     bool is_multipl = false;
     bool scnd_plr_connect = false;
 

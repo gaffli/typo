@@ -20,6 +20,7 @@ signals:
     void signal_other_f_w_pm(int,int);
     void writing_done();
     void signal_txt_nmbr(char);
+    void scnd_plr_con();
 
 public slots:
     void connected();
