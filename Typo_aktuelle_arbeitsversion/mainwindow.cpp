@@ -65,6 +65,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->horizontalLayout->addWidget(keyboard);
     fehlersuche = new Fehleranalyse();
 
+    setFocusPolicy(Qt::StrongFocus);
+    qApp->installEventFilter(this);
 
 
     QSqlDatabase typo_db =  QSqlDatabase::addDatabase("QMYSQL");        //Verbindung zur MYSQL Datenbank
