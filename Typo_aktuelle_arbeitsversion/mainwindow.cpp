@@ -38,11 +38,14 @@ MainWindow::MainWindow(QWidget *parent) :
     this->setWindowTitle("Typo - 10 Finger Lernprogramm");
 
     timer= new QTimer(this);                                    //Timer für das Zeitrennen
-    timer->setInterval(1000);
+    timer->setInterval(1000); //Interval auf 1 sek setzen
+
     connect(timer,SIGNAL(timeout()),this,SLOT(timer_timeout()));
-    QString imagePath = QCoreApplication::applicationDirPath() + "/banner.png";
+
+    QString imagePath = QCoreApplication::applicationDirPath() + "/banner.png";  // Der Pfad der Exe wird genommen um das Banner zu finden
     QPixmap image(imagePath);
     ui->label_banner_typo->setPixmap(image);
+
     ui->label_username->setText("");
     ui->label_username->hide();
     ui->frame_welcome->show();
@@ -62,9 +65,9 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->horizontalLayout->addWidget(keyboard);
     fehlersuche = new Fehleranalyse();
 
-    setFocusPolicy(Qt::StrongFocus);
-    qApp->installEventFilter(this);
-    QSqlDatabase typo_db =  QSqlDatabase::addDatabase("QMYSQL");
+
+
+    QSqlDatabase typo_db =  QSqlDatabase::addDatabase("QMYSQL");        //Verbindung zur MYSQL Datenbank
     typo_db.setDatabaseName("typo");
     typo_db.setUserName("Alex");
     typo_db.setPassword("A92K07!27");
@@ -155,13 +158,13 @@ void MainWindow::on_anmelden_clicked()
     ui->frame_welcome->show();
 
 
- login log;
- log.setModal(true);
- QObject::connect(&log,SIGNAL(signal_username_set(QString)),this,SLOT(on_label_username_set_user(QString)));
- QObject::connect(&log,SIGNAL(after_login_process()),this,SLOT(after_login_process()));
- QObject::connect(&log,SIGNAL(after_logout_process()),this,SLOT(after_logout_process()));
- log.exec();
- MainWindow::benutzername = log.get();
+         login log;
+         log.setModal(true);
+         QObject::connect(&log,SIGNAL(signal_username_set(QString)),this,SLOT(on_label_username_set_user(QString)));
+         QObject::connect(&log,SIGNAL(after_login_process()),this,SLOT(after_login_process()));
+         QObject::connect(&log,SIGNAL(after_logout_process()),this,SLOT(after_logout_process()));
+         log.exec();
+         MainWindow::benutzername = log.get();
 }
 
 void MainWindow::on_optionen_clicked()
@@ -180,8 +183,8 @@ void MainWindow::on_lernen_clicked()
   ui->frame_welcome->hide();
 
 
-  typodb=QSqlDatabase::addDatabase("QSQLITE");                //Datenbank Objekt erzeugt bzw ein SQLite Datenbank
-  QString dbPath = QCoreApplication::applicationDirPath() + "/TypoDB.db";
+  typodb=QSqlDatabase::addDatabase("QSQLITE");                                       //Verbindung zur SQLite Datenbank
+  QString dbPath = QCoreApplication::applicationDirPath() + "/TypoDB.db";           // Pfad der Datenbank wird im Ornder der Exe gesucht
   typodb.setDatabaseName(dbPath);
   typodb.open();
 
@@ -195,9 +198,10 @@ void MainWindow::on_bl_zeige_clicked()
   ui->frame_hand->hide();
   ui->frame_menue->hide();
   int rnd=rand() % 5 + 1; // Random zwischen 1-5
-    rnd=rand() % 5 + 1;
+  rnd=rand() % 5 + 1;
+
   QSqlQuery query;
-  query.prepare("select Texte from lernen where ID_lernen=?");  //Dem SQL Befehl wird eine Variable aus dem Programm zugewiesen
+  query.prepare("select Texte from lernen where ID_lernen=?");       //Dem SQL Befehl wird eine Variable aus dem Programm zugewiesen
   query.addBindValue(rnd);
   query.exec();
 
@@ -226,6 +230,7 @@ void MainWindow::on_bl_mittel_clicked()
   int rnd;
   rnd=rand() % 5 + 6; // Random zwischen 6-10
   rnd=rand() % 5 + 6;
+
   QSqlQuery query;
   query.prepare("select Texte from lernen where ID_lernen=?");
   query.addBindValue(rnd);
@@ -238,6 +243,7 @@ void MainWindow::on_bl_mittel_clicked()
        ui->frame_lernen->show();
        ui->textBrowser->setText(text);
         ui->eingabefeld->setFocus();
+
        if(!fehlersuche->IsRunning())
          {
           fehlersuche->start(text);
@@ -253,6 +259,7 @@ void MainWindow::on_bl_ring_clicked()
   int rnd;
   rnd=rand() % 5 + 11; // Random zwischen 11-15
   rnd=rand() % 5 + 11;
+
   QSqlQuery query;
   query.prepare("select Texte from lernen where ID_lernen=?");
   query.addBindValue(rnd);
@@ -265,6 +272,7 @@ void MainWindow::on_bl_ring_clicked()
        ui->frame_lernen->show();
        ui->textBrowser->setText(text);
         ui->eingabefeld->setFocus();
+
        if(!fehlersuche->IsRunning())
          {
           fehlersuche->start(text);
@@ -279,7 +287,8 @@ void MainWindow::on_bl_kleiner_clicked()
   ui->frame_menue->hide();
   int rnd;
   rnd=rand() % 5 + 16; // Random zwischen 16-20
-   rnd=rand() % 5 + 16;
+  rnd=rand() % 5 + 16;
+
   QSqlQuery query;
   query.prepare("select Texte from lernen where ID_lernen=?");
   query.addBindValue(rnd);
@@ -292,6 +301,7 @@ void MainWindow::on_bl_kleiner_clicked()
        ui->frame_lernen->show();
        ui->textBrowser->setText(text);
         ui->eingabefeld->setFocus();
+
        if(!fehlersuche->IsRunning())
          {
           fehlersuche->start(text);
@@ -306,7 +316,8 @@ void MainWindow::on_br_zeige_clicked()
   ui->frame_menue->hide();
   int rnd;
   rnd=rand() % 5 + 21; // Random zwischen 21-25
-    rnd=rand() % 5 + 21;
+  rnd=rand() % 5 + 21;
+
   QSqlQuery query;
   query.prepare("select Texte from lernen where ID_lernen=?");
   query.addBindValue(rnd);
@@ -319,6 +330,7 @@ void MainWindow::on_br_zeige_clicked()
        ui->frame_lernen->show();
        ui->textBrowser->setText(text);
         ui->eingabefeld->setFocus();
+
        if(!fehlersuche->IsRunning())
          {
           fehlersuche->start(text);
@@ -333,7 +345,8 @@ void MainWindow::on_br_mittel_clicked()
   ui->frame_menue->hide();
   int rnd;
   rnd=rand() % 5 + 26; // Random zwischen 26-30
-   rnd=rand() % 5 + 26;
+  rnd=rand() % 5 + 26;
+
   QSqlQuery query;
   query.prepare("select Texte from lernen where ID_lernen=?");
   query.addBindValue(rnd);
@@ -346,6 +359,7 @@ void MainWindow::on_br_mittel_clicked()
        ui->frame_lernen->show();
        ui->textBrowser->setText(text);
         ui->eingabefeld->setFocus();
+
        if(!fehlersuche->IsRunning())
          {
           fehlersuche->start(text);
@@ -360,7 +374,7 @@ void MainWindow::on_br_ring_clicked()
   ui->frame_menue->hide();
   int rnd;
   rnd=rand() % 5 + 31; // Random zwischen 31-35
-   rnd=rand() % 5 + 31;
+  rnd=rand() % 5 + 31;
   QSqlQuery query;
   query.prepare("select Texte from lernen where ID_lernen=?");
   query.addBindValue(rnd);
@@ -373,6 +387,7 @@ void MainWindow::on_br_ring_clicked()
        ui->frame_lernen->show();
        ui->textBrowser->setText(text);
         ui->eingabefeld->setFocus();
+
        if(!fehlersuche->IsRunning())
          {
           fehlersuche->start(text);
@@ -388,6 +403,7 @@ void MainWindow::on_br_kleiner_clicked()
   int rnd;
   rnd=rand() % 5 + 36; // Random zwischen 36-40
   rnd=rand() % 5 + 36;
+
   QSqlQuery query;
   query.prepare("select Texte from lernen where ID_lernen=?");
   query.addBindValue(rnd);
@@ -400,6 +416,7 @@ void MainWindow::on_br_kleiner_clicked()
        ui->frame_lernen->show();
        ui->textBrowser->setText(text);
         ui->eingabefeld->setFocus();
+
        if(!fehlersuche->IsRunning())
          {
           fehlersuche->start(text);
@@ -419,6 +436,7 @@ void MainWindow::on_button_uebungende_clicked()
   ui->label_fehler->setText("0");
   ui->label_WPM->setText("0");
   ui->frame_welcome->show();
+
   if(fehlersuche->IsRunning())
     {
       fehlersuche->end();
@@ -449,10 +467,11 @@ void MainWindow::on_pushButton_starten_clicked()
   ui->frame_ueben->hide();
   ui->frame_lernen->show();
   ui->frame_menue->hide();
-  int rnd=1;
+  int rnd=rand() % 5 + 1; // Random zwischen 1-5
+  rnd=rand() % 5 + 1;
 
   QSqlQuery query;
-  query.prepare("select Text from Texte where Textart='ueben' and ID_Texte='1'");
+  query.prepare("select Text from Texte where Textart='ueben' and ID_Texte=?");
   query.addBindValue(rnd);
   query.exec();
 
@@ -745,7 +764,6 @@ void MainWindow::on_pB_ende_clicked()
 void MainWindow::after_login_process()
 {
     ui->anmelden->hide();
-    //Profil showen
     ui->ueben->setEnabled(true);
     ui->zeitrennen->setEnabled(true);
     ui->multiplayer->setEnabled(true);
@@ -834,12 +852,12 @@ void MainWindow::on_pb_profil_2_clicked()
 {
     login log;
     log.setModal(true);
-       QString name = MainWindow::benutzername;
-       log.set(name);
-       QObject::connect(this,SIGNAL(profil_show_and_hide()),&log,SLOT(profil_show_and_hide()));
-       QObject::connect(&log,SIGNAL(after_logout_process()),this,SLOT(after_logout_process()));
-       emit profil_show_and_hide();
-       log.exec();
+    QString name = MainWindow::benutzername;
+    log.set(name);
+    QObject::connect(this,SIGNAL(profil_show_and_hide()),&log,SLOT(profil_show_and_hide()));
+    QObject::connect(&log,SIGNAL(after_logout_process()),this,SLOT(after_logout_process()));
+    emit profil_show_and_hide();
+    log.exec();
 }
 
 void MainWindow::scnd_plr_connected()
