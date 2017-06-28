@@ -9,13 +9,12 @@
 
 #include <QObject>
 
-// hallo lenenenekßjmvpigpjwigogphafpäi
 
 using namespace std;
 
 int main(int argc, char *argv[])
 {
-    QTextCodec::setCodecForLocale(QTextCodec::codecForName("UFT-8"));
+    QTextCodec::setCodecForLocale(QTextCodec::codecForName("UFT-8"));  //Wird benötigt damit man Umlaute darstellen kann
     QApplication a(argc, argv);
 
     MainWindow w;

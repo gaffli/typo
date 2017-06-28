@@ -1342,7 +1342,7 @@ border-top-width: 1.5px;
        <rect>
         <x>340</x>
         <y>0</y>
-        <width>91</width>
+        <width>105</width>
         <height>41</height>
        </rect>
       </property>
@@ -1365,6 +1365,14 @@ border-top-width: 1.5px;
      </property>
     </widget>
    </widget>
+   <zorder>frame_menue</zorder>
+   <zorder>frame_hand</zorder>
+   <zorder>frame_ueben</zorder>
+   <zorder>frame_zeit</zorder>
+   <zorder>frame_lernen</zorder>
+   <zorder>frame_welcome</zorder>
+   <zorder>frame_zeitvorbei</zorder>
+   <zorder>frame_textueben</zorder>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
@@ -1372,7 +1380,7 @@ border-top-width: 1.5px;
      <x>0</x>
      <y>0</y>
      <width>1280</width>
-     <height>21</height>
+     <height>17</height>
     </rect>
    </property>
   </widget>
