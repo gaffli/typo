@@ -94,7 +94,7 @@ private slots:
     void on_pb_profil_2_clicked();
 
     void on_multiplayer_clicked();
-    void set_rand_multi(char rand_mult);
+    void multi_txt_nmbr(char txt_nmbr);
     void scnd_plr_connected();
 
 private:

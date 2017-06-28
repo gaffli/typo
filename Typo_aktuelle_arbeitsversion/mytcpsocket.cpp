@@ -21,7 +21,8 @@ void MyTcpSocket::doConnect()
 
     qDebug() << "connecting...";
 
-    socket->bind(MyTcpSocket::socketport);
+    //socket->bind(MyTcpSocket::socketport);
+
     socket->connectToHost("::ffff:192.168.2.125",1234);
 
 
