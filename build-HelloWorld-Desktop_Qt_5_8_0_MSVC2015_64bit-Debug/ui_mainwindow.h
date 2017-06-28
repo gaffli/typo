@@ -611,7 +611,7 @@ public:
         label_wpm->setFont(font4);
         label_fpm = new QLabel(frame_zeitvorbei);
         label_fpm->setObjectName(QStringLiteral("label_fpm"));
-        label_fpm->setGeometry(QRect(300, 80, 61, 41));
+        label_fpm->setGeometry(QRect(300, 85, 61, 41));
         QFont font5;
         font5.setPointSize(9);
         font5.setBold(true);

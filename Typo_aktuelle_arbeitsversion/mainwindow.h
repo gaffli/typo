@@ -105,6 +105,8 @@ private:
     QSqlDatabase typo_db;
     bool text_run;
     bool ende = false;
+    QString art;
+    int teiler=0;
     int tippwert;
     int spacezaehler = 0;
     int textcounter = 0;

@@ -14,6 +14,7 @@ login::login(QWidget *parent) :
     ui->lab_status->hide();
     ui->reg_status->hide();
     ui->frame_profil->hide();
+    login::setFixedSize(710,570);
 
 }
 
@@ -156,6 +157,10 @@ void login::use_querylogin(QSqlQuery qry_login)
    qry_login.exec("select COUNT(Art) from Statistik where Art='wett' and Benutzername='"+ login::benutzername +"'");
    while (qry_login.next())
    ui->label_modiwett->setText(qry_login.value(0).toString());
+
+   qry_login.exec("select COUNT(Art) from Statistik where Art='eigener' and Benutzername='"+ login::benutzername +"'");
+   while (qry_login.next())
+   ui->label_eigner->setText(qry_login.value(0).toString());
 
    qry_login.exec("select AVG(FPM) from Statistik where Art='zeit' and Benutzername='"+ login::benutzername +"'");
    while (qry_login.next())

@@ -46,11 +46,13 @@ MainWindow::MainWindow(QWidget *parent) :
     QPixmap image(imagePath);
     ui->label_banner_typo->setPixmap(image);
 
+
     ui->label_username->setText("");
     ui->label_username->hide();
     ui->frame_welcome->show();
     ui->ueben->setEnabled(false);
     ui->zeitrennen->setEnabled(false);
+    ui->pb_profil_2->hide();
     ui->label_zeit->hide();
     ui->frame_zeitvorbei->hide();
     ui->frame_hand->hide();
@@ -67,7 +69,6 @@ MainWindow::MainWindow(QWidget *parent) :
 
     setFocusPolicy(Qt::StrongFocus);
     qApp->installEventFilter(this);
-
 
     QSqlDatabase typo_db =  QSqlDatabase::addDatabase("QMYSQL");        //Verbindung zur MYSQL Datenbank
     typo_db.setDatabaseName("typo");
@@ -92,7 +93,7 @@ void MainWindow::timer_timeout()
     MainWindow::cnt--;
 
     ui->label_zeit->setText(QString::number(MainWindow::cnt)); // Aktuelle Zeit wird dem label zugewiesen
-
+    MainWindow::art="zeit";
     if(MainWindow::cnt==0)
     {
       timer->stop();
@@ -105,48 +106,8 @@ void MainWindow::timer_timeout()
       int woerter=fehlersuche->NumberofCorrectWords;
       int fehler=fehlersuche->NumberofErrors;
 
-       QString art="zeit";
-      int teiler=0;
-      if (ui->radioButton_1->isChecked())              // 1 Minute Zeit
-         {
-          teiler=60;
-
-         }
-      else if (ui->radioButton_2->isChecked())        // 2 Minute Zeit
-         {
-          teiler=120;
-
-         }
-      else if (ui->radioButton_3->isChecked())        // 3 Minute Zeit
-         {
-          teiler=180;
-
-         }
-      else if (ui->radioButton_5->isChecked())        // 5 Minute Zeit
-         {
-          teiler=300;
-
-         }
-      else if(MainWindow::is_multipl == true)
-      {
-          teiler = 120;
-      }
-
-     // woerter=woerter/teiler;
-     // fehler=fehler/teiler;
-
-     ui->label_fpm->setNum(fehler);
-     ui->label_wpm->setNum(woerter);
-
-      QString name=ui->label_username->text();
-      QString fpm=ui->label_fpm->text();
-      QString wpm=ui->label_wpm->text();
 
       emit MainWindow::multipl_fpm_wpm(fehler,woerter);
-
-
-     QSqlQuery qry;
-      qry.exec("insert into Statistik (Benutzername, Art, FPM, WPM) values ('"+name +"','"+art +"','"+fpm+"','"+ wpm +"')");
 
 }
 }
@@ -214,7 +175,7 @@ void MainWindow::on_bl_zeige_clicked()
        ui->textBrowser->setText(text);
 
        ui->eingabefeld->setFocus();
-
+     MainWindow::art="lernen";
 
 
        if(!fehlersuche->IsRunning())
@@ -245,6 +206,7 @@ void MainWindow::on_bl_mittel_clicked()
        ui->textBrowser->setText(text);
         ui->eingabefeld->setFocus();
 
+         MainWindow::art="lernen";
        if(!fehlersuche->IsRunning())
          {
           fehlersuche->start(text);
@@ -272,6 +234,7 @@ void MainWindow::on_bl_ring_clicked()
        text=query.value(record.indexOf("texte")).toString();
        ui->frame_lernen->show();
        ui->textBrowser->setText(text);
+      MainWindow::art="lernen";
         ui->eingabefeld->setFocus();
 
        if(!fehlersuche->IsRunning())
@@ -301,6 +264,7 @@ void MainWindow::on_bl_kleiner_clicked()
        text=query.value(record.indexOf("texte")).toString();
        ui->frame_lernen->show();
        ui->textBrowser->setText(text);
+      MainWindow::art="lernen";
         ui->eingabefeld->setFocus();
 
        if(!fehlersuche->IsRunning())
@@ -330,6 +294,7 @@ void MainWindow::on_br_zeige_clicked()
        text=query.value(record.indexOf("texte")).toString();
        ui->frame_lernen->show();
        ui->textBrowser->setText(text);
+       MainWindow::art="lernen";
         ui->eingabefeld->setFocus();
 
        if(!fehlersuche->IsRunning())
@@ -359,6 +324,7 @@ void MainWindow::on_br_mittel_clicked()
        text=query.value(record.indexOf("texte")).toString();
        ui->frame_lernen->show();
        ui->textBrowser->setText(text);
+       MainWindow::art="lernen";
         ui->eingabefeld->setFocus();
 
        if(!fehlersuche->IsRunning())
@@ -387,6 +353,7 @@ void MainWindow::on_br_ring_clicked()
        text=query.value(record.indexOf("texte")).toString();
        ui->frame_lernen->show();
        ui->textBrowser->setText(text);
+       MainWindow::art="lernen";
         ui->eingabefeld->setFocus();
 
        if(!fehlersuche->IsRunning())
@@ -416,6 +383,7 @@ void MainWindow::on_br_kleiner_clicked()
        text=query.value(record.indexOf("texte")).toString();
        ui->frame_lernen->show();
        ui->textBrowser->setText(text);
+      MainWindow::art="lernen";
         ui->eingabefeld->setFocus();
 
        if(!fehlersuche->IsRunning())
@@ -436,6 +404,7 @@ void MainWindow::on_button_uebungende_clicked()
   ui->label->hide();
   ui->label_fehler->setText("0");
   ui->label_WPM->setText("0");
+  MainWindow::art="";
   ui->frame_welcome->show();
 
   if(fehlersuche->IsRunning())
@@ -482,6 +451,7 @@ void MainWindow::on_pushButton_starten_clicked()
        text=query.value(record.indexOf("Text")).toString();
        ui->frame_lernen->show();
        ui->textBrowser->setText(text);
+      MainWindow::art="ueben";
         ui->eingabefeld->setFocus();
 
        if(!fehlersuche->IsRunning())
@@ -513,6 +483,7 @@ void MainWindow::on_pushButton_eigener_clicked()
     int fehler=fehlersuche->NumberofErrors;
    ui->label_fpm->setNum(fehler);
    ui->label_wpm->setNum(woerter);
+  MainWindow::art="eigener";
 
 
            ui->frame_lernen->show();
@@ -552,6 +523,7 @@ void MainWindow::on_pushButton_zeitstart_clicked()
      if (ui->radioButton_1->isChecked())        // 1 Minute Zeit
         {
             MainWindow::cnt =60;
+             MainWindow::teiler=1;
             int rnd=rand() % 5 + 6; // Random zwischen 6-10
             rnd=rand() % 5 + 6;
             ui->frame_lernen->show();
@@ -581,8 +553,8 @@ void MainWindow::on_pushButton_zeitstart_clicked()
         }
      else if (ui->radioButton_2->isChecked())   // 2 Minute Zeit
         {
-            MainWindow::cnt =120;
-
+            MainWindow::cnt =12;
+             MainWindow::teiler=2;
             int rnd=rand() % 5 + 11; // Random zwischen 11-15
             rnd=rand() % 5 + 11;
             ui->frame_lernen->show();
@@ -611,6 +583,7 @@ void MainWindow::on_pushButton_zeitstart_clicked()
      else if (ui->radioButton_3->isChecked())   // 3 Minute Zeit
         {
             MainWindow::cnt =180;
+             MainWindow::teiler=3;
             int rnd=rand() % 5 + 16; // Random zwischen 16-20
             rnd=rand() % 5 + 16;
 
@@ -640,6 +613,7 @@ void MainWindow::on_pushButton_zeitstart_clicked()
      else if (ui->radioButton_5->isChecked())   // 5 Minute Zeit
         {
             MainWindow::cnt =300;
+             MainWindow::teiler=5;
             int rnd=rand() % 5 + 21;
             rnd=rand() % 5 + 21; // Random zwischen 21-25
 
@@ -776,6 +750,7 @@ void MainWindow::after_login_process()
     ui->zeitrennen->setEnabled(true);
     ui->multiplayer->setEnabled(true);
     ui->pb_profil->show();
+    ui->pb_profil_2->show();
 }
 
 void MainWindow::after_logout_process()
@@ -786,6 +761,7 @@ void MainWindow::after_logout_process()
     ui->multiplayer->setEnabled(false);
     ui->label_username->setText("");
     ui->pb_profil->hide();
+    ui->pb_profil_2->hide();
 
 }
 
@@ -856,15 +832,50 @@ void MainWindow::Vergleich()
         }
     if(ende==true)
     {
-      ui->frame_lernen->hide();
-      ui->frame_zeitvorbei->show();
-      ui->frame_zeittext->hide();
-      int woerter=fehlersuche->NumberofCorrectWords;
-      int fehler=fehlersuche->NumberofErrors;
-      ui->label_wpm->setNum(woerter);
-      ui->label_fpm->setNum(fehler);
+        int woerter=fehlersuche->NumberofCorrectWords;
+        int fehler=fehlersuche->NumberofErrors;
+        ui->label_wpm->setNum(woerter);
+        ui->label_fpm->setNum(fehler);
+        QString name=ui->label_username->text();
 
-    }
+       if (MainWindow::art=="zeit")
+       {
+
+        ui->frame_zeitvorbei->show();
+        ui->frame_zeittext->show();
+        ui->frame_textueben->hide();
+
+
+        //woerter=woerter/teiler;
+       // fehler=fehler/teiler;
+
+        ui->label_fpm->setNum(fehler);
+        ui->label_wpm->setNum(woerter);
+
+        QString fpm=ui->label_fpm->text();
+        QString wpm=ui->label_wpm->text();
+        QSqlQuery qry;
+        qry.exec("insert into Statistik (Benutzername, Art, FPM, WPM) values ('"+name +"','"+MainWindow::art +"','"+fpm+"','"+ wpm +"')");
+        }
+          else
+          {
+                 ui->frame_lernen->hide();
+                 ui->frame_zeitvorbei->show();
+                 ui->frame_textueben->show();
+                 ui->frame_zeittext->hide();
+
+        if(name=="")
+        {
+        }
+        else
+          {
+            QString fpm=ui->label_fpm->text();
+            QString wpm=ui->label_wpm->text();
+            QSqlQuery qry;
+            qry.exec("insert into Statistik (Benutzername, Art, FPM, WPM) values ('"+name +"','"+MainWindow::art +"','"+fpm+"','"+ wpm +"')");
+          }
+        }
+     }
 }
 
 void MainWindow::on_pb_profil_2_clicked()
