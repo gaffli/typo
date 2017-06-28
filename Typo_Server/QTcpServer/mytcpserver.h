@@ -31,9 +31,9 @@ private:
      QTcpSocket *socket;
      QStack<QHostAddress> client_ip;
      QStack<quint16> client_ports;
-     QTcpSocket *socket_1;
-     QTcpSocket *socket_2;
-     int counter;
+     QTcpSocket *socket_1 = new QTcpSocket(this);
+     QTcpSocket *socket_2 = new QTcpSocket(this);
+     int counter = 0;
 
 };
 

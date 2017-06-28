@@ -896,9 +896,9 @@ void MainWindow::scnd_plr_connected()
     qDebug() << "lauft";
 }
 
-void MainWindow::set_rand_multi(char rand_mult)
+void MainWindow::multi_txt_nmbr(char txt_nmbr)
 {
-    MainWindow::rnd_multi = rand_mult;
+    MainWindow::rnd_multi = txt_nmbr;
 
     QSqlQuery query;
     query.prepare("select Text from Texte where Textart='zeit2' and ID_Texte=?");
@@ -930,11 +930,14 @@ void MainWindow::on_multiplayer_clicked()
     MainWindow::is_multipl = true;
 
     MyTcpSocket s;
-    s.doConnect();
 
-    connect(&s,SIGNAL(signal_txt_nmbr(char)),this,SLOT(set_rand_multi(char)));
+    connect(&s,SIGNAL(signal_txt_nmbr(char)),this,SLOT(multi_txt_nmbr(char)));
     connect(this,SIGNAL(multipl_fpm_wpm(int,int)),&s,SLOT(set_variables(int,int)));
     connect(&s,SIGNAL(scnd_plr_con()),this,SLOT(scnd_plr_connected()));
+
+    s.doConnect();
+
+
 
     QSqlDatabase typo_db =  QSqlDatabase::addDatabase("QMYSQL");
     typo_db.setDatabaseName("typo");

@@ -39,23 +39,27 @@ MyTcpServer::MyTcpServer(QObject *parent) : QObject(parent)
 
  void MyTcpServer::newConnection()
  {
-     switch (MyTcpServer::counter) {
-     case 0:
+     qDebug() << "hi";
 
+     switch (MyTcpServer::counter)
+     {
+     case 0:
+         qDebug() << "1 ppls";
          MyTcpServer::socket_1 = server->nextPendingConnection();
          connect(MyTcpServer::socket_1, SIGNAL(readyRead()),this, SLOT(readyRead()));
-
          MyTcpServer::counter++;
-
+         qDebug() << MyTcpServer::socket_1->state() << "socket1";
          break;
-     case 1:
 
+     case 1:
+            qDebug() << MyTcpServer::socket_1->state() << "socket1";
+         qDebug() << "2 ppls";
          MyTcpServer::socket_2 = server->nextPendingConnection();
          connect(MyTcpServer::socket_2, SIGNAL(readyRead()),this, SLOT(readyRead()));
-
          MyTcpServer::counter = 0;
          emit two_clients_signal();
          break;
+
      default:
          break;
      }
@@ -86,10 +90,21 @@ MyTcpServer::MyTcpServer(QObject *parent) : QObject(parent)
      int r = (rand() % 5) + 1;
      QByteArray package_text_number = QByteArray::number(r);
 
-     MyTcpServer::socket_1->write(package_text_number);
-     MyTcpServer::socket_1->flush();
-     MyTcpServer::socket_2->write(package_text_number);
-     MyTcpServer::socket_2->flush();
+     qDebug() << r;
+
+     if (MyTcpServer::socket_1->state() == QAbstractSocket::ConnectingState)
+     {
+         qDebug() << "socket_1 written";
+         MyTcpServer::socket_1->write(package_text_number);
+         MyTcpServer::socket_1->flush();
+     }
+     if (MyTcpServer::socket_2->state() == QAbstractSocket::ConnectingState)
+     {
+         qDebug() << "socket_2 written";
+         MyTcpServer::socket_2->write(package_text_number);
+         MyTcpServer::socket_2->flush();
+     }
+
 
      while(MyTcpServer::socket_2->state() == MyTcpServer::socket_1->state() &&
            MyTcpServer::socket_1->state() != QAbstractSocket::UnconnectedState)
