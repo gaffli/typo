@@ -161,6 +161,7 @@ void MainWindow::on_anmelden_clicked()
  QObject::connect(&log,SIGNAL(after_login_process()),this,SLOT(after_login_process()));
  QObject::connect(&log,SIGNAL(after_logout_process()),this,SLOT(after_logout_process()));
  log.exec();
+ MainWindow::benutzername = log.get();
 }
 
 void MainWindow::on_optionen_clicked()
@@ -765,9 +766,13 @@ void MainWindow::after_logout_process()
 void MainWindow::on_pb_profil_clicked()
 {
     login log;
-    log.show();
-    QObject::connect(this,SIGNAL(profil_show_and_hide()),&log,SLOT(profil_show_and_hide()));
-    emit profil_show_and_hide();
+    log.setModal(true);
+       QString name = MainWindow::benutzername;
+       log.set(name);
+       QObject::connect(this,SIGNAL(profil_show_and_hide()),&log,SLOT(profil_show_and_hide()));
+       QObject::connect(&log,SIGNAL(after_logout_process()),this,SLOT(after_logout_process()));
+       emit profil_show_and_hide();
+       log.exec();
 }
 
 bool MainWindow::eventFilter(QObject *obj, QEvent *event)
@@ -828,9 +833,13 @@ void MainWindow::Vergleich()
 void MainWindow::on_pb_profil_2_clicked()
 {
     login log;
-    log.show();
-    QObject::connect(this,SIGNAL(profil_show_and_hide()),&log,SLOT(profil_show_and_hide()));
-    emit profil_show_and_hide();
+    log.setModal(true);
+       QString name = MainWindow::benutzername;
+       log.set(name);
+       QObject::connect(this,SIGNAL(profil_show_and_hide()),&log,SLOT(profil_show_and_hide()));
+       QObject::connect(&log,SIGNAL(after_logout_process()),this,SLOT(after_logout_process()));
+       emit profil_show_and_hide();
+       log.exec();
 }
 
 void MainWindow::scnd_plr_connected()
@@ -865,7 +874,7 @@ void MainWindow::set_rand_multi(char rand_mult)
 
 void MainWindow::on_multiplayer_clicked()
 {
-    ui->frame_zeit->show();
+
     ui->frame_hand->hide();
     ui->frame_lernen->hide();
     ui->frame_ueben->hide();

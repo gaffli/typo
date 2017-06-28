@@ -33,6 +33,7 @@ public:
 
 signals:
    void profil_show_and_hide();
+      void signal_sys_show();
    void multipl_fpm_wpm(int,int);
 
 private slots:
@@ -112,6 +113,7 @@ private:
     int rnd_multi = 1;
     bool is_multipl = false;
     bool scnd_plr_connect = false;
+     QString benutzername;
 
 };
 
