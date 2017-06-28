@@ -24,11 +24,9 @@ signals:
 
 public slots:
     void connected();
-    void disconnected();
     void bytesWritten(qint64 bytes);
-    void readyRead();
-    void socket_after_socket();
-    void newConnection();
+    //void socket_after_socket();
+    //void newConnection();
     void readyRead_new();
     void newdisconnected();
     void set_variables(int, int);
