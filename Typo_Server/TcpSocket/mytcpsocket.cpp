@@ -24,8 +24,6 @@ void MyTcpSocket::doConnect()
     // this is not blocking call
     socket->bind(MyTcpSocket::socketport);
     socket->connectToHost("::ffff:192.168.2.125",1234);
-    // we need to wait...
-
 
     if(!socket->waitForConnected(5000))
     {
@@ -38,7 +36,6 @@ void MyTcpSocket::connected()
     qDebug() << "connected...";
 
     // Hey server, tell me about you.
-    socket->write("HEAD / HTTP/1.0\r\n\r\n\r\n\r\n");
     socket->write("hallo server");
     socket->flush();
 }
@@ -103,9 +100,11 @@ void MyTcpSocket::newConnection()
 void MyTcpSocket::readyRead_new()
 {
     qDebug() << "laeuft";
+    qDebug() << new_socket->bytesAvailable();
     switch (MyTcpSocket::counter_message) {
     case 0:
         MyTcpSocket::new_socket->read(&(MyTcpSocket::txt_nmbr),5);
+        qDebug() << MyTcpSocket::txt_nmbr;
         MyTcpSocket::counter_message++;
         break;
 
