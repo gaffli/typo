@@ -66,12 +66,14 @@ public:
     QLabel *label_modizeit;
     QFrame *line_2;
     QFrame *line_4;
+    QLabel *label_13;
+    QLabel *label_eigner;
 
     void setupUi(QDialog *login)
     {
         if (login->objectName().isEmpty())
             login->setObjectName(QStringLiteral("login"));
-        login->resize(729, 588);
+        login->resize(710, 570);
         frame_login = new QFrame(login);
         frame_login->setObjectName(QStringLiteral("frame_login"));
         frame_login->setGeometry(QRect(20, 20, 680, 540));
@@ -158,18 +160,6 @@ public:
         line_5->setFrameShadow(QFrame::Plain);
         line_5->setLineWidth(2);
         line_5->setFrameShape(QFrame::HLine);
-        lab_benutzer->raise();
-        lab_passwort->raise();
-        le_benutzername->raise();
-        le_passwort->raise();
-        lab_status->raise();
-        but_anmelden->raise();
-        label->raise();
-        line->raise();
-        frame->raise();
-        abbrechen_anmelden->raise();
-        button_registrieren->raise();
-        line_5->raise();
         frame_profil = new QFrame(login);
         frame_profil->setObjectName(QStringLiteral("frame_profil"));
         frame_profil->setGeometry(QRect(10, 10, 680, 540));
@@ -275,6 +265,14 @@ public:
         line_4->setFrameShadow(QFrame::Plain);
         line_4->setLineWidth(2);
         line_4->setFrameShape(QFrame::HLine);
+        label_13 = new QLabel(frame_profil);
+        label_13->setObjectName(QStringLiteral("label_13"));
+        label_13->setGeometry(QRect(220, 345, 251, 20));
+        label_13->setFont(font);
+        label_eigner = new QLabel(frame_profil);
+        label_eigner->setObjectName(QStringLiteral("label_eigner"));
+        label_eigner->setGeometry(QRect(500, 325, 60, 40));
+        label_eigner->setFont(font4);
 
         retranslateUi(login);
 
@@ -312,6 +310,8 @@ public:
         label_mdilernen->setText(QApplication::translate("login", "0", Q_NULLPTR));
         label_modiwett->setText(QApplication::translate("login", "0", Q_NULLPTR));
         label_modizeit->setText(QApplication::translate("login", "0", Q_NULLPTR));
+        label_13->setText(QApplication::translate("login", "Eigene Text\303\274bungen:", Q_NULLPTR));
+        label_eigner->setText(QApplication::translate("login", "0", Q_NULLPTR));
     } // retranslateUi
 
 };
