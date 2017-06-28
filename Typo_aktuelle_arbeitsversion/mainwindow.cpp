@@ -135,7 +135,6 @@ void MainWindow::timer_timeout()
      // woerter=woerter/teiler;
      // fehler=fehler/teiler;
 
-
      ui->label_fpm->setNum(fehler);
      ui->label_wpm->setNum(woerter);
 
@@ -484,6 +483,7 @@ void MainWindow::on_pushButton_starten_clicked()
        ui->frame_lernen->show();
        ui->textBrowser->setText(text);
         ui->eingabefeld->setFocus();
+
        if(!fehlersuche->IsRunning())
          {
           fehlersuche->start(text);
@@ -509,6 +509,10 @@ void MainWindow::on_pushButton_eigener_clicked()
       {
     ui->eingabefeld->setFocus();
     ui->textBrowser->setText(text);
+    int woerter=fehlersuche->NumberofCorrectWords;
+    int fehler=fehlersuche->NumberofErrors;
+   ui->label_fpm->setNum(fehler);
+   ui->label_wpm->setNum(woerter);
 
 
            ui->frame_lernen->show();
@@ -521,6 +525,8 @@ void MainWindow::on_pushButton_eigener_clicked()
               fehlersuche->start(text);
              }
       }
+
+
 
 
 
@@ -848,6 +854,17 @@ void MainWindow::Vergleich()
             ui->textBrowser->setText(text);
             spacezaehler = 0;
         }
+    if(ende==true)
+    {
+      ui->frame_lernen->hide();
+      ui->frame_zeitvorbei->show();
+      ui->frame_zeittext->hide();
+      int woerter=fehlersuche->NumberofCorrectWords;
+      int fehler=fehlersuche->NumberofErrors;
+      ui->label_wpm->setNum(woerter);
+      ui->label_fpm->setNum(fehler);
+
+    }
 }
 
 void MainWindow::on_pb_profil_2_clicked()
