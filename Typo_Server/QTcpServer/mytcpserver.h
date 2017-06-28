@@ -7,6 +7,7 @@
 #include <QDebug>
 #include <QQueue>
 #include <QVector>
+#include <QStack>
 
 class MyTcpServer : public QObject
 {
@@ -23,12 +24,13 @@ public slots:
      void readyRead();
      void two_clients_slot();
      void connected();
+     void bytes_written(qint64 bytes);
 
 private:
      QTcpServer *server;
      QTcpSocket *socket;
-     QQueue<QHostAddress> client_ip;
-     QQueue<quint16> client_ports;
+     QStack<QHostAddress> client_ip;
+     QStack<quint16> client_ports;
 
 };
 
