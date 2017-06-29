@@ -895,7 +895,6 @@ void MainWindow::on_pb_profil_2_clicked()
 
 void MainWindow::multi_txt_nmbr(int txt_nmbr)
 {
-    qDebug() << "started";
     QSqlDatabase typo_db =  QSqlDatabase::addDatabase("QMYSQL");
     typo_db.setDatabaseName("typo");
     typo_db.setUserName("Alex");
@@ -914,6 +913,7 @@ void MainWindow::multi_txt_nmbr(int txt_nmbr)
      QSqlRecord record=query.record();
      while (query.next())
      {
+         qDebug() << "started";
          text=query.value(record.indexOf("Text")).toString();
          ui->frame_lernen->show();
          timer->start();                               //Zeitrennen starten
@@ -921,7 +921,7 @@ void MainWindow::multi_txt_nmbr(int txt_nmbr)
          ui->eingabefeld->setFocus();
          if(!fehlersuche->IsRunning())
            {
-
+            qDebug() << "started";
             fehlersuche->start(text);
            }
      }
