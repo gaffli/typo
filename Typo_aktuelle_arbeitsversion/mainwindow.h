@@ -95,8 +95,7 @@ private slots:
     void on_pb_profil_2_clicked();
 
     void on_multiplayer_clicked();
-    void multi_txt_nmbr(char txt_nmbr);
-    void scnd_plr_connected();
+    void multi_txt_nmbr(int txt_nmbr);
 
 private:
     Ui::MainWindow *ui;
@@ -113,7 +112,7 @@ private:
     int textcounter = 0;
     int zaehler = 0;
     int cnt = 0;
-    int rnd_multi = 1;
+    int rnd_multi = 0;
     bool is_multipl = false;
     bool scnd_plr_connect = false;
      QString benutzername;
