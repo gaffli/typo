@@ -895,6 +895,14 @@ void MainWindow::on_pb_profil_2_clicked()
 
 void MainWindow::multi_txt_nmbr(int txt_nmbr)
 {
+    QSqlDatabase typo_db =  QSqlDatabase::addDatabase("QMYSQL");
+    typo_db.setDatabaseName("typo");
+    typo_db.setUserName("Alex");
+    typo_db.setPassword("A92K07!27");
+    typo_db.setPort(3306);
+    typo_db.setHostName("89.163.178.19");
+    typo_db.open();
+
     MainWindow::rnd_multi = txt_nmbr;
 
     QSqlQuery query;
@@ -924,33 +932,13 @@ void MainWindow::on_multiplayer_clicked()
     ui->frame_lernen->hide();
     ui->frame_ueben->hide();
     ui->frame_welcome->hide();
+    ui->frame_lernen->show();
+    ui->frame_menue->hide();
+
     MainWindow::is_multipl = true;
-
-
-
     MainWindow::s.doConnect();
-
-
-
-    QSqlDatabase typo_db =  QSqlDatabase::addDatabase("QMYSQL");
-    typo_db.setDatabaseName("typo");
-    typo_db.setUserName("Alex");
-    typo_db.setPassword("A92K07!27");
-    typo_db.setPort(3306);
-    typo_db.setHostName("89.163.178.19");
-    typo_db.open();
-
-
-    ui->label_zeit->show();
-    ui->label->show();
-    ui->label_zeit->setText("Los Geht's!");
-
     MainWindow::cnt =120;
 
-
-    ui->frame_lernen->show();
-    ui->frame_zeit->hide();
-    ui->frame_menue->hide();
 }
 
 
