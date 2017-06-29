@@ -895,6 +895,7 @@ void MainWindow::on_pb_profil_2_clicked()
 
 void MainWindow::multi_txt_nmbr(int txt_nmbr)
 {
+    qDebug() << "started";
     QSqlDatabase typo_db =  QSqlDatabase::addDatabase("QMYSQL");
     typo_db.setDatabaseName("typo");
     typo_db.setUserName("Alex");
@@ -920,6 +921,7 @@ void MainWindow::multi_txt_nmbr(int txt_nmbr)
          ui->eingabefeld->setFocus();
          if(!fehlersuche->IsRunning())
            {
+
             fehlersuche->start(text);
            }
      }
