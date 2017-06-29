@@ -994,10 +994,10 @@ border-top-width: 1.5px;
    <widget class="QFrame" name="frame_welcome">
     <property name="geometry">
      <rect>
-      <x>219</x>
-      <y>9</y>
-      <width>1051</width>
-      <height>671</height>
+      <x>209</x>
+      <y>-1</y>
+      <width>1061</width>
+      <height>681</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -1364,15 +1364,141 @@ border-top-width: 1.5px;
       <string>Mein Profil</string>
      </property>
     </widget>
+    <widget class="QFrame" name="frame_wettkampf">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>0</y>
+       <width>391</width>
+       <height>241</height>
+      </rect>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QLabel" name="label_zeittext_2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>281</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Die Zeit ist abgelaufen. Du hast</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_wpm_4">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>0</y>
+        <width>91</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>WPM</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_fpm_4">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>50</y>
+        <width>91</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>FPM</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_zeittext_3">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>120</y>
+        <width>281</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Dein Wettkampfgegner hat </string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_wpm_5">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>110</y>
+        <width>91</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>WPM</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_fpm_5">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>160</y>
+        <width>91</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>FPM</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_wpm_gegner">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>110</y>
+        <width>71</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_fpm_gegner">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>160</y>
+        <width>61</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </widget>
+    </widget>
    </widget>
-   <zorder>frame_menue</zorder>
-   <zorder>frame_hand</zorder>
-   <zorder>frame_ueben</zorder>
-   <zorder>frame_zeit</zorder>
-   <zorder>frame_lernen</zorder>
-   <zorder>frame_welcome</zorder>
-   <zorder>frame_zeitvorbei</zorder>
-   <zorder>frame_textueben</zorder>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">

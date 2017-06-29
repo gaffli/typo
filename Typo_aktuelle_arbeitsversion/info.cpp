@@ -8,6 +8,7 @@ info::info(QWidget *parent) :
     ui(new Ui::info)
 {
     ui->setupUi(this);
+   info::setFixedSize(315,380);
     this->setWindowTitle("Info");
 
 }

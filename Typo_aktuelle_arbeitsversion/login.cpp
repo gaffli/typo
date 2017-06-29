@@ -10,6 +10,7 @@ login::login(QWidget *parent) :
     ui(new Ui::login)
 {
     ui->setupUi(this);
+
     this->setWindowTitle("Anmelden");
     ui->lab_status->hide();
     ui->reg_status->hide();
