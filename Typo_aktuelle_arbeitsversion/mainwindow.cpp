@@ -43,7 +43,7 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(timer,SIGNAL(timeout()),this,SLOT(timer_timeout()));
     connect(&s,SIGNAL(signal_txt_nmbr(int)),this,SLOT(multi_txt_nmbr(int)));
     connect(this,SIGNAL(multipl_fpm_wpm(int,int)),&s,SLOT(set_variables(int,int)));
-    connect(&s,SIGNAL(signal_other_f_w_pm(int,int)),this,SLOT(wpm_fpm_gegner_multi(int,int));
+    connect(&s,SIGNAL(signal_other_f_w_pm(int,int)),this,SLOT(wpm_fpm_gegner_multi(int,int)));
 
     QString imagePath = QCoreApplication::applicationDirPath() + "/banner.png";  // Der Pfad der Exe wird genommen um das Banner zu finden
     QPixmap image(imagePath);
@@ -939,7 +939,7 @@ void MainWindow::on_multiplayer_clicked()
 
 void MainWindow::wpm_fpm_gegner_multi(int fpm_other, int wpm_other)
 {
-    ui->label_wpm_gegner->setText(wpm_other);
-    ui->label_fpm_gegner->setText(fpm_other);
+    ui->label_wpm_gegner->setNum(wpm_other);
+    ui->label_fpm_gegner->setNum(fpm_other);
 }
 

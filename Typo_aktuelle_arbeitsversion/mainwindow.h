@@ -96,6 +96,7 @@ private slots:
 
     void on_multiplayer_clicked();
     void multi_txt_nmbr(int txt_nmbr);
+    void wpm_fpm_gegner_multi(int fpm_other, int wpm_other);
 
 private:
     Ui::MainWindow *ui;

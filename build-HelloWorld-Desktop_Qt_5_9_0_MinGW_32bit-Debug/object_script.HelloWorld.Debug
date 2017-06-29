@@ -1,0 +1,17 @@
+INPUT(
+./debug\main.o
+./debug\mainwindow.o
+./debug\login.o
+./debug\info.o
+./debug\key.o
+./debug\benutzerhandbuch.o
+./debug\fehleranalyse.o
+./debug\benutzer.o
+./debug\mytcpsocket.o
+./debug\moc_mainwindow.o
+./debug\moc_login.o
+./debug\moc_info.o
+./debug\moc_key.o
+./debug\moc_benutzerhandbuch.o
+./debug\moc_mytcpsocket.o
+);
