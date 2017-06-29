@@ -7,13 +7,11 @@ INPUT(
 ./release\benutzerhandbuch.o
 ./release\fehleranalyse.o
 ./release\benutzer.o
-./release\mytcpserver.o
 ./release\mytcpsocket.o
 ./release\moc_mainwindow.o
 ./release\moc_login.o
 ./release\moc_info.o
 ./release\moc_key.o
 ./release\moc_benutzerhandbuch.o
-./release\moc_mytcpserver.o
 ./release\moc_mytcpsocket.o
 );
