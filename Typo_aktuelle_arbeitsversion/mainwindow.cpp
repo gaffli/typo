@@ -43,7 +43,6 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(timer,SIGNAL(timeout()),this,SLOT(timer_timeout()));
     connect(&s,SIGNAL(signal_txt_nmbr(int)),this,SLOT(multi_txt_nmbr(int)));
     connect(this,SIGNAL(multipl_fpm_wpm(int,int)),&s,SLOT(set_variables(int,int)));
-    connect(&s,SIGNAL(scnd_plr_con()),this,SLOT(scnd_plr_connected()));
 
     QString imagePath = QCoreApplication::applicationDirPath() + "/banner.png";  // Der Pfad der Exe wird genommen um das Banner zu finden
     QPixmap image(imagePath);
@@ -894,12 +893,6 @@ void MainWindow::on_pb_profil_2_clicked()
     log.exec();
 }
 
-void MainWindow::scnd_plr_connected()
-{
-    MainWindow::scnd_plr_connect = true;
-    qDebug() << "lauft";
-}
-
 void MainWindow::multi_txt_nmbr(int txt_nmbr)
 {
     MainWindow::rnd_multi = txt_nmbr;
@@ -958,18 +951,6 @@ void MainWindow::on_multiplayer_clicked()
     ui->frame_lernen->show();
     ui->frame_zeit->hide();
     ui->frame_menue->hide();
-
-    if (MainWindow::scnd_plr_connect == false)
-        i = true;
-
-/*    while(i)
-    {
-        if (MainWindow::scnd_plr_connect == true)
-        {
-            i = false;
-        }
-    }
-*/
 }
 
 

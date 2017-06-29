@@ -28,12 +28,17 @@ public slots:
 
 private:
      QTcpServer *server;
-     QTcpSocket *socket;
+     QTcpSocket socket;
      QStack<QHostAddress> client_ip;
      QStack<quint16> client_ports;
-     QTcpSocket *socket_1 = new QTcpSocket(this);
-     QTcpSocket *socket_2 = new QTcpSocket(this);
+     QTcpSocket *socket_1 = new QTcpSocket();
+     QTcpSocket *socket_2 = new QTcpSocket();
+     QTcpSocket socket_0;
      int counter = 0;
+     QVector<QTcpSocket *> sockets;
+     QVector<QTcpSocket *> sockets2;
+     QVector<QTcpSocket *> sockets3;
+     bool first = true;
 
 };
 

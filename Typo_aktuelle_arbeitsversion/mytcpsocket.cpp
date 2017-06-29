@@ -20,8 +20,6 @@ void MyTcpSocket::doConnect()
 
     qDebug() << "connecting...";
 
-    //socket->bind(MyTcpSocket::socketport);
-
     MyTcpSocket::socket->connectToHost("::ffff:192.168.2.125",1234);
 
 
@@ -52,7 +50,6 @@ void MyTcpSocket::readyRead_new()
         MyTcpSocket::txt_nmbr = MyTcpSocket::socket->readAll();
         emit MyTcpSocket::signal_txt_nmbr(MyTcpSocket::txt_nmbr.toInt());
         qDebug() << MyTcpSocket::txt_nmbr;
-        emit scnd_plr_con();
         MyTcpSocket::counter_message++;
         break;
 
