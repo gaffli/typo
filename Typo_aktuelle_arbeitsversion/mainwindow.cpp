@@ -849,8 +849,8 @@ void MainWindow::Vergleich()
         ui->frame_textueben->hide();
 
 
-        //woerter=woerter/teiler;
-       // fehler=fehler/teiler;
+        woerter=woerter/teiler;
+        fehler=fehler/teiler;
 
         ui->label_fpm->setNum(fehler);
         ui->label_wpm->setNum(woerter);
@@ -867,7 +867,7 @@ void MainWindow::Vergleich()
                  ui->frame_textueben->show();
                  ui->frame_zeittext->hide();
 
-        if(name=="")
+       if(name=="")
         {
         }
         else
