@@ -43,6 +43,7 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(timer,SIGNAL(timeout()),this,SLOT(timer_timeout()));
     connect(&s,SIGNAL(signal_txt_nmbr(int)),this,SLOT(multi_txt_nmbr(int)));
     connect(this,SIGNAL(multipl_fpm_wpm(int,int)),&s,SLOT(set_variables(int,int)));
+    connect(&s,SIGNAL(signal_other_f_w_pm(int,int)),this,SLOT(wpm_fpm_gegner_multi(int,int));
 
     QString imagePath = QCoreApplication::applicationDirPath() + "/banner.png";  // Der Pfad der Exe wird genommen um das Banner zu finden
     QPixmap image(imagePath);
@@ -65,7 +66,6 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->frame_ueben->hide();
     ui->label->hide();
     ui->pb_profil->hide();
-
 
     keyboard = new key();
     ui->horizontalLayout->addWidget(keyboard);
@@ -895,7 +895,9 @@ void MainWindow::multi_txt_nmbr(int txt_nmbr)
     typo_db.setHostName("89.163.178.19");
     typo_db.open();
 
-    //MainWindow::rnd_multi = txt_nmbr;
+   // MainWindow::rnd_multi = txt_nmbr;
+
+
 
     QSqlQuery query;
     query.prepare("select Text from Texte where Textart='zeit2' and ID_Texte=15");
@@ -935,5 +937,9 @@ void MainWindow::on_multiplayer_clicked()
 
 }
 
-
+void MainWindow::wpm_fpm_gegner_multi(int fpm_other, int wpm_other)
+{
+    ui->label_wpm_gegner->setText(wpm_other);
+    ui->label_fpm_gegner->setText(fpm_other);
+}
 
