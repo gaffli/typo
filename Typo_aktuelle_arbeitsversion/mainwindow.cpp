@@ -61,6 +61,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->frame_hand->hide();
     ui->frame_zeit->hide();
     ui->frame_lernen->hide();
+    ui->frame_wettkampf->hide();
     ui->frame_ueben->hide();
     ui->label->hide();
     ui->pb_profil->hide();
