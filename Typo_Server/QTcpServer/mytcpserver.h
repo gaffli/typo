@@ -16,29 +16,25 @@ public:
     explicit MyTcpServer(QObject *parent = 0);
 
 signals:
-    void two_clients_signal();
+    void two_clients_signal(int,int);
 
 public slots:
 
      void newConnection();
      void readyRead();
-     void two_clients_slot();
+     void two_clients_slot(int client_1, int client_2);
      void connected();
      void bytes_written(qint64 bytes);
 
 private:
      QTcpServer *server;
      QTcpSocket socket;
-     QStack<QHostAddress> client_ip;
-     QStack<quint16> client_ports;
-     QTcpSocket *socket_1 = new QTcpSocket();
-     QTcpSocket *socket_2 = new QTcpSocket();
      QTcpSocket socket_0;
-     int counter = 0;
      QVector<QTcpSocket *> sockets;
-     QVector<QTcpSocket *> sockets2;
-     QVector<QTcpSocket *> sockets3;
-     bool first = true;
+     int client_cntr = 0;
+     int counter = 0;
+     int client_1;
+     int client_2;
 
 };
 
