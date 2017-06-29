@@ -921,7 +921,7 @@ void MainWindow::multi_txt_nmbr(int txt_nmbr)
          ui->eingabefeld->setFocus();
          if(!fehlersuche->IsRunning())
            {
-            qDebug() << "started";
+            qDebug() << "fehler ana started";
             fehlersuche->start(text);
            }
      }
