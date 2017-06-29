@@ -50,8 +50,8 @@ void MyTcpSocket::readyRead_new()
     qDebug() << "laeuft";
     switch (MyTcpSocket::counter_message) {
     case 0:
-        MyTcpSocket::new_socket->read(&(MyTcpSocket::txt_nmbr),5);
-        emit MyTcpSocket::signal_txt_nmbr(MyTcpSocket::txt_nmbr);
+        MyTcpSocket::txt_nmbr = MyTcpSocket::new_socket->read(5);
+        emit MyTcpSocket::signal_txt_nmbr(MyTcpSocket::txt_nmbr.toInt());
         qDebug() << MyTcpSocket::txt_nmbr;
         emit scnd_plr_con();
         MyTcpSocket::counter_message++;
