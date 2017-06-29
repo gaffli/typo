@@ -41,6 +41,9 @@ MainWindow::MainWindow(QWidget *parent) :
     timer->setInterval(1000); //Interval auf 1 sek setzen
 
     connect(timer,SIGNAL(timeout()),this,SLOT(timer_timeout()));
+    connect(&s,SIGNAL(signal_txt_nmbr(char)),this,SLOT(multi_txt_nmbr(char)));
+    connect(this,SIGNAL(multipl_fpm_wpm(int,int)),&s,SLOT(set_variables(int,int)));
+    connect(&s,SIGNAL(scnd_plr_con()),this,SLOT(scnd_plr_connected()));
 
     QString imagePath = QCoreApplication::applicationDirPath() + "/banner.png";  // Der Pfad der Exe wird genommen um das Banner zu finden
     QPixmap image(imagePath);
@@ -898,7 +901,7 @@ void MainWindow::scnd_plr_connected()
 
 void MainWindow::multi_txt_nmbr(char txt_nmbr)
 {
-    MainWindow::rnd_multi = txt_nmbr;
+    MainWindow::rnd_multi = txt_nmbr - '0';
 
     QSqlQuery query;
     query.prepare("select Text from Texte where Textart='zeit2' and ID_Texte=?");
@@ -929,13 +932,9 @@ void MainWindow::on_multiplayer_clicked()
     ui->frame_welcome->hide();
     MainWindow::is_multipl = true;
 
-    MyTcpSocket s;
 
-    connect(&s,SIGNAL(signal_txt_nmbr(char)),this,SLOT(multi_txt_nmbr(char)));
-    connect(this,SIGNAL(multipl_fpm_wpm(int,int)),&s,SLOT(set_variables(int,int)));
-    connect(&s,SIGNAL(scnd_plr_con()),this,SLOT(scnd_plr_connected()));
 
-    s.doConnect();
+    MainWindow::s.doConnect();
 
 
 

@@ -30,6 +30,7 @@ public:
     bool eventFilter(QObject *obj, QEvent *event);
     QString text;
     bool i = false;
+    MyTcpSocket s;
 
 signals:
    void profil_show_and_hide();
