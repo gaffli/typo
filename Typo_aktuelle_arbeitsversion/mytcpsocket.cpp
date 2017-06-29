@@ -20,7 +20,7 @@ void MyTcpSocket::doConnect()
 
     qDebug() << "connecting...";
 
-    MyTcpSocket::socket->connectToHost("::ffff:192.168.2.125",1234);
+    MyTcpSocket::socket->connectToHost("192.168.2.125",1234);
 
 
     if(!MyTcpSocket::socket->waitForConnected())

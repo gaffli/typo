@@ -105,12 +105,24 @@ void MainWindow::timer_timeout()
       ui->frame_textueben->hide();
       ui->frame_zeitvorbei->show();
 
-
       int woerter=fehlersuche->NumberofCorrectWords;
       int fehler=fehlersuche->NumberofErrors;
+      woerter=woerter/teiler;
+      fehler=fehler/teiler;
+
+      ui->label_fpm->setNum(fehler);
+      ui->label_wpm->setNum(woerter);
+      QString name=ui->label_username->text();
+      QString fpm=ui->label_fpm->text();
+      QString wpm=ui->label_wpm->text();
+      QSqlQuery qry;
+      qry.exec("insert into Statistik (Benutzername, Art, FPM, WPM) values ('"+name +"','"+MainWindow::art +"','"+fpm+"','"+ wpm +"')");
 
 
-      emit MainWindow::multipl_fpm_wpm(fehler,woerter);
+     // emit MainWindow::multipl_fpm_wpm(fehler,woerter);
+
+
+
 
 }
 }
@@ -841,27 +853,6 @@ void MainWindow::Vergleich()
         ui->label_fpm->setNum(fehler);
         QString name=ui->label_username->text();
 
-       if (MainWindow::art=="zeit")
-       {
-
-        ui->frame_zeitvorbei->show();
-        ui->frame_zeittext->show();
-        ui->frame_textueben->hide();
-
-
-        woerter=woerter/teiler;
-        fehler=fehler/teiler;
-
-        ui->label_fpm->setNum(fehler);
-        ui->label_wpm->setNum(woerter);
-
-        QString fpm=ui->label_fpm->text();
-        QString wpm=ui->label_wpm->text();
-        QSqlQuery qry;
-        qry.exec("insert into Statistik (Benutzername, Art, FPM, WPM) values ('"+name +"','"+MainWindow::art +"','"+fpm+"','"+ wpm +"')");
-        }
-          else
-          {
                  ui->frame_lernen->hide();
                  ui->frame_zeitvorbei->show();
                  ui->frame_textueben->show();
@@ -878,7 +869,7 @@ void MainWindow::Vergleich()
             qry.exec("insert into Statistik (Benutzername, Art, FPM, WPM) values ('"+name +"','"+MainWindow::art +"','"+fpm+"','"+ wpm +"')");
           }
         }
-     }
+
 }
 
 void MainWindow::on_pb_profil_2_clicked()
@@ -903,11 +894,11 @@ void MainWindow::multi_txt_nmbr(int txt_nmbr)
     typo_db.setHostName("89.163.178.19");
     typo_db.open();
 
-    MainWindow::rnd_multi = txt_nmbr;
+    //MainWindow::rnd_multi = txt_nmbr;
 
     QSqlQuery query;
-    query.prepare("select Text from Texte where Textart='zeit2' and ID_Texte=?");
-    query.addBindValue(MainWindow::rnd_multi);
+    query.prepare("select Text from Texte where Textart='zeit2' and ID_Texte=15");
+    //query.addBindValue(MainWindow::rnd_multi);
     query.exec();
 
      QSqlRecord record=query.record();
