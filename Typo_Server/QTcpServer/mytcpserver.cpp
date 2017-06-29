@@ -20,7 +20,7 @@ MyTcpServer::MyTcpServer(QObject *parent) : QObject(parent)
      connect(server, SIGNAL(newConnection()),
              this, SLOT(newConnection()));
 
-     connect(this,SIGNAL(two_clients_signal()),this,SLOT(two_clients_slot()));
+     connect(this,SIGNAL(two_clients_signal(int, int)),this,SLOT(two_clients_slot(int, int)));
 
 
 
@@ -39,32 +39,28 @@ MyTcpServer::MyTcpServer(QObject *parent) : QObject(parent)
 
  void MyTcpServer::newConnection()
  {
-
-
-
-     if(counter == 0)
-     {
-         MyTcpServer::sockets.append(server->nextPendingConnection());
-        qDebug() << MyTcpServer::sockets.at(counter)->peerAddress() << "socket 1 counter:" << counter;
-     }
-
-     if(counter == 1)
-     {
-         MyTcpServer::sockets.append(server->nextPendingConnection());
-        qDebug() << MyTcpServer::sockets.at(counter)->peerAddress() << "socket 2 counter:" << counter;
-     }
-
-     MyTcpServer::counter++;
-
-     qDebug() << MyTcpServer::sockets.at(0)->state() << "socket1";
-
-     if(counter % 2 == 0 && counter > 0)
-    {
-        emit MyTcpServer::two_clients_signal();
+     switch (counter) {
+     case 0:
+        MyTcpServer::sockets.append(server->nextPendingConnection());
+        qDebug() << MyTcpServer::sockets.at(MyTcpServer::client_cntr)->peerAddress() << "socket 1 counter:" << counter;
+        MyTcpServer::counter++;
+        MyTcpServer::client_cntr++;
+         break;
+     case 1:
+        MyTcpServer::sockets.append(server->nextPendingConnection());
+        qDebug() << MyTcpServer::sockets.at(MyTcpServer::client_cntr)->peerAddress() << "socket 2 counter:" << counter;
+        MyTcpServer::counter = 0;
+        MyTcpServer::client_cntr++;
+        client_1 = MyTcpServer::client_cntr - 2;
+        client_2 = MyTcpServer::client_cntr - 1;
+        emit MyTcpServer::two_clients_signal(client_1, client_2);
         qDebug() << "2ppl ";
-    }
-
+         break;
+     default:
+         break;
  }
+
+}
 
  void MyTcpServer::readyRead()
  {
@@ -73,7 +69,7 @@ MyTcpServer::MyTcpServer(QObject *parent) : QObject(parent)
      // read the data from the socket
  }
 
- void MyTcpServer::two_clients_slot()
+ void MyTcpServer::two_clients_slot(int client_1, int client_2)
  {
      QByteArray client_1_wpm;
      QByteArray client_1_fpm;
@@ -83,48 +79,48 @@ MyTcpServer::MyTcpServer(QObject *parent) : QObject(parent)
      bool client_1_written = false;
      bool client_2_written = false;
 
-     qDebug() << MyTcpServer::sockets[0]->state() << "socket1";
-     qDebug() << MyTcpServer::sockets[1]->state() << "socket2";
-     qDebug() << MyTcpServer::sockets[0]->peerAddress() << "socket1";
-     qDebug() << MyTcpServer::sockets[1]->peerAddress() << "socket2";
+     qDebug() << MyTcpServer::sockets[client_1]->state() << "socket1";
+     qDebug() << MyTcpServer::sockets[client_2]->state() << "socket2";
+     qDebug() << MyTcpServer::sockets[client_1]->peerAddress() << "socket1";
+     qDebug() << MyTcpServer::sockets[client_2]->peerAddress() << "socket2";
 
      int r = rand() % 5 + 1;
+     r = rand() % 5 + 1;
      QByteArray package_text_number = QByteArray::number(r);
 
      qDebug() << r;
 
-     if (MyTcpServer::sockets[0]->state() == QAbstractSocket::ConnectedState)
+     if (MyTcpServer::sockets[client_1]->state() == QAbstractSocket::ConnectedState)
      {
          qDebug() << "socket_1 written 1";
-         MyTcpServer::sockets[0]->write(package_text_number);
-         MyTcpServer::sockets[0]->flush();
+         MyTcpServer::sockets[client_1]->write(package_text_number);
+         MyTcpServer::sockets[client_1]->flush();
      }
-     if (MyTcpServer::sockets[1]->state() == QAbstractSocket::ConnectedState)
+     if (MyTcpServer::sockets[client_2]->state() == QAbstractSocket::ConnectedState)
      {
          qDebug() << "socket_2 written 1";
-         MyTcpServer::sockets[1]->write(package_text_number);
-         MyTcpServer::sockets[1]->flush();
+         MyTcpServer::sockets[client_2]->write(package_text_number);
+         MyTcpServer::sockets[client_2]->flush();
      }
 
-     MyTcpServer::sockets[0]->waitForReadyRead();
-     MyTcpServer::sockets[1]->waitForReadyRead();
-
-     while(MyTcpServer::sockets[1]->state() == MyTcpServer::sockets[0]->state() &&
-           MyTcpServer::sockets[0]->state() != QAbstractSocket::UnconnectedState)
+     while(MyTcpServer::sockets[client_2]->state() == MyTcpServer::sockets[client_1]->state() &&
+           MyTcpServer::sockets[client_1]->state() != QAbstractSocket::UnconnectedState)
      {
 
-          if (MyTcpServer::sockets[0]->bytesAvailable() != 0)
+          if (MyTcpServer::sockets[client_1]->bytesAvailable() != 0)
           {
               qDebug() << "hier";
-              client_1_fpm = MyTcpServer::sockets[0]->readAll();
-              client_1_wpm = MyTcpServer::sockets[0]->readAll();
+              client_1_fpm = MyTcpServer::sockets[client_1]->readAll();
+              MyTcpServer::sockets[client_1]->waitForReadyRead();
+              client_1_wpm = MyTcpServer::sockets[client_1]->readAll();
               client_1_written = true;
           }
-          if (MyTcpServer::sockets[1]->bytesAvailable() != 0)
+          if (MyTcpServer::sockets[client_2]->bytesAvailable() != 0)
           {
               qDebug() << "hier";
-              client_2_fpm = MyTcpServer::sockets[1]->readAll();
-              client_2_wpm = MyTcpServer::sockets[1]->readAll();
+              client_2_fpm = MyTcpServer::sockets[client_2]->readAll();
+              MyTcpServer::sockets[client_2]->waitForReadyRead();
+              client_2_wpm = MyTcpServer::sockets[client_2]->readAll();
               client_2_written = true;
           }
 
@@ -135,29 +131,29 @@ MyTcpServer::MyTcpServer(QObject *parent) : QObject(parent)
 
      if(client_1_written == client_2_written && client_1_written == true)
      {
-         MyTcpServer::sockets[0]->write(client_1_fpm);
-         MyTcpServer::sockets[1]->write(client_2_fpm);
-         MyTcpServer::sockets[0]->flush();
-         MyTcpServer::sockets[1]->flush();
+         MyTcpServer::sockets[client_1]->write(client_1_fpm);
+         MyTcpServer::sockets[client_2]->write(client_2_fpm);
+         MyTcpServer::sockets[client_1]->flush();
+         MyTcpServer::sockets[client_2]->flush();
 
-         MyTcpServer::sockets[0]->write(client_1_wpm);
-         MyTcpServer::sockets[1]->write(client_2_wpm);
-         MyTcpServer::sockets[0]->flush();
-         MyTcpServer::sockets[1]->flush();
+         MyTcpServer::sockets[client_1]->write(client_1_wpm);
+         MyTcpServer::sockets[client_2]->write(client_2_wpm);
+         MyTcpServer::sockets[client_1]->flush();
+         MyTcpServer::sockets[client_2]->flush();
      }
 
 
-     qDebug() << MyTcpServer::sockets.at(0)->state() << "socket1";
+     qDebug() << MyTcpServer::sockets.at(client_1)->state() << "socket1";
      qDebug() << MyTcpServer::sockets.at(1)->state() << "socket2";
 
-     MyTcpServer::sockets[0]->close();
-     MyTcpServer::sockets[1]->close();
+     MyTcpServer::sockets[client_1]->close();
+     MyTcpServer::sockets[client_2]->close();
 
-     if(MyTcpServer::sockets[0]->state() != QAbstractSocket::UnconnectedState)
-         MyTcpServer::sockets[0]->abort();
+     if(MyTcpServer::sockets[client_1]->state() != QAbstractSocket::UnconnectedState)
+         MyTcpServer::sockets[client_1]->abort();
 
-     if(MyTcpServer::sockets[1]->state() != QAbstractSocket::UnconnectedState)
-         MyTcpServer::sockets[1]->abort();
+     if(MyTcpServer::sockets[client_2]->state() != QAbstractSocket::UnconnectedState)
+         MyTcpServer::sockets[client_2]->abort();
  }
 
 void MyTcpServer::connected()
