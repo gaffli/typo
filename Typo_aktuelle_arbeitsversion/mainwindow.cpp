@@ -41,7 +41,7 @@ MainWindow::MainWindow(QWidget *parent) :
     timer->setInterval(1000); //Interval auf 1 sek setzen
 
     connect(timer,SIGNAL(timeout()),this,SLOT(timer_timeout()));
-    connect(&s,SIGNAL(signal_txt_nmbr(char)),this,SLOT(multi_txt_nmbr(char)));
+    connect(&s,SIGNAL(signal_txt_nmbr(int)),this,SLOT(multi_txt_nmbr(int)));
     connect(this,SIGNAL(multipl_fpm_wpm(int,int)),&s,SLOT(set_variables(int,int)));
     connect(&s,SIGNAL(scnd_plr_con()),this,SLOT(scnd_plr_connected()));
 
@@ -55,6 +55,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->frame_welcome->show();
     ui->ueben->setEnabled(false);
     ui->zeitrennen->setEnabled(false);
+    ui->multiplayer->setEnabled(true); //   -----------------------------------hier löschen bei programm
     ui->pb_profil_2->hide();
     ui->label_zeit->hide();
     ui->frame_zeitvorbei->hide();
@@ -899,9 +900,9 @@ void MainWindow::scnd_plr_connected()
     qDebug() << "lauft";
 }
 
-void MainWindow::multi_txt_nmbr(char txt_nmbr)
+void MainWindow::multi_txt_nmbr(int txt_nmbr)
 {
-    MainWindow::rnd_multi = txt_nmbr - '0';
+    MainWindow::rnd_multi = txt_nmbr;
 
     QSqlQuery query;
     query.prepare("select Text from Texte where Textart='zeit2' and ID_Texte=?");
