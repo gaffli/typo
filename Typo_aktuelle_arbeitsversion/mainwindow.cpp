@@ -104,10 +104,13 @@ void MainWindow::timer_timeout()
       if(MainWindow::art=="wett")
       {
       ui->frame_wettkampf->show();
+      ui->frame_zeittext->hide();
+      }else
+      {
+      ui->frame_zeittext->show();
       }
 
       ui->frame_lernen->hide();
-      ui->frame_zeittext->show();
       ui->frame_textueben->hide();
       ui->frame_zeitvorbei->show();
 
