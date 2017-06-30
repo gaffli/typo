@@ -73,7 +73,7 @@ public:
     {
         if (login->objectName().isEmpty())
             login->setObjectName(QStringLiteral("login"));
-        login->resize(710, 570);
+        login->resize(722, 576);
         frame_login = new QFrame(login);
         frame_login->setObjectName(QStringLiteral("frame_login"));
         frame_login->setGeometry(QRect(20, 20, 680, 540));

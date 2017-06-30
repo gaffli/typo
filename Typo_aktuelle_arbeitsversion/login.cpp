@@ -72,6 +72,13 @@ void login::on_button_registrieren_clicked()
         }
    else
     {
+       QSqlDatabase typo_db =  QSqlDatabase::addDatabase("QMYSQL");
+       typo_db.setDatabaseName("typo");
+       typo_db.setUserName("Alex");
+       typo_db.setPassword("A92K07!27");
+       typo_db.setPort(3306);
+       typo_db.setHostName("89.163.178.19");
+       typo_db.open();
 
      QSqlQuery qry_reg1;
          if (qry_reg1.exec("select Benutzername from Benutzer where Benutzername='"+ login::benutzername +"'"))    //Eingabe überprüfen ob der Benutzer schon verfügbar ist.
