@@ -40,8 +40,6 @@ public:
     QLineEdit *reg_benutzername;
     QLineEdit *reg_passwort;
     QLabel *reg_status;
-    QLabel *label_12;
-    QLineEdit *reg_email;
     QPushButton *abbrechen_anmelden;
     QPushButton *button_registrieren;
     QFrame *line_5;
@@ -125,7 +123,7 @@ public:
         frame->setFrameShadow(QFrame::Raised);
         label_10 = new QLabel(frame);
         label_10->setObjectName(QStringLiteral("label_10"));
-        label_10->setGeometry(QRect(20, 60, 141, 20));
+        label_10->setGeometry(QRect(20, 40, 141, 20));
         label_10->setFont(font);
         label_11 = new QLabel(frame);
         label_11->setObjectName(QStringLiteral("label_11"));
@@ -133,7 +131,7 @@ public:
         label_11->setFont(font);
         reg_benutzername = new QLineEdit(frame);
         reg_benutzername->setObjectName(QStringLiteral("reg_benutzername"));
-        reg_benutzername->setGeometry(QRect(170, 60, 270, 25));
+        reg_benutzername->setGeometry(QRect(170, 40, 270, 25));
         reg_passwort = new QLineEdit(frame);
         reg_passwort->setObjectName(QStringLiteral("reg_passwort"));
         reg_passwort->setGeometry(QRect(170, 100, 270, 25));
@@ -141,13 +139,6 @@ public:
         reg_status = new QLabel(frame);
         reg_status->setObjectName(QStringLiteral("reg_status"));
         reg_status->setGeometry(QRect(20, 130, 491, 41));
-        label_12 = new QLabel(frame);
-        label_12->setObjectName(QStringLiteral("label_12"));
-        label_12->setGeometry(QRect(20, 20, 141, 20));
-        label_12->setFont(font);
-        reg_email = new QLineEdit(frame);
-        reg_email->setObjectName(QStringLiteral("reg_email"));
-        reg_email->setGeometry(QRect(170, 20, 270, 25));
         abbrechen_anmelden = new QPushButton(frame_login);
         abbrechen_anmelden->setObjectName(QStringLiteral("abbrechen_anmelden"));
         abbrechen_anmelden->setGeometry(QRect(240, 460, 220, 61));
@@ -290,7 +281,6 @@ public:
         label_10->setText(QApplication::translate("login", "Benutzername", Q_NULLPTR));
         label_11->setText(QApplication::translate("login", "Passwort", Q_NULLPTR));
         reg_status->setText(QApplication::translate("login", "Status", Q_NULLPTR));
-        label_12->setText(QApplication::translate("login", "E-Mail Adresse", Q_NULLPTR));
         abbrechen_anmelden->setText(QApplication::translate("login", "Zur\303\274ck zum Hauptmen\303\274", Q_NULLPTR));
         button_registrieren->setText(QApplication::translate("login", "Registrieren", Q_NULLPTR));
         pb_abmelden->setText(QApplication::translate("login", "Abmelden", Q_NULLPTR));

@@ -37,7 +37,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
     this->setWindowTitle("Typo - 10 Finger Lernprogramm");
 
-    timer= new QTimer(this);                                    //Timer für das Zeitrennen
+    timer= new QTimer(this);                                    ///Timer für das Zeitrennen
     timer->setInterval(1000); //Interval auf 1 sek setzen
 
     connect(timer,SIGNAL(timeout()),this,SLOT(timer_timeout()));
@@ -45,7 +45,7 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(this,SIGNAL(multipl_fpm_wpm(int,int)),&s,SLOT(set_variables(int,int)));
     connect(&s,SIGNAL(signal_other_f_w_pm(int,int)),this,SLOT(wpm_fpm_gegner_multi(int,int)));
 
-    QString imagePath = QCoreApplication::applicationDirPath() + "/banner.png";  // Der Pfad der Exe wird genommen um das Banner zu finden
+    QString imagePath = QCoreApplication::applicationDirPath() + "/banner.png";  /// Der Pfad der Exe wird genommen um das Banner zu finden
     QPixmap image(imagePath);
     ui->label_banner_typo->setPixmap(image);
 
@@ -55,7 +55,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->frame_welcome->show();
     ui->ueben->setEnabled(false);
     ui->zeitrennen->setEnabled(false);
-    ui->multiplayer->setEnabled(true); //   -----------------------------------hier löschen bei programm
+    ui->multiplayer->setEnabled(false);
     ui->pb_profil_2->hide();
     ui->label_zeit->hide();
     ui->frame_zeitvorbei->hide();
@@ -74,7 +74,7 @@ MainWindow::MainWindow(QWidget *parent) :
     setFocusPolicy(Qt::StrongFocus);
     qApp->installEventFilter(this);
 
-    QSqlDatabase typo_db =  QSqlDatabase::addDatabase("QMYSQL");        //Verbindung zur MYSQL Datenbank
+    QSqlDatabase typo_db =  QSqlDatabase::addDatabase("QMYSQL");        ///Verbindung zur MYSQL Datenbank
     typo_db.setDatabaseName("typo");
     typo_db.setUserName("Alex");
     typo_db.setPassword("A92K07!27");
@@ -96,7 +96,7 @@ void MainWindow::timer_timeout()
 {
     MainWindow::cnt--;
 
-    ui->label_zeit->setText(QString::number(MainWindow::cnt)); // Aktuelle Zeit wird dem label zugewiesen
+    ui->label_zeit->setText(QString::number(MainWindow::cnt)); /// Aktuelle Zeit wird dem label zugewiesen
 
     if(MainWindow::cnt==0)
     {
@@ -184,14 +184,14 @@ void MainWindow::on_bl_zeige_clicked()
   rnd=rand() % 5 + 1;
 
   QSqlQuery query;
-  query.prepare("select Texte from lernen where ID_lernen=?");       //Dem SQL Befehl wird eine Variable aus dem Programm zugewiesen
+  query.prepare("select Texte from lernen where ID_lernen=?");       ///Dem SQL Befehl wird eine Variable aus dem Programm zugewiesen
   query.addBindValue(rnd);
   query.exec();
 
    QSqlRecord record=query.record();
    while (query.next())
    {
-       text=query.value(record.indexOf("texte")).toString();       //Der aus der MYSQL Datenbank entnomme Text wird in einen QString gespeichtert und anschließent ausgegeben
+       text=query.value(record.indexOf("texte")).toString();       ///Der aus der MYSQL Datenbank entnomme Text wird in einen QString gespeichtert und anschließent ausgegeben
        ui->frame_lernen->show();
        ui->textBrowser->setText(text);
 
@@ -427,6 +427,7 @@ void MainWindow::on_button_uebungende_clicked()
   ui->label_WPM->setText("0");
   MainWindow::art="";
   ui->frame_welcome->show();
+  timer->stop();
 
   if(fehlersuche->IsRunning())
     {
@@ -488,7 +489,7 @@ void MainWindow::on_pushButton_starten_clicked()
 void MainWindow::on_pushButton_eigener_clicked()
 {
     //Eigener Text
-   QString filename=QFileDialog::getOpenFileName(this, tr("Open File"), "C://", "Text File (*.txt)");       // Eigene txt Datein können entnommen werden, Starverzeichnis ist C
+   QString filename=QFileDialog::getOpenFileName(this, tr("Open File"), "C://", "Text File (*.txt)");       /// Eigene txt Datein können entnommen werden, Starverzeichnis ist C
     QFile file(filename);
 
 
@@ -562,7 +563,7 @@ void MainWindow::on_pushButton_zeitstart_clicked()
              {
                  text=query.value(record.indexOf("Text")).toString();
                  ui->frame_lernen->show();
-                 timer->start();                               //Zeitrennen starten
+                 timer->start();                               ///Zeitrennen starten
                  ui->textBrowser->setText(text);
                   ui->eingabefeld->setFocus();
                  if(!fehlersuche->IsRunning())
@@ -578,7 +579,7 @@ void MainWindow::on_pushButton_zeitstart_clicked()
             MainWindow::cnt =12;
              MainWindow::teiler=2;
              MainWindow::art="zeit";
-            int rnd=rand() % 5 + 11; // Random zwischen 11-15
+            int rnd=rand() % 5 + 11; /// Random zwischen 11-15
             rnd=rand() % 5 + 11;
             ui->frame_lernen->show();
             ui->frame_zeit->hide();
@@ -594,7 +595,7 @@ void MainWindow::on_pushButton_zeitstart_clicked()
              {
                  text=query.value(record.indexOf("Text")).toString();
                  ui->frame_lernen->show();
-                 timer->start();                               //Zeitrennen starten
+                 timer->start();                               ///Zeitrennen starten
                  ui->textBrowser->setText(text);
                   ui->eingabefeld->setFocus();
                  if(!fehlersuche->IsRunning())
@@ -603,12 +604,12 @@ void MainWindow::on_pushButton_zeitstart_clicked()
                    }
              }
         }
-     else if (ui->radioButton_3->isChecked())   // 3 Minute Zeit
+     else if (ui->radioButton_3->isChecked())   /// 3 Minute Zeit
         {
             MainWindow::cnt =180;
              MainWindow::teiler=3;
              MainWindow::art="zeit";
-            int rnd=rand() % 5 + 16; // Random zwischen 16-20
+            int rnd=rand() % 5 + 16; /// Random zwischen 16-20
             rnd=rand() % 5 + 16;
 
             ui->frame_lernen->show();
@@ -625,7 +626,7 @@ void MainWindow::on_pushButton_zeitstart_clicked()
              {
                  text=query.value(record.indexOf("Text")).toString();
                  ui->frame_lernen->show();
-                 timer->start();                               //Zeitrennen starten
+                 timer->start();                               ///Zeitrennen starten
                  ui->textBrowser->setText(text);
                   ui->eingabefeld->setFocus();
                  if(!fehlersuche->IsRunning())
@@ -634,13 +635,13 @@ void MainWindow::on_pushButton_zeitstart_clicked()
                    }
              }
         }
-     else if (ui->radioButton_5->isChecked())   // 5 Minute Zeit
+     else if (ui->radioButton_5->isChecked())   /// 5 Minute Zeit
         {
             MainWindow::cnt =300;
              MainWindow::teiler=5;
              MainWindow::art="zeit";
             int rnd=rand() % 5 + 21;
-            rnd=rand() % 5 + 21; // Random zwischen 21-25
+            rnd=rand() % 5 + 21; /// Random zwischen 21-25
 
             ui->frame_lernen->show();
             ui->frame_zeit->hide();
@@ -656,7 +657,7 @@ void MainWindow::on_pushButton_zeitstart_clicked()
              {
                  text=query.value(record.indexOf("Text")).toString();
                  ui->frame_lernen->show();
-                 timer->start();                               //Zeitrennen starten
+                 timer->start();                               ///Zeitrennen starten
                  ui->textBrowser->setText(text);
                   ui->eingabefeld->setFocus();
                  if(!fehlersuche->IsRunning())
@@ -761,6 +762,7 @@ void MainWindow::on_pB_ende_clicked()
     ui->frame_welcome->show();
     ui->label_fehler->setText("0");
     ui->label_WPM->setText("0");
+    ui->label->hide();
     if(fehlersuche->IsRunning())
       {
         fehlersuche->end();
@@ -915,7 +917,7 @@ void MainWindow::multi_txt_nmbr(int txt_nmbr)
    MainWindow::rnd_multi = txt_nmbr;
 
 
-    MainWindow::cnt =20;
+    MainWindow::cnt =60;
     ui->label_zeit->show();
     QSqlQuery query;
     query.prepare("select Text from Texte where Textart='zeit2' and ID_Texte=15");
@@ -928,6 +930,7 @@ void MainWindow::multi_txt_nmbr(int txt_nmbr)
          qDebug() << "started";
          text=query.value(record.indexOf("Text")).toString();
          ui->frame_lernen->show();
+         ui->label->show();
          timer->start();                               //Zeitrennen starten
          ui->textBrowser->setText(text);
          ui->eingabefeld->setFocus();
