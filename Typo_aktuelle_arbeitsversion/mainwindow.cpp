@@ -101,6 +101,11 @@ void MainWindow::timer_timeout()
     if(MainWindow::cnt==0)
     {
       timer->stop();
+      if(MainWindow::art=="wett")
+      {
+      ui->frame_wettkampf->show();
+      }
+
       ui->frame_lernen->hide();
       ui->frame_zeittext->show();
       ui->frame_textueben->hide();
@@ -749,6 +754,7 @@ void MainWindow::on_pB_ende_clicked()
     ui->label_zeit->setText("Los Geht's!");
     ui->label_zeit->hide();
     ui->label->hide();
+    ui->frame_wettkampf->hide();
     ui->frame_welcome->show();
     ui->label_fehler->setText("0");
     ui->label_WPM->setText("0");
@@ -888,6 +894,13 @@ void MainWindow::on_pb_profil_2_clicked()
 
 void MainWindow::multi_txt_nmbr(int txt_nmbr)
 {
+    ui->frame_hand->hide();
+    ui->frame_lernen->hide();
+    ui->frame_ueben->hide();
+    ui->frame_welcome->hide();
+    ui->frame_lernen->show();
+    ui->frame_menue->hide();
+
     QSqlDatabase typo_db =  QSqlDatabase::addDatabase("QMYSQL");
     typo_db.setDatabaseName("typo");
     typo_db.setUserName("Alex");
@@ -899,11 +912,11 @@ void MainWindow::multi_txt_nmbr(int txt_nmbr)
    MainWindow::rnd_multi = txt_nmbr;
 
 
-    MainWindow::cnt =60;
+    MainWindow::cnt =20;
     ui->label_zeit->show();
     QSqlQuery query;
-    query.prepare("select Text from Texte where Textart='zeit2' and ID_Texte=?");
-    query.addBindValue(MainWindow::rnd_multi);
+    query.prepare("select Text from Texte where Textart='zeit2' and ID_Texte=15");
+    //query.addBindValue(MainWindow::rnd_multi);
     query.exec();
 
      QSqlRecord record=query.record();
@@ -925,23 +938,16 @@ void MainWindow::multi_txt_nmbr(int txt_nmbr)
 
 void MainWindow::on_multiplayer_clicked()
 {
-
-    ui->frame_hand->hide();
-    ui->frame_lernen->hide();
-    ui->frame_ueben->hide();
-    ui->frame_welcome->hide();
-    ui->frame_lernen->show();
-    ui->frame_menue->hide();
     MainWindow::art="wett";
+    MainWindow::teiler=1;
     MainWindow::is_multipl = true;
     MainWindow::s.doConnect();
-
 
 }
 
 void MainWindow::wpm_fpm_gegner_multi(int fpm_other, int wpm_other)
 {
-    //ui->label_wpm_gegner->setNum(wpm_other);
-   // ui->label_fpm_gegner->setNum(fpm_other);
+    ui->label_wpm_gegner->setNum(wpm_other);
+    ui->label_fpm_gegner->setNum(fpm_other);
 }
 
