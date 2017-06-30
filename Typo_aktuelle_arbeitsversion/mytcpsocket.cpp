@@ -55,13 +55,13 @@ void MyTcpSocket::readyRead_new()
 
     case 1:
         MyTcpSocket::other_fpm = MyTcpSocket::socket->readAll();
-        qDebug() << MyTcpSocket::other_fpm;
+        qDebug() << MyTcpSocket::other_fpm << "other fpm";
         MyTcpSocket::counter_message++;
         break;
 
     case 2:
         MyTcpSocket::other_wpm = MyTcpSocket::socket->readAll();
-        qDebug() << MyTcpSocket::other_wpm;
+        qDebug() << MyTcpSocket::other_wpm << "other wpm";
         MyTcpSocket::counter_message++;
         break;
 
@@ -74,6 +74,7 @@ void MyTcpSocket::readyRead_new()
 
 void MyTcpSocket::newdisconnected()
 {
+    qDebug() << "newdisconnected is emitted";
     emit MyTcpSocket::signal_other_f_w_pm(MyTcpSocket::other_fpm.toInt(),MyTcpSocket::other_wpm.toInt());
 }
 
