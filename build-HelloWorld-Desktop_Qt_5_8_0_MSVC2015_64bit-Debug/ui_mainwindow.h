@@ -23,7 +23,6 @@
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QRadioButton>
-#include <QtWidgets/QTableWidget>
 #include <QtWidgets/QTextBrowser>
 #include <QtWidgets/QToolBar>
 #include <QtWidgets/QWidget>
@@ -98,7 +97,6 @@ public:
     QLabel *label_wpm;
     QLabel *label_fpm;
     QPushButton *pB_ende;
-    QTableWidget *tableWidget_woerter;
     QFrame *frame_zeittext;
     QLabel *label_zeittext;
     QLabel *label_wpm_2;
@@ -625,9 +623,6 @@ public:
         pB_ende = new QPushButton(frame_zeitvorbei);
         pB_ende->setObjectName(QStringLiteral("pB_ende"));
         pB_ende->setGeometry(QRect(270, 250, 140, 60));
-        tableWidget_woerter = new QTableWidget(frame_zeitvorbei);
-        tableWidget_woerter->setObjectName(QStringLiteral("tableWidget_woerter"));
-        tableWidget_woerter->setGeometry(QRect(520, 50, 256, 192));
         frame_zeittext = new QFrame(frame_zeitvorbei);
         frame_zeittext->setObjectName(QStringLiteral("frame_zeittext"));
         frame_zeittext->setGeometry(QRect(20, 30, 451, 211));

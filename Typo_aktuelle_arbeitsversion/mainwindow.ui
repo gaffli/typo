@@ -1231,16 +1231,6 @@ border-top-width: 1.5px;
       <string>Zurück</string>
      </property>
     </widget>
-    <widget class="QTableWidget" name="tableWidget_woerter">
-     <property name="geometry">
-      <rect>
-       <x>520</x>
-       <y>50</y>
-       <width>256</width>
-       <height>192</height>
-      </rect>
-     </property>
-    </widget>
     <widget class="QFrame" name="frame_zeittext">
      <property name="geometry">
       <rect>

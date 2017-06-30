@@ -49,18 +49,12 @@ void login::on_button_registrieren_clicked()
 
 
 
-   login::email=ui->reg_email->text();
+
    login::benutzername=ui->reg_benutzername->text();
    login::passwort=ui->reg_passwort->text();
 
 
-   if(!login::email.contains('@') || login::email.size()>30)
-     {
-      ui->reg_status->show();
-      ui->reg_status->setText("Keine Gültige E-Mail Adresse.");
-     }
-
-        else if (login::benutzername.size()<5 || login::benutzername.size()>15)
+        if (login::benutzername.size()<5 || login::benutzername.size()>15)
         {
         ui->reg_status->show();
         ui->reg_status->setText("Benutzername muss zwischen 5 und 15 Zeichen lang sein.");
@@ -81,7 +75,7 @@ void login::on_button_registrieren_clicked()
        typo_db.open();
 
      QSqlQuery qry_reg1;
-         if (qry_reg1.exec("select Benutzername from Benutzer where Benutzername='"+ login::benutzername +"'"))    //Eingabe überprüfen ob der Benutzer schon verfügbar ist.
+         if (qry_reg1.exec("select Benutzername from Benutzer where Benutzername='"+ login::benutzername +"'"))    ///Eingabe überprüfen ob der Benutzer schon verfügbar ist.
            {
                int count=0;
             while (qry_reg1.next())
@@ -97,10 +91,12 @@ void login::on_button_registrieren_clicked()
              else
             {
                QSqlQuery qry_reg2;
-               qry_reg2.exec("insert into Benutzer (Benutzername, Passwort, Mail) values ('"+ login::benutzername +"','"+login::passwort +"','"+login::email+"')");
+               qry_reg2.exec("insert into Benutzer (Benutzername, Passwort) values ('"+ login::benutzername +"','"+login::passwort +"')");
                ui->reg_status->setText("Sie haben sich erfolgreich registriert");
                ui->reg_status->show();
                ui->button_registrieren->hide();
+               ui->reg_benutzername->setText("");
+               ui->reg_passwort->setText("");
 
             }
           }
@@ -126,7 +122,7 @@ void login::on_but_anmelden_clicked()
 
     QSqlQuery qry_login;
 
-    if (qry_login.exec("select * from Benutzer where Benutzername='"+ login::benutzername +"'and  Passwort='"+login::passwort +"'"))    //Eingabe überprüfen ob sie mit der Datenbank übereinstimmt
+    if (qry_login.exec("select * from Benutzer where Benutzername='"+ login::benutzername +"'and  Passwort='"+login::passwort +"'"))    ///Eingabe überprüfen ob sie mit der Datenbank übereinstimmt
     {
         int count=0;
         while (qry_login.next())
