@@ -97,7 +97,7 @@ void MainWindow::timer_timeout()
     MainWindow::cnt--;
 
     ui->label_zeit->setText(QString::number(MainWindow::cnt)); // Aktuelle Zeit wird dem label zugewiesen
-    MainWindow::art="zeit";
+
     if(MainWindow::cnt==0)
     {
       timer->stop();
@@ -120,10 +120,7 @@ void MainWindow::timer_timeout()
       qry.exec("insert into Statistik (Benutzername, Art, FPM, WPM) values ('"+name +"','"+MainWindow::art +"','"+fpm+"','"+ wpm +"')");
 
 
-     // emit MainWindow::multipl_fpm_wpm(fehler,woerter);
-
-
-
+     emit MainWindow::multipl_fpm_wpm(fehler,woerter);
 
 }
 }
@@ -161,8 +158,8 @@ void MainWindow::on_lernen_clicked()
   ui->frame_welcome->hide();
 
 
-  typodb=QSqlDatabase::addDatabase("QSQLITE");                                       //Verbindung zur SQLite Datenbank
-  QString dbPath = QCoreApplication::applicationDirPath() + "/TypoDB.db";           // Pfad der Datenbank wird im Ornder der Exe gesucht
+  typodb=QSqlDatabase::addDatabase("QSQLITE");                                       ///Verbindung zur SQLite Datenbank
+  QString dbPath = QCoreApplication::applicationDirPath() + "/TypoDB.db";           /// Pfad der Datenbank wird im Ornder der Exe gesucht
   typodb.setDatabaseName(dbPath);
   typodb.open();
 
@@ -540,6 +537,7 @@ void MainWindow::on_pushButton_zeitstart_clicked()
         {
             MainWindow::cnt =60;
              MainWindow::teiler=1;
+             MainWindow::art="zeit";
             int rnd=rand() % 5 + 6; // Random zwischen 6-10
             rnd=rand() % 5 + 6;
             ui->frame_lernen->show();
@@ -571,6 +569,7 @@ void MainWindow::on_pushButton_zeitstart_clicked()
         {
             MainWindow::cnt =12;
              MainWindow::teiler=2;
+             MainWindow::art="zeit";
             int rnd=rand() % 5 + 11; // Random zwischen 11-15
             rnd=rand() % 5 + 11;
             ui->frame_lernen->show();
@@ -600,6 +599,7 @@ void MainWindow::on_pushButton_zeitstart_clicked()
         {
             MainWindow::cnt =180;
              MainWindow::teiler=3;
+             MainWindow::art="zeit";
             int rnd=rand() % 5 + 16; // Random zwischen 16-20
             rnd=rand() % 5 + 16;
 
@@ -630,6 +630,7 @@ void MainWindow::on_pushButton_zeitstart_clicked()
         {
             MainWindow::cnt =300;
              MainWindow::teiler=5;
+             MainWindow::art="zeit";
             int rnd=rand() % 5 + 21;
             rnd=rand() % 5 + 21; // Random zwischen 21-25
 
@@ -895,13 +896,14 @@ void MainWindow::multi_txt_nmbr(int txt_nmbr)
     typo_db.setHostName("89.163.178.19");
     typo_db.open();
 
-   // MainWindow::rnd_multi = txt_nmbr;
+   MainWindow::rnd_multi = txt_nmbr;
 
 
-
+    MainWindow::cnt =60;
+    ui->label_zeit->show();
     QSqlQuery query;
-    query.prepare("select Text from Texte where Textart='zeit2' and ID_Texte=15");
-    //query.addBindValue(MainWindow::rnd_multi);
+    query.prepare("select Text from Texte where Textart='zeit2' and ID_Texte=?");
+    query.addBindValue(MainWindow::rnd_multi);
     query.exec();
 
      QSqlRecord record=query.record();
@@ -930,16 +932,16 @@ void MainWindow::on_multiplayer_clicked()
     ui->frame_welcome->hide();
     ui->frame_lernen->show();
     ui->frame_menue->hide();
-
+    MainWindow::art="wett";
     MainWindow::is_multipl = true;
     MainWindow::s.doConnect();
-    MainWindow::cnt =120;
+
 
 }
 
 void MainWindow::wpm_fpm_gegner_multi(int fpm_other, int wpm_other)
 {
-    ui->label_wpm_gegner->setNum(wpm_other);
-    ui->label_fpm_gegner->setNum(fpm_other);
+    //ui->label_wpm_gegner->setNum(wpm_other);
+   // ui->label_fpm_gegner->setNum(fpm_other);
 }
 
