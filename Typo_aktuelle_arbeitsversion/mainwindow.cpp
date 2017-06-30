@@ -870,7 +870,7 @@ void MainWindow::Vergleich()
                  ui->frame_zeitvorbei->show();
                  ui->frame_textueben->show();
                  ui->frame_zeittext->hide();
-                 ende==false;
+                 ende=false;
 
        if(name=="")
         {

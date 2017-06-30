@@ -1747,9 +1747,6 @@ release\mainwindow.obj: ..\Typo_aktuelle_arbeitsversion\mainwindow.cpp ../Typo_a
 		C:\Qt\5.8\msvc2015_64\include\QtWidgets\qabstractbutton.h \
 		C:\Qt\5.8\msvc2015_64\include\QtWidgets\QRadioButton \
 		C:\Qt\5.8\msvc2015_64\include\QtWidgets\qradiobutton.h \
-		C:\Qt\5.8\msvc2015_64\include\QtWidgets\QTableWidget \
-		C:\Qt\5.8\msvc2015_64\include\QtWidgets\qtablewidget.h \
-		C:\Qt\5.8\msvc2015_64\include\QtWidgets\qtableview.h \
 		C:\Qt\5.8\msvc2015_64\include\QtWidgets\QTextBrowser \
 		C:\Qt\5.8\msvc2015_64\include\QtWidgets\qtextbrowser.h \
 		C:\Qt\5.8\msvc2015_64\include\QtWidgets\qtextedit.h \
@@ -2191,9 +2188,6 @@ release\info.obj: ..\Typo_aktuelle_arbeitsversion\info.cpp ../Typo_aktuelle_arbe
 		C:\Qt\5.8\msvc2015_64\include\QtWidgets\QPushButton \
 		C:\Qt\5.8\msvc2015_64\include\QtWidgets\qpushbutton.h \
 		C:\Qt\5.8\msvc2015_64\include\QtWidgets\qabstractbutton.h \
-		C:\Qt\5.8\msvc2015_64\include\QtWidgets\QTableWidget \
-		C:\Qt\5.8\msvc2015_64\include\QtWidgets\qtablewidget.h \
-		C:\Qt\5.8\msvc2015_64\include\QtWidgets\qtableview.h \
 		C:\Qt\5.8\msvc2015_64\include\QtGui\QDesktopServices \
 		C:\Qt\5.8\msvc2015_64\include\QtGui\qdesktopservices.h \
 		C:\Qt\5.8\msvc2015_64\include\QtCore\qstandardpaths.h \
