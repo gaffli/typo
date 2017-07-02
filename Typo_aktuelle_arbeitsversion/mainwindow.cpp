@@ -105,11 +105,6 @@ void MainWindow::timer_timeout()
       {
       ui->frame_wettkampf->show();
       ui->frame_zeittext->hide();
-      }else
-      {
-      ui->frame_zeittext->show();
-      }
-
       ui->frame_lernen->hide();
       ui->frame_textueben->hide();
       ui->frame_zeitvorbei->show();
@@ -129,6 +124,28 @@ void MainWindow::timer_timeout()
 
 
      emit MainWindow::multipl_fpm_wpm(fehler,woerter);
+
+      }else
+      {
+      ui->frame_zeittext->show();
+      ui->frame_lernen->hide();
+      ui->frame_textueben->hide();
+      ui->frame_zeitvorbei->show();
+
+      int woerter=fehlersuche->NumberofCorrectWords;
+      int fehler=fehlersuche->NumberofErrors;
+      woerter=woerter/teiler;
+      fehler=fehler/teiler;
+
+      ui->label_fpm->setNum(fehler);
+      ui->label_wpm->setNum(woerter);
+      QString name=ui->label_username->text();
+      QString fpm=ui->label_fpm->text();
+      QString wpm=ui->label_wpm->text();
+      QSqlQuery qry;
+      qry.exec("insert into Statistik (Benutzername, Art, FPM, WPM) values ('"+name +"','"+MainWindow::art +"','"+fpm+"','"+ wpm +"')");
+      }
+
 
 }
 }
@@ -421,6 +438,7 @@ void MainWindow::on_button_uebungende_clicked()
   ui->frame_menue->show();
   ui->label_zeit->setText("Los Geht's!");
   ui->textBrowser->setText("");
+  ui->eingabefeld->setText("");
   ui->label_zeit->hide();
   ui->label->hide();
   ui->label_fehler->setText("0");
@@ -757,6 +775,7 @@ void MainWindow::on_pB_ende_clicked()
     ui->frame_menue->show();
     ui->label_zeit->setText("Los Geht's!");
     ui->label_zeit->hide();
+    ui->eingabefeld->setText("");
     ui->label->hide();
     ui->frame_wettkampf->hide();
     ui->frame_welcome->show();
@@ -870,18 +889,28 @@ void MainWindow::Vergleich()
                  ui->frame_zeitvorbei->show();
                  ui->frame_textueben->show();
                  ui->frame_zeittext->hide();
-                 ende=false;
+
 
        if(name=="")
         {
         }
         else
           {
+           QSqlDatabase typo_db =  QSqlDatabase::addDatabase("QMYSQL");
+           typo_db.setDatabaseName("typo");
+           typo_db.setUserName("Alex");
+           typo_db.setPassword("A92K07!27");
+           typo_db.setPort(3306);
+           typo_db.setHostName("89.163.178.19");
+           typo_db.open();
+
+
             QString fpm=ui->label_fpm->text();
             QString wpm=ui->label_wpm->text();
             QSqlQuery qry;
             qry.exec("insert into Statistik (Benutzername, Art, FPM, WPM) values ('"+name +"','"+MainWindow::art +"','"+fpm+"','"+ wpm +"')");
           }
+       ende=false;
         }
 
 }
