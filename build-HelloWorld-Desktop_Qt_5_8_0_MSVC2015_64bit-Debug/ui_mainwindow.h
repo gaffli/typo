@@ -694,10 +694,12 @@ public:
         table_fehler = new QTableView(frame_zeitvorbei);
         table_fehler->setObjectName(QStringLiteral("table_fehler"));
         table_fehler->setGeometry(QRect(530, 40, 256, 192));
+        table_fehler->setFrameShape(QFrame::StyledPanel);
+        table_fehler->setGridStyle(Qt::DotLine);
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 1280, 20));
+        menuBar->setGeometry(QRect(0, 0, 1280, 17));
         MainWindow->setMenuBar(menuBar);
         mainToolBar = new QToolBar(MainWindow);
         mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
