@@ -24,7 +24,9 @@ private:
   QString *WordfromText;
   void GetnextWord();
 
-
+signals:
+  void wrong_word(QString);
+  void right_word(QString *);
 
 };
 
