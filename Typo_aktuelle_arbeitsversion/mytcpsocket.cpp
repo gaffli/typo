@@ -10,6 +10,8 @@ MyTcpSocket::MyTcpSocket(QObject *parent) :
 
 void MyTcpSocket::doConnect()
 {
+    /// Es wird ein neues Socket erstellt und der Counter für dieses Socket auf Null gesetzt.
+    /// alle Connects werden vollzogen, damit bei Standartsignalen der Klasse "QSocket" die Funktionen die ich geschrieben habe angepingt werden.
     MyTcpSocket::socket = new QTcpSocket(this);
     MyTcpSocket::counter_message = 0;
 
@@ -44,6 +46,9 @@ void MyTcpSocket::bytesWritten(qint64 bytes)
 
 void MyTcpSocket::readyRead_new()
 {
+    /// Der Counter für das Socket läuft für jede Nachricht. Die erste Nachricht die ankommt ist die Textnummer.
+    /// Die zweite Nachricht ist die fpm Nummer des Gegners.
+    /// Die dritte Nachricht ist die wpm Nummer des Gegners.
     qDebug() << "laeuft";
     switch (MyTcpSocket::counter_message) {
     case 0:
@@ -74,12 +79,14 @@ void MyTcpSocket::readyRead_new()
 
 void MyTcpSocket::newdisconnected()
 {
+    /// Erst wenn das Socket disconnected ist, werden die fpm und wpm des Gegners per Signal weitergegeben.
     qDebug() << "newdisconnected is emitted";
     emit MyTcpSocket::signal_other_f_w_pm(MyTcpSocket::other_fpm.toInt(),MyTcpSocket::other_wpm.toInt());
 }
 
 void MyTcpSocket::set_variables(int fpm_c, int wpm_c)
 {
+    /// Direkt nach dem Ende der Übung werden die fpm und wpm an den Server übertragen.
     MyTcpSocket::fpm = fpm_c;
     MyTcpSocket::wpm = wpm_c;
     MyTcpSocket::socket->write(QByteArray::number(MyTcpSocket::fpm));
@@ -89,37 +96,3 @@ void MyTcpSocket::set_variables(int fpm_c, int wpm_c)
 }
 
 
-//connect(this,SIGNAL(first_socked_finish()),this,SLOT(socket_after_socket()));
-//void MyTcpSocket::socket_after_socket()
-//{
-//    MyTcpSocket::counter_message = 0;
-//    MyTcpSocket::server = new QTcpServer(this);
-//    connect(MyTcpSocket::server, SIGNAL(newConnection()), this, SLOT(newConnection()));
-
-
-//    if(! MyTcpSocket::server->listen(QHostAddress::Any, MyTcpSocket::socketport))
-//    {
-//        qDebug() << "Server could not start";
-//    }
-//    else
-//    {
-//        qDebug() << "Server started!";
-//    }
-
-//}
-
-//void MyTcpSocket::newConnection()
-//{
-//    connect(MyTcpSocket::new_socket, SIGNAL(disconnected()),this, SLOT(newdisconnected()));
-//    connect(MyTcpSocket::new_socket, SIGNAL(readyRead()),this, SLOT(readyRead_new()));
-
-//    MyTcpSocket::new_socket = MyTcpSocket::server->nextPendingConnection();
-//    qDebug() << new_socket->state();
-
-
-
-
-//    MyTcpSocket::new_socket->waitForBytesWritten(3000);
-
-
-//}
