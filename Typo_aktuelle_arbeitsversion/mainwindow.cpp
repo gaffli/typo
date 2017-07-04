@@ -450,6 +450,8 @@ void MainWindow::on_button_uebungende_clicked()
   ui->frame_welcome->show();
   timer->stop();
 
+  ui->table_fehler->setModel(&table_fehler);
+
   if(fehlersuche->IsRunning())
     {
       fehlersuche->end();
@@ -997,8 +999,8 @@ void MainWindow::after_writing(QString wrong_word, QString * right_word, int fai
     wrongw = wrong_word;
     rightw = *right_word;
     MainWindow::table_fehler.setRowCount(failed_count);
-    QTableWidgetItem wrong(wrongw,1);
-    QTableWidgetItem right(rightw,1);
+    QStandardItem wrong(wrongw);
+    QStandardItem right(rightw);
     MainWindow::table_fehler.setItem(failed_count,1,&wrong);
     MainWindow::table_fehler.setItem(failed_count,2,&right);
 }
