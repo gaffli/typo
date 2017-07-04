@@ -45,7 +45,7 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(&s,SIGNAL(signal_txt_nmbr(int)),this,SLOT(multi_txt_nmbr(int)));
     connect(this,SIGNAL(multipl_fpm_wpm(int,int)),&s,SLOT(set_variables(int,int)));
     connect(&s,SIGNAL(signal_other_f_w_pm(int,int)),this,SLOT(wpm_fpm_gegner_multi(int,int)));
-    connect(fehlersuche,SIGNAL(wrong_word(QString,QString*)),this,SLOT());
+
 
     QString imagePath = QCoreApplication::applicationDirPath() + "/banner.png";  /// Der Pfad der Exe wird genommen um das Banner zu finden
     QPixmap image(imagePath);
@@ -68,12 +68,13 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->frame_ueben->hide();
     ui->label->hide();
     ui->pb_profil->hide();
-    MainWindow::table_fehler.setColumnCount(2);
+    MainWindow::table_fehler.setColumnCount(1);
 
     keyboard = new key();
     ui->horizontalLayout->addWidget(keyboard);
     fehlersuche = new Fehleranalyse();
 
+    connect(fehlersuche,SIGNAL(wrong_word(QString,QString*,int)),this,SLOT(after_writing(QString,QString*,int)));
     setFocusPolicy(Qt::StrongFocus);
     qApp->installEventFilter(this);
 
@@ -104,6 +105,7 @@ void MainWindow::timer_timeout()
     if(MainWindow::cnt==0)
     {
       timer->stop();
+       ui->table_fehler->setModel(&table_fehler);
       if(MainWindow::art=="wett")
       {
       ui->frame_wettkampf->show();
@@ -889,7 +891,7 @@ void MainWindow::Vergleich()
         ui->label_wpm->setNum(woerter);
         ui->label_fpm->setNum(fehler);
         QString name=ui->label_username->text();
-
+         ui->table_fehler->setModel(&table_fehler);
                  ui->frame_lernen->hide();
                  ui->frame_zeitvorbei->show();
                  ui->frame_textueben->show();
