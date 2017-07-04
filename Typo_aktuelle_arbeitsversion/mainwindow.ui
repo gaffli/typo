@@ -797,9 +797,9 @@ border-top-width: 1.5px;
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>0</y>
+      <y>10</y>
       <width>1261</width>
-      <height>691</height>
+      <height>681</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -994,9 +994,9 @@ border-top-width: 1.5px;
    <widget class="QFrame" name="frame_welcome">
     <property name="geometry">
      <rect>
-      <x>209</x>
+      <x>219</x>
       <y>9</y>
-      <width>1061</width>
+      <width>1051</width>
       <height>671</height>
      </rect>
     </property>
@@ -1488,6 +1488,16 @@ border-top-width: 1.5px;
       </property>
      </widget>
     </widget>
+    <widget class="QTableView" name="table_fehler">
+     <property name="geometry">
+      <rect>
+       <x>530</x>
+       <y>40</y>
+       <width>256</width>
+       <height>192</height>
+      </rect>
+     </property>
+    </widget>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
@@ -1496,7 +1506,7 @@ border-top-width: 1.5px;
      <x>0</x>
      <y>0</y>
      <width>1280</width>
-     <height>17</height>
+     <height>20</height>
     </rect>
    </property>
   </widget>
