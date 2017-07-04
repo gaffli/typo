@@ -1497,6 +1497,12 @@ border-top-width: 1.5px;
        <height>192</height>
       </rect>
      </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="gridStyle">
+      <enum>Qt::DotLine</enum>
+     </property>
     </widget>
    </widget>
   </widget>
@@ -1506,7 +1512,7 @@ border-top-width: 1.5px;
      <x>0</x>
      <y>0</y>
      <width>1280</width>
-     <height>20</height>
+     <height>17</height>
     </rect>
    </property>
   </widget>

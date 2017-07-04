@@ -22,6 +22,7 @@
 #include <QKeyEvent>
 #include <time.h>
 #include <QTime>
+#include <QTableWidget>
 
 
 
@@ -44,6 +45,7 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(&s,SIGNAL(signal_txt_nmbr(int)),this,SLOT(multi_txt_nmbr(int)));
     connect(this,SIGNAL(multipl_fpm_wpm(int,int)),&s,SLOT(set_variables(int,int)));
     connect(&s,SIGNAL(signal_other_f_w_pm(int,int)),this,SLOT(wpm_fpm_gegner_multi(int,int)));
+    connect(fehlersuche,SIGNAL(wrong_word(QString,QString*)),this,SLOT());
 
     QString imagePath = QCoreApplication::applicationDirPath() + "/banner.png";  /// Der Pfad der Exe wird genommen um das Banner zu finden
     QPixmap image(imagePath);
@@ -66,6 +68,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->frame_ueben->hide();
     ui->label->hide();
     ui->pb_profil->hide();
+    MainWindow::table_fehler.setColumnCount(2);
 
     keyboard = new key();
     ui->horizontalLayout->addWidget(keyboard);
@@ -445,6 +448,7 @@ void MainWindow::on_button_uebungende_clicked()
   ui->label_WPM->setText("0");
   MainWindow::art="";
   ui->frame_welcome->show();
+  ui->table_fehler->
   timer->stop();
 
   if(fehlersuche->IsRunning())
@@ -987,3 +991,16 @@ void MainWindow::wpm_fpm_gegner_multi(int fpm_other, int wpm_other)
     ui->label_fpm_gegner->setNum(fpm_other);
 }
 
+void MainWindow::after_writing(QString wrong_word, QString * right_word, int failed_count)
+{
+    QString rightw = 0;
+    QString wrongw = 0;
+    wrongw = wrong_word;
+    rightw = *right_word;
+    MainWindow::table_fehler.setRowCount(failed_count);
+    QTableWidgetItem wrong(wrongw,1);
+    QTableWidgetItem right(rightw,1);
+    MainWindow::table_fehler.setItem(failed_count,1,&wrong);
+    MainWindow::table_fehler.setItem(failed_count,2,&right);
+    ui->table_fehler->add
+}

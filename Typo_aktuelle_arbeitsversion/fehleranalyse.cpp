@@ -22,8 +22,7 @@ void Fehleranalyse::analyse(QString WordfromUser)
             {
               Fehleranalyse::NumberofErrors++;
               std::cout<< Fehleranalyse::NumberofErrors << std::endl;
-              emit wrong_word(WordfromUser);
-              emit right_word(Fehleranalyse::WordfromText);
+              emit wrong_word(WordfromUser, Fehleranalyse::WordfromText,Fehleranalyse::NumberofErrors);
             }
           if(Fehleranalyse::WordfromText == WordfromUser)
             {
