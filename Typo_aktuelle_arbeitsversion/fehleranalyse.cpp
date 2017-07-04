@@ -22,6 +22,8 @@ void Fehleranalyse::analyse(QString WordfromUser)
             {
               Fehleranalyse::NumberofErrors++;
               std::cout<< Fehleranalyse::NumberofErrors << std::endl;
+              emit wrong_word(WordfromUser);
+              emit right_word(Fehleranalyse::WordfromText);
             }
           if(Fehleranalyse::WordfromText == WordfromUser)
             {
@@ -43,7 +45,7 @@ void Fehleranalyse::GetnextWord()
           return;
         }
 
-      CharacterfromText = &(Fehleranalyse::text->at(Fehleranalyse::textcounter));
+       CharacterfromText = &(Fehleranalyse::text->at(Fehleranalyse::textcounter));
       if(CharacterfromText->isSpace())
         {
           Fehleranalyse::textcounter++;
