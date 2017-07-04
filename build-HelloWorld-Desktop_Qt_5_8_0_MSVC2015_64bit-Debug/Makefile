@@ -442,7 +442,7 @@ clean: debug-clean release-clean  FORCE
 	-$(DEL_FILE) HelloWorld.idb
 distclean: debug-distclean release-distclean  FORCE
 	-$(DEL_FILE) Makefile
-	-$(DEL_FILE) HelloWorld.lib HelloWorld.pdb
+	-$(DEL_FILE) .qmake.stash HelloWorld.lib HelloWorld.pdb
 
 debug-mocclean:
 	@set MAKEFLAGS=$(MAKEFLAGS)
