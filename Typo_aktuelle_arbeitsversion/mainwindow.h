@@ -12,6 +12,8 @@
 #include <QString>
 #include "mytcpsocket.h"
 #include <QTableWidget>
+#include <QStandardItemModel>
+#include <QStandardItem>
 
 
 namespace Ui {
@@ -118,7 +120,7 @@ private:
     bool is_multipl = false;
     bool scnd_plr_connect = false;
      QString benutzername;
-     QTableWidget table_fehler;
+     QStandardItemModel table_fehler;
 
 };
 
