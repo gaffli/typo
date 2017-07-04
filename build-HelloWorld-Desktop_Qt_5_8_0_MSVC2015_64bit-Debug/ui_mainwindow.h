@@ -23,6 +23,7 @@
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QRadioButton>
+#include <QtWidgets/QTableView>
 #include <QtWidgets/QTextBrowser>
 #include <QtWidgets/QToolBar>
 #include <QtWidgets/QWidget>
@@ -115,6 +116,7 @@ public:
     QLabel *label_fpm_5;
     QLabel *label_wpm_gegner;
     QLabel *label_fpm_gegner;
+    QTableView *table_fehler;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
 
@@ -500,7 +502,7 @@ public:
         radioButton_5->setGeometry(QRect(10, 120, 76, 19));
         frame_lernen = new QFrame(centralWidget);
         frame_lernen->setObjectName(QStringLiteral("frame_lernen"));
-        frame_lernen->setGeometry(QRect(10, 0, 1261, 691));
+        frame_lernen->setGeometry(QRect(10, 10, 1261, 681));
         frame_lernen->setFrameShape(QFrame::StyledPanel);
         frame_lernen->setFrameShadow(QFrame::Raised);
         horizontalWidget = new QWidget(frame_lernen);
@@ -564,7 +566,7 @@ public:
         label_fehler->setFont(font2);
         frame_welcome = new QFrame(centralWidget);
         frame_welcome->setObjectName(QStringLiteral("frame_welcome"));
-        frame_welcome->setGeometry(QRect(209, 9, 1061, 671));
+        frame_welcome->setGeometry(QRect(219, 9, 1051, 671));
         frame_welcome->setFrameShape(QFrame::StyledPanel);
         frame_welcome->setFrameShadow(QFrame::Raised);
         label_banner_typo = new QLabel(frame_welcome);
@@ -689,10 +691,13 @@ public:
         font5.setBold(true);
         font5.setWeight(75);
         label_fpm_gegner->setFont(font5);
+        table_fehler = new QTableView(frame_zeitvorbei);
+        table_fehler->setObjectName(QStringLiteral("table_fehler"));
+        table_fehler->setGeometry(QRect(530, 40, 256, 192));
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 1280, 17));
+        menuBar->setGeometry(QRect(0, 0, 1280, 20));
         MainWindow->setMenuBar(menuBar);
         mainToolBar = new QToolBar(MainWindow);
         mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
