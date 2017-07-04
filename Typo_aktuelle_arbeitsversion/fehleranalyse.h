@@ -5,6 +5,8 @@
 
 class Fehleranalyse:public QObject
 {
+    Q_OBJECT
+
 public:
   Fehleranalyse();
   ~Fehleranalyse();
@@ -17,15 +19,16 @@ public:
   int WPM=0;
   void analyse(QString WordfromUser);
 
+signals:
+  void wrong_word(QString, QString*, int);
+
+
 private:
   bool run = false;
   int textcounter = 0;
   QString *text;
   QString *WordfromText;
   void GetnextWord();
-
-signals:
-  void wrong_word(QString, QString*, int);
 
 };
 
