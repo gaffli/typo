@@ -17,7 +17,6 @@ void Fehleranalyse::analyse(QString WordfromUser)
 {
   if(run)
     {
-
           if(Fehleranalyse::WordfromText != WordfromUser)
             {
               Fehleranalyse::NumberofErrors++;
@@ -44,7 +43,7 @@ void Fehleranalyse::GetnextWord()
           return;
         }
 
-       CharacterfromText = &(Fehleranalyse::text->at(Fehleranalyse::textcounter));
+       //CharacterfromText = &(Fehleranalyse::text->at(Fehleranalyse::textcounter));
       if(CharacterfromText->isSpace())
         {
           Fehleranalyse::textcounter++;
