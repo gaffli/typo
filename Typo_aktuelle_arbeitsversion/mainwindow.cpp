@@ -448,7 +448,6 @@ void MainWindow::on_button_uebungende_clicked()
   ui->label_WPM->setText("0");
   MainWindow::art="";
   ui->frame_welcome->show();
-  ui->table_fehler->
   timer->stop();
 
   if(fehlersuche->IsRunning())
@@ -1002,5 +1001,4 @@ void MainWindow::after_writing(QString wrong_word, QString * right_word, int fai
     QTableWidgetItem right(rightw,1);
     MainWindow::table_fehler.setItem(failed_count,1,&wrong);
     MainWindow::table_fehler.setItem(failed_count,2,&right);
-    ui->table_fehler->add
 }
