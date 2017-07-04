@@ -11,6 +11,7 @@
 #include <QDialog>
 #include <QString>
 #include "mytcpsocket.h"
+#include <QTableWidget>
 
 
 namespace Ui {
@@ -77,7 +78,7 @@ private slots:
 
     void on_b_buch_clicked();
 
-
+    void after_writing(QString, QString *, int);
 
     void on_eingabefeld_textChanged(const QString &typedwords);
 
@@ -117,6 +118,7 @@ private:
     bool is_multipl = false;
     bool scnd_plr_connect = false;
      QString benutzername;
+     QTableWidget table_fehler;
 
 };
 

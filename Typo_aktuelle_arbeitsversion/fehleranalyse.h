@@ -25,8 +25,7 @@ private:
   void GetnextWord();
 
 signals:
-  void wrong_word(QString);
-  void right_word(QString *);
+  void wrong_word(QString, QString*, int);
 
 };
 

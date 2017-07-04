@@ -23,7 +23,7 @@
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QRadioButton>
-#include <QtWidgets/QTableWidget>
+#include <QtWidgets/QTableView>
 #include <QtWidgets/QTextBrowser>
 #include <QtWidgets/QToolBar>
 #include <QtWidgets/QWidget>
@@ -98,7 +98,6 @@ public:
     QLabel *label_wpm;
     QLabel *label_fpm;
     QPushButton *pB_ende;
-    QTableWidget *tableWidget_woerter;
     QFrame *frame_zeittext;
     QLabel *label_zeittext;
     QLabel *label_wpm_2;
@@ -117,6 +116,7 @@ public:
     QLabel *label_fpm_5;
     QLabel *label_wpm_gegner;
     QLabel *label_fpm_gegner;
+    QTableView *table_fehler;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
 
@@ -566,7 +566,7 @@ public:
         label_fehler->setFont(font2);
         frame_welcome = new QFrame(centralWidget);
         frame_welcome->setObjectName(QStringLiteral("frame_welcome"));
-        frame_welcome->setGeometry(QRect(209, -1, 1061, 681));
+        frame_welcome->setGeometry(QRect(219, 9, 1051, 671));
         frame_welcome->setFrameShape(QFrame::StyledPanel);
         frame_welcome->setFrameShadow(QFrame::Raised);
         label_banner_typo = new QLabel(frame_welcome);
@@ -612,7 +612,7 @@ public:
         frame_zeitvorbei->setFrameShadow(QFrame::Raised);
         label_wpm = new QLabel(frame_zeitvorbei);
         label_wpm->setObjectName(QStringLiteral("label_wpm"));
-        label_wpm->setGeometry(QRect(300, 30, 71, 41));
+        label_wpm->setGeometry(QRect(285, 30, 71, 41));
         QFont font4;
         font4.setPointSize(10);
         font4.setBold(true);
@@ -620,18 +620,11 @@ public:
         label_wpm->setFont(font4);
         label_fpm = new QLabel(frame_zeitvorbei);
         label_fpm->setObjectName(QStringLiteral("label_fpm"));
-        label_fpm->setGeometry(QRect(300, 85, 61, 41));
-        QFont font5;
-        font5.setPointSize(9);
-        font5.setBold(true);
-        font5.setWeight(75);
-        label_fpm->setFont(font5);
+        label_fpm->setGeometry(QRect(280, 85, 61, 41));
+        label_fpm->setFont(font4);
         pB_ende = new QPushButton(frame_zeitvorbei);
         pB_ende->setObjectName(QStringLiteral("pB_ende"));
         pB_ende->setGeometry(QRect(270, 250, 140, 60));
-        tableWidget_woerter = new QTableWidget(frame_zeitvorbei);
-        tableWidget_woerter->setObjectName(QStringLiteral("tableWidget_woerter"));
-        tableWidget_woerter->setGeometry(QRect(520, 50, 256, 192));
         frame_zeittext = new QFrame(frame_zeitvorbei);
         frame_zeittext->setObjectName(QStringLiteral("frame_zeittext"));
         frame_zeittext->setGeometry(QRect(20, 30, 451, 211));
@@ -665,7 +658,7 @@ public:
         pb_profil_2->setGeometry(QRect(40, 250, 170, 60));
         frame_wettkampf = new QFrame(frame_zeitvorbei);
         frame_wettkampf->setObjectName(QStringLiteral("frame_wettkampf"));
-        frame_wettkampf->setGeometry(QRect(10, 0, 391, 241));
+        frame_wettkampf->setGeometry(QRect(10, 20, 391, 241));
         frame_wettkampf->setFrameShape(QFrame::StyledPanel);
         frame_wettkampf->setFrameShadow(QFrame::Raised);
         label_zeittext_2 = new QLabel(frame_wettkampf);
@@ -673,27 +666,36 @@ public:
         label_zeittext_2->setGeometry(QRect(0, 0, 281, 41));
         label_wpm_4 = new QLabel(frame_wettkampf);
         label_wpm_4->setObjectName(QStringLiteral("label_wpm_4"));
-        label_wpm_4->setGeometry(QRect(310, 0, 91, 41));
+        label_wpm_4->setGeometry(QRect(320, 10, 91, 41));
         label_fpm_4 = new QLabel(frame_wettkampf);
         label_fpm_4->setObjectName(QStringLiteral("label_fpm_4"));
-        label_fpm_4->setGeometry(QRect(310, 50, 91, 51));
+        label_fpm_4->setGeometry(QRect(320, 60, 91, 51));
         label_zeittext_3 = new QLabel(frame_wettkampf);
         label_zeittext_3->setObjectName(QStringLiteral("label_zeittext_3"));
         label_zeittext_3->setGeometry(QRect(0, 120, 281, 41));
         label_wpm_5 = new QLabel(frame_wettkampf);
         label_wpm_5->setObjectName(QStringLiteral("label_wpm_5"));
-        label_wpm_5->setGeometry(QRect(310, 110, 91, 41));
+        label_wpm_5->setGeometry(QRect(320, 110, 91, 41));
         label_fpm_5 = new QLabel(frame_wettkampf);
         label_fpm_5->setObjectName(QStringLiteral("label_fpm_5"));
-        label_fpm_5->setGeometry(QRect(310, 160, 91, 51));
+        label_fpm_5->setGeometry(QRect(320, 160, 91, 51));
         label_wpm_gegner = new QLabel(frame_wettkampf);
         label_wpm_gegner->setObjectName(QStringLiteral("label_wpm_gegner"));
-        label_wpm_gegner->setGeometry(QRect(250, 110, 71, 41));
+        label_wpm_gegner->setGeometry(QRect(270, 110, 71, 41));
         label_wpm_gegner->setFont(font4);
         label_fpm_gegner = new QLabel(frame_wettkampf);
         label_fpm_gegner->setObjectName(QStringLiteral("label_fpm_gegner"));
-        label_fpm_gegner->setGeometry(QRect(250, 160, 61, 41));
+        label_fpm_gegner->setGeometry(QRect(270, 160, 61, 41));
+        QFont font5;
+        font5.setPointSize(9);
+        font5.setBold(true);
+        font5.setWeight(75);
         label_fpm_gegner->setFont(font5);
+        table_fehler = new QTableView(frame_zeitvorbei);
+        table_fehler->setObjectName(QStringLiteral("table_fehler"));
+        table_fehler->setGeometry(QRect(530, 40, 256, 192));
+        table_fehler->setFrameShape(QFrame::StyledPanel);
+        table_fehler->setGridStyle(Qt::DotLine);
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
