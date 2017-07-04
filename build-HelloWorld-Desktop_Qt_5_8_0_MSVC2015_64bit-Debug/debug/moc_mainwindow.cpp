@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_MainWindow_t {
-    QByteArrayData data[40];
-    char stringdata0[755];
+    QByteArrayData data[42];
+    char stringdata0[778];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -55,22 +55,24 @@ QT_MOC_LITERAL(20, 393, 31), // "on_pushButton_zeitstart_clicked"
 QT_MOC_LITERAL(21, 425, 21), // "on_zeitrennen_clicked"
 QT_MOC_LITERAL(22, 447, 13), // "timer_timeout"
 QT_MOC_LITERAL(23, 461, 17), // "on_b_buch_clicked"
-QT_MOC_LITERAL(24, 479, 26), // "on_eingabefeld_textChanged"
-QT_MOC_LITERAL(25, 506, 10), // "typedwords"
-QT_MOC_LITERAL(26, 517, 26), // "on_label_username_set_user"
-QT_MOC_LITERAL(27, 544, 8), // "username"
-QT_MOC_LITERAL(28, 553, 18), // "on_pB_ende_clicked"
-QT_MOC_LITERAL(29, 572, 19), // "after_login_process"
-QT_MOC_LITERAL(30, 592, 20), // "after_logout_process"
-QT_MOC_LITERAL(31, 613, 20), // "on_pb_profil_clicked"
-QT_MOC_LITERAL(32, 634, 9), // "Vergleich"
-QT_MOC_LITERAL(33, 644, 22), // "on_pb_profil_2_clicked"
-QT_MOC_LITERAL(34, 667, 22), // "on_multiplayer_clicked"
-QT_MOC_LITERAL(35, 690, 14), // "multi_txt_nmbr"
-QT_MOC_LITERAL(36, 705, 8), // "txt_nmbr"
-QT_MOC_LITERAL(37, 714, 20), // "wpm_fpm_gegner_multi"
-QT_MOC_LITERAL(38, 735, 9), // "fpm_other"
-QT_MOC_LITERAL(39, 745, 9) // "wpm_other"
+QT_MOC_LITERAL(24, 479, 13), // "after_writing"
+QT_MOC_LITERAL(25, 493, 8), // "QString*"
+QT_MOC_LITERAL(26, 502, 26), // "on_eingabefeld_textChanged"
+QT_MOC_LITERAL(27, 529, 10), // "typedwords"
+QT_MOC_LITERAL(28, 540, 26), // "on_label_username_set_user"
+QT_MOC_LITERAL(29, 567, 8), // "username"
+QT_MOC_LITERAL(30, 576, 18), // "on_pB_ende_clicked"
+QT_MOC_LITERAL(31, 595, 19), // "after_login_process"
+QT_MOC_LITERAL(32, 615, 20), // "after_logout_process"
+QT_MOC_LITERAL(33, 636, 20), // "on_pb_profil_clicked"
+QT_MOC_LITERAL(34, 657, 9), // "Vergleich"
+QT_MOC_LITERAL(35, 667, 22), // "on_pb_profil_2_clicked"
+QT_MOC_LITERAL(36, 690, 22), // "on_multiplayer_clicked"
+QT_MOC_LITERAL(37, 713, 14), // "multi_txt_nmbr"
+QT_MOC_LITERAL(38, 728, 8), // "txt_nmbr"
+QT_MOC_LITERAL(39, 737, 20), // "wpm_fpm_gegner_multi"
+QT_MOC_LITERAL(40, 758, 9), // "fpm_other"
+QT_MOC_LITERAL(41, 768, 9) // "wpm_other"
 
     },
     "MainWindow\0profil_show_and_hide\0\0"
@@ -86,7 +88,8 @@ QT_MOC_LITERAL(39, 745, 9) // "wpm_other"
     "on_pushButton_eigener_clicked\0"
     "on_pushButton_zeitstart_clicked\0"
     "on_zeitrennen_clicked\0timer_timeout\0"
-    "on_b_buch_clicked\0on_eingabefeld_textChanged\0"
+    "on_b_buch_clicked\0after_writing\0"
+    "QString*\0on_eingabefeld_textChanged\0"
     "typedwords\0on_label_username_set_user\0"
     "username\0on_pB_ende_clicked\0"
     "after_login_process\0after_logout_process\0"
@@ -103,7 +106,7 @@ static const uint qt_meta_data_MainWindow[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-      33,   14, // methods
+      34,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -111,41 +114,42 @@ static const uint qt_meta_data_MainWindow[] = {
        3,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    0,  179,    2, 0x06 /* Public */,
-       3,    0,  180,    2, 0x06 /* Public */,
-       4,    2,  181,    2, 0x06 /* Public */,
+       1,    0,  184,    2, 0x06 /* Public */,
+       3,    0,  185,    2, 0x06 /* Public */,
+       4,    2,  186,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-       5,    0,  186,    2, 0x08 /* Private */,
-       6,    0,  187,    2, 0x08 /* Private */,
-       7,    0,  188,    2, 0x08 /* Private */,
-       8,    0,  189,    2, 0x08 /* Private */,
-       9,    0,  190,    2, 0x08 /* Private */,
-      10,    0,  191,    2, 0x08 /* Private */,
-      11,    0,  192,    2, 0x08 /* Private */,
-      12,    0,  193,    2, 0x08 /* Private */,
-      13,    0,  194,    2, 0x08 /* Private */,
-      14,    0,  195,    2, 0x08 /* Private */,
-      15,    0,  196,    2, 0x08 /* Private */,
-      16,    0,  197,    2, 0x08 /* Private */,
-      17,    0,  198,    2, 0x08 /* Private */,
-      18,    0,  199,    2, 0x08 /* Private */,
-      19,    0,  200,    2, 0x08 /* Private */,
-      20,    0,  201,    2, 0x08 /* Private */,
-      21,    0,  202,    2, 0x08 /* Private */,
-      22,    0,  203,    2, 0x08 /* Private */,
-      23,    0,  204,    2, 0x08 /* Private */,
-      24,    1,  205,    2, 0x08 /* Private */,
-      26,    1,  208,    2, 0x08 /* Private */,
-      28,    0,  211,    2, 0x08 /* Private */,
-      29,    0,  212,    2, 0x08 /* Private */,
-      30,    0,  213,    2, 0x08 /* Private */,
-      31,    0,  214,    2, 0x08 /* Private */,
-      32,    0,  215,    2, 0x08 /* Private */,
-      33,    0,  216,    2, 0x08 /* Private */,
-      34,    0,  217,    2, 0x08 /* Private */,
-      35,    1,  218,    2, 0x08 /* Private */,
-      37,    2,  221,    2, 0x08 /* Private */,
+       5,    0,  191,    2, 0x08 /* Private */,
+       6,    0,  192,    2, 0x08 /* Private */,
+       7,    0,  193,    2, 0x08 /* Private */,
+       8,    0,  194,    2, 0x08 /* Private */,
+       9,    0,  195,    2, 0x08 /* Private */,
+      10,    0,  196,    2, 0x08 /* Private */,
+      11,    0,  197,    2, 0x08 /* Private */,
+      12,    0,  198,    2, 0x08 /* Private */,
+      13,    0,  199,    2, 0x08 /* Private */,
+      14,    0,  200,    2, 0x08 /* Private */,
+      15,    0,  201,    2, 0x08 /* Private */,
+      16,    0,  202,    2, 0x08 /* Private */,
+      17,    0,  203,    2, 0x08 /* Private */,
+      18,    0,  204,    2, 0x08 /* Private */,
+      19,    0,  205,    2, 0x08 /* Private */,
+      20,    0,  206,    2, 0x08 /* Private */,
+      21,    0,  207,    2, 0x08 /* Private */,
+      22,    0,  208,    2, 0x08 /* Private */,
+      23,    0,  209,    2, 0x08 /* Private */,
+      24,    3,  210,    2, 0x08 /* Private */,
+      26,    1,  217,    2, 0x08 /* Private */,
+      28,    1,  220,    2, 0x08 /* Private */,
+      30,    0,  223,    2, 0x08 /* Private */,
+      31,    0,  224,    2, 0x08 /* Private */,
+      32,    0,  225,    2, 0x08 /* Private */,
+      33,    0,  226,    2, 0x08 /* Private */,
+      34,    0,  227,    2, 0x08 /* Private */,
+      35,    0,  228,    2, 0x08 /* Private */,
+      36,    0,  229,    2, 0x08 /* Private */,
+      37,    1,  230,    2, 0x08 /* Private */,
+      39,    2,  233,    2, 0x08 /* Private */,
 
  // signals: parameters
     QMetaType::Void,
@@ -172,8 +176,9 @@ static const uint qt_meta_data_MainWindow[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void, QMetaType::QString,   25,
+    QMetaType::Void, QMetaType::QString, 0x80000000 | 25, QMetaType::Int,    2,    2,    2,
     QMetaType::Void, QMetaType::QString,   27,
+    QMetaType::Void, QMetaType::QString,   29,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -181,8 +186,8 @@ static const uint qt_meta_data_MainWindow[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void, QMetaType::Int,   36,
-    QMetaType::Void, QMetaType::Int, QMetaType::Int,   38,   39,
+    QMetaType::Void, QMetaType::Int,   38,
+    QMetaType::Void, QMetaType::Int, QMetaType::Int,   40,   41,
 
        0        // eod
 };
@@ -215,17 +220,18 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 19: _t->on_zeitrennen_clicked(); break;
         case 20: _t->timer_timeout(); break;
         case 21: _t->on_b_buch_clicked(); break;
-        case 22: _t->on_eingabefeld_textChanged((*reinterpret_cast< const QString(*)>(_a[1]))); break;
-        case 23: _t->on_label_username_set_user((*reinterpret_cast< QString(*)>(_a[1]))); break;
-        case 24: _t->on_pB_ende_clicked(); break;
-        case 25: _t->after_login_process(); break;
-        case 26: _t->after_logout_process(); break;
-        case 27: _t->on_pb_profil_clicked(); break;
-        case 28: _t->Vergleich(); break;
-        case 29: _t->on_pb_profil_2_clicked(); break;
-        case 30: _t->on_multiplayer_clicked(); break;
-        case 31: _t->multi_txt_nmbr((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 32: _t->wpm_fpm_gegner_multi((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
+        case 22: _t->after_writing((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< QString*(*)>(_a[2])),(*reinterpret_cast< int(*)>(_a[3]))); break;
+        case 23: _t->on_eingabefeld_textChanged((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 24: _t->on_label_username_set_user((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 25: _t->on_pB_ende_clicked(); break;
+        case 26: _t->after_login_process(); break;
+        case 27: _t->after_logout_process(); break;
+        case 28: _t->on_pb_profil_clicked(); break;
+        case 29: _t->Vergleich(); break;
+        case 30: _t->on_pb_profil_2_clicked(); break;
+        case 31: _t->on_multiplayer_clicked(); break;
+        case 32: _t->multi_txt_nmbr((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 33: _t->wpm_fpm_gegner_multi((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -280,13 +286,13 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 33)
+        if (_id < 34)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 33;
+        _id -= 34;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 33)
+        if (_id < 34)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 33;
+        _id -= 34;
     }
     return _id;
 }
