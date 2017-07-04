@@ -16,14 +16,14 @@ MyTcpServer::MyTcpServer(QObject *parent) : QObject(parent)
 
     server = new QTcpServer(this);
 
-     // whenever a user connects, it will emit signal
+     /// Connects für den Server durchführen. Der Server ruft NewConnection immer dann auf, wenn sich ein Client verbindet.
      connect(server, SIGNAL(newConnection()),
              this, SLOT(newConnection()));
 
      connect(this,SIGNAL(two_clients_signal(int, int)),this,SLOT(two_clients_slot(int, int)));
 
 
-
+/// Der Server wartet auf eingehende Connections auf dem Port 1234
      if(!server->listen(QHostAddress::Any, 1234))
      {
          qDebug() << "Server could not start";
@@ -39,6 +39,9 @@ MyTcpServer::MyTcpServer(QObject *parent) : QObject(parent)
 
  void MyTcpServer::newConnection()
  {
+     /// Falls die Connection die erste ist, lässt der Server diese offen und wartet. Das verbundene Socket ist in einem Vector gespeichert.
+     /// Falls es die zweite Connections ist, wird das verbundene Socket in den Vector gespeichert und dann wird das Signal "two_clients" ausgesendet.
+     /// Dieses ruft dann die hauptarbeitende Funktion "two_clients" auf, welche die beiden Sockets bearbeitet.
      switch (counter) {
      case 0:
         MyTcpServer::sockets.append(server->nextPendingConnection());
@@ -87,6 +90,8 @@ MyTcpServer::MyTcpServer(QObject *parent) : QObject(parent)
 
      qDebug() << r;
 
+     /// Erst wird ein text ausgewählt, danach wird erst gefragt ob die Sockets noch verbunden sind, falls ja,
+     /// wird der Multiplayer durch das aussenden der Textnummer gestartet.
      if (MyTcpServer::sockets[client_1]->state() == QAbstractSocket::ConnectedState)
      {
          qDebug() << "socket_1 written 1";
@@ -100,9 +105,11 @@ MyTcpServer::MyTcpServer(QObject *parent) : QObject(parent)
          MyTcpServer::sockets[client_2]->flush();
      }
 
+     /// Warten auf beenden des abtippens der zwei Clienten
     MyTcpServer::sockets[client_1]->waitForReadyRead(61000);
     MyTcpServer::sockets[client_2]->waitForReadyRead(60100);
 
+    /// es wird, falls es gelesen werden kann, die fpm und wpm beider clienten ausgelesen und gespeichert.
         if (MyTcpServer::sockets[client_1]->bytesAvailable() != 0)
         {
             qDebug() << "hier socket 1";
@@ -123,6 +130,7 @@ MyTcpServer::MyTcpServer(QObject *parent) : QObject(parent)
 
 
 
+          /// wenn auf beiden Sockets geschrieben wurde, werden die Ergebnisse weitergesendet.
 
      if(client_1_written == client_2_written && client_1_written == true)
      {
@@ -142,6 +150,7 @@ MyTcpServer::MyTcpServer(QObject *parent) : QObject(parent)
      qDebug() << MyTcpServer::sockets.at(client_1)->state() << "socket1";
      qDebug() << MyTcpServer::sockets.at(1)->state() << "socket2";
 
+     /// Damit die fpm und wpm bei den Clienten angezeigt werden, wird die Connection zu beiden Sockets gekappt.
      MyTcpServer::sockets[client_1]->close();
      MyTcpServer::sockets[client_2]->close();
 
