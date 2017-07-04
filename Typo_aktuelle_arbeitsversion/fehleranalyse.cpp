@@ -43,7 +43,7 @@ void Fehleranalyse::GetnextWord()
           return;
         }
 
-       //CharacterfromText = &(Fehleranalyse::text->at(Fehleranalyse::textcounter));
+       CharacterfromText = &(Fehleranalyse::text->at(Fehleranalyse::textcounter));
       if(CharacterfromText->isSpace())
         {
           Fehleranalyse::textcounter++;
