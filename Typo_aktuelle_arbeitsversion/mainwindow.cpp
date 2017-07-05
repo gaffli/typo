@@ -105,7 +105,7 @@ void MainWindow::timer_timeout()
     if(MainWindow::cnt==0)
     {
       timer->stop();
-       ui->table_fehler->setModel(&table_fehler);
+       ui->table_fehler->setModel(&(MainWindow::table_fehler));
       if(MainWindow::art=="wett")
       {
       ui->frame_wettkampf->show();
@@ -452,7 +452,7 @@ void MainWindow::on_button_uebungende_clicked()
   ui->frame_welcome->show();
   timer->stop();
 
-  ui->table_fehler->setModel(&table_fehler);
+  ui->table_fehler->setModel(&(MainWindow::table_fehler));
 
   if(fehlersuche->IsRunning())
     {
@@ -891,7 +891,7 @@ void MainWindow::Vergleich()
         ui->label_wpm->setNum(woerter);
         ui->label_fpm->setNum(fehler);
         QString name=ui->label_username->text();
-         ui->table_fehler->setModel(&table_fehler);
+         ui->table_fehler->setModel(&(MainWindow::table_fehler));
                  ui->frame_lernen->hide();
                  ui->frame_zeitvorbei->show();
                  ui->frame_textueben->show();
@@ -1000,7 +1000,7 @@ void MainWindow::after_writing(QString wrong_word, QString * right_word, int fai
     QString wrongw = 0;
     wrongw = wrong_word;
     rightw = *right_word;
-    MainWindow::table_fehler.setRowCount(failed_count);
+    MainWindow::table_fehler.setRowCount(failed_count - 1);
     QStandardItem wrong(wrongw);
     QStandardItem right(rightw);
     MainWindow::table_fehler.setItem(failed_count,1,&wrong);
