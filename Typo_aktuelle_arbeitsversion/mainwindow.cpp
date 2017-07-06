@@ -725,6 +725,9 @@ void MainWindow::on_eingabefeld_textChanged(const QString &typedwords)
   if(typedwords.length() == 0)
     return;
 
+  /// Wenn das Anzeigefeld leer ist, also der gesamte Text bereits eingegeben wurde,
+  /// dann wird die Fehleranalyse direkt beendet ohne die Eingaben des Benutzers zu analysieren.
+  /// Und das Eingabefeld wird zurückgesetzt.
   if(ui->textBrowser->toPlainText() == "")
   MainWindow::text_run = false;
   else
@@ -736,12 +739,14 @@ void MainWindow::on_eingabefeld_textChanged(const QString &typedwords)
       return;
   }
 
-
+/// wenn das letzte eingegebene Zeichen ein Leerzeichen ist, wird die if-Bedingung ausgelöst.
   if(typedwords.at(typedwords.length() - 1) == ' ')
     {
       int counter = 0;
       int firstSpace = -1;
-
+      /// In dieser Schleife wird ermittelt, an welcher Position i das erste Mal vom Benutzer ein Leerzeichen für sein neues Wort
+      /// getippt wird.
+      /// Wenn ein Leerzeichen gedrückt wurde, dann wird der counter immer auf 1 sein.
       for(int i = 0; i < typedwords.length(); i++)
         {
           if(typedwords.at(i) == ' ')
@@ -753,7 +758,8 @@ void MainWindow::on_eingabefeld_textChanged(const QString &typedwords)
                 }
             }
         }
-
+/// Wenn das einzige eingegebene Zeichen ein Leerzeichen war, wird der Fehlerzähler hochgezählt,
+/// das Eingabefeld wird zurückgesetzt und die Funktion beendet.
       if(typedwords.size() == 1 && typedwords.at(typedwords.size()-1) == ' ')
       {
           ui->eingabefeld->setText(typedwords.mid(firstSpace + 1));
@@ -762,12 +768,13 @@ void MainWindow::on_eingabefeld_textChanged(const QString &typedwords)
           ui->label_fehler->setNum(fehler);
           return;
       }
-
+/// Wenn ein Leerzeichen gedrückt wurde, dann springt man in diese if-Bedingung rein.
+/// Hier wird im Eingabefeld das Wort links vom Leerzeichen gelöscht, damit wir ein dynamisches Eingabefeld haben.
       if(counter >=1)
         {
-          QString tmpString = typedwords.left(firstSpace);
-          ui->eingabefeld->setText(typedwords.mid(firstSpace + 1));
-          fehlersuche->analyse(tmpString);
+          QString tmpString = typedwords.left(firstSpace); /// Das Wort links vom Leerzeichen kommt in ein temporären String
+          ui->eingabefeld->setText(typedwords.mid(firstSpace + 1)); /// Dann wird das Eingabefeld neu gesettet, also alles vor dem ersten Leerzeichen wird gelöscht.
+          fehlersuche->analyse(tmpString); /// Das Wort im temporären String wird dann zur Fehlersuche in die anaylse-Funktion gesendet
           std::cout << "Richtige Wörter: " <<fehlersuche->NumberofCorrectWords<< std::endl;
           int woerter=fehlersuche->NumberofCorrectWords;
           ui->label_WPM->setNum(woerter);
@@ -890,7 +897,7 @@ void MainWindow::Vergleich() ///In dieser Funktion, werden die ausgelesen. In de
                     ende = true;
                     break;
                 }
-            }while(v  != Qt::Key_Space);
+            }while(v != Qt::Key_Space);
             text.remove(0,zaehler);
             ui->textBrowser->setText(text);
             spacezaehler = 0;
