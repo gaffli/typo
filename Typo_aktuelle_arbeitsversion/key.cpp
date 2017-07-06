@@ -38,6 +38,9 @@ key::~key()
 
 bool key::eventFilter(QObject *obj, QEvent *event)
 {
+  /// In dieser Funktion werden die Tasteneindrücke durch einen Switch/Case abgefangen.
+  /// für jede von uns genutzte Taste existiert ein Case. Wenn die korespondierende Taste gedrückt wird,
+  /// wird diese in der Ui animiert.
     if (event->type() == QEvent::KeyPress)
     {
             QKeyEvent *keyEvent = static_cast<QKeyEvent *>(event);
