@@ -56,7 +56,7 @@ void MyTcpSocket::readyRead_new()
         qDebug() << MyTcpSocket::txt_nmbr;
         emit MyTcpSocket::signal_txt_nmbr(MyTcpSocket::txt_nmbr.toInt());
         MyTcpSocket::counter_message++;
-        socket->read
+
         break;
 
     case 1:

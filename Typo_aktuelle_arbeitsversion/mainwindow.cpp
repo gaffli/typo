@@ -37,8 +37,8 @@ MainWindow::MainWindow(QWidget *parent) :
     MainWindow::setFixedSize(1280,720);
     ui->setupUi(this);
     this->setWindowTitle("Typo - 10 Finger Lernprogramm");
-
-    timer= new QTimer(this);                                    ///Timer für das Zeitrennen
+    ///Timer für das Zeitrennen
+    timer= new QTimer(this);
     timer->setInterval(1000); //Interval auf 1 sek setzen
 
     connect(timer,SIGNAL(timeout()),this,SLOT(timer_timeout()));
@@ -46,8 +46,8 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(this,SIGNAL(multipl_fpm_wpm(int,int)),&s,SLOT(set_variables(int,int)));
     connect(&s,SIGNAL(signal_other_f_w_pm(int,int)),this,SLOT(wpm_fpm_gegner_multi(int,int)));
 
-
-    QString imagePath = QCoreApplication::applicationDirPath() + "/banner.png";  /// Der Pfad der Exe wird genommen um das Banner zu finden
+     /// Der Pfad der Exe wird genommen um das Banner zu finden
+    QString imagePath = QCoreApplication::applicationDirPath() + "/banner.png";
     QPixmap image(imagePath);
     ui->label_banner_typo->setPixmap(image);
 
@@ -78,7 +78,8 @@ MainWindow::MainWindow(QWidget *parent) :
     setFocusPolicy(Qt::StrongFocus);
     qApp->installEventFilter(this);
 
-    QSqlDatabase typo_db =  QSqlDatabase::addDatabase("QMYSQL");        ///Verbindung zur MYSQL Datenbank
+    ///Verbindung zur MYSQL Datenbank
+    QSqlDatabase typo_db =  QSqlDatabase::addDatabase("QMYSQL");
     typo_db.setDatabaseName("typo");
     typo_db.setUserName("Alex");
     typo_db.setPassword("A92K07!27");
@@ -99,8 +100,8 @@ MainWindow::~MainWindow()
 void MainWindow::timer_timeout()
 {
     MainWindow::cnt--;
-
-    ui->label_zeit->setText(QString::number(MainWindow::cnt)); /// Aktuelle Zeit wird dem label zugewiesen
+    /// Aktuelle Zeit wird dem label zugewiesen
+    ui->label_zeit->setText(QString::number(MainWindow::cnt));
 
     if(MainWindow::cnt==0)
     {
@@ -116,6 +117,7 @@ void MainWindow::timer_timeout()
 
       int woerter=fehlersuche->NumberofCorrectWords;
       int fehler=fehlersuche->NumberofErrors;
+
       woerter=woerter/teiler;
       fehler=fehler/teiler;
 
@@ -139,6 +141,7 @@ void MainWindow::timer_timeout()
 
       int woerter=fehlersuche->NumberofCorrectWords;
       int fehler=fehlersuche->NumberofErrors;
+      ///Die Anzahl der Wörter werden durch 1,2,3,5 geteilt je nach auswahl der Zeitübung
       woerter=woerter/teiler;
       fehler=fehler/teiler;
 
@@ -188,8 +191,10 @@ void MainWindow::on_lernen_clicked()
   ui->frame_welcome->hide();
 
 
-  typodb=QSqlDatabase::addDatabase("QSQLITE");                                       ///Verbindung zur SQLite Datenbank
-  QString dbPath = QCoreApplication::applicationDirPath() + "/TypoDB.db";           /// Pfad der Datenbank wird im Ornder der Exe gesucht
+  typodb=QSqlDatabase::addDatabase("QSQLITE");
+  ///Verbindung zur SQLite Datenbank
+  /// Pfad der Datenbank wird im Ornder der Exe gesucht
+  QString dbPath = QCoreApplication::applicationDirPath() + "/TypoDB.db";
   typodb.setDatabaseName(dbPath);
   typodb.open();
 
@@ -202,18 +207,20 @@ void MainWindow::on_bl_zeige_clicked()
 {  
   ui->frame_hand->hide();
   ui->frame_menue->hide();
-  int rnd=rand() % 5 + 1; // Random zwischen 1-5
+  int rnd=rand() % 5 + 1; /// Random zwischen 1-5
   rnd=rand() % 5 + 1;
 
+  ///Dem SQL Befehl wird eine Variable aus dem Programm zugewiesen
   QSqlQuery query;
-  query.prepare("select Texte from lernen where ID_lernen=?");       ///Dem SQL Befehl wird eine Variable aus dem Programm zugewiesen
+  query.prepare("select Texte from lernen where ID_lernen=?");
   query.addBindValue(rnd);
   query.exec();
 
    QSqlRecord record=query.record();
    while (query.next())
    {
-       text=query.value(record.indexOf("texte")).toString();       ///Der aus der MYSQL Datenbank entnomme Text wird in einen QString gespeichtert und anschließent ausgegeben
+        ///Der aus der MYSQL Datenbank entnomme Text wird in einen QString gespeichtert und anschließent ausgegeben
+       text=query.value(record.indexOf("texte")).toString();
        ui->frame_lernen->show();
        ui->textBrowser->setText(text);
 
@@ -233,7 +240,7 @@ void MainWindow::on_bl_mittel_clicked()
   ui->frame_hand->hide();
   ui->frame_menue->hide();
   int rnd;
-  rnd=rand() % 5 + 6; // Random zwischen 6-10
+  rnd=rand() % 5 + 6;
   rnd=rand() % 5 + 6;
 
   QSqlQuery query;
@@ -263,7 +270,7 @@ void MainWindow::on_bl_ring_clicked()
   ui->frame_hand->hide();
   ui->frame_menue->hide();
   int rnd;
-  rnd=rand() % 5 + 11; // Random zwischen 11-15
+  rnd=rand() % 5 + 11;
   rnd=rand() % 5 + 11;
 
   QSqlQuery query;
@@ -513,12 +520,13 @@ void MainWindow::on_pushButton_starten_clicked()
 
 void MainWindow::on_pushButton_eigener_clicked()
 {
-    //Eigener Text
-   QString filename=QFileDialog::getOpenFileName(this, tr("Open File"), "C://", "Text File (*.txt)");       /// Eigene txt Datein können entnommen werden, Starverzeichnis ist C
+    ///Eigener Text
+    /// Eigene txt Datein können entnommen werden, Starverzeichnis ist C
+   QString filename=QFileDialog::getOpenFileName(this, tr("Open File"), "C://", "Text File (*.txt)");
     QFile file(filename);
 
-
-    file.open(QIODevice::ReadOnly | QIODevice::Text); // Als Text-Datei nur zum Lesen öffnen
+    /// Als Text-Datei nur zum Lesen öffnen
+    file.open(QIODevice::ReadOnly | QIODevice::Text);
     text=QLatin1String (file.readAll());
     file.close(); // Datei wieder schließen
 
@@ -567,7 +575,7 @@ void MainWindow::on_pushButton_zeitstart_clicked()
 
   timer->stop();
 
-     if (ui->radioButton_1->isChecked())        // 1 Minute Zeit
+     if (ui->radioButton_1->isChecked())        /// 1 Minute Zeit
         {
             MainWindow::cnt =60;
              MainWindow::teiler=1;
@@ -599,7 +607,7 @@ void MainWindow::on_pushButton_zeitstart_clicked()
 
              }
         }
-     else if (ui->radioButton_2->isChecked())   // 2 Minute Zeit
+     else if (ui->radioButton_2->isChecked())   /// 2 Minute Zeit
         {
             MainWindow::cnt =12;
              MainWindow::teiler=2;
@@ -777,6 +785,7 @@ void MainWindow::on_label_username_set_user(QString username)
 
 void MainWindow::on_pB_ende_clicked()
 {
+   /// Wenn der Button "Übungen beenden" geklickt wird, kommt man zurück ins Hauptmenü
     ui->frame_lernen->hide();
     ui->frame_zeitvorbei->hide();
     ui->frame_menue->show();
@@ -821,10 +830,11 @@ void MainWindow::after_logout_process()
 
 void MainWindow::on_pb_profil_clicked()
 {
+    /// Es wird ein Objekt der Klasse Login erzeugt und über Singal und Slots das Profil des Nutzer aufgerufen mit seinem Übungsstand
     login log;
     log.setModal(true);
-       QString name = MainWindow::benutzername;
-       log.set(name);
+    QString name = MainWindow::benutzername;
+    log.set(name);
        QObject::connect(this,SIGNAL(profil_show_and_hide()),&log,SLOT(profil_show_and_hide()));
        QObject::connect(&log,SIGNAL(after_logout_process()),this,SLOT(after_logout_process()));
        emit profil_show_and_hide();
@@ -958,8 +968,8 @@ void MainWindow::multi_txt_nmbr(int txt_nmbr)
     MainWindow::cnt =60;
     ui->label_zeit->show();
     QSqlQuery query;
-    query.prepare("select Text from Texte where Textart='zeit2' and ID_Texte=15");
-    //query.addBindValue(MainWindow::rnd_multi);
+    query.prepare("select Text from Texte where Textart='zeit2' and ID_Texte=?");
+    query.addBindValue(MainWindow::rnd_multi);
     query.exec();
 
      QSqlRecord record=query.record();
@@ -969,7 +979,7 @@ void MainWindow::multi_txt_nmbr(int txt_nmbr)
          text=query.value(record.indexOf("Text")).toString();
          ui->frame_lernen->show();
          ui->label->show();
-         timer->start();                               //Zeitrennen starten
+         timer->start();
          ui->textBrowser->setText(text);
          ui->eingabefeld->setFocus();
          if(!fehlersuche->IsRunning())

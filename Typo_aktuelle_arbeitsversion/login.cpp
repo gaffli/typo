@@ -75,7 +75,8 @@ void login::on_button_registrieren_clicked()
        typo_db.open();
 
      QSqlQuery qry_reg1;
-         if (qry_reg1.exec("select Benutzername from Benutzer where Benutzername='"+ login::benutzername +"'"))    ///Eingabe überprüfen ob der Benutzer schon verfügbar ist.
+     ///Eingabe überprüfen ob der Benutzer schon verfügbar ist.
+         if (qry_reg1.exec("select Benutzername from Benutzer where Benutzername='"+ login::benutzername +"'"))
            {
                int count=0;
             while (qry_reg1.next())
@@ -121,8 +122,8 @@ void login::on_but_anmelden_clicked()
         benutzername[ 0 ] = benutzername[ 0 ].toUpper();
 
     QSqlQuery qry_login;
-
-    if (qry_login.exec("select * from Benutzer where Benutzername='"+ login::benutzername +"'and  Passwort='"+login::passwort +"'"))    ///Eingabe überprüfen ob sie mit der Datenbank übereinstimmt
+    ///Eingabe überprüfen ob sie mit der Datenbank übereinstimmt
+    if (qry_login.exec("select * from Benutzer where Benutzername='"+ login::benutzername +"'and  Passwort='"+login::passwort +"'"))
     {
         int count=0;
         while (qry_login.next())
@@ -145,6 +146,8 @@ void login::on_but_anmelden_clicked()
 
 void login::use_querylogin(QSqlQuery qry_login)
 {
+
+   /// Hier werden alle Daten wie z.B. Anzahl der Übungen, WPM, FPM usw. des Benutzers aus der Datenbank gezogen und im Profil angezeigt
   ui->frame_login->hide();
   ui->frame_profil->show();
   ui->label_username->setText(login::benutzername);

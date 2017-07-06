@@ -14,7 +14,8 @@ using namespace std;
 
 int main(int argc, char *argv[])
 {
-    QTextCodec::setCodecForLocale(QTextCodec::codecForName("UFT-8"));  ///Wird benötigt damit man Umlaute darstellen kann
+     ///Wird benötigt damit man Umlaute darstellen kann
+    QTextCodec::setCodecForLocale(QTextCodec::codecForName("UFT-8"));
     QApplication a(argc, argv);
 
     MainWindow w;
