@@ -12,7 +12,6 @@ public:
   ~Fehleranalyse();
   void start(QString neuertext);
   void end();
-  void reset();
   bool IsRunning();
   int NumberofErrors=0;
   int NumberofCorrectWords=0;
