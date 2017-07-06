@@ -833,7 +833,7 @@ void MainWindow::on_pb_profil_clicked()
 
 bool MainWindow::eventFilter(QObject *obj, QEvent *event)
 {
-    if (event->type() == QEvent::KeyPress)
+    if (event->type() == QEvent::KeyPress) ///In dieser Funktion, werden die eingegebenen Tasten ausgelesen und in einen Integer gecastet
     {
         QKeyEvent* ke = (QKeyEvent *) event;
         QByteArray byte = 0;
@@ -854,7 +854,8 @@ bool MainWindow::eventFilter(QObject *obj, QEvent *event)
     return QObject::eventFilter(obj, event);
 }
 
-void MainWindow::Vergleich()
+void MainWindow::Vergleich() ///In dieser Funktion, werden die ausgelesen. In der ersten if-Anweisung wird der Counter hochgezählt falls ein Buchstabe eingegeben wurde und in der zweiten if-Anweisung
+///wird der eingebene Text aus dem Anzeigefeld gelöscht, falls ein Leerzeichen getippt wurde
 {
     if (tippwert >= 33 && tippwert <= 126)
     {
@@ -884,7 +885,7 @@ void MainWindow::Vergleich()
             ui->textBrowser->setText(text);
             spacezaehler = 0;
         }
-    if(ende==true)
+    if(ende==true) ///Falls der Text abgetippt wurde, wird diese If-Schleife ausgeführt um anschließend, die Statisitk am Ende einer jeden Übung auszugeben
     {
         int woerter=fehlersuche->NumberofCorrectWords;
         int fehler=fehlersuche->NumberofErrors;
