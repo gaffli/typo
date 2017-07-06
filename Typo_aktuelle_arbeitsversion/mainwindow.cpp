@@ -879,7 +879,7 @@ void MainWindow::Vergleich()
                     ende = true;
                     break;
                 }
-            }while(v != Qt::Key_Space);
+            }while(v  != Qt::Key_Space);
             text.remove(0,zaehler);
             ui->textBrowser->setText(text);
             spacezaehler = 0;
