@@ -21,13 +21,14 @@ Benutzerhandbuch::~Benutzerhandbuch()
     delete ui;
 }
 
-void Benutzerhandbuch::SetPath()
+void Benutzerhandbuch::SetPath() ///In dieser Funktion wird dem QString Url der Pfad der Exe Datei übergeben, um dort auch das Handbuch aufzurufen
 {
     Url = QDir::currentPath();
     Url.push_front("file:///");
 }
 
-void Benutzerhandbuch::on_AAVollstaendigesHandbuch_clicked()
+void Benutzerhandbuch::on_AAVollstaendigesHandbuch_clicked() ///Diese Funktion ruft das vollständige Handbuch auf, indem es zuerst QString den Pfad hinzufügt und die Pdf anschließend aufruft,
+///alle weiteren Funktionen darunter arbeiten nach dem gleichen Prinzip
 {
     SetPath();
     Url.push_back("/Handbuch/AAVollstaendigesHandbuch.pdf");
