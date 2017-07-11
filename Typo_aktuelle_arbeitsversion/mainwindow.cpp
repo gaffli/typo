@@ -55,7 +55,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->label_username->setText("");
     ui->label_username->hide();
     ui->frame_welcome->show();
-    ui->ueben->setEnabled(true);
+    ui->ueben->setEnabled(false);
     ui->zeitrennen->setEnabled(false);
     ui->multiplayer->setEnabled(false);
     ui->pb_profil_2->hide();
