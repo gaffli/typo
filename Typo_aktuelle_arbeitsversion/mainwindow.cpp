@@ -55,7 +55,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->label_username->setText("");
     ui->label_username->hide();
     ui->frame_welcome->show();
-    ui->ueben->setEnabled(false);
+    ui->ueben->setEnabled(true);
     ui->zeitrennen->setEnabled(false);
     ui->multiplayer->setEnabled(false);
     ui->pb_profil_2->hide();
@@ -874,6 +874,7 @@ bool MainWindow::eventFilter(QObject *obj, QEvent *event)
 void MainWindow::Vergleich() ///In dieser Funktion, werden die ausgelesen. In der ersten if-Anweisung wird der Counter hochgezählt falls ein Buchstabe eingegeben wurde und in der zweiten if-Anweisung
 ///wird der eingebene Text aus dem Anzeigefeld gelöscht, falls ein Leerzeichen getippt wurde
 {
+    int spacezaehler;
     if (tippwert >= 33 && tippwert <= 126)
     {
         spacezaehler ++;
@@ -897,7 +898,7 @@ void MainWindow::Vergleich() ///In dieser Funktion, werden die ausgelesen. In de
                     ende = true;
                     break;
                 }
-            }while(v != Qt::Key_Space);
+            }while(v[0] != Qt::Key_Space);
             text.remove(0,zaehler);
             ui->textBrowser->setText(text);
             spacezaehler = 0;
@@ -916,11 +917,7 @@ void MainWindow::Vergleich() ///In dieser Funktion, werden die ausgelesen. In de
                  ui->frame_zeittext->hide();
 
 
-       if(name=="")
-        {
-        }
-        else
-          {
+
            QSqlDatabase typo_db =  QSqlDatabase::addDatabase("QMYSQL");
            typo_db.setDatabaseName("typo");
            typo_db.setUserName("Alex");
@@ -934,7 +931,7 @@ void MainWindow::Vergleich() ///In dieser Funktion, werden die ausgelesen. In de
             QString wpm=ui->label_wpm->text();
             QSqlQuery qry;
             qry.exec("insert into Statistik (Benutzername, Art, FPM, WPM) values ('"+name +"','"+MainWindow::art +"','"+fpm+"','"+ wpm +"')");
-          }
+
        ende=false;
         }
 
