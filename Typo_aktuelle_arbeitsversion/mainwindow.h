@@ -112,7 +112,6 @@ private:
     QString art;
     int teiler=0;
     int tippwert;
-    int spacezaehler = 0;
     int textcounter = 0;
     int zaehler = 0;
     int cnt = 0;
